@@ -1,0 +1,344 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR MailChimp API Support Team
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: MailChimp 1.1.5\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/mailchimp\n"
+"POT-Creation-Date: 2009-07-15 14:23-0400\n"
+"PO-Revision-Date: 2010-12-17 14:37-0500\n"
+"Last-Translator: MailChimp API <api@mailchimp.com>\n"
+"Language-Team:  <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: mailchimp_includes.php:27
+#: mailchimp_includes.php:62
+msgid "You must fill in %s."
+msgstr "내용을 입력해 주세요 %s."
+
+#: mailchimp_includes.php:59
+msgid "That email address is already subscribed to the list"
+msgstr "이미 가입된 이메일 주소입니다"
+
+#: mailchimp_includes.php:66
+#, php-format
+msgid "%s has invalid content"
+msgstr "%s 의 값이 맞지 않습니다"
+
+#: mailchimp_includes.php:68
+msgid "An invalid Interest Group was selected"
+msgstr "정확하지 않은 그룹입니다"
+
+#: mailchimp_includes.php:69
+msgid "That email address is invalid"
+msgstr "형식이 맞지 않는 이메일 주소입니다"
+
+#: mailchimp_includes.php:75
+msgid "Success, you've been signed up! Please look for our confirmation email!"
+msgstr "성공했습니다. 확인 메일을 보내드렸습니다"
+
+#: mailchimp_includes.php:131
+msgid "required field"
+msgstr "필수 항목"
+
+#: mailchimp_includes.php:168
+msgid "unsubscribe from list"
+msgstr "가입 해지하기"
+
+#: mailchimp_includes.php:171
+msgid "powered by"
+msgstr "도움 주신 곳"
+
+#: mailchimp.php:135
+msgid "MailChimp Setup"
+msgstr "메일침프 설정"
+
+#: mailchimp.php:150
+msgid "While upgrading the plugin setup, we were unable to login to your account. You will need to login again and setup your list."
+msgstr "플러그인 설정을 업그레이드하려고 했지만 계정에 로그인할 수 없었습니다. 다시 로그인하고 리스트를 설정해야 합니다."
+
+#: mailchimp.php:156
+msgid "MailChimp List Setup"
+msgstr "메일침프 리스트 설정"
+
+#: mailchimp.php:166
+msgid "Success! We were able to verify your username & password! Let's continue, shall we?"
+msgstr "성공했습니다. 사용자 이름과 암호를 확인하였습니다. 계속하십시오."
+
+#: mailchimp.php:178
+msgid "Uh-oh, we were unable to login and verify your username & password. Please check them and try again!"
+msgstr "사용자 이름과 암호를 확인할 수 없었습니다. 다시 확인 후 시도해 주십시오."
+
+#: mailchimp.php:179
+msgid "The server said:"
+msgstr "서버 메시지: "
+
+#: mailchimp.php:222
+msgid "Sign up for"
+msgstr "가입하기 "
+
+#: mailchimp.php:223
+msgid "Subscribe"
+msgstr "가입하기"
+
+#: mailchimp.php:253
+#, php-format
+msgid "Success! Loaded and saved the info for %d Merge Variables and %d Interest Groups from your list"
+msgstr "성공하였습니다. 리스트에서 %d 머지 변수와 %d Interest Group 정보를 불러와 저장하였습니다."
+
+#: mailchimp.php:256
+msgid "Now you should either Turn On the MailChimp Widget or change your options below, then turn it on."
+msgstr "이제 바로 메일침프 위젯을 켜거나 아래 선택 사항을 변경한 다음 위젯을 켜면 됩니다"
+
+#: mailchimp.php:284
+msgid "Successfully Reset your List selection... Now you get to pick again!"
+msgstr "성공적으로 리스트 선택을 리셋하였습니다. 다시 선택하면 됩니다."
+
+#: mailchimp.php:290
+msgid "Monkey Rewards turned On!"
+msgstr "Monkey Rewards 켜기!"
+
+#: mailchimp.php:294
+msgid "Monkey Rewards turned Off!"
+msgstr "Monkey Rewards 끄기!"
+
+#: mailchimp.php:299
+msgid "Fancy Javascript submission turned On!"
+msgstr "Fancy Javascript 가입버튼 켜기!"
+
+#: mailchimp.php:303
+msgid "Fancy Javascript submission turned Off!"
+msgstr "Fancy Javascript 가입버튼 끄기!"
+
+#: mailchimp.php:309
+msgid "Unsubscribe link turned On!"
+msgstr "Unsubscribe 링크 켜기!"
+
+#: mailchimp.php:313
+msgid "Unsubscribe link turned Off!"
+msgstr "Unsubscribe 링크 끄기!"
+
+#: mailchimp.php:359
+msgid "Successfully Updated your List Subscribe Form Settings!"
+msgstr "List Subscribe Form Settings을 성공적으로 업데이트하였습니다!"
+
+#: mailchimp.php:372
+msgid "Login Info"
+msgstr "로그인 정보"
+
+#: mailchimp.php:373
+msgid "To start using the MailChimp plugin, we first need to login and get your API Key. Please enter your MailChimp username and password below."
+msgstr "메일침프 플러그인을 사용하려면, 먼저 로그인하여 API 키를 얻어와야 합니다. 메일침프 사용자 이름과 암호를 아래에 넣어 주세요."
+
+#: mailchimp.php:375
+msgid "Don't have a MailChimp account? <a href='http://www.mailchimp.com/tryit.phtml' target='_blank'>Try one for Free</a>!"
+msgstr "메일침프 계정이 없는 경우, <a href='http://www.mailchimp.com/tryit.phtml' target='_blank'>무료 계정 만들기</a>!"
+
+#: mailchimp.php:379
+msgid "Username"
+msgstr "사용자 이름"
+
+#: mailchimp.php:383
+msgid "Password"
+msgstr "암호"
+
+#: mailchimp.php:389
+msgid "Save & Check"
+msgstr "저장 및 확인"
+
+#: mailchimp.php:394
+msgid "Notes"
+msgstr "참고"
+
+#: mailchimp.php:395
+msgid "Changing your settings at MailChimp.com may cause this to stop working."
+msgstr "MailChimp.com 에서 설정을 변경하면 작동하지 않을 수 있습니다."
+
+#: mailchimp.php:396
+msgid "If you change your login to a different account, the info you have setup below will be erased."
+msgstr "다른 계정으로 로그인하면 아래 설정된 정보는 삭제됩니다."
+
+#: mailchimp.php:397
+msgid "If any of that happens, no biggie - just reconfigure your login and the items below..."
+msgstr "만약 그러한 일이 생긴다고 해도... 괜찮습니다. 다시 로그인 정보와 아래 항목들을 설정하면 됩니다."
+
+#: mailchimp.php:403
+msgid "Logged in as"
+msgstr "로그인 된 계정"
+
+#: mailchimp.php:407
+msgid "Logout"
+msgstr "로그아웃"
+
+#: mailchimp.php:421
+msgid "Your Lists"
+msgstr "리스트"
+
+#: mailchimp.php:423
+msgid "Please select the List you wish to create a Signup Form for."
+msgstr "Signup Form을 만들려고 하는 리스트를 선택해 주십시오."
+
+#: mailchimp.php:432
+#, php-format
+msgid "Uh-oh, you don't have any lists defined! Please visit %s, login, and setup a list before using this tool!"
+msgstr "정의된 리스트가 하나도 없습니다. %s 를 방문하고 로그인 한 다음 리스트를 생성해 주십시오."
+
+#: mailchimp.php:437
+msgid "Select A List"
+msgstr "리스트 선택"
+
+#: mailchimp.php:450
+msgid "Update List"
+msgstr "리스트 업데이트"
+
+#: mailchimp.php:453
+msgid "Note:"
+msgstr "참고"
+
+#: mailchimp.php:453
+msgid "Updating your list will not cause settings below to be lost. Changing to a new list will."
+msgstr "리스트를 업데이트 해도 아래 설정은 없어지지 않지만 새로운 리스트를 선택하면 지워집니다."
+
+#: mailchimp.php:471
+msgid "Reset List Options and Select again"
+msgstr "리스트 선택 사항을 원래대로 되돌리고 다시 선택하기"
+
+#: mailchimp.php:474
+msgid "Subscribe Form Widget Settings for this List"
+msgstr "선택된 리스트에 대한 가입 폼 위젯 설정"
+
+#: mailchimp.php:475
+msgid "Selected MailChimp List"
+msgstr "선택된 메일침프 리스트"
+
+#: mailchimp.php:496
+#: mailchimp.php:569
+#: mailchimp.php:630
+msgid "Update Subscribe Form Settings"
+msgstr "가입 폼 설정 업데이트"
+
+#: mailchimp.php:499
+msgid "Monkey Rewards"
+msgstr "Monkey Reward"
+
+#: mailchimp.php:501
+msgid "turning this on will place a \"powered by MailChimp\" link in your form that will earn you credits with us. It is optional and can be turned on or off at any time."
+msgstr "이것을 사용하는 것으로 설정하면 가입 폼에 \"powered by MailChimp\" 가 생성되고 이를 통해 크레딧을 얻을 수 있습니다. 선택 사항이며 언제나 끄고 켤 수 있습니다."
+
+#: mailchimp.php:505
+msgid "Use Javascript Support?"
+msgstr "자바스크립트 지원 사용?"
+
+#: mailchimp.php:507
+msgid "turning this on will use fancy javascript submission and should degrade gracefully for users not using javascript. It is optional and can be turned on or off at any time."
+msgstr "이것을 사용하는 것으로 설정하면 Fancy Javascript 가입버튼이 사용되며 자바스크립트를 사용하지 않는 사용자들에게는 원래의 것으로 나타납니다. 선택 사항이며 언제나 끄고 켤 수 있습니다."
+
+#: mailchimp.php:511
+msgid "Include Unsubscribe link?"
+msgstr "가입 헤지 링크 포함?"
+
+#: mailchimp.php:513
+msgid "turning this on will add a link to your host unsubscribe form"
+msgstr "이것을 사용하는 것으로 설정하면 가입 해지 폼으로 연결되는 링크가 추가됩니다"
+
+#: mailchimp.php:517
+msgid "Header content"
+msgstr "헤더 컨텐트"
+
+#: mailchimp.php:520
+msgid "You can fill this with your own Text, HTML markup (including image links), or Nothing!"
+msgstr "자신만의 글, HTML (이미지 링크 포함) 등을 넣거나 아무것도 넣지 않아도 됩니다"
+
+#: mailchimp.php:525
+msgid "Submit Button text"
+msgstr "전송 버튼 문자"
+
+#: mailchimp.php:532
+msgid "Custom Styling"
+msgstr "사용자 설정 스타일"
+
+#: mailchimp.php:536
+msgid "Turned On?"
+msgstr "사용합니까?"
+
+#: mailchimp.php:537
+msgid "Header Settings (only applies if there are no HTML tags in the Header Content area above)"
+msgstr "헤더 설정 (헤더 컨텐트 부분에 HTML 태그가 없는 경우에만 적용됨)"
+
+#: mailchimp.php:538
+#: mailchimp.php:552
+msgid "Border Width"
+msgstr "테두리 두깨"
+
+#: mailchimp.php:539
+#: mailchimp.php:553
+msgid "Set to 0 for no border, do not enter <strong>px</strong>!"
+msgstr "테두리를 없애려면 0을 입력 하십시오. <strong>px</strong>는 입력하지 마십시오"
+
+#: mailchimp.php:541
+#: mailchimp.php:555
+msgid "Border Color"
+msgstr "테두리 색상"
+
+#: mailchimp.php:542
+#: mailchimp.php:545
+#: mailchimp.php:548
+#: mailchimp.php:556
+#: mailchimp.php:559
+#: mailchimp.php:562
+msgid "do not enter initial <strong>#</strong>"
+msgstr "앞부분의 #는 입력하지 마십시오"
+
+#: mailchimp.php:551
+msgid "Form Settings"
+msgstr "폼 설정"
+
+#: mailchimp.php:571
+msgid "Merge Variables Included"
+msgstr "머지 변수 포함"
+
+#: mailchimp.php:574
+msgid "No Merge Variables found."
+msgstr "머지 변수가 없습니다"
+
+#: mailchimp.php:580
+#: mailchimp.php:614
+msgid "Name"
+msgstr "이름"
+
+#: mailchimp.php:581
+msgid "Tag"
+msgstr "태그"
+
+#: mailchimp.php:582
+msgid "Required?"
+msgstr "필수?"
+
+#: mailchimp.php:583
+msgid "Include?"
+msgstr "포함?"
+
+#: mailchimp.php:603
+msgid "Interest Groups"
+msgstr "Interest Group들"
+
+#: mailchimp.php:605
+msgid "No Interest Groups Setup for this List"
+msgstr "이 리스트에는 Interest Group이 없습니다"
+
+#: mailchimp.php:610
+msgid "Show?"
+msgstr "보여주기?"
+
+#: mailchimp.php:617
+msgid "Input Type"
+msgstr "입력 종류"
+
+#: mailchimp.php:620
+msgid "Options"
+msgstr "선택사항"
+

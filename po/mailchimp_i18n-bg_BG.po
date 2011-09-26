@@ -1,0 +1,343 @@
+# Copyright (C) YEAR MailChimp API Support Team
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: MailChimp 1.1.5\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/mailchimp\n"
+"POT-Creation-Date: 2009-07-15 14:23-0400\n"
+"PO-Revision-Date: 2010-12-28 17:45-0500\n"
+"Last-Translator: MailChimp API <api@mailchimp.com>\n"
+"Language-Team: MailChimp API <api@mailchimp.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: mailchimp_includes.php:27
+#: mailchimp_includes.php:62
+msgid "You must fill in %s."
+msgstr "Трябва да попълните %s."
+
+#: mailchimp_includes.php:59
+msgid "That email address is already subscribed to the list"
+msgstr "Този адрес вече е записан в списъка"
+
+#: mailchimp_includes.php:66
+#, php-format
+msgid "%s has invalid content"
+msgstr "%s съдържа невалидно съдържание"
+
+#: mailchimp_includes.php:68
+msgid "An invalid Interest Group was selected"
+msgstr "Избрана е невалидна група по интереси"
+
+#: mailchimp_includes.php:69
+msgid "That email address is invalid"
+msgstr "Този адрес е невалиден"
+
+#: mailchimp_includes.php:75
+msgid "Success, you've been signed up! Please look for our confirmation email!"
+msgstr "Поздравления, вие се записахте успешно! Очаквайте потвърдителното писмо!"
+
+#: mailchimp_includes.php:131
+msgid "required field"
+msgstr "задължително поле"
+
+#: mailchimp_includes.php:168
+msgid "unsubscribe from list"
+msgstr "отпиши се от списъка"
+
+#: mailchimp_includes.php:171
+msgid "powered by"
+msgstr "благодарение на"
+
+#: mailchimp.php:135
+msgid "MailChimp Setup"
+msgstr "MailChimp Setup"
+
+#: mailchimp.php:150
+msgid "While upgrading the plugin setup, we were unable to login to your account. You will need to login again and setup your list."
+msgstr "Докато обновявахме настройките, не успяхме да влезем с вашия акаунт. Ще се наложи отново да се идентифицирате и да настроите списъка си."
+
+#: mailchimp.php:156
+msgid "MailChimp List Setup"
+msgstr "MailChimp List Setup"
+
+#: mailchimp.php:166
+msgid "Success! We were able to verify your username & password! Let's continue, shall we?"
+msgstr "Поздравления! Вашите потребителско име и парола бяха прието! Да продължим напред?"
+
+#: mailchimp.php:178
+msgid "Uh-oh, we were unable to login and verify your username & password. Please check them and try again!"
+msgstr "Вашето потребителско име и парола не бяха приети. Моля, проверете ги и опитайте отново!"
+
+#: mailchimp.php:179
+msgid "The server said:"
+msgstr "Сървъра отговори:"
+
+#: mailchimp.php:222
+msgid "Sign up for"
+msgstr "Запиши се за"
+
+#: mailchimp.php:223
+msgid "Subscribe"
+msgstr "Записване"
+
+#: mailchimp.php:253
+#, php-format
+msgid "Success! Loaded and saved the info for %d Merge Variables and %d Interest Groups from your list"
+msgstr "Поздравления! Заредихме и записахме информацията за %d променливи на сливането и %d групи по интереси от вашият списък"
+
+#: mailchimp.php:256
+msgid "Now you should either Turn On the MailChimp Widget or change your options below, then turn it on."
+msgstr "Сега трябва или да включите MailChimp Widget-а или да промените настройките и тогава да го включите."
+
+#: mailchimp.php:284
+msgid "Successfully Reset your List selection... Now you get to pick again!"
+msgstr "Успешно изчистихте избора си на списък. Сега трябва да го изберете отново!"
+
+#: mailchimp.php:290
+msgid "Monkey Rewards turned On!"
+msgstr "Monkey Rewards включени!"
+
+#: mailchimp.php:294
+msgid "Monkey Rewards turned Off!"
+msgstr "Monkey Rewards изключени!"
+
+#: mailchimp.php:299
+msgid "Fancy Javascript submission turned On!"
+msgstr "Регистрация с Fancy Javascript включена!"
+
+#: mailchimp.php:303
+msgid "Fancy Javascript submission turned Off!"
+msgstr "Регистрация с Javascript изключена!"
+
+#: mailchimp.php:309
+msgid "Unsubscribe link turned On!"
+msgstr "Връзка за отписване включена!"
+
+#: mailchimp.php:313
+msgid "Unsubscribe link turned Off!"
+msgstr "Връзка за отписване изключена!"
+
+#: mailchimp.php:359
+msgid "Successfully Updated your List Subscribe Form Settings!"
+msgstr "Списъка Запиши от настройките беше обновен успешно!"
+
+#: mailchimp.php:372
+msgid "Login Info"
+msgstr "Потребителска информация"
+
+#: mailchimp.php:373
+msgid "To start using the MailChimp plugin, we first need to login and get your API Key. Please enter your MailChimp username and password below."
+msgstr "За да зпочнете да използвате MailChimp за пръв път, трябва да се сдобиете с ваш API ключ. Моля, въведете вашето MailChimp потребителско име и парола в полетата отдолу."
+
+#: mailchimp.php:375
+msgid "Don't have a MailChimp account? <a href='http://www.mailchimp.com/tryit.phtml' target='_blank'>Try one for Free</a>!"
+msgstr "Нямате MailChimp акаунт? <a href='http://www.mailchimp.com/tryit.phtml' target='_blank'>Вземете един безплатно!</a>!"
+
+#: mailchimp.php:379
+msgid "Username"
+msgstr "Потребителско име"
+
+#: mailchimp.php:383
+msgid "Password"
+msgstr "Парола"
+
+#: mailchimp.php:389
+msgid "Save & Check"
+msgstr "Запиши & Провери"
+
+#: mailchimp.php:394
+msgid "Notes"
+msgstr "Бележки"
+
+#: mailchimp.php:395
+msgid "Changing your settings at MailChimp.com may cause this to stop working."
+msgstr "Промяната на настройките на MailChimp.com може да го накара да спре да работи."
+
+#: mailchimp.php:396
+msgid "If you change your login to a different account, the info you have setup below will be erased."
+msgstr "Ако влезете с друг акаунт, информацията, която въведете по-долу ще бъде изгубена."
+
+#: mailchimp.php:397
+msgid "If any of that happens, no biggie - just reconfigure your login and the items below..."
+msgstr "Ако това се случи не се притеснявайте - просто променете настройките за вход и променливите под тях..."
+
+#: mailchimp.php:403
+msgid "Logged in as"
+msgstr "Регистриран като"
+
+#: mailchimp.php:407
+msgid "Logout"
+msgstr "Отпиши се"
+
+#: mailchimp.php:421
+msgid "Your Lists"
+msgstr "Вашите списъци"
+
+#: mailchimp.php:423
+msgid "Please select the List you wish to create a Signup Form for."
+msgstr "Моля, изберете списък за който искате да се запишете."
+
+#: mailchimp.php:432
+#, php-format
+msgid "Uh-oh, you don't have any lists defined! Please visit %s, login, and setup a list before using this tool!"
+msgstr "Нямате избран нито един списък! Моля посетете %s, идентифицирайте се и настройте списък преди да използвате този инструмент!"
+
+#: mailchimp.php:437
+msgid "Select A List"
+msgstr "Избери списък"
+
+#: mailchimp.php:450
+msgid "Update List"
+msgstr "Обнови списък"
+
+#: mailchimp.php:453
+msgid "Note:"
+msgstr "Бележка:"
+
+#: mailchimp.php:453
+msgid "Updating your list will not cause settings below to be lost. Changing to a new list will."
+msgstr "Обновяването на списъка няма да доведе до загуба на настройките отдолу. Ако изберете друг писък обаче - това ще стане."
+
+#: mailchimp.php:471
+msgid "Reset List Options and Select again"
+msgstr "Изчисти настройките на списъка и избери отново"
+
+#: mailchimp.php:474
+msgid "Subscribe Form Widget Settings for this List"
+msgstr "Настройки на Subscribe Form Widget-а за този списък"
+
+#: mailchimp.php:475
+msgid "Selected MailChimp List"
+msgstr "Избран MailChimp списък"
+
+#: mailchimp.php:496
+#: mailchimp.php:569
+#: mailchimp.php:630
+msgid "Update Subscribe Form Settings"
+msgstr "Обнови настройките на формата за записване"
+
+#: mailchimp.php:499
+msgid "Monkey Rewards"
+msgstr "Monkey Rewards"
+
+#: mailchimp.php:501
+msgid "turning this on will place a \"powered by MailChimp\" link in your form that will earn you credits with us. It is optional and can be turned on or off at any time."
+msgstr "включването на тази опция ще добави \"powered by MailChimp\" връзка към вашата форма, която ще ни помогне. Тази настройка може да се включи и изключи по всяко време."
+
+#: mailchimp.php:505
+msgid "Use Javascript Support?"
+msgstr "Използвай Javascript поддръжка?"
+
+#: mailchimp.php:507
+msgid "turning this on will use fancy javascript submission and should degrade gracefully for users not using javascript. It is optional and can be turned on or off at any time."
+msgstr "включвайки тази опция ще използвате Fancy Javascript Submission която няма да се показва на потребителите с изключен JavaScript. Тя е опционална и може да се включи или изключи по всяко време."
+
+#: mailchimp.php:511
+msgid "Include Unsubscribe link?"
+msgstr "Включи връзка за отписване?"
+
+#: mailchimp.php:513
+msgid "turning this on will add a link to your host unsubscribe form"
+msgstr "включването на тази опция ще добави връзка към формата за отписване на хост"
+
+#: mailchimp.php:517
+msgid "Header content"
+msgstr "Съдържание на хедъра"
+
+#: mailchimp.php:520
+msgid "You can fill this with your own Text, HTML markup (including image links), or Nothing!"
+msgstr "Може да попълните с ваш текст, HTML код (включително връзки на изображения) или нищо!"
+
+#: mailchimp.php:525
+msgid "Submit Button text"
+msgstr "Submit Button text"
+
+#: mailchimp.php:532
+msgid "Custom Styling"
+msgstr "Индивидуално стилизиране"
+
+#: mailchimp.php:536
+msgid "Turned On?"
+msgstr "Включено?"
+
+#: mailchimp.php:537
+msgid "Header Settings (only applies if there are no HTML tags in the Header Content area above)"
+msgstr "Настройки на хедъра (важи само ако няма HTML тагове в горното съдържание на хедъра)"
+
+#: mailchimp.php:538
+#: mailchimp.php:552
+msgid "Border Width"
+msgstr "Ширина на рамката"
+
+#: mailchimp.php:539
+#: mailchimp.php:553
+msgid "Set to 0 for no border, do not enter <strong>px</strong>!"
+msgstr "Задайте 0 за да няма рамка, не въвеждайте <strong>px</strong>!"
+
+#: mailchimp.php:541
+#: mailchimp.php:555
+msgid "Border Color"
+msgstr "Цвят на рамка"
+
+#: mailchimp.php:542
+#: mailchimp.php:545
+#: mailchimp.php:548
+#: mailchimp.php:556
+#: mailchimp.php:559
+#: mailchimp.php:562
+msgid "do not enter initial <strong>#</strong>"
+msgstr "не въвеждайте първоначално <strong>#</strong>"
+
+#: mailchimp.php:551
+msgid "Form Settings"
+msgstr "Настройки на формата"
+
+#: mailchimp.php:571
+msgid "Merge Variables Included"
+msgstr "Включени променливи по сливане"
+
+#: mailchimp.php:574
+msgid "No Merge Variables found."
+msgstr "Няма включени променливи по сливане"
+
+#: mailchimp.php:580
+#: mailchimp.php:614
+msgid "Name"
+msgstr "Име"
+
+#: mailchimp.php:581
+msgid "Tag"
+msgstr "Етикет"
+
+#: mailchimp.php:582
+msgid "Required?"
+msgstr "Задължително?"
+
+#: mailchimp.php:583
+msgid "Include?"
+msgstr "Включи?"
+
+#: mailchimp.php:603
+msgid "Interest Groups"
+msgstr "Групи по интереси"
+
+#: mailchimp.php:605
+msgid "No Interest Groups Setup for this List"
+msgstr "Няма групи по интереси избрани за този списък"
+
+#: mailchimp.php:610
+msgid "Show?"
+msgstr "Покажи?"
+
+#: mailchimp.php:617
+msgid "Input Type"
+msgstr "Вид вход"
+
+#: mailchimp.php:620
+msgid "Options"
+msgstr "Настройки"
+

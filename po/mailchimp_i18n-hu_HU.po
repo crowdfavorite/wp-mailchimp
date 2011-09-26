@@ -1,0 +1,349 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR MailChimp API Support Team
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: MailChimp 1.1.5\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/mailchimp\n"
+"POT-Creation-Date: 2009-07-15 14:23-0400\n"
+"PO-Revision-Date: 2010-12-17 14:37-0500\n"
+"Last-Translator: MailChimp API <api@mailchimp.com>\n"
+"Language-Team: Fordítók <okostobi@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: c:\\weblapjaim\\wordpress-egyéb\\plugins\\mailchimp\n"
+"X-Poedit-Language: Hungarian\n"
+"X-Poedit-Country: HUNGARY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"Plural-Forms: k\n"
+
+#: mailchimp_includes.php:27
+#: mailchimp_includes.php:62
+msgid "You must fill in %s."
+msgstr "Töltse ki %s."
+
+#: mailchimp_includes.php:59
+msgid "That email address is already subscribed to the list"
+msgstr "Ez az E-mil cím már a listán van"
+
+#: mailchimp_includes.php:66
+#, php-format
+msgid "%s has invalid content"
+msgstr "%s helytelen tartalom"
+
+#: mailchimp_includes.php:68
+msgid "An invalid Interest Group was selected"
+msgstr "Érvénytelen Interest Group lett kiválasztva"
+
+#: mailchimp_includes.php:69
+msgid "That email address is invalid"
+msgstr "Érvénytelen E-mail cím"
+
+#: mailchimp_includes.php:75
+msgid "Success, you've been signed up! Please look for our confirmation email!"
+msgstr "Sikerült, Ön feliratkozott! Kérem keresse meg a visszaigazolást tartalmazó e-mailt!"
+
+#: mailchimp_includes.php:131
+msgid "required field"
+msgstr "szükséges mező"
+
+#: mailchimp_includes.php:168
+msgid "unsubscribe from list"
+msgstr "listáról való leíratkozás"
+
+#: mailchimp_includes.php:171
+msgid "powered by"
+msgstr "készítette:"
+
+#: mailchimp.php:135
+msgid "MailChimp Setup"
+msgstr "MailChimp beállítás"
+
+#: mailchimp.php:150
+msgid "While upgrading the plugin setup, we were unable to login to your account. You will need to login again and setup your list."
+msgstr "A kiegészítő beállításakor nem tudtunk belépni az Ön fiókjába. Önnek ismét be kell jelentkeznie és beállítania a listát."
+
+#: mailchimp.php:156
+msgid "MailChimp List Setup"
+msgstr "MailChimp Lista beállítás"
+
+#: mailchimp.php:166
+msgid "Success! We were able to verify your username & password! Let's continue, shall we?"
+msgstr "Sikerült! Ellenőriztük a felhasználónevét és jelszavát! Folytathatjuk?"
+
+#: mailchimp.php:178
+msgid "Uh-oh, we were unable to login and verify your username & password. Please check them and try again!"
+msgstr "Jaj-jaj! Baj van! Nem tudtunk belépni a fiókjába a megadott felhasználónév-jelszó párossal.Ellenőrizze, azután próbálja meg újra!"
+
+#: mailchimp.php:179
+msgid "The server said:"
+msgstr "A szerver mondja:"
+
+#: mailchimp.php:222
+msgid "Sign up for"
+msgstr "Bejelentkezés"
+
+#: mailchimp.php:223
+msgid "Subscribe"
+msgstr "Felíratkozás"
+
+#: mailchimp.php:253
+#, php-format
+msgid "Success! Loaded and saved the info for %d Merge Variables and %d Interest Groups from your list"
+msgstr "Sikerült! A %d Merge Variables és a %d Interest Groups betöltve és mentve a listájáról"
+
+#: mailchimp.php:256
+msgid "Now you should either Turn On the MailChimp Widget or change your options below, then turn it on."
+msgstr "Most vagy bekapcsolja a MailChimp Widget-t vagy változtat a lenti opción azzal, hogy azt bekapcsolja."
+
+#: mailchimp.php:284
+msgid "Successfully Reset your List selection... Now you get to pick again!"
+msgstr "Sikresen visszaállítottaa Lista választót... Most ismét neki állhat!"
+
+#: mailchimp.php:290
+msgid "Monkey Rewards turned On!"
+msgstr "Monkey Rewards bekapcsolva!"
+
+#: mailchimp.php:294
+msgid "Monkey Rewards turned Off!"
+msgstr "Monkey Rewards kikacsolva!"
+
+#: mailchimp.php:299
+msgid "Fancy Javascript submission turned On!"
+msgstr "Fancy Javascript bekapcsolva!!"
+
+#: mailchimp.php:303
+msgid "Fancy Javascript submission turned Off!"
+msgstr "Fancy Javascript kikapcsolva!"
+
+#: mailchimp.php:309
+msgid "Unsubscribe link turned On!"
+msgstr "Leíratkozó link bekapcsolva!"
+
+#: mailchimp.php:313
+msgid "Unsubscribe link turned Off!"
+msgstr "Leíratkozó link kikapcsolva!"
+
+#: mailchimp.php:359
+msgid "Successfully Updated your List Subscribe Form Settings!"
+msgstr "Sikeresen frissítette a lista felíratkozó beállításait!"
+
+#: mailchimp.php:372
+msgid "Login Info"
+msgstr "Bejelentkező információ"
+
+#: mailchimp.php:373
+msgid "To start using the MailChimp plugin, we first need to login and get your API Key. Please enter your MailChimp username and password below."
+msgstr "A MailChimp plugin első használatakor be kell jelentkeznünk és megkapnunk az API key-t. Kérem adja meg a felhasználónevét és jelszavát."
+
+#: mailchimp.php:375
+msgid "Don't have a MailChimp account? <a href='http://www.mailchimp.com/tryit.phtml' target='_blank'>Try one for Free</a>!"
+msgstr "Még nincs MailChimp fiókja? <a href='http://www.mailchimp.com/tryit.phtml' target='_blank'>Próbálja ki ingyen</a>!"
+
+#: mailchimp.php:379
+msgid "Username"
+msgstr "Felhasználónév"
+
+#: mailchimp.php:383
+msgid "Password"
+msgstr "Jelszó"
+
+#: mailchimp.php:389
+msgid "Save & Check"
+msgstr "Ment & Ellenőriz"
+
+#: mailchimp.php:394
+msgid "Notes"
+msgstr "Megjegyzés"
+
+#: mailchimp.php:395
+msgid "Changing your settings at MailChimp.com may cause this to stop working."
+msgstr "A beállítások megváltoztatása a MailChimp.com-on lehet, hogy leállítja a működést. "
+
+#: mailchimp.php:396
+msgid "If you change your login to a different account, the info you have setup below will be erased."
+msgstr "Ha a bejelentkezési fiókját módosítja, akkor az eltárolt beállítások törlődnek."
+
+#: mailchimp.php:397
+msgid "If any of that happens, no biggie - just reconfigure your login and the items below..."
+msgstr "Ha bármi is történt, ami nem olyan fontos, csak állítsa be újra a bejelentkezését és a tételeket..."
+
+#: mailchimp.php:403
+msgid "Logged in as"
+msgstr "Belépve, mint"
+
+#: mailchimp.php:407
+msgid "Logout"
+msgstr "Kijelentkezés"
+
+#: mailchimp.php:421
+msgid "Your Lists"
+msgstr "Az Ön listája"
+
+#: mailchimp.php:423
+msgid "Please select the List you wish to create a Signup Form for."
+msgstr "Válassza ki az a listát, amihez a Feljelentkezési lapot készíti."
+
+#: mailchimp.php:432
+#, php-format
+msgid "Uh-oh, you don't have any lists defined! Please visit %s, login, and setup a list before using this tool!"
+msgstr "Jaj-jaj, baj van! Még nem készített listát! Kérem látogassa me %s, lépjen be és állítsa be a a listáját ezzel az eszközzel!"
+
+#: mailchimp.php:437
+msgid "Select A List"
+msgstr "Válasszon egy listát"
+
+#: mailchimp.php:450
+msgid "Update List"
+msgstr "A lista frissítése"
+
+#: mailchimp.php:453
+msgid "Note:"
+msgstr "Megjegyzés: "
+
+#: mailchimp.php:453
+msgid "Updating your list will not cause settings below to be lost. Changing to a new list will."
+msgstr "Nem a listája firrítésekor keletkeztek a lenti beállítási gondok. Készítsen másikat."
+
+#: mailchimp.php:471
+msgid "Reset List Options and Select again"
+msgstr "Törölje a Lista opcióit és válasszon megint"
+
+#: mailchimp.php:474
+msgid "Subscribe Form Widget Settings for this List"
+msgstr "Feliratkozó lap widget beállításai ehhez a listához"
+
+#: mailchimp.php:475
+msgid "Selected MailChimp List"
+msgstr "A kiválaszott MailChimp Lista"
+
+#: mailchimp.php:496
+#: mailchimp.php:569
+#: mailchimp.php:630
+msgid "Update Subscribe Form Settings"
+msgstr "Felíratkozó lap beállítások frissítése"
+
+#: mailchimp.php:499
+msgid "Monkey Rewards"
+msgstr "Monkey Rewards"
+
+#: mailchimp.php:501
+msgid "turning this on will place a \"powered by MailChimp\" link in your form that will earn you credits with us. It is optional and can be turned on or off at any time."
+msgstr "amikor bekapcsolja, elhelyezi a \"powered by MailChimp\" link-et a lapjára, amellyel pénzt is kereshet a segítségünkkel. Választható és bármikor ki-bekapcsolhatja."
+
+#: mailchimp.php:505
+msgid "Use Javascript Support?"
+msgstr "Használ Javascript Support-ot?"
+
+#: mailchimp.php:507
+msgid "turning this on will use fancy javascript submission and should degrade gracefully for users not using javascript. It is optional and can be turned on or off at any time."
+msgstr "amikor bekapcsolja, használni fogja a Fancy Javascript-et és elegánsan gyengítheti azokat a felhasználókat, aki nem használnak javascriptet. Választható és bármikor ki-bekapcsolhatja."
+
+#: mailchimp.php:511
+msgid "Include Unsubscribe link?"
+msgstr "Benne legyen a leíratkozás link?"
+
+#: mailchimp.php:513
+msgid "turning this on will add a link to your host unsubscribe form"
+msgstr "amikor bekapcsolja, kap egy linket a Leíratkozó laphoz"
+
+#: mailchimp.php:517
+msgid "Header content"
+msgstr "Fejléc tartalma"
+
+#: mailchimp.php:520
+msgid "You can fill this with your own Text, HTML markup (including image links), or Nothing!"
+msgstr "Kitöltheti a saját szövegével, HTML jelekkel (kép linkek is), de semmi egyéb!"
+
+#: mailchimp.php:525
+msgid "Submit Button text"
+msgstr "OK gomb felirata"
+
+#: mailchimp.php:532
+msgid "Custom Styling"
+msgstr "Stílus változtatása"
+
+#: mailchimp.php:536
+msgid "Turned On?"
+msgstr "Bekapcsolja?"
+
+#: mailchimp.php:537
+msgid "Header Settings (only applies if there are no HTML tags in the Header Content area above)"
+msgstr "Fejlcé Beállítások (csak akkor jelenik meg, ha nincs HTML kód a Fejlcé tartalom-ban)"
+
+#: mailchimp.php:538
+#: mailchimp.php:552
+msgid "Border Width"
+msgstr "Keret szélesség"
+
+#: mailchimp.php:539
+#: mailchimp.php:553
+msgid "Set to 0 for no border, do not enter <strong>px</strong>!"
+msgstr "Nincs keret, az 0, ne írjon semmit <strong>px</strong>!"
+
+#: mailchimp.php:541
+#: mailchimp.php:555
+msgid "Border Color"
+msgstr "Keret szín"
+
+#: mailchimp.php:542
+#: mailchimp.php:545
+#: mailchimp.php:548
+#: mailchimp.php:556
+#: mailchimp.php:559
+#: mailchimp.php:562
+msgid "do not enter initial <strong>#</strong>"
+msgstr "ne írjon kezdeti <strong>#</strong>"
+
+#: mailchimp.php:551
+msgid "Form Settings"
+msgstr "Lap beállítások"
+
+#: mailchimp.php:571
+msgid "Merge Variables Included"
+msgstr "Merge Variables benne van"
+
+#: mailchimp.php:574
+msgid "No Merge Variables found."
+msgstr "Nincs sehol a Merge Variables."
+
+#: mailchimp.php:580
+#: mailchimp.php:614
+msgid "Name"
+msgstr "Név"
+
+#: mailchimp.php:581
+msgid "Tag"
+msgstr "Tag"
+
+#: mailchimp.php:582
+msgid "Required?"
+msgstr "Nagyon kell?"
+
+#: mailchimp.php:583
+msgid "Include?"
+msgstr "Benne van?"
+
+#: mailchimp.php:603
+msgid "Interest Groups"
+msgstr "Interest Groups"
+
+#: mailchimp.php:605
+msgid "No Interest Groups Setup for this List"
+msgstr "A listában nincs Interest Groups beállítás"
+
+#: mailchimp.php:610
+msgid "Show?"
+msgstr "Megjelenítés?"
+
+#: mailchimp.php:617
+msgid "Input Type"
+msgstr "Bevitel típusa"
+
+#: mailchimp.php:620
+msgid "Options"
+msgstr "Lehetőségek"
+

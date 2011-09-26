@@ -1,0 +1,344 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR MailChimp API Support Team
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: MailChimp 1.1.5\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/mailchimp\n"
+"POT-Creation-Date: 2009-07-15 14:23-0400\n"
+"PO-Revision-Date: 2011-05-03 14:20-0500\n"
+"Last-Translator: MailChimp API <api@mailchimp.com>\n"
+"Language-Team: MailChimp API <api@mailchimp.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: mailchimp_includes.php:27
+#: mailchimp_includes.php:62
+msgid "You must fill in %s."
+msgstr "Πρέπει να συμπληρώσετε το %s"
+
+#: mailchimp_includes.php:59
+msgid "That email address is already subscribed to the list"
+msgstr "Αυτή η ηλεκτρονική διεύθυνση αλληλογραφίας είναι ήδη συνδρομητής στη λίστα"
+
+#: mailchimp_includes.php:66
+#, php-format
+msgid "%s has invalid content"
+msgstr "%s έχει λανθασμένο περιεχόμενο"
+
+#: mailchimp_includes.php:68
+msgid "An invalid Interest Group was selected"
+msgstr "Έχει επιλεγεί λανθασμένη ομάδα ενδιαφέροντος"
+
+#: mailchimp_includes.php:69
+msgid "That email address is invalid"
+msgstr "Αυτή η διεύθυνση ηλεκτρονικής αλληλογραφίας είναι λανθασμένη"
+
+#: mailchimp_includes.php:75
+msgid "Success, you've been signed up! Please look for our confirmation email!"
+msgstr "Η συνδρομή πραγματοποιήθηκε με επιτυχία! Παρακαλούμε ελέγξτε για το ηλεκτρονικό μήνυμα επιβεβαίωσης"
+
+#: mailchimp_includes.php:131
+msgid "required field"
+msgstr "απαραίτητο πεδίο"
+
+#: mailchimp_includes.php:168
+msgid "unsubscribe from list"
+msgstr "κατάργηση συνδρομής από τη λίστα"
+
+#: mailchimp_includes.php:171
+msgid "powered by"
+msgstr "powered by"
+
+#: mailchimp.php:135
+msgid "MailChimp Setup"
+msgstr "Εγκατάσταση MailChimp"
+
+#: mailchimp.php:150
+msgid "While upgrading the plugin setup, we were unable to login to your account. You will need to login again and setup your list."
+msgstr "Κατα τη διάρκεια της ενημέρωσης της εγκατάστασης του πρόσθετου, δεν μπορέσαμε να εισέλθουμε στον λογαριασμό σας. Θα χρειαστεί να κάνετε είσοδο στον λογαριασμό σας εκ νέου και να εγκαταστήσετε τη λίστα σας."
+
+#: mailchimp.php:156
+msgid "MailChimp List Setup"
+msgstr "Εγκατάσταση λίστας MailChimp"
+
+#: mailchimp.php:166
+msgid "Success! We were able to verify your username & password! Let's continue, shall we?"
+msgstr "Επιτυχία! Έχουμε πιστοποιήσει τον χρήστη και κωδικό πρόσβασης σας! Θέλετε να συνεχίσουμε;"
+
+#: mailchimp.php:178
+msgid "Uh-oh, we were unable to login and verify your username & password. Please check them and try again!"
+msgstr "Ωχ, δεν μπορέσαμε να εισέλθουμε και να πιστοποιήσουμε το χρήστη και κωδικό πρόσβασης. Παρακαλούμε ελέγξτε τα στοιχεία και δοκιμάστε ξανά!"
+
+#: mailchimp.php:179
+msgid "The server said:"
+msgstr "Ο διακομιστής επέστρεψε:"
+
+#: mailchimp.php:222
+msgid "Sign up for"
+msgstr "Εγγραφή για"
+
+#: mailchimp.php:223
+msgid "Subscribe"
+msgstr "Συνδρομή"
+
+#: mailchimp.php:253
+#, php-format
+msgid "Success! Loaded and saved the info for %d Merge Variables and %d Interest Groups from your list"
+msgstr "Επιτυχία! Έγινε φόρτωση και αποθήκευση των πληροφοριών για %d Μεταβλητές Συγχώνευσης και %d Ομάδες Ενδιαφέροντος από την λίστα σας."
+
+#: mailchimp.php:256
+msgid "Now you should either Turn On the MailChimp Widget or change your options below, then turn it on."
+msgstr "Τώρα θα πρέπει να κάνετε Ενεργοποίηση της Μονάδας του MailChimp ή να αλλάξετε τις επιλογές παρακάτω και μετά να την ενεργοποιήσετε."
+
+#: mailchimp.php:284
+msgid "Successfully Reset your List selection... Now you get to pick again!"
+msgstr "Η Επαναφορά της επιλογής Λίστας ολοκληρώθηκε με επιτυχία... Τώρα μπορείτε να επιλέξετε ξανά!"
+
+#: mailchimp.php:290
+msgid "Monkey Rewards turned On!"
+msgstr "Ενεργοποίηση Monkey Rewards!"
+
+#: mailchimp.php:294
+msgid "Monkey Rewards turned Off!"
+msgstr "Απενεργοποίηση Monkey Rewards!"
+
+#: mailchimp.php:299
+msgid "Fancy Javascript submission turned On!"
+msgstr "Ενεργοποίηση υποβολής με φανταχτερό Javascript!"
+
+#: mailchimp.php:303
+msgid "Fancy Javascript submission turned Off!"
+msgstr "Απενεργοποίηση υποβολής με φανταχτερό Javascript!"
+
+#: mailchimp.php:309
+msgid "Unsubscribe link turned On!"
+msgstr "Ο σύνδεσμος Κατάργησης Συνδρομής έχει ενεργοποιηθεί!"
+
+#: mailchimp.php:313
+msgid "Unsubscribe link turned Off!"
+msgstr "Ο σύνδεσμος Κατάργησης Συνδρομής έχει απενεργοποιηθεί!"
+
+#: mailchimp.php:359
+msgid "Successfully Updated your List Subscribe Form Settings!"
+msgstr "Η Ενημέρωση των Ρυθμίσεων της Φόρμας Συνδρομής σε Λίστα Ολοκληρώθηκε με Επιτυχία!"
+
+#: mailchimp.php:372
+msgid "Login Info"
+msgstr "Πληροφορίες εισόδου"
+
+#: mailchimp.php:373
+msgid "To start using the MailChimp plugin, we first need to login and get your API Key. Please enter your MailChimp username and password below."
+msgstr "Για να ξεκινήσετε να χρησιμοποιείτε το πρόσθετο του MailChimp, θα πρέπει να κάνετε είσοδο και να πάρετε το κλειδί API σας. Παρακαλούμε εισάγετε τον χρήστη και τον κωδικό πρόσβασης του λογαριασμού σας στο MailChimp παρακάτω."
+
+#: mailchimp.php:375
+msgid "Don't have a MailChimp account? <a href='http://www.mailchimp.com/tryit.phtml' target='_blank'>Try one for Free</a>!"
+msgstr "Δεν έχετε λογαριασμό MailChimp; <a href='http://www.mailchimp.com/tryit.phtml' target='_blank'>Δοκιμάστε έναν Δωρεάν</a>! "
+
+#: mailchimp.php:379
+msgid "Username"
+msgstr "Χρήστης"
+
+#: mailchimp.php:383
+msgid "Password"
+msgstr "Κωδικός πρόσβασης"
+
+#: mailchimp.php:389
+msgid "Save & Check"
+msgstr "Αποθήκευση και επαλήθευση"
+
+#: mailchimp.php:394
+msgid "Notes"
+msgstr "Σημειώσεις"
+
+#: mailchimp.php:395
+msgid "Changing your settings at MailChimp.com may cause this to stop working."
+msgstr "Αυτό ενδέχεται να πάψει να λειτουργεί αν αλλάξετε τις ρυθμίσεις σας στο MailChimp.com"
+
+#: mailchimp.php:396
+msgid "If you change your login to a different account, the info you have setup below will be erased."
+msgstr "Εάν αλλάξετε τα στοιχεία εισόδου σε διαφορετικό λογαριασμό, οι πληροφορίες που έχετε καταχωρήσει θα διαγραφούν."
+
+#: mailchimp.php:397
+msgid "If any of that happens, no biggie - just reconfigure your login and the items below..."
+msgstr "Εάν ένα από αυτά συμβεί, δεν υπάρχει πρόβλημα - απλώς επαναρυθμίσετε τα στοιχεία εισόδου και τα παρακάτω στοιχεία..."
+
+#: mailchimp.php:403
+msgid "Logged in as"
+msgstr "Συνδεθήκατε ώς"
+
+#: mailchimp.php:407
+msgid "Logout"
+msgstr "Αποσύνδεση"
+
+#: mailchimp.php:421
+msgid "Your Lists"
+msgstr "Οι λίστες σας"
+
+#: mailchimp.php:423
+msgid "Please select the List you wish to create a Signup Form for."
+msgstr "Παρακαλούμε επιλέξτε τη Λίστα για την οποία θέλετε να δημιουργήσετε μία Φόρμα Εγγραφής."
+
+#: mailchimp.php:432
+#, php-format
+msgid "Uh-oh, you don't have any lists defined! Please visit %s, login, and setup a list before using this tool!"
+msgstr "Ωχ, δεν έχετε ορίσει κάποια λίστα! Παρακαλούμε επισκεφτείτε την διεύθυνση %s, κάνετε είσοδο, και κάνετε εγκατάσταση μίας λίστας πριν χρησιμοποιήσετε αυτό το εργαλείο!"
+
+#: mailchimp.php:437
+msgid "Select A List"
+msgstr "Επιλογή μίας λίστας"
+
+#: mailchimp.php:450
+msgid "Update List"
+msgstr "Ενημέρωση λίστας"
+
+#: mailchimp.php:453
+msgid "Note:"
+msgstr "Σημείωση"
+
+#: mailchimp.php:453
+msgid "Updating your list will not cause settings below to be lost. Changing to a new list will."
+msgstr "Οι ρυθμίσεις παρακάτω δεν θα χαθούν αν ενημερώσετε τη λίστα σας. Θα χαθούν μόνο αν μεταβείτε σε νέα λίστα."
+
+#: mailchimp.php:471
+msgid "Reset List Options and Select again"
+msgstr "Επαναφορά Επιλογών Λίστας και Επιλογή ξανά"
+
+#: mailchimp.php:474
+msgid "Subscribe Form Widget Settings for this List"
+msgstr "Ρυθμίσεις Μονάδας Φόρμας Συνδρομής για αυτή τη Λίστα"
+
+#: mailchimp.php:475
+msgid "Selected MailChimp List"
+msgstr "Επιλεγμένη λίστα MailChimp"
+
+#: mailchimp.php:496
+#: mailchimp.php:569
+#: mailchimp.php:630
+msgid "Update Subscribe Form Settings"
+msgstr "Ενημέρωση Ρυθμίσεων Φόρμας Συνδρομής"
+
+#: mailchimp.php:499
+msgid "Monkey Rewards"
+msgstr "Monkey Rewards"
+
+#: mailchimp.php:501
+msgid "turning this on will place a \"powered by MailChimp\" link in your form that will earn you credits with us. It is optional and can be turned on or off at any time."
+msgstr "ενεργοποιώντας αυτό θα προσθέσει ένα σύνδεσμο \"powered by MailChimp\" στην φόρμα με τον οποίο θα κερδίζετε πιστώσεις μαζί μας. Είναι προαιρετικό και μπορεί να ενεργοποιηθεί και να απενεργοποιηθεί οποιαδήποτε στιγμή."
+
+#: mailchimp.php:505
+msgid "Use Javascript Support?"
+msgstr "Χρήση υποστήριξης Javascript;"
+
+#: mailchimp.php:507
+msgid "turning this on will use fancy javascript submission and should degrade gracefully for users not using javascript. It is optional and can be turned on or off at any time."
+msgstr "ενεργοποιώντας αυτό θα χρησιιμοποιήσει την υποβολή με φανταχτερό javascript και δεν θα δημιουργήσει πρόβλημα για τους χρήστες που δεν χρησιμοποιούν javascript. Είναι προαιρετικό και μπορεί να ενεργοποιηθεί και να απενεργοποιηθεί οποιαδήποτε στιγμή."
+
+#: mailchimp.php:511
+msgid "Include Unsubscribe link?"
+msgstr "Συμπερίληψη συνδέσμου Κατάργησης Συνδρομής;"
+
+#: mailchimp.php:513
+msgid "turning this on will add a link to your host unsubscribe form"
+msgstr "ενεργοποιώντας αυτό θα προσθέσει ένα σύνδεσμο στη φόρμα κατάργησης συνδρομής"
+
+#: mailchimp.php:517
+msgid "Header content"
+msgstr "Περιεχόμενο κεφαλίδας"
+
+#: mailchimp.php:520
+msgid "You can fill this with your own Text, HTML markup (including image links), or Nothing!"
+msgstr "Μπορείτε να εισάγετε σε αυτό το δικό σας Κείμενο, εντολές HTML (συμπεριλαμβανομένου και συνδέσμων εικόνων), ή Τίποτα!"
+
+#: mailchimp.php:525
+msgid "Submit Button text"
+msgstr "Κείμενο κουμπιού αποστολής"
+
+#: mailchimp.php:532
+msgid "Custom Styling"
+msgstr "Παραμετροποιήσιμο στυλ"
+
+#: mailchimp.php:536
+msgid "Turned On?"
+msgstr "Ενεργοποιημένο;"
+
+#: mailchimp.php:537
+msgid "Header Settings (only applies if there are no HTML tags in the Header Content area above)"
+msgstr "Ρυθμίσεις Κεφαλίδας (εφαρμόζεται μόνο εφόσον δεν υπάρχουν HTML εντολές στην περιοχή Περιεχόμενο Κεφαλίδας παραπάνω)"
+
+#: mailchimp.php:538
+#: mailchimp.php:552
+msgid "Border Width"
+msgstr "Πλάτος περιγράμματος"
+
+#: mailchimp.php:539
+#: mailchimp.php:553
+msgid "Set to 0 for no border, do not enter <strong>px</strong>!"
+msgstr "Εισάγετε 0 για να μην υπάρχει περίγραμμα, μην εισάγετε <strong>px</strong>!"
+
+#: mailchimp.php:541
+#: mailchimp.php:555
+msgid "Border Color"
+msgstr "Χρώμα περιγράμματος"
+
+#: mailchimp.php:542
+#: mailchimp.php:545
+#: mailchimp.php:548
+#: mailchimp.php:556
+#: mailchimp.php:559
+#: mailchimp.php:562
+msgid "do not enter initial <strong>#</strong>"
+msgstr "μην εισάγετε αρχικό <strong>#</strong>"
+
+#: mailchimp.php:551
+msgid "Form Settings"
+msgstr "Ρυθμίσεις φόρμας"
+
+#: mailchimp.php:571
+msgid "Merge Variables Included"
+msgstr "Συμπεριλήφθηκαν οι Μεταβλητές Συγχώνευσης"
+
+#: mailchimp.php:574
+msgid "No Merge Variables found."
+msgstr "Δεν βρέθηκαν Μεταβλητές Συγχώνευσης."
+
+#: mailchimp.php:580
+#: mailchimp.php:614
+msgid "Name"
+msgstr "Όνομα"
+
+#: mailchimp.php:581
+msgid "Tag"
+msgstr "Ετικέτα"
+
+#: mailchimp.php:582
+msgid "Required?"
+msgstr "Απαιτούμενη;"
+
+#: mailchimp.php:583
+msgid "Include?"
+msgstr "Συμπερίληψη;"
+
+#: mailchimp.php:603
+msgid "Interest Groups"
+msgstr "Ομάδες Ενδιαφέροντος"
+
+#: mailchimp.php:605
+msgid "No Interest Groups Setup for this List"
+msgstr "Δεν έχει γίνει Εγκατάσταση Ομάδων Ενδοαφέροντος για αυτή τη Λίστα"
+
+#: mailchimp.php:610
+msgid "Show?"
+msgstr "Εμφάνιση;"
+
+#: mailchimp.php:617
+msgid "Input Type"
+msgstr "Τύπος εισαγωγής"
+
+#: mailchimp.php:620
+msgid "Options"
+msgstr "Επιλογές"
+

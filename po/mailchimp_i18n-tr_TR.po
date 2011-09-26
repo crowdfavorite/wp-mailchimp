@@ -1,0 +1,344 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR MailChimp API Support Team
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: MailChimp 1.1.5\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/mailchimp\n"
+"POT-Creation-Date: 2009-07-15 14:23-0400\n"
+"PO-Revision-Date: 2011-09-14 07:51-0500\n"
+"Last-Translator: MailChimp API <api@mailchimp.com>\n"
+"Language-Team:  <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: mailchimp_includes.php:27
+#: mailchimp_includes.php:62
+msgid "You must fill in %s."
+msgstr "Doldurmalısınız %s."
+
+#: mailchimp_includes.php:59
+msgid "That email address is already subscribed to the list"
+msgstr "Bu mail adresi listemizde mevcut"
+
+#: mailchimp_includes.php:66
+#, php-format
+msgid "%s has invalid content"
+msgstr "%s geçersiz bir içeriğe sahip"
+
+#: mailchimp_includes.php:68
+msgid "An invalid Interest Group was selected"
+msgstr "Geçersiz bir ilgi alanı grubu seçildi"
+
+#: mailchimp_includes.php:69
+msgid "That email address is invalid"
+msgstr "Bu posta adresi geçersiz"
+
+#: mailchimp_includes.php:75
+msgid "Success, you've been signed up! Please look for our confirmation email!"
+msgstr "Başarılı, kayıt oldunuz! Lütfen onay için posta kutunuzu kontrol edin!"
+
+#: mailchimp_includes.php:131
+msgid "required field"
+msgstr "doldurulması zorunludur"
+
+#: mailchimp_includes.php:168
+msgid "unsubscribe from list"
+msgstr "Liste aboneliğinden çıkış"
+
+#: mailchimp_includes.php:171
+msgid "powered by"
+msgstr "tarafından desteklenmektedir"
+
+#: mailchimp.php:135
+msgid "MailChimp Setup"
+msgstr "MailChimp Kurulumu"
+
+#: mailchimp.php:150
+msgid "While upgrading the plugin setup, we were unable to login to your account. You will need to login again and setup your list."
+msgstr "Eklenti güncellemesi sırasında hesabınıza giriş yapamadık. Tekrar giriş yaparak listenizi kurmalısınız."
+
+#: mailchimp.php:156
+msgid "MailChimp List Setup"
+msgstr "MailChimp Liste Kurulumu"
+
+#: mailchimp.php:166
+msgid "Success! We were able to verify your username & password! Let's continue, shall we?"
+msgstr "Başarılı! Kullanıcı adı & parolanızı doğrulayabildik! Devam edelim, olur mu?"
+
+#: mailchimp.php:178
+msgid "Uh-oh, we were unable to login and verify your username & password. Please check them and try again!"
+msgstr "Uh-oh, kullanıcı adı & parolanızı doğrulayamadık ve giriş yapamadık. Lütfen tekrar kontrol edin!"
+
+#: mailchimp.php:179
+msgid "The server said:"
+msgstr "Sunucu der ki:"
+
+#: mailchimp.php:222
+msgid "Sign up for"
+msgstr "Bunun için kayıt olun"
+
+#: mailchimp.php:223
+msgid "Subscribe"
+msgstr "Abone ol"
+
+#: mailchimp.php:253
+#, php-format
+msgid "Success! Loaded and saved the info for %d Merge Variables and %d Interest Groups from your list"
+msgstr "Başarılı! Gereken bilgi yüklendi ve kayıt edildi %d değişkenleri birleştir ve %d İlgi alanı Grupları listesinden."
+
+#: mailchimp.php:256
+msgid "Now you should either Turn On the MailChimp Widget or change your options below, then turn it on."
+msgstr "Şimdi MailChimp Widget'i etkinleştirmeli veya alttaki ayarları değiştirmelisiniz, sonrada açın."
+
+#: mailchimp.php:284
+msgid "Successfully Reset your List selection... Now you get to pick again!"
+msgstr "Liste seçimleriniz Başarıyla Sıfırlandı... Şimde tekrar seçim yapın!"
+
+#: mailchimp.php:290
+msgid "Monkey Rewards turned On!"
+msgstr "Maymun Ödülleri açıldı!"
+
+#: mailchimp.php:294
+msgid "Monkey Rewards turned Off!"
+msgstr "Maymun Ödülleri kapatıldı!"
+
+#: mailchimp.php:299
+msgid "Fancy Javascript submission turned On!"
+msgstr "Cancanlı Javascript gönderimi açıldı!"
+
+#: mailchimp.php:303
+msgid "Fancy Javascript submission turned Off!"
+msgstr "Cancanlı Javascript gönderimi kapatıldı!"
+
+#: mailchimp.php:309
+msgid "Unsubscribe link turned On!"
+msgstr "Abonelikten vazgeç linki açıldı!"
+
+#: mailchimp.php:313
+msgid "Unsubscribe link turned Off!"
+msgstr "Abonelikten vazgeç linki kapatıldı"
+
+#: mailchimp.php:359
+msgid "Successfully Updated your List Subscribe Form Settings!"
+msgstr "Abone Form Liste Ayarlarınız Başarıyla Güncellendi!"
+
+#: mailchimp.php:372
+msgid "Login Info"
+msgstr "Giriş Bilgisi"
+
+#: mailchimp.php:373
+msgid "To start using the MailChimp plugin, we first need to login and get your API Key. Please enter your MailChimp username and password below."
+msgstr "MailChimp eklentisini kullanmaya başlamak için giriş yapmanıza ve API anahtarı almanıza ihtiyacımız var. Lütfen aşağıya MailChimp kullanıcı adı ve parolanızı girin."
+
+#: mailchimp.php:375
+msgid "Don't have a MailChimp account? <a href='http://www.mailchimp.com/tryit.phtml' target='_blank'>Try one for Free</a>!"
+msgstr "MailChimp hesabınız yokmu? <a href='http://www.mailchimp.com/tryit.phtml' target='_blank'>Ücretsiz Deneyin</a>!"
+
+#: mailchimp.php:379
+msgid "Username"
+msgstr "Kullanıcı adı"
+
+#: mailchimp.php:383
+msgid "Password"
+msgstr "Parola"
+
+#: mailchimp.php:389
+msgid "Save & Check"
+msgstr "Kayıt & Kontrol"
+
+#: mailchimp.php:394
+msgid "Notes"
+msgstr "Notlar"
+
+#: mailchimp.php:395
+msgid "Changing your settings at MailChimp.com may cause this to stop working."
+msgstr "MailChimp.com'da ki ayarlarınızın değişmesi çalışmayı durdurmasına neden olabilir."
+
+#: mailchimp.php:396
+msgid "If you change your login to a different account, the info you have setup below will be erased."
+msgstr "Eğer girişinizi başka bir hesap ile değiştirirseniz, kurulumunuzdaki bilgiler silinecektir."
+
+#: mailchimp.php:397
+msgid "If any of that happens, no biggie - just reconfigure your login and the items below..."
+msgstr "Herhangi birşey olursa, önemsemeyin - sadece giriş ve alt öğeleri yeniden yapılandırın..."
+
+#: mailchimp.php:403
+msgid "Logged in as"
+msgstr "Olarak oturum açıldı"
+
+#: mailchimp.php:407
+msgid "Logout"
+msgstr "Çıkış"
+
+#: mailchimp.php:421
+msgid "Your Lists"
+msgstr "Listeniz"
+
+#: mailchimp.php:423
+msgid "Please select the List you wish to create a Signup Form for."
+msgstr "Lütfen oluşturmak istediğiniz Üye Kayıt Formunu seçin."
+
+#: mailchimp.php:432
+#, php-format
+msgid "Uh-oh, you don't have any lists defined! Please visit %s, login, and setup a list before using this tool!"
+msgstr "Uh-oh, herhangi bir liste tanımlamadınız! Lütfen ziyaret edin%s, giriş, ve bu aracı kullanmadan önce bir liste oluşturun."
+
+#: mailchimp.php:437
+msgid "Select A List"
+msgstr "Bir Liste Seç"
+
+#: mailchimp.php:450
+msgid "Update List"
+msgstr "Listeyi Güncelle"
+
+#: mailchimp.php:453
+msgid "Note:"
+msgstr "Not:"
+
+#: mailchimp.php:453
+msgid "Updating your list will not cause settings below to be lost. Changing to a new list will."
+msgstr "Listenizi güncellemek alt ayarların kaybolmasına neden olmaz. Yeni bir listeyle değiştirirseniz olur."
+
+#: mailchimp.php:471
+msgid "Reset List Options and Select again"
+msgstr "Liste Ayarlarını Sıfırla ve tekrar Seç"
+
+#: mailchimp.php:474
+msgid "Subscribe Form Widget Settings for this List"
+msgstr "Bu Liste için Abone Formu Widget Ayarları"
+
+#: mailchimp.php:475
+msgid "Selected MailChimp List"
+msgstr "Seçilen MailChimp Listesi"
+
+#: mailchimp.php:496
+#: mailchimp.php:569
+#: mailchimp.php:630
+msgid "Update Subscribe Form Settings"
+msgstr "Abone Form Ayarlarını Güncelle"
+
+#: mailchimp.php:499
+msgid "Monkey Rewards"
+msgstr "Maymun Ödülleri"
+
+#: mailchimp.php:501
+msgid "turning this on will place a \"powered by MailChimp\" link in your form that will earn you credits with us. It is optional and can be turned on or off at any time."
+msgstr "Bunu açmanız formunuza bizimle kredi kazanabileceğiniz \"powered by MailChimp\" linki ekler. Bu isteğe bağlıdır ve her zaman açık veya kapalı olarak değişebilir."
+
+#: mailchimp.php:505
+msgid "Use Javascript Support?"
+msgstr "Javascript Desteği Kullanılsın mı?"
+
+#: mailchimp.php:507
+msgid "turning this on will use fancy javascript submission and should degrade gracefully for users not using javascript. It is optional and can be turned on or off at any time."
+msgstr "Bunu açmanız cancanlı javascript gönderimini kullanır ve javascript kullanmayanları nazikçe küçük düşürür. Bu isteğe bağlıdır ve her zaman açık veya kapalı olarak değişebilir."
+
+#: mailchimp.php:511
+msgid "Include Unsubscribe link?"
+msgstr "Abonelikten Vazgeçme linki Eklensin mi?"
+
+#: mailchimp.php:513
+msgid "turning this on will add a link to your host unsubscribe form"
+msgstr "bunu açmak sunucunuza bir abonelikten vazgeçme form linki ekleyecektir"
+
+#: mailchimp.php:517
+msgid "Header content"
+msgstr "Başlık içeriği"
+
+#: mailchimp.php:520
+msgid "You can fill this with your own Text, HTML markup (including image links), or Nothing!"
+msgstr "Buraya kendi Yazınızı ekleyebilir, HTML biçimi (resim linki ekleme), yada hiçbir şey!"
+
+#: mailchimp.php:525
+msgid "Submit Button text"
+msgstr "Kabul Buton yazısı"
+
+#: mailchimp.php:532
+msgid "Custom Styling"
+msgstr "Kişisel Stil"
+
+#: mailchimp.php:536
+msgid "Turned On?"
+msgstr "Açılsın mı?"
+
+#: mailchimp.php:537
+msgid "Header Settings (only applies if there are no HTML tags in the Header Content area above)"
+msgstr "Başlık Ayarları (yalnızca yukarıdaki Üstbilgi İçerik alanında herhangi bir HTML etiketi yoksa geçerlidir)"
+
+#: mailchimp.php:538
+#: mailchimp.php:552
+msgid "Border Width"
+msgstr "Kenarlık Eni"
+
+#: mailchimp.php:539
+#: mailchimp.php:553
+msgid "Set to 0 for no border, do not enter <strong>px</strong>!"
+msgstr "Kenarlıksız için 0 gir,  girme <strong>px</strong>!"
+
+#: mailchimp.php:541
+#: mailchimp.php:555
+msgid "Border Color"
+msgstr "Kenarlık Rengi"
+
+#: mailchimp.php:542
+#: mailchimp.php:545
+#: mailchimp.php:548
+#: mailchimp.php:556
+#: mailchimp.php:559
+#: mailchimp.php:562
+msgid "do not enter initial <strong>#</strong>"
+msgstr "başına girme <strong>#</strong>"
+
+#: mailchimp.php:551
+msgid "Form Settings"
+msgstr "Form Ayarları"
+
+#: mailchimp.php:571
+msgid "Merge Variables Included"
+msgstr "Birleşen Değişkenler Eklendi"
+
+#: mailchimp.php:574
+msgid "No Merge Variables found."
+msgstr "Birleşen Değişken bulunamadı."
+
+#: mailchimp.php:580
+#: mailchimp.php:614
+msgid "Name"
+msgstr "İsim"
+
+#: mailchimp.php:581
+msgid "Tag"
+msgstr "Etiket"
+
+#: mailchimp.php:582
+msgid "Required?"
+msgstr "Gerekli?"
+
+#: mailchimp.php:583
+msgid "Include?"
+msgstr "Ekle?"
+
+#: mailchimp.php:603
+msgid "Interest Groups"
+msgstr "İlgi Alanı Grupları"
+
+#: mailchimp.php:605
+msgid "No Interest Groups Setup for this List"
+msgstr "Bu Liste için İlgi Alanı Grupları Kurulmadı"
+
+#: mailchimp.php:610
+msgid "Show?"
+msgstr "Göster?"
+
+#: mailchimp.php:617
+msgid "Input Type"
+msgstr "Giriş Tipi"
+
+#: mailchimp.php:620
+msgid "Options"
+msgstr "Seçenekler"
+

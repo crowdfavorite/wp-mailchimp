@@ -1,0 +1,344 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR MailChimp API Support Team
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: MailChimp 1.1.5\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/mailchimp\n"
+"POT-Creation-Date: 2009-07-15 14:23-0400\n"
+"PO-Revision-Date: 2010-12-17 14:38-0500\n"
+"Last-Translator: MailChimp API <api@mailchimp.com>\n"
+"Language-Team: MailChimp API <api@mailchimp.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: mailchimp_includes.php:27
+#: mailchimp_includes.php:62
+msgid "You must fill in %s."
+msgstr "Väli tuleb täita %s."
+
+#: mailchimp_includes.php:59
+msgid "That email address is already subscribed to the list"
+msgstr "See meiliaadress on juba listis"
+
+#: mailchimp_includes.php:66
+#, php-format
+msgid "%s has invalid content"
+msgstr "%s sisu on kehtetu"
+
+#: mailchimp_includes.php:68
+msgid "An invalid Interest Group was selected"
+msgstr "Valiti kehtetu huvigrupp"
+
+#: mailchimp_includes.php:69
+msgid "That email address is invalid"
+msgstr "See meiliaadress on kehtetu"
+
+#: mailchimp_includes.php:75
+msgid "Success, you've been signed up! Please look for our confirmation email!"
+msgstr "Meililistiga liitumine õnnestus! Kinnituse saatsime sulle meilboksi."
+
+#: mailchimp_includes.php:131
+msgid "required field"
+msgstr "nõutav väli"
+
+#: mailchimp_includes.php:168
+msgid "unsubscribe from list"
+msgstr "eemalda end meililistist"
+
+#: mailchimp_includes.php:171
+msgid "powered by"
+msgstr "paneb tööle"
+
+#: mailchimp.php:135
+msgid "MailChimp Setup"
+msgstr "MailChimpi seaded"
+
+#: mailchimp.php:150
+msgid "While upgrading the plugin setup, we were unable to login to your account. You will need to login again and setup your list."
+msgstr "Plugina settingute uuendamisel ei õnnestunud meil Sinu kontole siseneda. Pead uuesti sisse logima ja oma listi tööle seadma."
+
+#: mailchimp.php:156
+msgid "MailChimp List Setup"
+msgstr "MailChimpi meililisti seaded"
+
+#: mailchimp.php:166
+msgid "Success! We were able to verify your username & password! Let's continue, shall we?"
+msgstr "Õnnitleme! Sinu kasutajanimi ja salasõna on kontrollitud! Jätkame tegutsemist, eks?"
+
+#: mailchimp.php:178
+msgid "Uh-oh, we were unable to login and verify your username & password. Please check them and try again!"
+msgstr "Oh häda, meil ei õnnestunud sinu kontole logida ja kasutajanime ega salasõna kontrollida. Vaata need üle ja proovi uuesti!"
+
+#: mailchimp.php:179
+msgid "The server said:"
+msgstr "Server ütles:"
+
+#: mailchimp.php:222
+msgid "Sign up for"
+msgstr "Liitu listiga"
+
+#: mailchimp.php:223
+msgid "Subscribe"
+msgstr "Eemalda listist"
+
+#: mailchimp.php:253
+#, php-format
+msgid "Success! Loaded and saved the info for %d Merge Variables and %d Interest Groups from your list"
+msgstr "Õnnitleme! Laadisime ja salvestasime %d Merge Variables ja %d Huvigrupid sinu listist"
+
+#: mailchimp.php:256
+msgid "Now you should either Turn On the MailChimp Widget or change your options below, then turn it on."
+msgstr "Nüüd peaksid kas MailChimpi mooduli sisse lülitama või muutma allolevaid settinguid ja siis selle sisse lülitama."
+
+#: mailchimp.php:284
+msgid "Successfully Reset your List selection... Now you get to pick again!"
+msgstr "Õnnestus muuta Sinu listi valikut... Nüüd võid uuesti valida!"
+
+#: mailchimp.php:290
+msgid "Monkey Rewards turned On!"
+msgstr "Monkey Rewards sisse lülitatud!"
+
+#: mailchimp.php:294
+msgid "Monkey Rewards turned Off!"
+msgstr "Monkey Rewards välja lülitatud!"
+
+#: mailchimp.php:299
+msgid "Fancy Javascript submission turned On!"
+msgstr "Udupeen Javascript sisse lülitatud!"
+
+#: mailchimp.php:303
+msgid "Fancy Javascript submission turned Off!"
+msgstr "Udupeen Javascript välja lülitatud!"
+
+#: mailchimp.php:309
+msgid "Unsubscribe link turned On!"
+msgstr "Listist eemaldamise link sisse lülitatud!"
+
+#: mailchimp.php:313
+msgid "Unsubscribe link turned Off!"
+msgstr "Listist eemaldamise link välja lülitatud!"
+
+#: mailchimp.php:359
+msgid "Successfully Updated your List Subscribe Form Settings!"
+msgstr "Listiga liitumise vormi settingute uuendamine õnnestus!"
+
+#: mailchimp.php:372
+msgid "Login Info"
+msgstr "Sisselogimise info"
+
+#: mailchimp.php:373
+msgid "To start using the MailChimp plugin, we first need to login and get your API Key. Please enter your MailChimp username and password below."
+msgstr "MailChimp plugina kasutama hakkamiseks tuleb kõigepealt MailChimpi sisse logida ja hankida API Key. Palun sisesta all oma MailChimpi kasutaja ja salasõna."
+
+#: mailchimp.php:375
+msgid "Don't have a MailChimp account? <a href='http://www.mailchimp.com/tryit.phtml' target='_blank'>Try one for Free</a>!"
+msgstr "MailChimpi konto puudub? <a href='http://www.mailchimp.com/tryit.phtml' target='_blank'>Proovi seda tasuta</a>!"
+
+#: mailchimp.php:379
+msgid "Username"
+msgstr "Kasutajanimi"
+
+#: mailchimp.php:383
+msgid "Password"
+msgstr "Salasõna"
+
+#: mailchimp.php:389
+msgid "Save & Check"
+msgstr "Salvesta & Kontrolli"
+
+#: mailchimp.php:394
+msgid "Notes"
+msgstr "Märkused"
+
+#: mailchimp.php:395
+msgid "Changing your settings at MailChimp.com may cause this to stop working."
+msgstr "Kui muudad oma settinguid MailChimp.com lehel, võib see töötamast lakata."
+
+#: mailchimp.php:396
+msgid "If you change your login to a different account, the info you have setup below will be erased."
+msgstr "Kui muudad ligipääsu mõnele teisele kontole, kustutatakse allpool seadistatud info."
+
+#: mailchimp.php:397
+msgid "If any of that happens, no biggie - just reconfigure your login and the items below..."
+msgstr "Kui midagi sellist juhtub, pole hullu - konfigureeri ligipääs ja allolev info uuesti..."
+
+#: mailchimp.php:403
+msgid "Logged in as"
+msgstr "Sisse logitud kasutajana"
+
+#: mailchimp.php:407
+msgid "Logout"
+msgstr "Logi välja"
+
+#: mailchimp.php:421
+msgid "Your Lists"
+msgstr "Sinu meililistid"
+
+#: mailchimp.php:423
+msgid "Please select the List you wish to create a Signup Form for."
+msgstr "Palun vali list, millele Sa soovid luua tellimisvormi."
+
+#: mailchimp.php:432
+#, php-format
+msgid "Uh-oh, you don't have any lists defined! Please visit %s, login, and setup a list before using this tool!"
+msgstr "Oh häda, Sa pole seadistanud ühtegi meililisti! Mine lehele %s, logi sisse ja seadista enne selle plugina kasutamist list!"
+
+#: mailchimp.php:437
+msgid "Select A List"
+msgstr "Vali list"
+
+#: mailchimp.php:450
+msgid "Update List"
+msgstr "Uuenda listi"
+
+#: mailchimp.php:453
+msgid "Note:"
+msgstr "Märkus:"
+
+#: mailchimp.php:453
+msgid "Updating your list will not cause settings below to be lost. Changing to a new list will."
+msgstr "Allolevad settingud ei kustu, kui sa listi uuendad. Uue listi valimine kustutab need."
+
+#: mailchimp.php:471
+msgid "Reset List Options and Select again"
+msgstr "Määra listi valikud uuesti ja vali list uuesti"
+
+#: mailchimp.php:474
+msgid "Subscribe Form Widget Settings for this List"
+msgstr "Selle listi tellimisvormi mooduli settingud"
+
+#: mailchimp.php:475
+msgid "Selected MailChimp List"
+msgstr "Valitud MailChimpi list"
+
+#: mailchimp.php:496
+#: mailchimp.php:569
+#: mailchimp.php:630
+msgid "Update Subscribe Form Settings"
+msgstr "Uuenda tellimisvormi settinguid"
+
+#: mailchimp.php:499
+msgid "Monkey Rewards"
+msgstr "Monkey Rewards"
+
+#: mailchimp.php:501
+msgid "turning this on will place a \"powered by MailChimp\" link in your form that will earn you credits with us. It is optional and can be turned on or off at any time."
+msgstr "selle sisselülitamine sisestab Sinu vormile lingi \"powered by MailChimp\", mis aitab Sul meie juures boonust koguda. See on valikuline ja seda saab alati välja lülitada."
+
+#: mailchimp.php:505
+msgid "Use Javascript Support?"
+msgstr "Kasutan Javascripti tuge?"
+
+#: mailchimp.php:507
+msgid "turning this on will use fancy javascript submission and should degrade gracefully for users not using javascript. It is optional and can be turned on or off at any time."
+msgstr "selle sisselülitamine paneb tööle udupeene javascripti, mis ei tohiks javascripti mittekasutajatele probleeme mitte valmistada. On valikuline ja saab alati välja lülitada."
+
+#: mailchimp.php:511
+msgid "Include Unsubscribe link?"
+msgstr "Lisada meililistist eemaldamise link?"
+
+#: mailchimp.php:513
+msgid "turning this on will add a link to your host unsubscribe form"
+msgstr "selle sisselülitamine lisab lingi sinu meililistist eemaldamise vormile"
+
+#: mailchimp.php:517
+msgid "Header content"
+msgstr "Päise sisu"
+
+#: mailchimp.php:520
+msgid "You can fill this with your own Text, HTML markup (including image links), or Nothing!"
+msgstr "Siia võid sisestada oma teksti, HTML sisu (koos pildilinkidega) või mitte midagi!"
+
+#: mailchimp.php:525
+msgid "Submit Button text"
+msgstr "Saada nupu tekst"
+
+#: mailchimp.php:532
+msgid "Custom Styling"
+msgstr "Välimuse muutmine"
+
+#: mailchimp.php:536
+msgid "Turned On?"
+msgstr "Sisse lülitatud?"
+
+#: mailchimp.php:537
+msgid "Header Settings (only applies if there are no HTML tags in the Header Content area above)"
+msgstr "Päise settingud (ainult juhul, kui ülalpool pole Päisesse sisestatud HTML koodi)"
+
+#: mailchimp.php:538
+#: mailchimp.php:552
+msgid "Border Width"
+msgstr "Raami laius"
+
+#: mailchimp.php:539
+#: mailchimp.php:553
+msgid "Set to 0 for no border, do not enter <strong>px</strong>!"
+msgstr "Kui raami ei soovi, sisesta 0, ära lisa <strong>px</strong>!"
+
+#: mailchimp.php:541
+#: mailchimp.php:555
+msgid "Border Color"
+msgstr "Raami värv"
+
+#: mailchimp.php:542
+#: mailchimp.php:545
+#: mailchimp.php:548
+#: mailchimp.php:556
+#: mailchimp.php:559
+#: mailchimp.php:562
+msgid "do not enter initial <strong>#</strong>"
+msgstr "ära lisa algusesse <strong>#</strong>"
+
+#: mailchimp.php:551
+msgid "Form Settings"
+msgstr "Vormi settingud"
+
+#: mailchimp.php:571
+msgid "Merge Variables Included"
+msgstr "Merge Variables lisatud"
+
+#: mailchimp.php:574
+msgid "No Merge Variables found."
+msgstr "Ei leitud Merge Variables."
+
+#: mailchimp.php:580
+#: mailchimp.php:614
+msgid "Name"
+msgstr "Nimi"
+
+#: mailchimp.php:581
+msgid "Tag"
+msgstr "Tag"
+
+#: mailchimp.php:582
+msgid "Required?"
+msgstr "Nõutav?"
+
+#: mailchimp.php:583
+msgid "Include?"
+msgstr "Lisada?"
+
+#: mailchimp.php:603
+msgid "Interest Groups"
+msgstr "Huvirühmad"
+
+#: mailchimp.php:605
+msgid "No Interest Groups Setup for this List"
+msgstr "Sellele listile pole määratud huvirühmi"
+
+#: mailchimp.php:610
+msgid "Show?"
+msgstr "Näita?"
+
+#: mailchimp.php:617
+msgid "Input Type"
+msgstr "Sisendi liik"
+
+#: mailchimp.php:620
+msgid "Options"
+msgstr "Valikud"
+
