@@ -28,7 +28,7 @@ Author URI: http://mailchimp.com/api/
 define('MCSF_VER', '1.2.5');
 
 // What's our permission (capability) threshold
-define('MCSF_CAP_THRESHOLD', 'edit_plugins');
+define('MCSF_CAP_THRESHOLD', 'manage_options');
 
 // Define our location constants, both MCSF_DIR and MCSF_URL
 mailchimpSF_where_am_i();
