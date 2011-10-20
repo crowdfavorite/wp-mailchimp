@@ -63,12 +63,20 @@ function mailchimpSF_plugin_init() {
 }
 add_action( 'init', 'mailchimpSF_plugin_init' );
 
+
+/**
+ * Add the settings link to the MailChimp plugin row
+ *
+ * @param array $links - Links for the plugin
+ * @return array - Links
+ */
 function mailchimpSD_plugin_action_links($links) {
-	$settings_link = '<a href="'. admin_url('options-general.php?page=mailchimpSF_options').'">'.__('Settings', 'mailchimp_i18n' ).'</a>';
+	$settings_page = add_query_arg(array('page' => 'mailchimpSF_options'), admin_url('options-general.php'));
+	$settings_link = '<a href="'.$settings_page.'">'.__('Settings', 'mailchimp_i18n' ).'</a>';
 	array_unshift($links, $settings_link);
 	return $links;
 }
-add_filter('plugin_action_links', 'mailchimpSD_plugin_action_links', 10, 1);
+add_filter('plugin_action_links_'.plugin_basename(__FILE__), 'mailchimpSD_plugin_action_links', 10, 1);
 
 /**
  * Loads the appropriate JS and CSS resources depending on 
