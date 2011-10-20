@@ -1194,6 +1194,9 @@ function mailchimpSF_signup_submit() {
 	// Head back to the beginning of the merge vars array
 	reset($mv);
 	
+	// Ensure we have an array
+	$igs = !is_array($igs) ? array() : $igs;
+	
 	foreach ($igs as $ig) {
 		if (get_option('mc_show_interest_groups_'.$ig['id']) == 'on') {
 			$groupings = array();
