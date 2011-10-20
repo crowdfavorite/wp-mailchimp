@@ -360,16 +360,15 @@ add_action('admin_init', 'mailchimpSF_upgrade');
 function mailchimpSF_needs_upgrade() {
 	$igs = get_option('mc_interest_groups');
 	
-	/* True if:
-	 * 		The option is set in the database AND
-	 * 		The option is empty (no interest groups) OR the option is an array and the first element has an 'id' element in it
-	 * False otherwise
-	 */ 
-	if ($igs !== false && (empty($igs) || (is_array($igs) && isset($igs[0]['id']))) ) {
-		return false;
+	if ($igs !== false // we have an option
+		&& (
+			empty($igs) || // it can be an empty array (no interest groups)
+			(is_array($igs) && isset($igs[0]['id'])) // OR it should be a populated array that's well-formed
+		)) {
+		return false; // no need to upgrade
 	}
 	else {
-		return true;
+		return true; // yeah, let's do it
 	}
 }
 
@@ -383,6 +382,10 @@ function mailchimpSF_do_upgrade() {
     delete_option('mc_password');
     $api = new mailchimpSF_MCAPI(get_option('mc_apikey'));
     $igs = $api->listInterestGroupings(get_option('mc_list_id'));
+	
+	// If we don't have any interest groups store an empty array, not (bool) false
+	$igs = !$igs ? array() : $igs;
+	
     update_option('mc_interest_groups', $igs);
 }
 
