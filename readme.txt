@@ -125,6 +125,7 @@ Added support for multiple interest groups, field formatting based on type and d
 = 1.2.6 =
 * Fixed bug with "settings" link appearing on all plugins (props Jason Lane)
 * Resolved issue with unnecessary calls to the MailChimp API during upgrade check
+* Resolved PHP warning when there weren't any interest groups
 
 = 1.2.5 =
 * Field formatting based on type
