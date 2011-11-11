@@ -117,13 +117,16 @@ Maybe! Look in the /po/ directory in our plugin package and see if your language
 
 == Upgrade Notice ==
 
+= 1.2.6 = 
+Fixes major bug with "Settings" link on Plugins screen, amongst other bugs.
+
 = 1.2.5 =
 Added support for multiple interest groups, field formatting based on type and date picker.
 
 == Changelog ==
 
 = 1.2.6 =
-* Fixed bug with "settings" link appearing on all plugins (props Jason Lane)
+* Fixed bug with "Settings" link appearing on all plugins (props Jason Lane)
 * Resolved issue with unnecessary calls to the MailChimp API during upgrade check
 * Resolved PHP warning when there weren't any interest groups
 
