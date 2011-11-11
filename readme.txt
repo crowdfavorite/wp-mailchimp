@@ -118,7 +118,7 @@ Maybe! Look in the /po/ directory in our plugin package and see if your language
 == Upgrade Notice ==
 
 = 1.2.6 = 
-Fixes major bug with "Settings" link on Plugins screen, amongst other bugs.
+Fixes major bug with "Settings" link on Plugins screen.
 
 = 1.2.5 =
 Added support for multiple interest groups, field formatting based on type and date picker.

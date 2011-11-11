@@ -72,7 +72,7 @@ add_action( 'init', 'mailchimpSF_plugin_init' );
  */
 function mailchimpSD_plugin_action_links($links) {
 	$settings_page = add_query_arg(array('page' => 'mailchimpSF_options'), admin_url('options-general.php'));
-	$settings_link = '<a href="'.$settings_page.'">'.__('Settings', 'mailchimp_i18n' ).'</a>';
+	$settings_link = '<a href="'.esc_url($settings_page).'">'.__('Settings', 'mailchimp_i18n' ).'</a>';
 	array_unshift($links, $settings_link);
 	return $links;
 }
