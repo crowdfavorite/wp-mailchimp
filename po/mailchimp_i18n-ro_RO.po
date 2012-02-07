@@ -1,0 +1,346 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR MailChimp API Support Team
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: MailChimp 1.1.5\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/mailchimp\n"
+"POT-Creation-Date: 2009-07-15 14:23-0400\n"
+"PO-Revision-Date: 2012-02-07 08:58-0500\n"
+"Last-Translator: MailChimp API <api@mailchimp.com>\n"
+"Language-Team: Contributed <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Romanian\n"
+"X-Poedit-Country: ROMANIA\n"
+
+#: mailchimp_includes.php:27
+#: mailchimp_includes.php:62
+msgid "You must fill in %s."
+msgstr "Trebuie să completezi %s."
+
+#: mailchimp_includes.php:59
+msgid "That email address is already subscribed to the list"
+msgstr "Acea adresă de email este deja abonată"
+
+#: mailchimp_includes.php:66
+#, php-format
+msgid "%s has invalid content"
+msgstr "%s are conținut invalid"
+
+#: mailchimp_includes.php:68
+msgid "An invalid Interest Group was selected"
+msgstr "Un Grup de Interes invalid a fost selectat."
+
+#: mailchimp_includes.php:69
+msgid "That email address is invalid"
+msgstr "Acea adresă de email este invalidă"
+
+#: mailchimp_includes.php:75
+msgid "Success, you've been signed up! Please look for our confirmation email!"
+msgstr "Felicitări, ai fost abonat! Te rugăm, verifică dacă ai primit mailul de confirmare!"
+
+#: mailchimp_includes.php:131
+msgid "required field"
+msgstr "câmp necesar"
+
+#: mailchimp_includes.php:168
+msgid "unsubscribe from list"
+msgstr "dezabonare din listă"
+
+#: mailchimp_includes.php:171
+msgid "powered by"
+msgstr "facilitat de"
+
+#: mailchimp.php:135
+msgid "MailChimp Setup"
+msgstr "Configurare MailChimp"
+
+#: mailchimp.php:150
+msgid "While upgrading the plugin setup, we were unable to login to your account. You will need to login again and setup your list."
+msgstr "Actualizând configurarea, nu te-am putut conecta la cont. Va trebui să te conectezi din nou și să configurezi lista."
+
+#: mailchimp.php:156
+msgid "MailChimp List Setup"
+msgstr "Configurarea de liste MailChimp"
+
+#: mailchimp.php:166
+msgid "Success! We were able to verify your username & password! Let's continue, shall we?"
+msgstr "Felicitări! Am verificat utilizatorul și parola cu succes! Putem continua?"
+
+#: mailchimp.php:178
+msgid "Uh-oh, we were unable to login and verify your username & password. Please check them and try again!"
+msgstr "Of, nu te-am putut conecta și verifica utilizatorul & parola. Te rugăm, verifică-le și încearcă din nou!"
+
+#: mailchimp.php:179
+msgid "The server said:"
+msgstr "Serverul a răspuns cu:"
+
+#: mailchimp.php:222
+msgid "Sign up for"
+msgstr "Înregistrare pentru"
+
+#: mailchimp.php:223
+msgid "Subscribe"
+msgstr "Abonare"
+
+#: mailchimp.php:253
+#, php-format
+msgid "Success! Loaded and saved the info for %d Merge Variables and %d Interest Groups from your list"
+msgstr "Succes! Am încărcat și salvat datele din listă pentru %d Variabilele de Asortare și %d Grupuri de Interese"
+
+#: mailchimp.php:256
+msgid "Now you should either Turn On the MailChimp Widget or change your options below, then turn it on."
+msgstr "Acum ar trebui să activezi Widget-ul MailChimp sau să schimbi configurările mai jos, după care să-l activezi."
+
+#: mailchimp.php:284
+msgid "Successfully Reset your List selection... Now you get to pick again!"
+msgstr "Selecția de Liste a fost resetată cu succes... Poți alege din nou!"
+
+#: mailchimp.php:290
+msgid "Monkey Rewards turned On!"
+msgstr "Recompensele MailChimp au fost activate!"
+
+#: mailchimp.php:294
+msgid "Monkey Rewards turned Off!"
+msgstr "Recompensele MailChimp au fost dezactivate!"
+
+#: mailchimp.php:299
+msgid "Fancy Javascript submission turned On!"
+msgstr "Trimitere prin Javascript Extravagant activată!"
+
+#: mailchimp.php:303
+msgid "Fancy Javascript submission turned Off!"
+msgstr "Trimitere prin Javascript Extravagant dezactivată!"
+
+#: mailchimp.php:309
+msgid "Unsubscribe link turned On!"
+msgstr "Link-ul de dezabonare activat!"
+
+#: mailchimp.php:313
+msgid "Unsubscribe link turned Off!"
+msgstr "Link-ul de dezabonare dezactivat!"
+
+#: mailchimp.php:359
+msgid "Successfully Updated your List Subscribe Form Settings!"
+msgstr "Configurația Formularului de Abonare a fost actualizată!"
+
+#: mailchimp.php:372
+msgid "Login Info"
+msgstr "Date de Conectare"
+
+#: mailchimp.php:373
+msgid "To start using the MailChimp plugin, we first need to login and get your API Key. Please enter your MailChimp username and password below."
+msgstr "Pentru a folosi extensia de MailChimp, trebuie să te conectezi și să primești Cheia de API. Te rugăm să-ți completezi dedesubt utilizatorul și parola."
+
+#: mailchimp.php:375
+msgid "Don't have a MailChimp account? <a href='http://www.mailchimp.com/tryit.phtml' target='_blank'>Try one for Free</a>!"
+msgstr "Nu ai cont de MailChimp? <a href='http://www.mailchimp.com/tryit.phtml' target='_blank'>Încearcă Gratuit</a>!"
+
+#: mailchimp.php:379
+msgid "Username"
+msgstr "Utilizator"
+
+#: mailchimp.php:383
+msgid "Password"
+msgstr "Parolă"
+
+#: mailchimp.php:389
+msgid "Save & Check"
+msgstr "Salvează și Verifică"
+
+#: mailchimp.php:394
+msgid "Notes"
+msgstr "Note"
+
+#: mailchimp.php:395
+msgid "Changing your settings at MailChimp.com may cause this to stop working."
+msgstr "Schimbarea configurării pe MailChimp.com poate opri funcționarea acesteia."
+
+#: mailchimp.php:396
+msgid "If you change your login to a different account, the info you have setup below will be erased."
+msgstr "Dacă îți schimbi datele de conectare către un alt cont, configurarea alăturată va fi ștearsă."
+
+#: mailchimp.php:397
+msgid "If any of that happens, no biggie - just reconfigure your login and the items below..."
+msgstr "Dacă se întâmpla ceva de genul, nici o problemă - reconfigurează datele de conectare dedesubt..."
+
+#: mailchimp.php:403
+msgid "Logged in as"
+msgstr "Conectat ca"
+
+#: mailchimp.php:407
+msgid "Logout"
+msgstr "Deconectare"
+
+#: mailchimp.php:421
+msgid "Your Lists"
+msgstr "Listele tale"
+
+#: mailchimp.php:423
+msgid "Please select the List you wish to create a Signup Form for."
+msgstr "Te rugăm, selectează-ți Lista pentru care dorești să creezi un Formular de Abonare."
+
+#: mailchimp.php:432
+#, php-format
+msgid "Uh-oh, you don't have any lists defined! Please visit %s, login, and setup a list before using this tool!"
+msgstr "Of, n-ai liste definite! Te rugăm, vizitează %s, conectează-te și definește o listă înainte de a utiliza această funționalitate!"
+
+#: mailchimp.php:437
+msgid "Select A List"
+msgstr "Selectează o Listă:"
+
+#: mailchimp.php:450
+msgid "Update List"
+msgstr "Actualizează Lista"
+
+#: mailchimp.php:453
+msgid "Note:"
+msgstr "Notă:"
+
+#: mailchimp.php:453
+msgid "Updating your list will not cause settings below to be lost. Changing to a new list will."
+msgstr "Actualizarea listei nu va șterge configurația alăturată. Schimbarea la o altă listă o va face."
+
+#: mailchimp.php:471
+msgid "Reset List Options and Select again"
+msgstr "Resetează Configurația Listei și Selectează din nou"
+
+#: mailchimp.php:474
+msgid "Subscribe Form Widget Settings for this List"
+msgstr "Configurarea Widget-ului pentru Formularul de Abonare a acestei Liste"
+
+#: mailchimp.php:475
+msgid "Selected MailChimp List"
+msgstr "Lista MailChimp selectată"
+
+#: mailchimp.php:496
+#: mailchimp.php:569
+#: mailchimp.php:630
+msgid "Update Subscribe Form Settings"
+msgstr "Actualizează Configurația Formularului de Abonare"
+
+#: mailchimp.php:499
+msgid "Monkey Rewards"
+msgstr "Recompense MailChimp"
+
+#: mailchimp.php:501
+msgid "turning this on will place a \"powered by MailChimp\" link in your form that will earn you credits with us. It is optional and can be turned on or off at any time."
+msgstr "Activarea acestei opțiuni va afișa un link \"facilitat de MailChimp\" în formular, prin care vei dobândi credite MailChimp. Este opțional și poate fi dezactivat oricând."
+
+#: mailchimp.php:505
+msgid "Use Javascript Support?"
+msgstr "Folosește Javascript"
+
+#: mailchimp.php:507
+msgid "turning this on will use fancy javascript submission and should degrade gracefully for users not using javascript. It is optional and can be turned on or off at any time."
+msgstr "prin activarea acesteia se va folosi javascript extravagant, dacă vizitatorul are javascript activat, pentru trimiterea formularului.  Este opțional și poate fi dezactivat oricând."
+
+#: mailchimp.php:511
+msgid "Include Unsubscribe link?"
+msgstr "Include link de Dezabonare?"
+
+#: mailchimp.php:513
+msgid "turning this on will add a link to your host unsubscribe form"
+msgstr "activarea acesteia va adăuga un link formularului de dezabonare, hostat"
+
+#: mailchimp.php:517
+msgid "Header content"
+msgstr "Titlu"
+
+#: mailchimp.php:520
+msgid "You can fill this with your own Text, HTML markup (including image links), or Nothing!"
+msgstr "Poți completa cu text, cod HTML (inclusiv imagini), sau nimic!"
+
+#: mailchimp.php:525
+msgid "Submit Button text"
+msgstr "Eticheta butonului de trimitere"
+
+#: mailchimp.php:532
+msgid "Custom Styling"
+msgstr "Înfățișare personalizată"
+
+#: mailchimp.php:536
+msgid "Turned On?"
+msgstr "Activat?"
+
+#: mailchimp.php:537
+msgid "Header Settings (only applies if there are no HTML tags in the Header Content area above)"
+msgstr "Configurare Titlu (se aplică doar dacă nu există cod HTML in Titlu)"
+
+#: mailchimp.php:538
+#: mailchimp.php:552
+msgid "Border Width"
+msgstr "Lățime Chenar"
+
+#: mailchimp.php:539
+#: mailchimp.php:553
+msgid "Set to 0 for no border, do not enter <strong>px</strong>!"
+msgstr "Introduceți 0 pentru nici un Chenar, fără <strong>px</strong>!"
+
+#: mailchimp.php:541
+#: mailchimp.php:555
+msgid "Border Color"
+msgstr "Culoarea Chenarului"
+
+#: mailchimp.php:542
+#: mailchimp.php:545
+#: mailchimp.php:548
+#: mailchimp.php:556
+#: mailchimp.php:559
+#: mailchimp.php:562
+msgid "do not enter initial <strong>#</strong>"
+msgstr "Nu introduce <strong>#</strong>-ul de început"
+
+#: mailchimp.php:551
+msgid "Form Settings"
+msgstr "Configurare formular"
+
+#: mailchimp.php:571
+msgid "Merge Variables Included"
+msgstr "S-au inclus Variabilele de Asortare"
+
+#: mailchimp.php:574
+msgid "No Merge Variables found."
+msgstr "Nu s-au găsit Variabile de Asortare"
+
+#: mailchimp.php:580
+#: mailchimp.php:614
+msgid "Name"
+msgstr "Nume"
+
+#: mailchimp.php:581
+msgid "Tag"
+msgstr "Etichetă"
+
+#: mailchimp.php:582
+msgid "Required?"
+msgstr "Necesar?"
+
+#: mailchimp.php:583
+msgid "Include?"
+msgstr "Include?"
+
+#: mailchimp.php:603
+msgid "Interest Groups"
+msgstr "Grupuri de Interes"
+
+#: mailchimp.php:605
+msgid "No Interest Groups Setup for this List"
+msgstr "Nu au fost configurate Grupuri de Interes pentru această listă"
+
+#: mailchimp.php:610
+msgid "Show?"
+msgstr "Afișează?"
+
+#: mailchimp.php:617
+msgid "Input Type"
+msgstr "Tipul înregistrării"
+
+#: mailchimp.php:620
+msgid "Options"
+msgstr "Opțiuni"
+
