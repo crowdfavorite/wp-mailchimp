@@ -105,13 +105,10 @@ function mailchimpSF_load_resources() {
 		wp_enqueue_script('datepicker', MCSF_URL.'/js/datepicker.js', array('jquery','jquery-ui-core'));
 	}
 	
-	// CSS
-	else {
-		wp_enqueue_style('mailchimpSF_main_css', home_url('?mcsf_action=main_css&ver='.MCSF_VER));
-		wp_enqueue_style('mailchimpSF_ie_css', MCSF_URL.'css/ie.css');
-		global $wp_styles;
-		$wp_styles->add_data( 'mailchimpSF_ie_css', 'conditional', 'IE' );
-	}
+	wp_enqueue_style('mailchimpSF_main_css', home_url('?mcsf_action=main_css&ver='.MCSF_VER));
+	wp_enqueue_style('mailchimpSF_ie_css', MCSF_URL.'css/ie.css');
+	global $wp_styles;
+	$wp_styles->add_data( 'mailchimpSF_ie_css', 'conditional', 'IE' );
 }
 
 
