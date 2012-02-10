@@ -65,6 +65,7 @@ Currently we have the plugin configured so it can be easily translated and the f
 * es_ES - Spanish in Spain (thanks to [Claudia Mansilla](http://cricava.com/) for contributing)
 * et_ET - Estonian in Estonia (thanks to [Helen Urbanik](http://www.motomaania.ee/) for contributing)
 * fr_FR - French in France (thanks to [Maxime Toulliou](http://www.maximetoulliou.com/) for contributing)
+* he_IL - Hebrew in Israel (thanks to [שגיב בית](http://www.sagive.co.il) for contributing)
 * hu_HU - Hungarian in Hungary (thanks to Okostobi for contributing)
 * it_IT - Italian in Italy (thanks to [Stefan Des](http://www.stefandes.com) for contributing)
 * ko_KR - Korean (thanks to 백선기 (SK Baek)  for contributing)
@@ -72,6 +73,7 @@ Currently we have the plugin configured so it can be easily translated and the f
 * nl_BE - Dutch (thanks to [Filip Stas](http://suddenelfilio.net/) for contributing)
 * pt_BR - Portuguese in Brazil (thanks to Maria Manoela Porto for contributing)
 * pt_PT - Portuguese in Portugal (thanks to [Tiago Faria](http://xroot.org) for contributing)
+* ro_RO - Romanian in Romania (thanks to Alexandru Armin Roșu for contributing)
 * ru_RU - Russian in the Russian Federation (thanks to [Илья](http://fatcow.com) for contributing)
 * sv_SE - Swedish in Sweden (thanks to [Sebastian Johnsson](http://www.agiley.se/) for contributing)
 * tr_TR - Turkish in Turkey (thanks to [Hakan E.](http://kazancexpert.com/) for contributing)
@@ -81,7 +83,9 @@ If your language is not listed above, feel free to create a translation. Here ar
 1. Copy "mailchimp_i18n-en_US.po" to "mailchimp_i18n-LANG_COUNTRY.po" - fill in LANG and COUNTRY with whatever you use for WPLANG in wp-config.php
 2. Grab a transalation editor. [POedit](http://www.poedit.net/) works for us
 3. Translate each line - if you need some context, just open up mailchimp.php and search for the line number or text
-4. Send it to us - api@mailchimp.com - and we'll test it and include it with our next release
+4. [Fork](http://help.github.com/fork-a-repo/) the [repository on github](https://github.com/crowdfavorite/wp-mailchimp)
+5. Add the appropriately named files to the /po/ directory and edit the /readme.txt to include how you'd like to be attributed
+6. Make a [pull request](http://help.github.com/send-pull-requests/)
 
 
 == Frequently Asked Questions ==
@@ -101,9 +105,11 @@ To learn more, just check out our site: [MailChimp](http://mailchimp.com/feature
 Maybe! Look in the /po/ directory in our plugin package and see if your language is in there. If it is, great! If it is not, feel from to create one. Here are the basic steps:
 
 1. Copy "mailchimp_i18n-en_US.po" to "mailchimp_i18n-LANG_COUNTRY.po" - fill in LANG and COUNTRY with whatever you use for WPLANG in wp-config.php
-2. Grab a translation editor. [POedit](http://www.poedit.net/) works for us
-3. Translate each line - if you need some context, just open up mailchimp.php or mailchimp_widget.php and search for the line number or text
-4. Send it to us - api@mailchimp.com - and we'll test it and include it
+2. Grab a transalation editor. [POedit](http://www.poedit.net/) works for us
+3. Translate each line - if you need some context, just open up mailchimp.php and search for the line number or text
+4. [Fork](http://help.github.com/fork-a-repo/) the [repository on github](https://github.com/crowdfavorite/wp-mailchimp)
+5. Add the appropriately named files to the /po/ directory and edit the /readme.txt to include how you'd like to be attributed
+6. Make a [pull request](http://help.github.com/send-pull-requests/)
 
 
 
