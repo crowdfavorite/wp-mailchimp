@@ -84,8 +84,9 @@ If your language is not listed above, feel free to create a translation. Here ar
 2. Grab a transalation editor. [POedit](http://www.poedit.net/) works for us
 3. Translate each line - if you need some context, just open up mailchimp.php and search for the line number or text
 4. [Fork](http://help.github.com/fork-a-repo/) the [repository on github](https://github.com/crowdfavorite/wp-mailchimp)
-5. Add the appropriately named files to the /po/ directory and edit the /readme.txt to include how you'd like to be attributed
-6. Make a [pull request](http://help.github.com/send-pull-requests/)
+5. [Clone](http://help.github.com/remotes/#clone) the _develop_ branch
+6. Add the appropriately named files to the /po/ directory and edit the /readme.txt to include how you'd like to be attributed
+7. Make a [pull request](http://help.github.com/send-pull-requests/)
 
 
 == Frequently Asked Questions ==
@@ -108,9 +109,9 @@ Maybe! Look in the /po/ directory in our plugin package and see if your language
 2. Grab a transalation editor. [POedit](http://www.poedit.net/) works for us
 3. Translate each line - if you need some context, just open up mailchimp.php and search for the line number or text
 4. [Fork](http://help.github.com/fork-a-repo/) the [repository on github](https://github.com/crowdfavorite/wp-mailchimp)
-5. Add the appropriately named files to the /po/ directory and edit the /readme.txt to include how you'd like to be attributed
-6. Make a [pull request](http://help.github.com/send-pull-requests/)
-
+5. [Clone](http://help.github.com/remotes/#clone) the _develop_ branch
+6. Add the appropriately named files to the /po/ directory and edit the /readme.txt to include how you'd like to be attributed
+7. Make a [pull request](http://help.github.com/send-pull-requests/)
 
 
 == Screenshots ==
