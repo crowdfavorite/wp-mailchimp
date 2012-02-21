@@ -7,7 +7,7 @@ Version: 1.2.7
 Author: MailChimp and Crowd Favorite
 Author URI: http://mailchimp.com/api/
 */
-/*  Copyright 2008  MailChimp.com  (email : api@mailchimp.com)
+/*  Copyright 2008-2012  MailChimp.com  (email : api@mailchimp.com)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
