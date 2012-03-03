@@ -138,7 +138,10 @@ Added support for multiple interest groups, field formatting based on type and d
 * Fixed bug where entire phone numbers were only being deposited in the area code portion
 
 = 1.2.7 =
-
+* CSS should now always load correctly on the front end
+* Adding Hebrew and Romanian language support
+* Updating translation contribution instructions
+* Tested version is now 3.3.1
 
 = 1.2.6 =
 * Fixed bug with "Settings" link appearing on all plugins (props Jason Lane)
