@@ -3,7 +3,7 @@ Contributors: mc_jesse, crowdfavorite
 Tags: mailchimp, email, newsletter, signup, marketing, plugin, widget
 Requires at least: 2.8
 Tested up to: 3.3.1
-Stable tag: 1.2.7
+Stable tag: 1.2.8
 
 == Description ==
 
@@ -124,6 +124,9 @@ Maybe! Look in the /po/ directory in our plugin package and see if your language
 
 == Upgrade Notice ==
 
+= 1.2.8=
+Fixes bug where entire phone numbers were only being deposited in the area code portion
+
 = 1.2.6 = 
 Fixes major bug with "Settings" link on Plugins screen.
 
@@ -131,6 +134,11 @@ Fixes major bug with "Settings" link on Plugins screen.
 Added support for multiple interest groups, field formatting based on type and date picker.
 
 == Changelog ==
+= 1.2.8 = 
+* Fixed bug where entire phone numbers were only being deposited in the area code portion
+
+= 1.2.7 =
+
 
 = 1.2.6 =
 * Fixed bug with "Settings" link appearing on all plugins (props Jason Lane)
