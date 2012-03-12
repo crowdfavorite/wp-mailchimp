@@ -3,7 +3,7 @@
 Plugin Name: MailChimp
 Plugin URI: http://www.mailchimp.com/plugins/mailchimp-wordpress-plugin/
 Description: The MailChimp plugin allows you to quickly and easily add a signup form for your MailChimp list.
-Version: 1.2.7
+Version: 1.2.8
 Author: MailChimp and Crowd Favorite
 Author URI: http://mailchimp.com/api/
 */
@@ -25,7 +25,7 @@ Author URI: http://mailchimp.com/api/
 */
 
 // Version constant for easy CSS refreshes
-define('MCSF_VER', '1.2.7');
+define('MCSF_VER', '1.2.8');
 
 // What's our permission (capability) threshold
 define('MCSF_CAP_THRESHOLD', 'manage_options');
@@ -1172,8 +1172,11 @@ function mailchimpSF_signup_submit() {
 		
 		$opt_val = isset($_POST[$opt]) ? $_POST[$opt] : '';
 		
-		if (is_array($opt_val)) {
-			$opt_val = implode('', $opt_val);
+		if (is_array($opt_val) && isset($opt_val['area'])) {
+			$opt_val = implode('-', $opt_val);
+		}
+		else if (is_array($opt_val)) {
+			$opt_val = implode($opt_val);
 		}
 	
 		if ($var['req'] == 'Y' && trim($opt_val) == '') {
@@ -1196,7 +1199,7 @@ function mailchimpSF_signup_submit() {
 	
 	// Ensure we have an array
 	$igs = !is_array($igs) ? array() : $igs;
-	
+	$groups = '';
 	foreach ($igs as $ig) {
 		if (get_option('mc_show_interest_groups_'.$ig['id']) == 'on') {
 			$groupings = array();
@@ -1240,7 +1243,6 @@ function mailchimpSF_signup_submit() {
 	// If we're good
 	if ($success) {		
 		// Clear out empty merge vars
-	
 		foreach ($merge as $k => $v) {
 			if (is_array($v) && empty($v)) {
 				unset($merge[$k]);
@@ -1268,9 +1270,9 @@ function mailchimpSF_signup_submit() {
 				if ($merge_key !== 'GROUPINGS') {
 					switch ($mv_tag_keys[$merge_key]['field_type']) {
 						case 'phone':
-							$phone = implode($merge_value, '');
+							$phone = $merge_value;
 							if (!empty($phone)) {
-								if (preg_match('/[^0-9]/', $phone)) {
+								if (!preg_match('/[0-9]{0,3}-[0-9]{0,3}-[0-9]{0,4}/', $phone)) {
 									$errs[] = sprintf(__("%s must consist of only numbers", 'mailchimp_i18n'), esc_html($mv_tag_keys[$merge_key]['name']));
 									$success = false;
 								}

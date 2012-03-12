@@ -233,11 +233,13 @@ function mailchimp_interest_group_field($ig) {
 			</select>';
 			break;
 		case 'hidden': 
+			$i = 1;
 			foreach($ig['groups'] as $interest) {
 				$interest = $interest['name'];
 				$html .= '
 				<input type="checkbox" name="'.esc_attr($set_name.'['.$i.']').'" id="'.esc_attr('mc_interest_'.$ig['id'].'_'.$interest).'" class="mc_interest" value="'.esc_attr($interest).'" />
 				<label for="'. esc_attr('mc_interest_'.$ig['id'].'_'.$interest).'" class="mc_interest_label">'.esc_html($interest).'</label>';
+				$i++;
 			}
 			break;
 	}
