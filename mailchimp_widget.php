@@ -261,7 +261,8 @@ function mailchimp_form_field($var, $num_fields) {
 		if ($var['req'] && $num_fields > 1) {
 			$label .= '<span class="mc_required">*</span>';
 		}
-		$label .= '</label>';
+		// Puts a line break after the name, surname, email fields so the boxes are below. Looks cleaner.  
+		$label .= '</label><br />';
 	
 		$html .= '
 <div class="mc_merge_var">
