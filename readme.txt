@@ -134,6 +134,10 @@ Fixes major bug with "Settings" link on Plugins screen.
 Added support for multiple interest groups, field formatting based on type and date picker.
 
 == Changelog ==
+= 1.2.9 =
+* Fixed bug where multiple checkbox type interest groups were returning an invalid error
+* Fixed but where assets were not enqueueing properly if the plugin directory was not set to 'mailchimp'. Now supports any directory name.
+
 = 1.2.8 = 
 * Fixed bug where entire phone numbers were only being deposited in the area code portion
 
