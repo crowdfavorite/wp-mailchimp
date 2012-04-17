@@ -1287,7 +1287,6 @@ function mailchimpSF_signup_submit() {
 		}
 		if ($success) {
 			$api = new mailchimpSF_MCAPI(get_option('mc_apikey'));
-			error_log(print_r($merge,1));
 			$retval = $api->listSubscribe( $listId, $email, $merge, $email_type);
 			if (!$retval) {
 				switch($api->errorCode) {
