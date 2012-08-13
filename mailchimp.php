@@ -1210,7 +1210,7 @@ function mailchimpSF_signup_submit() {
 					if (isset($_POST['group'][$ig['id']])) {
 						$groupings = array(
 							'id' => $ig['id'],
-							'groups' => str_replace(',', '\,', $_POST['group'][$ig['id']]),
+							'groups' => str_replace(',', '\,', stripslashes($_POST['group'][$ig['id']])),
 						);
 					}
 					break;
@@ -1219,7 +1219,7 @@ function mailchimpSF_signup_submit() {
 					if (isset($_POST['group'][$ig['id']])) {
 						foreach ($_POST['group'][$ig['id']] as $i => $value) {
 							// Escape
-							$groups .= str_replace(',', '\,', $value).',';
+							$groups .= str_replace(',', '\,', stripslashes($value)).',';
 						}
 						$groupings = array(
 							'id' => $ig['id'],
