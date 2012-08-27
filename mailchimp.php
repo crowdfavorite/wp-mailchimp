@@ -3,7 +3,7 @@
 Plugin Name: MailChimp
 Plugin URI: http://www.mailchimp.com/plugins/mailchimp-wordpress-plugin/
 Description: The MailChimp plugin allows you to quickly and easily add a signup form for your MailChimp list.
-Version: 1.2.9
+Version: 1.2.10
 Author: MailChimp and Crowd Favorite
 Author URI: http://mailchimp.com/api/
 */
@@ -25,7 +25,7 @@ Author URI: http://mailchimp.com/api/
 */
 
 // Version constant for easy CSS refreshes
-define('MCSF_VER', '1.2.9');
+define('MCSF_VER', '1.2.10');
 
 // What's our permission (capability) threshold
 define('MCSF_CAP_THRESHOLD', 'manage_options');
@@ -1210,7 +1210,7 @@ function mailchimpSF_signup_submit() {
 					if (isset($_POST['group'][$ig['id']])) {
 						$groupings = array(
 							'id' => $ig['id'],
-							'groups' => str_replace(',', '\,', $_POST['group'][$ig['id']]),
+							'groups' => str_replace(',', '\,', stripslashes($_POST['group'][$ig['id']])),
 						);
 					}
 					break;
@@ -1219,7 +1219,7 @@ function mailchimpSF_signup_submit() {
 					if (isset($_POST['group'][$ig['id']])) {
 						foreach ($_POST['group'][$ig['id']] as $i => $value) {
 							// Escape
-							$groups .= str_replace(',', '\,', $value).',';
+							$groups .= str_replace(',', '\,', stripslashes($value)).',';
 						}
 						$groupings = array(
 							'id' => $ig['id'],
