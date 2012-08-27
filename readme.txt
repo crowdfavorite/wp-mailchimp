@@ -2,8 +2,8 @@
 Contributors: mc_jesse, crowdfavorite
 Tags: mailchimp, email, newsletter, signup, marketing, plugin, widget
 Requires at least: 2.8
-Tested up to: 3.3.1
-Stable tag: 1.2.8
+Tested up to: 3.4.1
+Stable tag: 1.2.10
 
 == Description ==
 
@@ -123,6 +123,9 @@ Maybe! Look in the /po/ directory in our plugin package and see if your language
 5. An example Signup Form Widget
 
 == Upgrade Notice ==
+
+= 1.2.10 =
+Fixed submission error when apostrophes are present
 
 = 1.2.8=
 Fixes bug where entire phone numbers were only being deposited in the area code portion
