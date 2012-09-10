@@ -342,3 +342,19 @@ msgstr "Input Type"
 msgid "Options"
 msgstr "Opzioni"
 
+#: wp-content/plugins/mailchimp/mailchimp_widget.php:140
+msgid "Preferred Format"
+msgstr "Formato preferito"
+
+#: wp-content/plugins/mailchimp/mailchimp_widget.php:143
+msgid "HTML"
+msgstr "HTML"
+
+#: wp-content/plugins/mailchimp/mailchimp_widget.php:144
+msgid "Text"
+msgstr "Testo"
+
+#: wp-content/plugins/mailchimp/mailchimp_widget.php:145
+msgid "Mobile"
+msgstr "Mobile"
+
