@@ -3,7 +3,7 @@ Contributors: mc_jesse, crowdfavorite
 Tags: mailchimp, email, newsletter, signup, marketing, plugin, widget
 Requires at least: 2.8
 Tested up to: 3.4.2
-Stable tag: 1.2.11
+Stable tag: 1.2.12
 
 == Description ==
 
@@ -140,6 +140,10 @@ Fixes major bug with "Settings" link on Plugins screen.
 Added support for multiple interest groups, field formatting based on type and date picker.
 
 == Changelog ==
+
+= 1.2.12 =
+* Update spanish language files (es_ES and es_MX)
+
 = 1.2.9 =
 * Fixed bug where multiple checkbox type interest groups were returning an invalid error
 * Fixed bug where assets were not enqueueing properly if the plugin directory was not set to 'mailchimp'. Now supports any directory name.
