@@ -3,7 +3,7 @@
 Plugin Name: MailChimp
 Plugin URI: http://www.mailchimp.com/plugins/mailchimp-wordpress-plugin/
 Description: The MailChimp plugin allows you to quickly and easily add a signup form for your MailChimp list.
-Version: 1.2.11
+Version: 1.2.12
 Author: MailChimp and Crowd Favorite
 Author URI: http://mailchimp.com/api/
 */
