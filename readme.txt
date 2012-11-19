@@ -77,6 +77,7 @@ Currently we have the plugin configured so it can be easily translated and the f
 * ru_RU - Russian in the Russian Federation (thanks to [Илья](http://fatcow.com) for contributing)
 * sv_SE - Swedish in Sweden (thanks to [Sebastian Johnsson](http://www.agiley.se/) for contributing)
 * tr_TR - Turkish in Turkey (thanks to [Hakan E.](http://kazancexpert.com/) for contributing)
+* pl_PL - frontend translated in Polish
 
 If your language is not listed above, feel free to create a translation. Here are the basic steps:
 
