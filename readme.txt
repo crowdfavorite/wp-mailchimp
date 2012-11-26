@@ -3,7 +3,7 @@ Contributors: mc_jesse, crowdfavorite
 Tags: mailchimp, email, newsletter, signup, marketing, plugin, widget
 Requires at least: 2.8
 Tested up to: 3.4.2
-Stable tag: 1.2.12
+Stable tag: 1.2.13
 
 == Description ==
 
@@ -140,6 +140,9 @@ Fixes major bug with "Settings" link on Plugins screen.
 Added support for multiple interest groups, field formatting based on type and date picker.
 
 == Changelog ==
+
+= 1.2.13 =
+* Fixed bug preventing address fields from submitting correctly.
 
 = 1.2.12 =
 * Update spanish language files (es_ES and es_MX)
