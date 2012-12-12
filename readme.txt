@@ -69,8 +69,10 @@ If you are upgrading to version 1.2.1 and you used the widget in your sidebar pr
 == Internationalization (i18n) ==
 Currently we have the plugin configured so it can be easily translated and the following languages supported:
 
+* ar_SA - Arabic in Saudi Arabia and Middle East (thanks to [Lenin](http://twitter.com/nine_l) for compiling and Nagwa Ibrahim, Egypt for translating)
 * bg_BG - Bulgarian in Bulgaria (thanks to [SiteGround](http://www.siteground.com/wordpress-hosting.htm) for contributing)
 * ca    - Catalan (thanks to [DeMomentSomTres Vilafranca Web Design](http://demomentsomtres.com) for contributing
+* bn_BD - Bangla in Bangladesh (thanks to [Lenin](http://twitter.com/nine_l) for contributing)
 * cs_CZ - Czech in the Czech Republic (thanks to [Peter Kahoun](http://kahi.cz/) for contributing)
 * da_DK - Danish in Denmark (thanks to Jan Lund for contributing)
 * de_DE - German in Germany (thanks to Michael Jaekel for contributing)
