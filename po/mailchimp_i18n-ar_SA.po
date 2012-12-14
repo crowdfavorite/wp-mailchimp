@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: MailChimp 1.1.5\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/mailchimp\n"
 "POT-Creation-Date: 2009-07-15 14:23-0400\n"
-"PO-Revision-Date: 2012-12-12 18:18+0600\n"
+"PO-Revision-Date: 2012-12-13 15:27+0600\n"
 "Last-Translator: Lenin <doctortomorrow@gmail.com>\n"
 "Language-Team: TasawrTeam <lenin@phpxperts.net>\n"
 "MIME-Version: 1.0\n"
@@ -114,11 +114,11 @@ msgstr "مكافآت القرد مغلقة!"
 
 #: mailchimp.php:299
 msgid "Fancy Javascript submission turned On!"
-msgstr ""
+msgstr "تحولت الهوى الجافا تقديم وفي!"
 
 #: mailchimp.php:303
 msgid "Fancy Javascript submission turned Off!"
-msgstr ""
+msgstr "تحولت الهوى الجافا تقديم معطلة!"
 
 #: mailchimp.php:309
 msgid "Unsubscribe link turned On!"
@@ -229,7 +229,7 @@ msgstr "تحديث إعدادات نموذج الاشتراك"
 
 #: mailchimp.php:499
 msgid "Monkey Rewards"
-msgstr ""
+msgstr "قرد مكافآت"
 
 #: mailchimp.php:501
 msgid "turning this on will place a \"powered by MailChimp\" link in your form that will earn you credits with us. It is optional and can be turned on or off at any time."
@@ -241,7 +241,7 @@ msgstr "استخدم دعم جافا سكريبت؟"
 
 #: mailchimp.php:507
 msgid "turning this on will use fancy javascript submission and should degrade gracefully for users not using javascript. It is optional and can be turned on or off at any time."
-msgstr ""
+msgstr "وسوف تحول هذه على استخدام يتوهم تقديم جافا سكريبت وينبغي أن تتحلل برشاقة لمستخدمي عدم استخدام جافا سكريبت. وهي اختيارية، ويمكن تشغيل أو إيقاف تشغيله في أي وقت."
 
 #: mailchimp.php:511
 msgid "Include Unsubscribe link?"
