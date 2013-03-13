@@ -1305,20 +1305,18 @@ function mailchimpSF_signup_submit() {
 						break;
 					case '214' : 
 						$msg = __("That email address is already subscribed to the list", 'mailchimp_i18n') . '.';
-						
-						$account = $api->getAccountDetails( array("modules", "orders", "rewards-credits", "rewards-inspections", "rewards-referrals", "rewards-applied") );
-						if ( !$api->errorCode ) {
+
+						$account = $api->getAccountDetails(array("modules", "orders", "rewards-credits", "rewards-inspections", "rewards-referrals", "rewards-applied"));
+						if (!$api->errorCode) {
 							list($dummy, $dc) = explode('-',get_option('mc_apikey'));
-							$uid 		= $account['user_id'];
-							$username 	= $account['username'];
-							$eid 		= base64_encode($email);
-							
-							$msg .= ' ' . sprintf(__("<a href=\"%s\">Click here to update your profile.</a>", 'mailchimp_i18n'), "http://$username.$dc.list-manage.com/subscribe/send-email?u=$uid&id=$listId&e=$eid");
+							$uid = $account['user_id'];
+							$username = $account['username'];
+							$eid = base64_encode($email);
+							$msg .= ' ' . sprintf(__('<a href="%s">Click here to update your profile.</a>', 'mailchimp_i18n'), "http://$username.$dc.list-manage.com/subscribe/send-email?u=$uid&id=$listId&e=$eid");
 						}
 						
 						$errs[] = $msg;
 						$html_errs[] = count($errs)-1;
-						$escape	= false;
 						break;
 					case '250' : 
 						list($field, $rest) = explode(' ', $api->errorMessage, 2);					
@@ -1347,7 +1345,9 @@ function mailchimpSF_signup_submit() {
 	if (count($errs) > 0) {
 		$msg = '<span class="mc_error_msg">';
 		foreach($errs as $error_index => $error){
-			if ( !in_array($error_index, $html_errs) ) $error = esc_html($error); 
+			if (!in_array($error_index, $html_errs)) {
+				$error = esc_html($error);
+			}
 			$msg .= '&raquo; '.$error.'<br />';
 		}
 		$msg .= '</span>';
