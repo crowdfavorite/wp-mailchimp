@@ -1308,11 +1308,12 @@ function mailchimpSF_signup_submit() {
 						
 						$account = $api->getAccountDetails( array("modules", "orders", "rewards-credits", "rewards-inspections", "rewards-referrals", "rewards-applied") );
 						if ( !$api->errorCode ) {
+							list($dummy, $dc) = explode('-',get_option('mc_apikey'));
 							$uid 		= $account['user_id'];
 							$username 	= $account['username'];
 							$eid 		= base64_encode($email);
 							
-							$msg .= ' ' . sprintf(__("<a href=\"%s\">Click here to update your profile.</a>", 'mailchimp_i18n'), "http://$username.list-manage.com/subscribe/send-email?u=$uid&id=$listId&e=$eid");
+							$msg .= ' ' . sprintf(__("<a href=\"%s\">Click here to update your profile.</a>", 'mailchimp_i18n'), "http://$username.$dc.list-manage.com/subscribe/send-email?u=$uid&id=$listId&e=$eid");
 						}
 						
 						$errs[] = $msg;
