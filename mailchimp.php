@@ -3,7 +3,7 @@
 Plugin Name: MailChimp
 Plugin URI: http://www.mailchimp.com/plugins/mailchimp-wordpress-plugin/
 Description: The MailChimp plugin allows you to quickly and easily add a signup form for your MailChimp list.
-Version: 1.2.13
+Version: 1.2.14
 Author: MailChimp and Crowd Favorite
 Author URI: http://mailchimp.com/api/
 */
@@ -25,7 +25,7 @@ Author URI: http://mailchimp.com/api/
 */
 
 // Version constant for easy CSS refreshes
-define('MCSF_VER', '1.2.13');
+define('MCSF_VER', '1.2.14');
 
 // What's our permission (capability) threshold
 define('MCSF_CAP_THRESHOLD', 'manage_options');
@@ -57,8 +57,8 @@ function mailchimpSF_plugin_init() {
 	$textdomain = 'mailchimp_i18n';
 	$locale = apply_filters( 'plugin_locale', get_locale(), $textdomain);
 	load_textdomain('mailchimp_i18n', MCSF_LANG_DIR.$textdomain.'-'.$locale.'.mo');
-	
-	// Bring in our appropriate JS and CSS resources 
+
+	// Bring in our appropriate JS and CSS resources
 	mailchimpSF_load_resources();
 }
 add_action( 'init', 'mailchimpSF_plugin_init' );
@@ -79,7 +79,7 @@ function mailchimpSD_plugin_action_links($links) {
 add_filter('plugin_action_links_'.plugin_basename(__FILE__), 'mailchimpSD_plugin_action_links', 10, 1);
 
 /**
- * Loads the appropriate JS and CSS resources depending on 
+ * Loads the appropriate JS and CSS resources depending on
  * settings and context (admin or not)
  *
  * @return void
@@ -97,14 +97,14 @@ function mailchimpSF_load_resources() {
 			));
 		}
 	}
-	
+
 	if (get_option('mc_use_datepicker') == 'on' && !is_admin()) {
 		// Datepicker theme
 		wp_enqueue_style('flick', MCSF_URL.'/css/flick/flick.css');
 		// Datepicker JS
 		wp_enqueue_script('datepicker', MCSF_URL.'/js/datepicker.js', array('jquery','jquery-ui-core'));
 	}
-	
+
 	wp_enqueue_style('mailchimpSF_main_css', home_url('?mcsf_action=main_css&ver='.MCSF_VER));
 	wp_enqueue_style('mailchimpSF_ie_css', MCSF_URL.'css/ie.css');
 	global $wp_styles;
@@ -137,8 +137,8 @@ function mc_datepicker_load() {
 				changeYear: true,
 				beforeShow: function(input, inst) { $('#ui-datepicker-div').addClass('show'); },
 				dateFormat: 'yy/mm/dd',
-			});			
-			
+			});
+
 			d = new Date();
 			$('.birthdate-pick').datepicker({
 				autoFocusNextInput: true,
@@ -150,11 +150,11 @@ function mc_datepicker_load() {
 				beforeShow: function(input, inst) { $('#ui-datepicker-div').removeClass('show'); },
 				dateFormat: 'mm/dd',
 			});
-			
-				
+
+
 		});
 	</script>
-	<?php 
+	<?php
 }
 if (get_option('mc_use_datepicker') == 'on' && !is_admin()) {
 	add_action('wp_head', 'mc_datepicker_load');
@@ -178,18 +178,18 @@ add_action('init', 'mailchimpSF_early_request_handler', 0);
 
 /**
  * Outputs the front-end CSS.  This checks several options, so it
- * was best to put it in a Request-handled script, as opposed to 
+ * was best to put it in a Request-handled script, as opposed to
  * a static file.
  */
 function mailchimpSF_main_css() {
 	?>
-	.mc_error_msg { 
+	.mc_error_msg {
 		color: red;
 	}
 	.mc_success_msg {
 		color: green;
 	}
-	.mc_merge_var{ 
+	.mc_merge_var{
 		padding:0;
 		margin:0;
 	}
@@ -197,7 +197,7 @@ function mailchimpSF_main_css() {
 // If we're utilizing custom styles
 if (get_option('mc_custom_style')=='on'){
 	?>
-	#mc_signup_form { 
+	#mc_signup_form {
 		padding:5px;
 		border-width: <?php echo get_option('mc_form_border_width'); ?>px;
 		border-style: <?php echo (get_option('mc_form_border_width')==0) ? 'none' : 'solid'; ?>;
@@ -205,8 +205,8 @@ if (get_option('mc_custom_style')=='on'){
 		color: #<?php echo get_option('mc_form_text_color'); ?>;
 		background-color: #<?php echo get_option('mc_form_background'); ?>;
 	}
-	
-	
+
+
 	.mc_custom_border_hdr {
 		border-width: <?php echo get_option('mc_header_border_width'); ?>px;
 		border-style: <?php echo (get_option('mc_header_border_width')==0) ? 'none' : 'solid'; ?>;
@@ -224,11 +224,11 @@ if (get_option('mc_custom_style')=='on'){
 	#mc_signup_form {}
 	#mc_signup_form .mc_var_label {}
 	#mc_signup_form .mc_input {}
-	#mc-indicates-required { 
+	#mc-indicates-required {
 		width:100%;
 	}
 	#mc_display_rewards {}
-	.mc_interests_header { 
+	.mc_interests_header {
 		font-weight:bold;
 	}
 	div.mc_interest{
@@ -236,11 +236,11 @@ if (get_option('mc_custom_style')=='on'){
 	}
 	#mc_signup_form input.mc_interest {}
 	#mc_signup_form select {}
-	#mc_signup_form label.mc_interest_label { 
+	#mc_signup_form label.mc_interest_label {
 		display:inline;
 	}
-	.mc_signup_submit { 
-		text-align:center; 
+	.mc_signup_submit {
+		text-align:center;
 	}
 	ul.mc_list {
 		list-style-type: none;
@@ -266,7 +266,7 @@ if (get_option('mc_custom_style')=='on'){
  */
 function mailchimpSF_add_pages(){
 	// Add settings page for users who can edit plugins
-	add_options_page( __( 'MailChimp Setup', 'mailchimp_i18n' ), __( 'MailChimp Setup', 'mailchimp_i18n' ), MCSF_CAP_THRESHOLD, 'mailchimpSF_options', 'mailchimpSF_setup_page');  
+	add_options_page( __( 'MailChimp Setup', 'mailchimp_i18n' ), __( 'MailChimp Setup', 'mailchimp_i18n' ), MCSF_CAP_THRESHOLD, 'mailchimpSF_options', 'mailchimpSF_setup_page');
 }
 add_action('admin_menu', 'mailchimpSF_add_pages');
 
@@ -279,7 +279,7 @@ function mailchimpSF_request_handler() {
 					wp_die('Cheatin&rsquo; huh?');
 				}
 
-				// erase API Key 
+				// erase API Key
 			    update_option('mc_apikey', '');
 				break;
 			case 'update_mc_apikey':
@@ -287,7 +287,7 @@ function mailchimpSF_request_handler() {
 				if (!current_user_can(MCSF_CAP_THRESHOLD) || !wp_verify_nonce($_POST['_mcsf_nonce_action'], 'update_mc_api_key')) {
 					wp_die('Cheatin&rsquo; huh?');
 				}
-				
+
 				mailchimpSF_set_api_key(strip_tags(stripslashes($_POST['mc_apikey'])));
 				break;
 			case 'reset_list':
@@ -295,14 +295,14 @@ function mailchimpSF_request_handler() {
 				if (!current_user_can(MCSF_CAP_THRESHOLD) || !wp_verify_nonce($_POST['_mcsf_nonce_action'], 'reset_mailchimp_list')) {
 					wp_die('Cheatin&rsquo; huh?');
 				}
-				
+
 				mailchimpSF_reset_list_settings();
 				break;
 			case 'change_form_settings':
 				if (!current_user_can(MCSF_CAP_THRESHOLD) || !wp_verify_nonce($_POST['_mcsf_nonce_action'], 'update_general_form_settings')) {
 					wp_die('Cheatin&rsquo; huh?');
 				}
-				
+
 				// Update the form settings
 				mailchimpSF_save_general_form_settings();
 				break;
@@ -311,14 +311,14 @@ function mailchimpSF_request_handler() {
 				if (!wp_verify_nonce($_POST['_mc_submit_signup_form_nonce'], 'mc_submit_signup_form')) {
 					wp_die('Cheatin&rsquo; huh?');
 				}
-				
+
 				// Attempt the signup
 				mailchimpSF_signup_submit();
-				
+
 				// Do a different action for html vs. js
 				switch ($_POST['mc_submit_type']) {
 					case 'html':
-						/* Allow to fall through.  The widget will pick up the 
+						/* Allow to fall through.  The widget will pick up the
 						* global message left over from the signup_submit function */
 						break;
 					case 'js':
@@ -335,9 +335,9 @@ add_action('init', 'mailchimpSF_request_handler');
 
 /**
  * Upgrades data if it needs to. Checks on admin_init
- * 
+ *
  * @return void
- */ 
+ */
 function mailchimpSF_upgrade() {
 	// See if we need an upgrade
 	if (mailchimpSF_needs_upgrade()) {
@@ -349,14 +349,14 @@ function mailchimpSF_upgrade() {
 add_action('admin_init', 'mailchimpSF_upgrade');
 
 /**
- * Checks to see if we're storing a password, if so, we need 
+ * Checks to see if we're storing a password, if so, we need
  * to upgrade to the API key
  *
  * @return bool
  **/
 function mailchimpSF_needs_upgrade() {
 	$igs = get_option('mc_interest_groups');
-	
+
 	if ($igs !== false // we have an option
 		&& (
 			empty($igs) || // it can be an empty array (no interest groups)
@@ -379,10 +379,10 @@ function mailchimpSF_do_upgrade() {
     delete_option('mc_password');
     $api = new mailchimpSF_MCAPI(get_option('mc_apikey'));
     $igs = $api->listInterestGroupings(get_option('mc_list_id'));
-	
+
 	// If we don't have any interest groups store an empty array, not (bool) false
 	$igs = !$igs ? array() : $igs;
-	
+
     update_option('mc_interest_groups', $igs);
 }
 
@@ -410,7 +410,7 @@ function mailchimpSF_set_api_key($api_key = '') {
             $delete_setup = true;
 			foreach($lists as $list) {
 				if ($list['id'] == $cur_list_id) {
-					$list_id = isset($_POST['mc_list_id']) ? $_POST['mc_list_id'] : ''; 
+					$list_id = isset($_POST['mc_list_id']) ? $_POST['mc_list_id'] : '';
 					$delete_setup = false;
 				}
 			}
@@ -425,8 +425,8 @@ function mailchimpSF_set_api_key($api_key = '') {
 	}
 
 	// Set a global message
-	mailchimpSF_global_msg($msg); 
-	
+	mailchimpSF_global_msg($msg);
+
 	// If we need to delete our setup, do it
 	if ($delete_setup){
 		mailchimpSF_delete_setup();
@@ -477,7 +477,7 @@ function mailchimpSF_reset_list_settings() {
 	delete_option('mc_use_javascript');
 	delete_option('mc_use_unsub_link');
 	delete_option('mc_use_datepicker');
-	
+
 	delete_option('mc_header_content');
 	delete_option('mc_subheader_content');
 	delete_option('mc_submit_text');
@@ -493,7 +493,7 @@ function mailchimpSF_reset_list_settings() {
 	delete_option('mc_form_border_color');
 	delete_option('mc_form_background');
 	delete_option('mc_form_text_color');
-	
+
 	$msg = '<p class="success_msg">'.esc_html(__('Successfully Reset your List selection... Now you get to pick again!', 'mailchimp_i18n')).'</p>';
 	mailchimpSF_global_msg($msg);
 }
@@ -505,12 +505,12 @@ function mailchimpSF_reset_list_settings() {
  **/
 function mailchimpSF_global_msg($msg = null) {
 	global $mcsf_msgs;
-	
+
 	// Make sure we're formed properly
 	if (!is_array($mcsf_msgs)) {
 		$mcsf_msgs = array();
 	}
-	
+
 	// See if we're getting
 	if (is_null($msg)) {
 		return implode('', $mcsf_msgs);
@@ -527,7 +527,7 @@ function mailchimpSF_global_msg($msg = null) {
 function mailchimpSF_set_form_defaults($list_name = '') {
 	update_option('mc_header_content',__( 'Sign up for', 'mailchimp_i18n' ).' '.$list_name);
 	update_option('mc_submit_text',__( 'Subscribe', 'mailchimp_i18n' ));
-	
+
 	update_option('mc_use_datepicker', 'on');
 	update_option('mc_custom_style','on');
 	update_option('mc_use_javascript','on');
@@ -536,7 +536,7 @@ function mailchimpSF_set_form_defaults($list_name = '') {
 	update_option('mc_header_border_color','E3E3E3');
 	update_option('mc_header_background','FFFFFF');
 	update_option('mc_header_text_color','CC6600');
-	
+
 	update_option('mc_form_border_width','1');
 	update_option('mc_form_border_color','C4D3EA');
 	update_option('mc_form_background','EEF3F8');
@@ -567,7 +567,7 @@ function mailchimpSF_save_general_form_settings() {
 		$msg = '<p class="success_msg">'.__('Fancy Javascript submission turned Off!', 'mailchimp_i18n').'</p>';
 		mailchimpSF_global_msg($msg);
 	}
-	
+
 	if (isset($_POST['mc_use_datepicker'])){
 		update_option('mc_use_datepicker', 'on');
 		$msg = '<p class="success_msg">'.__('Datepicker turned On!', 'mailchimp_i18n').'</p>';
@@ -577,7 +577,7 @@ function mailchimpSF_save_general_form_settings() {
 		$msg = '<p class="success_msg">'.__('Datepicker turned Off!', 'mailchimp_i18n').'</p>';
 		mailchimpSF_global_msg($msg);
 	}
-	
+
 	if (isset($_POST['mc_use_unsub_link'])){
 		update_option('mc_use_unsub_link', 'on');
 		$msg = '<p class="success_msg">'.__('Unsubscribe link turned On!', 'mailchimp_i18n').'</p>';
@@ -591,7 +591,7 @@ function mailchimpSF_save_general_form_settings() {
 	$content = stripslashes($_POST['mc_header_content']);
 	$content = str_replace("\r\n","<br/>", $content);
 	update_option('mc_header_content', $content );
-	
+
 	$content = stripslashes($_POST['mc_subheader_content']);
 	$content = str_replace("\r\n","<br/>", $content);
 	update_option('mc_subheader_content', $content );
@@ -600,7 +600,7 @@ function mailchimpSF_save_general_form_settings() {
 	$submit_text = stripslashes($_POST['mc_submit_text']);
 	$submit_text = str_replace("\r\n","", $submit_text);
 	update_option('mc_submit_text', $submit_text);
-	
+
 	// Set Custom Style option
 	update_option('mc_custom_style', isset($_POST['mc_custom_style']) ? 'on' : 'off');
 
@@ -648,38 +648,38 @@ function mailchimpSF_save_general_form_settings() {
 function mailchimpSF_change_list_if_necessary($api_key) {
 	// Simple permission check before going through all this
 	if (!current_user_can(MCSF_CAP_THRESHOLD)) { return; }
-	
+
 	$api = new mailchimpSF_MCAPI($api_key);
     //we *could* support paging, but few users have that many lists (and shouldn't)
 	$lists = $api->lists(array(),0,100);
 	$lists = $lists['data'];
-	
+
 	if (is_array($lists) && !empty($lists) && isset($_POST['mc_list_id'])) {
-		
+
 		/* If our incoming list ID (the one chosen in the select dropdown)
 		is in our array of lists, the set it to be the active list */
-		foreach($lists as $key => $list) { 
+		foreach($lists as $key => $list) {
 			if ($list['id'] == $_POST['mc_list_id']) {
-				$list_id = $_POST['mc_list_id']; 
-				$list_name = $list['name']; 
+				$list_id = $_POST['mc_list_id'];
+				$list_name = $list['name'];
 				$list_key = $key;
 			}
 		}
-	
+
 		$orig_list = get_option('mc_list_id');
 		if ($list_id != '') {
 	        update_option('mc_list_id', $list_id);
 		    update_option('mc_list_name', $list_name);
 			update_option('mc_email_type_option', $lists[$list_key]['email_type_option']);
 
-		
+
 			// See if the user changed the list
 	        if ($orig_list != $list_id){
 				// The user changed the list, Reset the Form Defaults
 				mailchimpSF_set_form_defaults($list_name);
 	        }
 	//		email_type_option
-		
+
 			// Grab the merge vars and interest groups
 		    $mv = $api->listMergeVars($list_id);
 		    $igs = $api->listInterestGroupings($list_id);
@@ -706,7 +706,7 @@ function mailchimpSF_change_list_if_necessary($api_key) {
 			if (is_array($igs)) {
 				$igs_text .= sprintf(__('and %s Sets of Interest Groups', 'mailchimp_i18n'), count($igs));
 			}
-		
+
 		    $msg = '<p class="success_msg">'.
 		        sprintf(
 					__('Success! Loaded and saved the info for %d Merge Variables', 'mailchimp_i18n').$igs_text,
@@ -756,19 +756,19 @@ if (get_option('mc_apikey') == '') {
 		<form method="post" action="options-general.php?page=mailchimpSF_options">
 			<h3><?php esc_html_e('Login Info', 'mailchimp_i18n');?></h3>
 			<?php esc_html_e('To start using the MailChimp plugin, we first need to login and get your API Key. Please enter your MailChimp API Key below.', 'mailchimp_i18n'); ?>
-		
+
 			<br/>
-		
-			<?php 
+
+			<?php
 			echo sprintf(
-				'%1$s <a href="http://www.mailchimp.com/signup/" target="_blank">%2$s</a>', 
-				esc_html(__("Don't have a MailChimp account?", 'mailchimp_i18n')), 
+				'%1$s <a href="http://www.mailchimp.com/signup/" target="_blank">%2$s</a>',
+				esc_html(__("Don't have a MailChimp account?", 'mailchimp_i18n')),
 				esc_html(__('Try one for Free!', 'mailchimp_i18n'))
-			); 
+			);
 			?>
-		
+
 			<br/>
-		
+
 			<table class="form-table">
 				<tr valign="top">
 				<th scope="row"><?php esc_html_e('API Key', 'mailchimp_i18n'); ?>:</th>
@@ -779,14 +779,14 @@ if (get_option('mc_apikey') == '') {
 				</td>
 				</tr>
 			</table>
-		
+
 			<input type="hidden" name="mcsf_action" value="update_mc_apikey"/>
 			<input type="submit" name="Submit" value="<?php esc_attr_e('Save & Check', 'mailchimp_i18n');?>" class="button" />
 			<?php wp_nonce_field('update_mc_api_key', '_mcsf_nonce_action'); ?>
 		</form>
 	</div>
 
-	<?php 
+	<?php
     if (get_option('mc_username')!=''){
 		?>
 		<strong><?php esc_html_e('Notes', 'mailchimp_i18n'); ?>:</strong>
@@ -827,7 +827,7 @@ if (get_option('mc_apikey') == '') return;
 if (get_option('mc_apikey')!=''){
 	?>
 	<h3><?php esc_html_e('Your Lists', 'mailchimp_i18n'); ?></h3>
-	
+
 <div>
 
 	<p><?php esc_html_e('Please select the List you wish to create a Signup Form for.', 'mailchimp_i18n'); ?></p>
@@ -842,11 +842,11 @@ if (get_option('mc_apikey')!=''){
 		if (count($lists) == 0) {
 			?>
 			<span class='error_msg'>
-				<?php 
+				<?php
 				echo sprintf(
 					esc_html(__("Uh-oh, you don't have any lists defined! Please visit %s, login, and setup a list before using this tool!", 'mailchimp_i18n')),
 					"<a href='http://www.mailchimp.com/'>MailChimp</a>"
-				); 
+				);
 				?>
 			</span>
 			<?php
@@ -888,7 +888,7 @@ if (get_option('mc_apikey')!=''){
 <br/>
 
 <?php
-} 
+}
 else {
 //display the selected list...
 ?>
@@ -949,7 +949,7 @@ if (get_option('mc_list_id') == '') return;
 	<em><?php esc_html_e('You can fill this with your own Text, HTML markup (including image links), or Nothing!', 'mailchimp_i18n'); ?></em>
 	</td>
 	</tr>
-	
+
     <tr valign="top">
 	<th scope="row"><?php esc_html_e('Sub-header content', 'mailchimp_i18n'); ?>:</th>
 	<td>
@@ -986,7 +986,7 @@ if (get_option('mc_list_id') == '') return;
 		<tr><th><?php esc_html_e('Background Color', 'mailchimp_i18n'); ?>:</th><td>#<input type="text" name="mc_header_background" size="7" maxlength="6" value="<?php echo esc_attr(get_option('mc_header_background')); ?>"/><br/>
 			<em><?php esc_html_e('do not enter initial', 'mailchimp_i18n'); ?> <strong>#</strong></em>
 		</td></tr>
-		
+
         <tr><th colspan="2"><?php esc_html_e('Form Settings', 'mailchimp_i18n'); ?>:</th></tr>
 		<tr><th><?php esc_html_e('Border Width', 'mailchimp_i18n'); ?>:</th><td><input type="text" name="mc_form_border_width" size="3" maxlength="3" value="<?php echo esc_attr(get_option('mc_form_border_width')); ?>"/> px<br/>
 			<em><?php esc_html_e('Set to 0 for no border, do not enter', 'mailchimp_i18n'); ?> <strong>px</strong>!</em>
@@ -1023,7 +1023,7 @@ if (count($mv) == 0 || !is_array($mv)){
 	<?php
 } else {
 	?>
-	
+
 	<table class='widefat'>
 		<tr valign="top">
 			<th><?php esc_html_e('Name', 'mailchimp_i18n');?></th>
@@ -1149,8 +1149,8 @@ add_shortcode('mailchimpsf_form', 'mailchimpSF_shortcode');
 
 /**
  * Attempts to signup a user, per the $_POST args.
- * 
- * This sets a global message, that is then used in the widget 
+ *
+ * This sets a global message, that is then used in the widget
  * output to retrieve and display that message.
  *
  * @return bool
@@ -1158,20 +1158,20 @@ add_shortcode('mailchimpsf_form', 'mailchimpSF_shortcode');
 function mailchimpSF_signup_submit() {
 	$mv = get_option('mc_merge_vars', array());
 	$mv_tag_keys = array();
-	
+
 	$igs = get_option('mc_interest_groups', array());
-	
+
 	$success = true;
 	$listId = get_option('mc_list_id');
 	$email = isset($_POST['mc_mv_EMAIL']) ? strip_tags(stripslashes($_POST['mc_mv_EMAIL'])) : '';
-	$merge = $errs = array(); // Set up some vars
-	
+	$merge = $errs = $html_errs = array(); // Set up some vars
+
 	// Loop through our Merge Vars, and if they're empty, but required, then print an error, and mark as failed
 	foreach($mv as $var) {
 		$opt = 'mc_mv_'.$var['tag'];
-		
+
 		$opt_val = isset($_POST[$opt]) ? $_POST[$opt] : '';
-		
+
 		if (is_array($opt_val) && isset($opt_val['area'])) {
 			$opt_val = implode('-', $opt_val);
 		}
@@ -1188,7 +1188,7 @@ function mailchimpSF_signup_submit() {
 		else if (is_array($opt_val)) {
 			$opt_val = implode($opt_val);
 		}
-	
+
 		if ($var['req'] == 'Y' && trim($opt_val) == '') {
 			$success = false;
 			$errs[] = sprintf(__("You must fill in %s.", 'mailchimp_i18n'), esc_html($var['name']));
@@ -1198,15 +1198,15 @@ function mailchimpSF_signup_submit() {
 				$merge[$var['tag']] = $opt_val;
 			}
 		}
-	
+
 		// We also want to create an array where the keys are the tags for easier validation later
 		$mv_tag_keys[$var['tag']] = $var;
 
 	}
-	
+
 	// Head back to the beginning of the merge vars array
 	reset($mv);
-	
+
 	// Ensure we have an array
 	$igs = !is_array($igs) ? array() : $igs;
 	foreach ($igs as $ig) {
@@ -1237,7 +1237,7 @@ function mailchimpSF_signup_submit() {
 						);
 					}
 					break;
-				default: 
+				default:
 					// Nothing
 					break;
 			}
@@ -1251,7 +1251,7 @@ function mailchimpSF_signup_submit() {
 	}
 
 	// If we're good
-	if ($success) {		
+	if ($success) {
 		// Clear out empty merge vars
 		foreach ($merge as $k => $v) {
 			if (is_array($v) && empty($v)) {
@@ -1261,7 +1261,7 @@ function mailchimpSF_signup_submit() {
 				unset($merge[$k]);
 			}
 		}
-		
+
 		// If we have an empty $merge, then assign empty string.
 		if (count($merge) == 0 || $merge == '') {
 			$merge = '';
@@ -1288,10 +1288,10 @@ function mailchimpSF_signup_submit() {
 								}
 							}
 							break;
-						
+
 						default:
 							break;
-					}	
+					}
 				}
 			}
 		}
@@ -1300,24 +1300,36 @@ function mailchimpSF_signup_submit() {
 			$retval = $api->listSubscribe( $listId, $email, $merge, $email_type);
 			if (!$retval) {
 				switch($api->errorCode) {
-					case '105' : 
-						$errs[] = __("Please try again later", 'mailchimp_i18n').'.'; 
+					case '105' :
+						$errs[] = __("Please try again later", 'mailchimp_i18n').'.';
 						break;
-					case '214' : 
-						$errs[] = __("That email address is already subscribed to the list", 'mailchimp_i18n').'.'; 
+					case '214' :
+						$msg = __("That email address is already subscribed to the list", 'mailchimp_i18n') . '.';
+
+						$account = $api->getAccountDetails(array("modules", "orders", "rewards-credits", "rewards-inspections", "rewards-referrals", "rewards-applied"));
+						if (!$api->errorCode) {
+							list($dummy, $dc) = explode('-',get_option('mc_apikey'));
+							$uid = $account['user_id'];
+							$username = $account['username'];
+							$eid = base64_encode($email);
+							$msg .= ' ' . sprintf(__('<a href="%s">Click here to update your profile.</a>', 'mailchimp_i18n'), "http://$username.$dc.list-manage.com/subscribe/send-email?u=$uid&id=$listId&e=$eid");
+						}
+
+						$errs[] = $msg;
+						$html_errs[] = count($errs)-1;
 						break;
-					case '250' : 
-						list($field, $rest) = explode(' ', $api->errorMessage, 2);					
+					case '250' :
+						list($field, $rest) = explode(' ', $api->errorMessage, 2);
 						$errs[] = sprintf(__("You must fill in %s.", 'mailchimp_i18n'), esc_html($mv_tag_keys[$field]['name']));
 						break;
-					case '254' : 
+					case '254' :
 						list($i1, $i2, $i3, $field, $rest) = explode(' ',$api->errorMessage,5);
 						$errs[] = sprintf(__("%s has invalid content.", 'mailchimp_i18n'), esc_html($mv_tag_keys[$field]['name']));
 						break;
-					case '270' : 
+					case '270' :
 						$errs[] = __("An invalid Interest Group was selected", 'mailchimp_i18n').'.';
 						break;
-					case '502' : 
+					case '502' :
 						$errs[] = __("That email address is invalid", 'mailchimp_i18n').'.';
 						break;
 					default:
@@ -1328,22 +1340,25 @@ function mailchimpSF_signup_submit() {
 			}
 		}
 	}
-	
+
 	// If we have errors, then show them
 	if (count($errs) > 0) {
 		$msg = '<span class="mc_error_msg">';
-		foreach($errs as $error){
-			$msg .= '&raquo; '.esc_html($error).'<br />';
+		foreach($errs as $error_index => $error){
+			if (!in_array($error_index, $html_errs)) {
+				$error = esc_html($error);
+			}
+			$msg .= '&raquo; '.$error.'<br />';
 		}
 		$msg .= '</span>';
 	}
 	else {
 		$msg = "<strong class='mc_success_msg'>".esc_html(__("Success, you've been signed up! Please look for our confirmation email!", 'mailchimp_i18n'))."</strong>";
 	}
-	
+
 	// Set our global message
 	mailchimpSF_global_msg($msg);
-	
+
 	return $success;
 }
 
@@ -1354,7 +1369,7 @@ function mailchimpSF_signup_submit() {
 **********************/
 /**
  * Utility function to allow placement of plugin in plugins, mu-plugins, child or parent theme's plugins folders
- * 
+ *
  * This function must be ran _very early_ in the load process, as it sets up important constants for the rest of the plugin
  */
 function mailchimpSF_where_am_i() {
@@ -1392,14 +1407,14 @@ function mailchimpSF_where_am_i() {
 			break;
 		}
 	}
-	
+
 	// Define our complete filesystem path
 	define('MCSF_DIR', $mscf_dir);
-	
-	/* Lang location needs to be relative *from* ABSPATH, 
+
+	/* Lang location needs to be relative *from* ABSPATH,
 	so strip it out of our language dir location */
-	define('MCSF_LANG_DIR', trailingslashit(MCSF_DIR).'po/'); 
-	
+	define('MCSF_LANG_DIR', trailingslashit(MCSF_DIR).'po/');
+
 	// Define our complete URL to the plugin folder
 	define('MCSF_URL', $mscf_url);
 }
