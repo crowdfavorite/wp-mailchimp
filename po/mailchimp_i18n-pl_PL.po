@@ -1,0 +1,416 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR MailChimp API Support Team
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: MailChimp 1.1.5\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/mailchimp\n"
+"POT-Creation-Date: 2009-07-15 14:23-0400\n"
+"PO-Revision-Date: 2013-06-28 01:43+0100\n"
+"Last-Translator: Kazik <netboy@netboy.pl>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+
+#: mailchimp_includes.php:27 mailchimp_includes.php:62
+msgid "You must fill in %s."
+msgstr "Musisz uzupełnić %s."
+
+#: mailchimp_includes.php:59
+msgid "That email address is already subscribed to the list"
+msgstr "Ten adres e-mail jest już zapisany na listę"
+
+#: mailchimp_includes.php:66
+#, php-format
+msgid "%s has invalid content"
+msgstr "%s ma nieprawidłową zawartość"
+
+#: mailchimp_includes.php:68
+msgid "An invalid Interest Group was selected"
+msgstr "Została wybrana nieprawidłowa Grupa zainteresowań"
+
+#: mailchimp_includes.php:69
+msgid "That email address is invalid"
+msgstr "Ten adres e-mail jest nieprawidłowy"
+
+#: mailchimp_includes.php:75
+msgid "Success, you've been signed up! Please look for our confirmation email!"
+msgstr ""
+"Brawo, zapisałeś/-łaś się! Proszę otwórz przesłany e-mail potwierdzający."
+
+#: mailchimp_includes.php:131
+msgid "required field"
+msgstr "pole obowiązkowe"
+
+#: mailchimp_includes.php:168
+msgid "unsubscribe from list"
+msgstr "wypisz się z listy"
+
+#: mailchimp_includes.php:171
+msgid "powered by"
+msgstr "powered by"
+
+#: mailchimp.php:135
+msgid "MailChimp Setup"
+msgstr "Ustawienia MailChimp"
+
+#: mailchimp.php:150
+msgid ""
+"While upgrading the plugin setup, we were unable to login to your account. "
+"You will need to login again and setup your list."
+msgstr ""
+"Dostosowując ustawienia wtyczki, nie mogliśmy się zalogować na Twoje konto. "
+"Będziesz musiał ponownie się zalogować i ustawić swoją listę."
+
+#: mailchimp.php:156
+msgid "MailChimp List Setup"
+msgstr "Ustawienia listy MailChimp"
+
+#: mailchimp.php:166
+msgid ""
+"Success! We were able to verify your username & password! Let's continue, "
+"shall we?"
+msgstr ""
+"Brawo! Zweryfikowaliśmy Twoją nazwę użytkownika oraz hasło! Kontynuujemy?"
+
+#: mailchimp.php:178
+msgid ""
+"Uh-oh, we were unable to login and verify your username & password. Please "
+"check them and try again!"
+msgstr ""
+"Ups, nie zdołaliśmy zweryfikować Twojej nazwy użytkownika oraz hasła. "
+"Sprawdź czy wpisałeś je poprawnie!"
+
+#: mailchimp.php:179
+msgid "The server said:"
+msgstr "Serwer odpowiedział:"
+
+#: mailchimp.php:222
+msgid "Sign up for"
+msgstr "Zapisz się do"
+
+#: mailchimp.php:223
+msgid "Subscribe"
+msgstr "Zapisz się"
+
+#: mailchimp.php:253
+#, php-format
+msgid ""
+"Success! Loaded and saved the info for %d Merge Variables and %d Interest "
+"Groups from your list"
+msgstr ""
+"Sukces! Załadowano i zapisano informacje dotyczące %d \"Merge Variables\" "
+"oraz %d Grup zainteresowań z twojej listy"
+
+#: mailchimp.php:256
+msgid ""
+"Now you should either Turn On the MailChimp Widget or change your options "
+"below, then turn it on."
+msgstr ""
+"Teraz powinieneś/powinnaś włączyć MailChimp Widget lub zacząć od zmiany "
+"opcji."
+
+#: mailchimp.php:284
+msgid "Successfully Reset your List selection... Now you get to pick again!"
+msgstr "Udało się zresetować wybór Listy… Teraz możesz wybierać ponownie!"
+
+#: mailchimp.php:290
+msgid "Monkey Rewards turned On!"
+msgstr "Monkey Rewards włączone!"
+
+#: mailchimp.php:294
+msgid "Monkey Rewards turned Off!"
+msgstr "Monkey Rewards wyłączone!"
+
+#: mailchimp.php:299
+msgid "Fancy Javascript submission turned On!"
+msgstr "Zaawansowana obsługa formularza włączona!"
+
+#: mailchimp.php:303
+msgid "Fancy Javascript submission turned Off!"
+msgstr "Zaawansowana obsługa formularza wyłączona!"
+
+#: mailchimp.php:309
+msgid "Unsubscribe link turned On!"
+msgstr "Link służący do wypisania się włączony!"
+
+#: mailchimp.php:313
+msgid "Unsubscribe link turned Off!"
+msgstr "Link służący do wypisania się wyłączony!"
+
+#: mailchimp.php:359
+msgid "Successfully Updated your List Subscribe Form Settings!"
+msgstr "Ustawienia Formularza rejestracji zostały zmodyfikowane!"
+
+#: mailchimp.php:372
+msgid "Login Info"
+msgstr "Informacje o Loginie"
+
+#: mailchimp.php:373
+msgid ""
+"To start using the MailChimp plugin, we first need to login and get your API "
+"Key. Please enter your MailChimp username and password below."
+msgstr ""
+"Aby zacząć korzystać z wtyczki MailChimp, prosimy o zalogowanie się i "
+"pobranie klucza API. Wprowadź swoją nazwę użytkownika i hasło poniżej."
+
+#: mailchimp.php:375
+msgid ""
+"Don't have a MailChimp account? <a href='http://www.mailchimp.com/tryit."
+"phtml' target='_blank'>Try one for Free</a>!"
+msgstr ""
+"Nie masz konta MailChimp? <a href='http://www.mailchimp.com/tryit.phtml' "
+"target='_blank'>Wypróbuj za darmo</a>!"
+
+#: mailchimp.php:379
+msgid "Username"
+msgstr "Nazwa użytkownika"
+
+#: mailchimp.php:383
+msgid "Password"
+msgstr "Hasło"
+
+#: mailchimp.php:389
+msgid "Save & Check"
+msgstr "Zapisz i Sprawdź"
+
+#: mailchimp.php:394
+msgid "Notes"
+msgstr "Notatki"
+
+#: mailchimp.php:395
+msgid "Changing your settings at MailChimp.com may cause this to stop working."
+msgstr ""
+"Zmiana ustawień na MailChimp.com może spowodować, że to przestanie działać."
+
+#: mailchimp.php:396
+msgid ""
+"If you change your login to a different account, the info you have setup "
+"below will be erased."
+msgstr ""
+"Jeśli zmienisz swój login na inne konto, informacje ustawione poniżej "
+"zostaną usunięte."
+
+#: mailchimp.php:397
+msgid ""
+"If any of that happens, no biggie - just reconfigure your login and the "
+"items below..."
+msgstr ""
+"Jeśli cokolwiek z tego się zdarzy, nie panikuj - po prostu zrekonfiguruj "
+"swój login i pozycje poniżej..."
+
+#: mailchimp.php:403
+msgid "Logged in as"
+msgstr "Zalogowany jako"
+
+#: mailchimp.php:407
+msgid "Logout"
+msgstr "Wyloguj się"
+
+#: mailchimp.php:421
+msgid "Your Lists"
+msgstr "Twoje Listy"
+
+#: mailchimp.php:423
+msgid "Please select the List you wish to create a Signup Form for."
+msgstr "Proszę wybierz Listę, dla której chcesz stworzyć Formularz rejestracji"
+
+#: mailchimp.php:432
+#, php-format
+msgid ""
+"Uh-oh, you don't have any lists defined! Please visit %s, login, and setup a "
+"list before using this tool!"
+msgstr ""
+"Ups, nie masz zdefiniowanych żadnych list! Proszę odwiedź %s, zaloguj się, i "
+"skonfiguruj listę zanim skorzystasz z tego narzędzia!"
+
+#: mailchimp.php:437
+msgid "Select A List"
+msgstr "Wybierz Listę"
+
+#: mailchimp.php:450
+msgid "Update List"
+msgstr "Zaktualizuj Listę"
+
+#: mailchimp.php:453
+msgid "Note:"
+msgstr "Notatka:"
+
+#: mailchimp.php:453
+msgid ""
+"Updating your list will not cause settings below to be lost. Changing to a "
+"new list will."
+msgstr ""
+"Aktualizacja Twojej listy nie spowoduje usunięcia poniższych ustawień. "
+"Wyberanie innej listy owszem."
+
+#: mailchimp.php:471
+msgid "Reset List Options and Select again"
+msgstr "Zresetuj ustawienia Listy i wprowadź je ponownie"
+
+#: mailchimp.php:474
+msgid "Subscribe Form Widget Settings for this List"
+msgstr "Ustawienia Formularza rejestracji dla tej Listy"
+
+#: mailchimp.php:475
+msgid "Selected MailChimp List"
+msgstr "Wybrana Lista MailChimp"
+
+#: mailchimp.php:496 mailchimp.php:569 mailchimp.php:630
+msgid "Update Subscribe Form Settings"
+msgstr "Zaktualizuj ustawienia Formularza rejestracji"
+
+#: mailchimp.php:499
+msgid "Monkey Rewards"
+msgstr "Monkey Rewards"
+
+#: mailchimp.php:501
+msgid ""
+"turning this on will place a \"powered by MailChimp\" link in your form that "
+"will earn you credits with us. It is optional and can be turned on or off at "
+"any time."
+msgstr ""
+"włączenie tego spowoduje dodanie linka \"powered by MailChimp\" do Twojego "
+"formularza, który pozwoli Ci na zdobywanie kredytów. Opcja nieobowiązkowa, "
+"może być wyłączona w każdym momencie."
+
+#: mailchimp.php:505
+msgid "Use Javascript Support?"
+msgstr "Włączyć obsługę Javascript?"
+
+#: mailchimp.php:507
+msgid ""
+"turning this on will use fancy javascript submission and should degrade "
+"gracefully for users not using javascript. It is optional and can be turned "
+"on or off at any time."
+msgstr ""
+"ta opcja spowoduje włączenie zaawansowanego trybu obsługi formularza "
+"opartego o Javascript. Jest to całkowicie nieobowiązkowy tryb, który może "
+"być wyłączony w każdym momencie."
+
+#: mailchimp.php:511
+msgid "Include Unsubscribe link?"
+msgstr "Czy aktywować link to Formularza rezygnacji?"
+
+#: mailchimp.php:513
+msgid "turning this on will add a link to your host unsubscribe form"
+msgstr ""
+"włączenie tego spowoduje dodanie linka służącego do wypisania się na twoim "
+"serwerze"
+
+#: mailchimp.php:517
+msgid "Header content"
+msgstr "Zawartość nagłówka"
+
+#: mailchimp.php:520
+msgid ""
+"You can fill this with your own Text, HTML markup (including image links), "
+"or Nothing!"
+msgstr ""
+"Możesz to uzupełnić własnym tekstem, kodem HTML (zawierającym obrazki) lub "
+"pozostawić puste!"
+
+#: mailchimp.php:525
+msgid "Submit Button text"
+msgstr "Tekst przycisku potwierdzenia"
+
+#: mailchimp.php:532
+msgid "Custom Styling"
+msgstr "Własne style"
+
+#: mailchimp.php:536
+msgid "Turned On?"
+msgstr "Włączone?"
+
+#: mailchimp.php:537
+msgid ""
+"Header Settings (only applies if there are no HTML tags in the Header "
+"Content area above)"
+msgstr ""
+"Ustawienia nagłówka (obowiązują tylko jeśli nie ma tagów HTML w Zawartości "
+"nagłówka powyżej)"
+
+#: mailchimp.php:538 mailchimp.php:552
+msgid "Border Width"
+msgstr "Grubość ramki"
+
+#: mailchimp.php:539 mailchimp.php:553
+msgid "Set to 0 for no border, do not enter <strong>px</strong>!"
+msgstr "Ustaw 0 aby wyłączyć ramkę, nie wpisuj <strong>px</strong>!"
+
+#: mailchimp.php:541 mailchimp.php:555
+msgid "Border Color"
+msgstr "Kolor ramki"
+
+#: mailchimp.php:542 mailchimp.php:545 mailchimp.php:548 mailchimp.php:556
+#: mailchimp.php:559 mailchimp.php:562
+msgid "do not enter initial <strong>#</strong>"
+msgstr "nie wpisuj początkowego <strong>#</strong>"
+
+#: mailchimp.php:551
+msgid "Form Settings"
+msgstr "Ustawienia formularza"
+
+#: mailchimp.php:571
+msgid "Merge Variables Included"
+msgstr "\"Merge Variables\" włączone"
+
+#: mailchimp.php:574
+msgid "No Merge Variables found."
+msgstr "Nie znaleziono \"Merge Variables\""
+
+#: mailchimp.php:580 mailchimp.php:614
+msgid "Name"
+msgstr "Nazwa"
+
+#: mailchimp.php:581
+msgid "Tag"
+msgstr "Tag"
+
+#: mailchimp.php:582
+msgid "Required?"
+msgstr "Wymagane?"
+
+#: mailchimp.php:583
+msgid "Include?"
+msgstr "Włączyć?"
+
+#: mailchimp.php:603
+msgid "Interest Groups"
+msgstr "Grupy zainteresowań"
+
+#: mailchimp.php:605
+msgid "No Interest Groups Setup for this List"
+msgstr "Brak ustawionych Grup zainteresowań dla tej Listy"
+
+#: mailchimp.php:610
+msgid "Show?"
+msgstr "Pokaż?"
+
+#: mailchimp.php:617
+msgid "Input Type"
+msgstr "Sposób wprowadzania"
+
+#: mailchimp.php:620
+msgid "Options"
+msgstr "Opcje"
+
+#: wp-content/plugins/mailchimp/mailchimp_widget.php:140
+msgid "Preferred Format"
+msgstr "Preferowany format"
+
+#: wp-content/plugins/mailchimp/mailchimp_widget.php:143
+msgid "HTML"
+msgstr "HTML"
+
+#: wp-content/plugins/mailchimp/mailchimp_widget.php:144
+msgid "Text"
+msgstr "Tekst"
+
+#: wp-content/plugins/mailchimp/mailchimp_widget.php:145
+msgid "Mobile"
+msgstr "Telefon komórkowy"
