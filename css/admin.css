@@ -81,6 +81,8 @@ table.mc-widefat td label {
 
 table.mc-widefat td {
 	color: #5D5C5D !important;
+	font-size: 13px;
+	line-height: 18px !important;
 }
 
 table.mc-widefat td input {

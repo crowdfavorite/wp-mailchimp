@@ -918,29 +918,29 @@ if (get_option('mc_list_id') == '') return;
 <input type="hidden" name="mcsf_action" value="change_form_settings">
 <?php wp_nonce_field('update_general_form_settings', '_mcsf_nonce_action'); ?>
 <!--<input type="submit" value="<?php esc_attr_e('Update Subscribe Form Settings', 'mailchimp_i18n'); ?>" class="button" />-->
-<table class="widefat mc-widefat">
+<table class="widefat mc-widefat mc-label-options">
 	<tr><th colspan="2">Label Options</th></tr>
     <tr valign="top">
 		<th scope="row"><?php esc_html_e('Header content', 'mailchimp_i18n'); ?>:</th>
 		<td>
-			<textarea name="mc_header_content" rows="2" cols="50"><?php echo esc_html(get_option('mc_header_content')); ?></textarea><br/>
-			<em><?php esc_html_e('You can fill this with your own Text, HTML markup (including image links), or Nothing!', 'mailchimp_i18n'); ?></em>
+			<textarea name="mc_header_content" rows="2" cols="63"><?php echo esc_html(get_option('mc_header_content')); ?></textarea><br/>
+			<?php esc_html_e('You can fill this with your own Text, HTML markup (including image links), or Nothing!', 'mailchimp_i18n'); ?>
 		</td>
 	</tr>
 
     <tr valign="top">
 		<th scope="row"><?php esc_html_e('Sub-header content', 'mailchimp_i18n'); ?>:</th>
 		<td>
-			<textarea name="mc_subheader_content" rows="2" cols="50"><?php echo esc_html(get_option('mc_subheader_content')); ?></textarea><br/>
-			<em><?php esc_html_e('You can fill this with your own Text, HTML markup (including image links), or Nothing!', 'mailchimp_i18n'); ?></em>.
-		       <?php esc_html_e('This will be displayed under the heading and above the form.', 'mailchimp_i18n'); ?>
+			<textarea name="mc_subheader_content" rows="2" cols="63"><?php echo esc_html(get_option('mc_subheader_content')); ?></textarea><br/>
+			<?php esc_html_e('You can fill this with your own Text, HTML markup (including image links), or Nothing!', 'mailchimp_i18n'); ?>.<br/>
+		    <?php esc_html_e('This will be displayed under the heading and above the form.', 'mailchimp_i18n'); ?>
 		</td>
 	</tr>
 
 	<tr valign="top" class="last-row">
 	<th scope="row"><?php esc_html_e('Submit Button text', 'mailchimp_i18n'); ?>:</th>
 	<td>
-	<input type="text" name="mc_submit_text" size="30" value="<?php echo esc_attr(get_option('mc_submit_text')); ?>"/>
+	<input type="text" name="mc_submit_text" size="40" value="<?php echo esc_attr(get_option('mc_submit_text')); ?>"/>
 	</td>
 	</tr>
 </table>
