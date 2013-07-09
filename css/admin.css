@@ -79,8 +79,12 @@ table.mc-widefat td label {
 	font-size: 13px;
 }
 
+table.mc-widefat td {
+	color: #5D5C5D !important;
+}
+
 table.mc-widefat td input {
-	display: block;
+	display: inline-block;
 	font-style: normal;
 }
 
@@ -96,3 +100,36 @@ table.mc-widefat tr:first-child th {
 	text-shadow: none;	
 	border-bottom: none !important;
 }
+
+
+.mc-internal-heading {
+	background: rgba(197,229,222,0.25) !important;	
+}
+table.mc-widefat tr.mc-internal-heading th {
+	text-shadow: none !important;
+	color: #449A88 !important;
+}
+
+tr.mc-turned-on th {
+	color: #449A88 !important;	
+}
+.mc-custom-styling em,
+.mc-custom-styling td {
+	font-style: normal;
+	font-size: 13px;
+}
+
+.mc-custom-styling td span.mc-pre-input {
+	width: 14px;
+	display: inline-block;
+}
+
+.mc-custom-styling td input {
+	width: 70px;
+	margin-right: 7px;
+}
+
+
+
+
+
