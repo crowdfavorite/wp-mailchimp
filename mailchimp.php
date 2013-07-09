@@ -726,8 +726,9 @@ function mailchimpSF_setup_page() {
 ?>
 <div class="wrap">
 
-	<h2><?php esc_html_e('MailChimp List Setup', 'mailchimp_i18n');?> </h2>
-
+	<div class="mailchimp-header">
+		<h2><?php esc_html_e('MailChimp List Setup', 'mailchimp_i18n');?> </h2>
+	</div>
 <?php
 
 $user = get_option('mc_username');
@@ -913,52 +914,60 @@ if (get_option('mc_list_id') == '') return;
 
 <div>
 <form method="post" action="options-general.php?page=mailchimpSF_options">
-<div style="width:600px;">
+<div style="width:700px;">
 <input type="hidden" name="mcsf_action" value="change_form_settings">
 <?php wp_nonce_field('update_general_form_settings', '_mcsf_nonce_action'); ?>
-<input type="submit" value="<?php esc_attr_e('Update Subscribe Form Settings', 'mailchimp_i18n'); ?>" class="button" />
-<table class="widefat">
+<!--<input type="submit" value="<?php esc_attr_e('Update Subscribe Form Settings', 'mailchimp_i18n'); ?>" class="button" />-->
+
+<table class="widefat mc-widefat">
+
     <tr valign="top">
-    <th scope="row"><?php esc_html_e('Monkey Rewards', 'mailchimp_i18n'); ?>:</th>
-    <td><input name="mc_rewards" type="checkbox"<?php if (get_option('mc_rewards')=='on' || get_option('mc_rewards')=='' ) { echo ' checked="checked"'; } ?> id="mc_rewards" class="code" />
-    <em><label for="mc_rewards"><?php esc_html_e('turning this on will place a "powered by MailChimp" link in your form that will earn you credits with us. It is optional and can be turned on or off at any time.', 'mailchimp_i18n'); ?></label></em>
-    </td>
+    	<th scope="row"><?php esc_html_e('Monkey Rewards', 'mailchimp_i18n'); ?>:</th>
+	    <td><input name="mc_rewards" type="checkbox"<?php if (get_option('mc_rewards')=='on' || get_option('mc_rewards')=='' ) { echo ' checked="checked"'; } ?> id="mc_rewards" class="code" />
+		    <em><label for="mc_rewards"><?php esc_html_e('Turning this on will place a "powered by MailChimp" link in your form that will earn you credits with us. It is optional and can be turned on or off at any time.', 'mailchimp_i18n'); ?></label></em>
+	    </td>
     </tr>
+    
     <tr valign="top">
-    <th scope="row"><?php esc_html_e('Use Javascript Support?', 'mailchimp_i18n'); ?>:</th>
-    <td><input name="mc_use_javascript" type="checkbox" <?php checked(get_option('mc_use_javascript'), 'on'); ?> id="mc_use_javascript" class="code" />
-    <em><label for="mc_use_javascript"><?php esc_html_e('turning this on will use fancy javascript submission and should degrade gracefully for users not using javascript. It is optional and can be turned on or off at any time.', 'mailchimp_i18n'); ?></label></em>
-    </td>
+	    <th scope="row"><?php esc_html_e('Use Javascript Support?', 'mailchimp_i18n'); ?>:</th>
+	    <td><input name="mc_use_javascript" type="checkbox" <?php checked(get_option('mc_use_javascript'), 'on'); ?> id="mc_use_javascript" class="code" />
+		    <em><label for="mc_use_javascript"><?php esc_html_e('Turning this on will use fancy javascript submission and should degrade gracefully for users not using javascript. It is optional and can be turned on or off at any time.', 'mailchimp_i18n'); ?></label></em>
+	    </td>
     </tr>
+	
 	<tr valign="top">
-    <th scope="row"><?php esc_html_e('Use Javascript Datepicker?', 'mailchimp_i18n'); ?>:</th>
-    <td><input name="mc_use_datepicker" type="checkbox" <?php checked(get_option('mc_use_datepicker'), 'on'); ?> id="mc_use_datepicker" class="code" />
-    <em><label for="mc_use_datepicker"><?php esc_html_e('turning this on will use the jQuery UI Datepicker for dates.', 'mailchimp_i18n'); ?></label></em>
-    </td>
+    	<th scope="row"><?php esc_html_e('Use Javascript Datepicker?', 'mailchimp_i18n'); ?>:</th>
+	    <td><input name="mc_use_datepicker" type="checkbox" <?php checked(get_option('mc_use_datepicker'), 'on'); ?> id="mc_use_datepicker" class="code" />
+		    <em><label for="mc_use_datepicker"><?php esc_html_e('Turning this on will use the jQuery UI Datepicker for dates.', 'mailchimp_i18n'); ?></label></em>
+	    </td>
     </tr>
-    <tr valign="top">
-    <th scope="row"><?php esc_html_e('Include Unsubscribe link?', 'mailchimp_i18n'); ?>:</th>
-    <td><input name="mc_use_unsub_link" type="checkbox"<?php checked(get_option('mc_use_unsub_link'), 'on'); ?> id="mc_use_unsub_link" class="code" />
-    <em><label for="mc_use_unsub_link"><?php esc_html_e('turning this on will add a link to your host unsubscribe form', 'mailchimp_i18n'); ?></label></em>
-    </td>
+    <tr valign="top" class="last-row">
+	    <th scope="row"><?php esc_html_e('Include Unsubscribe link?', 'mailchimp_i18n'); ?>:</th>
+	    <td><input name="mc_use_unsub_link" type="checkbox"<?php checked(get_option('mc_use_unsub_link'), 'on'); ?> id="mc_use_unsub_link" class="code" />
+		    <em><label for="mc_use_unsub_link"><?php esc_html_e('Turning this on will add a link to your host unsubscribe form', 'mailchimp_i18n'); ?></label></em>
+	    </td>
     </tr>
+
+</table>
+
+<br/><br/>
+<table class="widefat mc-widefat">
     <tr valign="top">
-	<th scope="row"><?php esc_html_e('Header content', 'mailchimp_i18n'); ?>:</th>
-	<td>
-	<textarea name="mc_header_content" rows="2" cols="50"><?php echo esc_html(get_option('mc_header_content')); ?></textarea><br/>
-	<em><?php esc_html_e('You can fill this with your own Text, HTML markup (including image links), or Nothing!', 'mailchimp_i18n'); ?></em>
-	</td>
+		<th scope="row"><?php esc_html_e('Header content', 'mailchimp_i18n'); ?>:</th>
+		<td>
+			<textarea name="mc_header_content" rows="2" cols="50"><?php echo esc_html(get_option('mc_header_content')); ?></textarea><br/>
+			<em><?php esc_html_e('You can fill this with your own Text, HTML markup (including image links), or Nothing!', 'mailchimp_i18n'); ?></em>
+		</td>
 	</tr>
 
     <tr valign="top">
-	<th scope="row"><?php esc_html_e('Sub-header content', 'mailchimp_i18n'); ?>:</th>
-	<td>
-	<textarea name="mc_subheader_content" rows="2" cols="50"><?php echo esc_html(get_option('mc_subheader_content')); ?></textarea><br/>
-	<em><?php esc_html_e('You can fill this with your own Text, HTML markup (including image links), or Nothing!', 'mailchimp_i18n'); ?></em>.
-       <?php esc_html_e('This will be displayed under the heading and above the form.', 'mailchimp_i18n'); ?>
-	</td>
+		<th scope="row"><?php esc_html_e('Sub-header content', 'mailchimp_i18n'); ?>:</th>
+		<td>
+			<textarea name="mc_subheader_content" rows="2" cols="50"><?php echo esc_html(get_option('mc_subheader_content')); ?></textarea><br/>
+			<em><?php esc_html_e('You can fill this with your own Text, HTML markup (including image links), or Nothing!', 'mailchimp_i18n'); ?></em>.
+		       <?php esc_html_e('This will be displayed under the heading and above the form.', 'mailchimp_i18n'); ?>
+		</td>
 	</tr>
-
 
 	<tr valign="top">
 	<th scope="row"><?php esc_html_e('Submit Button text', 'mailchimp_i18n'); ?>:</th>

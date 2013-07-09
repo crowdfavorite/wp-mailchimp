@@ -1,3 +1,5 @@
+
+
 .error_msg { 
 	color: red;
 	margin: 0px;
@@ -8,3 +10,70 @@
 	margin: 0px;
 	font-weight: bold;
 }
+
+/* 	Header
+	---------------------------------------------------------------  */
+
+.mailchimp-header {
+	background: url(images/mailchimp-header.png) no-repeat;
+	background-size: 983px 96px;
+	height: 96px;
+	width: 983px;
+	margin-top: 19px;
+}
+
+.mailchimp-header h2 {
+	float: right;
+	margin-top: 24px;
+	margin-right: 12px;
+	font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 700;
+	color: #fff !important;
+	text-shadow: none;
+	font-size: 26px !important;
+}
+
+
+/* 	Table 
+	---------------------------------------------------------------  */
+
+table.mc-widefat {
+	background: #fff !important;
+	border: 2px solid #72C1B0 !important;
+	-webkit-border-radius: 10px !important;
+	-moz-border-radius: 10px !important;
+	border-radius: 10px !important;
+
+}
+table.mc-widefat td,
+table.mc-widefat th {
+	border-bottom: 1px solid #C5E5DE !important;
+	border-top: none !important;
+	padding: 18px;
+}
+
+table.mc-widefat .last-row td,
+table.mc-widefat .last-row th {
+	border-bottom: none !important;
+}
+
+table.mc-widefat th {
+	color: #373737 !important;
+	font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 700;
+	width: 130px;	
+}
+
+table.mc-widefat td label {
+	padding-left: 24px;
+	display: block;
+	margin-top: -13px;
+	font-style: normal;
+	font-size: 13px;
+}
+
+table.mc-widefat td input {
+	display: block;
+	font-style: normal;
+}
+
