@@ -914,13 +914,13 @@ if (get_option('mc_list_id') == '') return;
 
 <div>
 <form method="post" action="options-general.php?page=mailchimpSF_options">
-<div style="width:700px;">
+<div style="width:900px;">
 <input type="hidden" name="mcsf_action" value="change_form_settings">
 <?php wp_nonce_field('update_general_form_settings', '_mcsf_nonce_action'); ?>
 <!--<input type="submit" value="<?php esc_attr_e('Update Subscribe Form Settings', 'mailchimp_i18n'); ?>" class="button" />-->
 
 <table class="widefat mc-widefat">
-
+	<tr><th colspan="2">List Options</th></tr>
     <tr valign="top">
     	<th scope="row"><?php esc_html_e('Monkey Rewards', 'mailchimp_i18n'); ?>:</th>
 	    <td><input name="mc_rewards" type="checkbox"<?php if (get_option('mc_rewards')=='on' || get_option('mc_rewards')=='' ) { echo ' checked="checked"'; } ?> id="mc_rewards" class="code" />
@@ -950,8 +950,8 @@ if (get_option('mc_list_id') == '') return;
 
 </table>
 
-<br/><br/>
 <table class="widefat mc-widefat">
+	<tr><th colspan="2">Label Options</th></tr>
     <tr valign="top">
 		<th scope="row"><?php esc_html_e('Header content', 'mailchimp_i18n'); ?>:</th>
 		<td>
@@ -975,43 +975,38 @@ if (get_option('mc_list_id') == '') return;
 	<input type="text" name="mc_submit_text" size="30" value="<?php echo esc_attr(get_option('mc_submit_text')); ?>"/>
 	</td>
 	</tr>
+</table>
 
-	<tr valign="top">
-	<th scope="row"><?php esc_html_e('Custom Styling', 'mailchimp_i18n'); ?>:</th>
-	<td>
-	<table class="widefat">
+<table class="widefat mc-widefat mc-custom-styling">
+	<tr><th colspan="2">Custom Styling</th></tr>
+	<tr><th><label for="mc_custom_style"><?php esc_html_e('Turned On?', 'mailchimp_i18n'); ?></label></th><td><input type="checkbox" name="mc_custom_style" id="mc_custom_style"<?php checked(get_option('mc_custom_style'), 'on'); ?> /></td></tr>
+    <tr><th colspan="2"><?php esc_html_e('Header Settings (only applies if there are no HTML tags in the Header Content area above)', 'mailchimp_i18n'); ?>:</th></tr>
+	<tr><th><?php esc_html_e('Border Width', 'mailchimp_i18n'); ?>:</th><td><input type="text" name="mc_header_border_width" size="3" maxlength="3" value="<?php echo esc_attr(get_option('mc_header_border_width')); ?>"/> px<br/>
+		<em><?php esc_html_e('Set to 0 for no border, do not enter', 'mailchimp_i18n'); ?> <strong>px</strong>!</em>
+	</td></tr>
+	<tr><th><?php esc_html_e('Border Color', 'mailchimp_i18n'); ?>:</th><td>#<input type="text" name="mc_header_border_color" size="7" maxlength="6" value="<?php echo esc_attr(get_option('mc_header_border_color')); ?>"/><br/>
+		<em><?php esc_html_e('do not enter initial', 'mailchimp_i18n'); ?> <strong>#</strong></em>
+	</td></tr>
+	<tr><th><?php esc_html_e('Text Color', 'mailchimp_i18n'); ?>:</th><td>#<input type="text" name="mc_header_text_color" size="7" maxlength="6" value="<?php echo esc_attr(get_option('mc_header_text_color')); ?>"/><br/>
+		<em><?php esc_html_e('do not enter initial', 'mailchimp_i18n'); ?> <strong>#</strong></em>
+	</td></tr>
+	<tr><th><?php esc_html_e('Background Color', 'mailchimp_i18n'); ?>:</th><td>#<input type="text" name="mc_header_background" size="7" maxlength="6" value="<?php echo esc_attr(get_option('mc_header_background')); ?>"/><br/>
+		<em><?php esc_html_e('do not enter initial', 'mailchimp_i18n'); ?> <strong>#</strong></em>
+	</td></tr>
 
-		<tr><th><label for="mc_custom_style"><?php esc_html_e('Turned On?', 'mailchimp_i18n'); ?></label></th><td><input type="checkbox" name="mc_custom_style" id="mc_custom_style"<?php checked(get_option('mc_custom_style'), 'on'); ?> /></td></tr>
-        <tr><th colspan="2"><?php esc_html_e('Header Settings (only applies if there are no HTML tags in the Header Content area above)', 'mailchimp_i18n'); ?>:</th></tr>
-		<tr><th><?php esc_html_e('Border Width', 'mailchimp_i18n'); ?>:</th><td><input type="text" name="mc_header_border_width" size="3" maxlength="3" value="<?php echo esc_attr(get_option('mc_header_border_width')); ?>"/> px<br/>
-			<em><?php esc_html_e('Set to 0 for no border, do not enter', 'mailchimp_i18n'); ?> <strong>px</strong>!</em>
-		</td></tr>
-		<tr><th><?php esc_html_e('Border Color', 'mailchimp_i18n'); ?>:</th><td>#<input type="text" name="mc_header_border_color" size="7" maxlength="6" value="<?php echo esc_attr(get_option('mc_header_border_color')); ?>"/><br/>
-			<em><?php esc_html_e('do not enter initial', 'mailchimp_i18n'); ?> <strong>#</strong></em>
-		</td></tr>
-		<tr><th><?php esc_html_e('Text Color', 'mailchimp_i18n'); ?>:</th><td>#<input type="text" name="mc_header_text_color" size="7" maxlength="6" value="<?php echo esc_attr(get_option('mc_header_text_color')); ?>"/><br/>
-			<em><?php esc_html_e('do not enter initial', 'mailchimp_i18n'); ?> <strong>#</strong></em>
-		</td></tr>
-		<tr><th><?php esc_html_e('Background Color', 'mailchimp_i18n'); ?>:</th><td>#<input type="text" name="mc_header_background" size="7" maxlength="6" value="<?php echo esc_attr(get_option('mc_header_background')); ?>"/><br/>
-			<em><?php esc_html_e('do not enter initial', 'mailchimp_i18n'); ?> <strong>#</strong></em>
-		</td></tr>
-
-        <tr><th colspan="2"><?php esc_html_e('Form Settings', 'mailchimp_i18n'); ?>:</th></tr>
-		<tr><th><?php esc_html_e('Border Width', 'mailchimp_i18n'); ?>:</th><td><input type="text" name="mc_form_border_width" size="3" maxlength="3" value="<?php echo esc_attr(get_option('mc_form_border_width')); ?>"/> px<br/>
-			<em><?php esc_html_e('Set to 0 for no border, do not enter', 'mailchimp_i18n'); ?> <strong>px</strong>!</em>
-		</td></tr>
-		<tr><th><?php esc_html_e('Border Color', 'mailchimp_i18n'); ?>:</th><td>#<input type="text" name="mc_form_border_color" size="7" maxlength="6" value="<?php echo esc_attr(get_option('mc_form_border_color')); ?>"/><br/>
-			<em><?php esc_html_e('do not enter initial', 'mailchimp_i18n'); ?> <strong>#</strong></em>
-		</td></tr>
-		<tr><th><?php esc_html_e('Text Color', 'mailchimp_i18n'); ?>:</th><td>#<input type="text" name="mc_form_text_color" size="7" maxlength="6" value="<?php echo esc_attr(get_option('mc_form_text_color')); ?>"/><br/>
-			<em><?php esc_html_e('do not enter initial', 'mailchimp_i18n'); ?> <strong>#</strong></em>
-		</td></tr>
-		<tr><th><?php esc_html_e('Background Color', 'mailchimp_i18n'); ?>:</th><td>#<input type="text" name="mc_form_background" size="7" maxlength="6" value="<?php echo esc_attr(get_option('mc_form_background')); ?>"/><br/>
-			<em><?php esc_html_e('do not enter initial', 'mailchimp_i18n'); ?> <strong>#</strong></em>
-		</td></tr>
-	</table>
-</td>
-</tr>
+    <tr><th colspan="2"><?php esc_html_e('Form Settings', 'mailchimp_i18n'); ?>:</th></tr>
+	<tr><th><?php esc_html_e('Border Width', 'mailchimp_i18n'); ?>:</th><td><input type="text" name="mc_form_border_width" size="3" maxlength="3" value="<?php echo esc_attr(get_option('mc_form_border_width')); ?>"/> px<br/>
+		<em><?php esc_html_e('Set to 0 for no border, do not enter', 'mailchimp_i18n'); ?> <strong>px</strong>!</em>
+	</td></tr>
+	<tr><th><?php esc_html_e('Border Color', 'mailchimp_i18n'); ?>:</th><td>#<input type="text" name="mc_form_border_color" size="7" maxlength="6" value="<?php echo esc_attr(get_option('mc_form_border_color')); ?>"/><br/>
+		<em><?php esc_html_e('do not enter initial', 'mailchimp_i18n'); ?> <strong>#</strong></em>
+	</td></tr>
+	<tr><th><?php esc_html_e('Text Color', 'mailchimp_i18n'); ?>:</th><td>#<input type="text" name="mc_form_text_color" size="7" maxlength="6" value="<?php echo esc_attr(get_option('mc_form_text_color')); ?>"/><br/>
+		<em><?php esc_html_e('do not enter initial', 'mailchimp_i18n'); ?> <strong>#</strong></em>
+	</td></tr>
+	<tr><th><?php esc_html_e('Background Color', 'mailchimp_i18n'); ?>:</th><td>#<input type="text" name="mc_form_background" size="7" maxlength="6" value="<?php echo esc_attr(get_option('mc_form_background')); ?>"/><br/>
+		<em><?php esc_html_e('do not enter initial', 'mailchimp_i18n'); ?> <strong>#</strong></em>
+	</td></tr>
 </table>
 </div>
 <input type="submit" value="<?php esc_attr_e('Update Subscribe Form Settings', 'mailchimp_i18n'); ?>" class="button" />

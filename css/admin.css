@@ -11,6 +11,12 @@
 	font-weight: bold;
 }
 
+/* 	Headings
+	---------------------------------------------------------------  */
+
+.mc-h3 {
+}
+
 /* 	Header
 	---------------------------------------------------------------  */
 
@@ -40,9 +46,10 @@
 table.mc-widefat {
 	background: #fff !important;
 	border: 2px solid #72C1B0 !important;
-	-webkit-border-radius: 10px !important;
-	-moz-border-radius: 10px !important;
-	border-radius: 10px !important;
+	-webkit-border-radius: 6px !important;
+	-moz-border-radius: 6px !important;
+	border-radius: 6px !important;
+	margin-bottom: 24px;
 
 }
 table.mc-widefat td,
@@ -77,3 +84,14 @@ table.mc-widefat td input {
 	font-style: normal;
 }
 
+
+table.mc-widefat tr:first-child {
+	background: #72C1B0 !important;
+}
+table.mc-widefat tr:first-child th {
+	color: #fff !important;
+	font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-size: 16px;
+	margin-left: 9px;
+	text-shadow: none;	
+}
