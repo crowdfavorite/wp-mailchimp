@@ -45,7 +45,7 @@
 
 table.mc-widefat {
 	background: #fff !important;
-	border: 2px solid #72C1B0 !important;
+	border: 2px solid #95D1C4 !important;
 	-webkit-border-radius: 6px !important;
 	-moz-border-radius: 6px !important;
 	border-radius: 6px !important;
@@ -86,7 +86,7 @@ table.mc-widefat td input {
 
 
 table.mc-widefat tr:first-child {
-	background: #72C1B0 !important;
+	background: #95D1C4 !important;
 }
 table.mc-widefat tr:first-child th {
 	color: #fff !important;
@@ -94,4 +94,5 @@ table.mc-widefat tr:first-child th {
 	font-size: 16px;
 	margin-left: 9px;
 	text-shadow: none;	
+	border-bottom: none !important;
 }

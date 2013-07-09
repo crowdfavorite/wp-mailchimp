@@ -922,27 +922,27 @@ if (get_option('mc_list_id') == '') return;
 <table class="widefat mc-widefat">
 	<tr><th colspan="2">List Options</th></tr>
     <tr valign="top">
-    	<th scope="row"><?php esc_html_e('Monkey Rewards', 'mailchimp_i18n'); ?>:</th>
+    	<th scope="row"><?php esc_html_e('Monkey Rewards', 'mailchimp_i18n'); ?>?</th>
 	    <td><input name="mc_rewards" type="checkbox"<?php if (get_option('mc_rewards')=='on' || get_option('mc_rewards')=='' ) { echo ' checked="checked"'; } ?> id="mc_rewards" class="code" />
 		    <em><label for="mc_rewards"><?php esc_html_e('Turning this on will place a "powered by MailChimp" link in your form that will earn you credits with us. It is optional and can be turned on or off at any time.', 'mailchimp_i18n'); ?></label></em>
 	    </td>
     </tr>
     
     <tr valign="top">
-	    <th scope="row"><?php esc_html_e('Use Javascript Support?', 'mailchimp_i18n'); ?>:</th>
+	    <th scope="row"><?php esc_html_e('Use Javascript Support?', 'mailchimp_i18n'); ?></th>
 	    <td><input name="mc_use_javascript" type="checkbox" <?php checked(get_option('mc_use_javascript'), 'on'); ?> id="mc_use_javascript" class="code" />
 		    <em><label for="mc_use_javascript"><?php esc_html_e('Turning this on will use fancy javascript submission and should degrade gracefully for users not using javascript. It is optional and can be turned on or off at any time.', 'mailchimp_i18n'); ?></label></em>
 	    </td>
     </tr>
 	
 	<tr valign="top">
-    	<th scope="row"><?php esc_html_e('Use Javascript Datepicker?', 'mailchimp_i18n'); ?>:</th>
+    	<th scope="row"><?php esc_html_e('Use Javascript Datepicker?', 'mailchimp_i18n'); ?></th>
 	    <td><input name="mc_use_datepicker" type="checkbox" <?php checked(get_option('mc_use_datepicker'), 'on'); ?> id="mc_use_datepicker" class="code" />
 		    <em><label for="mc_use_datepicker"><?php esc_html_e('Turning this on will use the jQuery UI Datepicker for dates.', 'mailchimp_i18n'); ?></label></em>
 	    </td>
     </tr>
     <tr valign="top" class="last-row">
-	    <th scope="row"><?php esc_html_e('Include Unsubscribe link?', 'mailchimp_i18n'); ?>:</th>
+	    <th scope="row"><?php esc_html_e('Include Unsubscribe link?', 'mailchimp_i18n'); ?></th>
 	    <td><input name="mc_use_unsub_link" type="checkbox"<?php checked(get_option('mc_use_unsub_link'), 'on'); ?> id="mc_use_unsub_link" class="code" />
 		    <em><label for="mc_use_unsub_link"><?php esc_html_e('Turning this on will add a link to your host unsubscribe form', 'mailchimp_i18n'); ?></label></em>
 	    </td>
