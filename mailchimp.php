@@ -755,9 +755,9 @@ if (get_option('mc_apikey') == '') {
 	?>
 	<div>
 		<form method="post" action="options-general.php?page=mailchimpSF_options">
-			<h3 class="mc-h2"><?php esc_html_e('Login Info', 'mailchimp_i18n');?></h3>
+			<h3 class="mc-h2"><?php esc_html_e('Log In Information', 'mailchimp_i18n');?></h3><br/>
 			<p class="mc-p"><?php esc_html_e('To start using the MailChimp plugin, we first need to login and get your API Key. Please enter your MailChimp API Key below.', 'mailchimp_i18n'); ?></p>
-			<p class="mc-p">
+			<p class="mc-a">
 			<?php
 			echo sprintf(
 				'%1$s <a href="http://www.mailchimp.com/signup/" target="_blank">%2$s</a>',
@@ -766,24 +766,25 @@ if (get_option('mc_apikey') == '') {
 			);
 			?>
 			</p>
-			<br/>
-
-			<table class="form-table">
+		<div style="width: 900px;">
+			<table class="widefat mc-widefat mc-api">
 				<tr valign="top">
-				<th scope="row"><?php esc_html_e('API Key', 'mailchimp_i18n'); ?>:</th>
+				<th scope="row"><?php esc_html_e('API Key', 'mailchimp_i18n'); ?></th>
 				<td>
-					<input name="mc_apikey" type="text" id="mc_apikey" class="code" value="<?php echo esc_attr($api_key); ?>" size="32" />
-					<br/>
-				    <a href="http://admin.mailchimp.com/account/api-key-popup" target="_blank">get your API Key here</a>
+					<input name="mc_apikey" type="text" id="mc_apikey" class="code" value="<?php echo esc_attr($api_key); ?>" size="52" />
+				    <a href="http://admin.mailchimp.com/account/api-key-popup" target="_blank" class="mc-api-key">Get your API Key here.</a>
 				</td>
 				</tr>
 			</table>
 
 			<input type="hidden" name="mcsf_action" value="update_mc_apikey"/>
-			<input type="submit" name="Submit" value="<?php esc_attr_e('Save & Check', 'mailchimp_i18n');?>" class="button" />
+			<input type="submit" name="Submit" value="<?php esc_attr_e('Save & Check', 'mailchimp_i18n');?>" class="button mc-api-submit" />
 			<?php wp_nonce_field('update_mc_api_key', '_mcsf_nonce_action'); ?>
 		</form>
+
+		</div>
 	</div>
+	<br/>
 <div class="notes_msg">
 	<?php
     if (get_option('mc_username')!=''){

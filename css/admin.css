@@ -137,6 +137,14 @@ table.mc-list-select {
 	margin-bottom: 0;
 }
 
+.mc-a {
+	color: #5D5C5D;	
+	font-size: 14px;
+	font-family: "HelveticaNeue-Regular", "Helvetica Neue Regular", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: normal;
+	margin-bottom: 0;	
+}
+
 /* 	Header
 	---------------------------------------------------------------  */
 
@@ -177,6 +185,7 @@ table.mc-widefat th {
 	border-top: none !important;
 	padding: 18px;
 	text-align: left;
+	text-shadow: none;
 }
 
 table.mc-widefat .last-row td,
@@ -267,6 +276,35 @@ table.mc-widefat.mc-blue tr:first-child {
 	background: #6DC5DC !important;
 }
 
+.mc-widefat.mc-api {
+	border: 2px solid #95D1C4 !important;	
+}
+
+table.mc-widefat.mc-api {
+	margin-bottom: 19px;
+	margin-top: 19px;
+}
+table.mc-widefat.mc-api td,
+table.mc-widefat.mc-api th {
+	border-bottom: none !important;
+}
+table.mc-widefat.mc-api tr:first-child {
+	background: #95D1C4 !important;
+}
+
+a.mc-api-key {
+	color: #fff;
+	display: block;
+	margin-top: 3px;
+}
+a.mc-api-key:hover {
+	color: #fff;
+	text-decoration: underline;
+}
+
+.mc-api-submit {
+	margin-bottom: 19px;
+}
 
 
 .mc-submit {
