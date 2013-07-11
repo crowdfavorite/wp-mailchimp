@@ -133,7 +133,7 @@ table.mc-user tr {
 }
 
 .mc-h3 {
-	color: #52BAD5;
+	color: #72C1B0;
 	font-size: 18px;
 	margin-bottom: 12px;
 }
@@ -263,7 +263,7 @@ tr.mc-turned-on th {
 
 
 
-.mc-widefat.mc-blue {
+/*.mc-widefat.mc-blue {
 	background: #fff !important;
 	border: 2px solid #6DC5DC !important;	
 }
@@ -275,4 +275,4 @@ table.mc-widefat.mc-blue th {
 table.mc-widefat.mc-blue tr:first-child {
 	background: #6DC5DC !important;
 }
-
+*/

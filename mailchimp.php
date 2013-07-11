@@ -1014,19 +1014,23 @@ if (get_option('mc_list_id') == '') return;
 ?>
 <div style="width:900px;">
 
-	<h3 class="mc-h3"><?php esc_html_e('Merge Variables Included', 'mailchimp_i18n'); ?></h3>
-
-<?php
-$mv = get_option('mc_merge_vars');
-
-if (count($mv) == 0 || !is_array($mv)){
-	?>
-	<em><?php esc_html_e('No Merge Variables found.', 'mailchimp_i18n'); ?></em>
-	<?php
-} else {
-	?>
 
 	<table class='widefat mc-widefat mc-blue'>
+		<tr>
+			<th colspan="4">
+				<?php esc_html_e('Merge Variables Included', 'mailchimp_i18n'); ?>
+
+				<?php
+				$mv = get_option('mc_merge_vars');
+				
+				if (count($mv) == 0 || !is_array($mv)){
+					?>
+					<em><?php esc_html_e('No Merge Variables found.', 'mailchimp_i18n'); ?></em>
+					<?php
+				} else {
+					?>
+			</th>
+		</tr>
 		<tr valign="top">
 			<th><?php esc_html_e('Name', 'mailchimp_i18n');?></th>
 			<th><?php esc_html_e('Tag', 'mailchimp_i18n');?></th>
