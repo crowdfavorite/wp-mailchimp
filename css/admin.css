@@ -1,21 +1,77 @@
-
+/* 	Headings
+	---------------------------------------------------------------  */
 
 .error_msg { 
-	color: red;
-	margin: 0px;
-	font-weight: bold;
+	background: #fadbd5;
+	border: 1px solid #db3a1b;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	box-sizing: border-box;
+	color: #373737; 
+	font-size: 12px;
+	line-height: 16px;
+	margin: 12px 0;
+	padding: 9px;
+	width: 983px;
 }
 .success_msg { 
-	color: green; 
-	margin: 0px;
-	font-weight: bold;
+	background: #fff3d4;
+	border: 1px solid #febe12;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	box-sizing: border-box;
+	color: #373737; 
+	font-size: 12px;
+	line-height: 16px;
+	margin: 12px 0;
+	padding: 9px;
+	width: 983px;
+}
+
+/* 	User
+	---------------------------------------------------------------  */
+
+table.mc-user {
+	width: 983px;
+	margin-top: 19px;
+}
+table.mc-user tr {
+	float: right;
+}
+.mc-user td:first-of-type {
+	border-top: 1px solid #6dc5dc;
+	border-bottom: 1px solid #6dc5dc;
+	border-left: 1px solid #6dc5dc;
+	-webkit-border-top-left-radius: 6px;
+	-webkit-border-bottom-left-radius: 6px;
+	-moz-border-radius-topleft: 6px;
+	-moz-border-radius-bottomleft: 6px;
+	border-top-left-radius: 6px;
+	border-bottom-left-radius: 6px;
+	min-width: 200px;
+}
+.mc-user td:last-of-type {
+	border-top: 1px solid #6dc5dc;
+	border-right: 1px solid #6dc5dc;
+	border-bottom: 1px solid #6dc5dc;
+	-webkit-border-top-right-radius: 6px;
+	-webkit-border-bottom-right-radius: 6px;
+	-moz-border-radius-topright: 6px;
+	-moz-border-radius-bottomright: 6px;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+	min-width: 75px;
+}
+
+.mc-user h3 {
+	font-weight: normal;
+	text-indent: 9px;
 }
 
 /* 	Headings
 	---------------------------------------------------------------  */
-
-.mc-h3 {
-}
 
 /* 	Header
 	---------------------------------------------------------------  */
@@ -76,12 +132,12 @@ table.mc-widefat td label {
 	display: block;
 	margin-top: -13px;
 	font-style: normal;
-	font-size: 13px;
+	font-size: 12px;
 }
 
 table.mc-widefat td {
 	color: #5D5C5D !important;
-	font-size: 13px;
+	font-size: 12px;
 	line-height: 18px !important;
 }
 

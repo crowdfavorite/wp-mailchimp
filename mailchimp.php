@@ -709,7 +709,7 @@ function mailchimpSF_change_list_if_necessary($api_key) {
 
 		    $msg = '<p class="success_msg">'.
 		        sprintf(
-					__('Success! Loaded and saved the info for %d Merge Variables', 'mailchimp_i18n').$igs_text,
+					__('<b>Success!</b> Loaded and saved the info for %d Merge Variables', 'mailchimp_i18n').$igs_text,
 					count($mv)
 				).' '.
 				__('from your list').' "'.$list_name.'"<br/><br/>'.
@@ -804,7 +804,7 @@ if (get_option('mc_apikey') == '') {
 // Start logout form
 else {
 ?>
-<table style="min-width:400px;">
+<table style="min-width:400px;" class="mc-user" cellspacing="0">
 	<tr>
 		<td><h3><?php esc_html_e('Logged in as', 'mailchimp_i18n');?>: <?php echo esc_html(get_option('mc_username')); ?></h3>
 		</td>
@@ -919,35 +919,35 @@ if (get_option('mc_list_id') == '') return;
 <?php wp_nonce_field('update_general_form_settings', '_mcsf_nonce_action'); ?>
 <!--<input type="submit" value="<?php esc_attr_e('Update Subscribe Form Settings', 'mailchimp_i18n'); ?>" class="button" />-->
 <table class="widefat mc-widefat mc-label-options">
-	<tr><th colspan="2">Label Options</th></tr>
+	<tr><th colspan="2">Content Options</th></tr>
     <tr valign="top">
-		<th scope="row"><?php esc_html_e('Header content', 'mailchimp_i18n'); ?>:</th>
+		<th scope="row"><?php esc_html_e('Header', 'mailchimp_i18n'); ?></th>
 		<td>
-			<textarea name="mc_header_content" rows="2" cols="63"><?php echo esc_html(get_option('mc_header_content')); ?></textarea><br/>
+			<textarea name="mc_header_content" rows="2" cols="70"><?php echo esc_html(get_option('mc_header_content')); ?></textarea><br/>
 			<?php esc_html_e('You can fill this with your own Text, HTML markup (including image links), or Nothing!', 'mailchimp_i18n'); ?>
 		</td>
 	</tr>
 
     <tr valign="top">
-		<th scope="row"><?php esc_html_e('Sub-header content', 'mailchimp_i18n'); ?>:</th>
+		<th scope="row"><?php esc_html_e('Sub-header', 'mailchimp_i18n'); ?></th>
 		<td>
-			<textarea name="mc_subheader_content" rows="2" cols="63"><?php echo esc_html(get_option('mc_subheader_content')); ?></textarea><br/>
+			<textarea name="mc_subheader_content" rows="2" cols="70"><?php echo esc_html(get_option('mc_subheader_content')); ?></textarea><br/>
 			<?php esc_html_e('You can fill this with your own Text, HTML markup (including image links), or Nothing!', 'mailchimp_i18n'); ?>.<br/>
 		    <?php esc_html_e('This will be displayed under the heading and above the form.', 'mailchimp_i18n'); ?>
 		</td>
 	</tr>
 
 	<tr valign="top" class="last-row">
-	<th scope="row"><?php esc_html_e('Submit Button text', 'mailchimp_i18n'); ?>:</th>
+	<th scope="row"><?php esc_html_e('Submit Button', 'mailchimp_i18n'); ?></th>
 	<td>
-	<input type="text" name="mc_submit_text" size="40" value="<?php echo esc_attr(get_option('mc_submit_text')); ?>"/>
+	<input type="text" name="mc_submit_text" size="70" value="<?php echo esc_attr(get_option('mc_submit_text')); ?>"/>
 	</td>
 	</tr>
 </table>
 
 <table class="widefat mc-widefat mc-custom-styling">
 	<tr><th colspan="2">Custom Styling</th></tr>
-	<tr class="mc-turned-on"><th><label for="mc_custom_style"><?php esc_html_e('Turned On?', 'mailchimp_i18n'); ?></label></th><td><input type="checkbox" name="mc_custom_style" id="mc_custom_style"<?php checked(get_option('mc_custom_style'), 'on'); ?> /></td></tr>
+	<tr class="mc-turned-on"><th><label for="mc_custom_style"><?php esc_html_e('Enabled?', 'mailchimp_i18n'); ?></label></th><td><span class="mc-pre-input"></span><input type="checkbox" name="mc_custom_style" id="mc_custom_style"<?php checked(get_option('mc_custom_style'), 'on'); ?> /></td></tr>
     <tr class="mc-internal-heading"><th colspan="2"><?php esc_html_e('Header Settings (only applies if there are no HTML tags in the Header Content area above)', 'mailchimp_i18n'); ?>:</th></tr>
 	<tr><th><?php esc_html_e('Border Width', 'mailchimp_i18n'); ?>:</th><td><span class="mc-pre-input"></span><input type="text" name="mc_header_border_width" size="3" maxlength="3" value="<?php echo esc_attr(get_option('mc_header_border_width')); ?>"/>
 		<em>px • <?php esc_html_e('Set to 0 for no border, do not enter', 'mailchimp_i18n'); ?> <strong>px</strong>!</em>
