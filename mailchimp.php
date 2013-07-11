@@ -755,7 +755,7 @@ if (get_option('mc_apikey') == '') {
 	?>
 	<div>
 		<form method="post" action="options-general.php?page=mailchimpSF_options">
-			<h3 class="mc-h2"><?php esc_html_e('Log In Information', 'mailchimp_i18n');?></h3><br/>
+			<h3 class="mc-h2"><?php esc_html_e('Log In Information', 'mailchimp_i18n');?></h3>
 			<p class="mc-p"><?php esc_html_e('To start using the MailChimp plugin, we first need to login and get your API Key. Please enter your MailChimp API Key below.', 'mailchimp_i18n'); ?></p>
 			<p class="mc-a">
 			<?php
