@@ -286,13 +286,13 @@ class mailchimpSF_MCAPI {
      * You should never have to call this function manually
      */
     function callServer($method, $params) {
-	    $dc = "us1";
-	    if (strstr($this->api_key,"-")){
-        	list($key, $dc) = explode("-",$this->api_key,2);
+        $dc = "us1";
+        if (strstr($this->api_key,"-")){
+            list($key, $dc) = explode("-",$this->api_key,2);
             if (!$dc) $dc = "us1";
         }
         $host = $dc.".".$this->apiUrl["host"];
-		$params["apikey"] = $this->api_key;
+        $params["apikey"] = $this->api_key;
 
         $this->errorMessage = "";
         $this->errorCode = "";
@@ -303,42 +303,36 @@ class mailchimpSF_MCAPI {
             $orig_sep = ini_get("arg_separator.output");
             ini_set("arg_separator.output", "&");
         }
-		$post_vars = $this->httpBuildQuery($params);
+        $post_vars = $this->httpBuildQuery($params);
         if ($sep_changed){
             ini_set("arg_separator.output", $orig_sep);
         }
-        
-        $payload = "POST " . $this->apiUrl["path"] . "?" . $this->apiUrl["query"] . "&method=" . $method . " HTTP/1.0\r\n";
-        $payload .= "Host: " . $host . "\r\n";
-        $payload .= "User-Agent: MCAPIwp/" . $this->version ."\r\n";
-        $payload .= "Content-type: application/x-www-form-urlencoded\r\n";
-        $payload .= "Content-length: " . strlen($post_vars) . "\r\n";
-        $payload .= "Connection: close \r\n\r\n";
-        $payload .= $post_vars;
-        
-        ob_start();
-        if ($this->secure){
-            $sock = @fsockopen("ssl://".$host, 443, $errno, $errstr, 30);
+
+        $payload = $this->apiUrl["path"] . "?" . $this->apiUrl["query"] . "&method=" . $method . "&" . $post_vars;
+        $ch = curl_init();
+        if (defined("CURL_CA_BUNDLE_PATH")) {
+            curl_setopt($ch, CURLOPT_CAINFO, CURL_CA_BUNDLE_PATH);
+        }
+        if ($this->secure) {
+            curl_setopt($ch, CURLOPT_URL, "https://" . $host . $payload);
         } else {
-            $sock = @fsockopen($host, 80, $errno, $errstr, 30);
+            curl_setopt($ch, CURLOPT_URL, "http://" . $host . $payload);
         }
-        if(!$sock) {
-            $this->errorMessage = "Could not connect (ERR $errno: $errstr)";
-            $this->errorCode = "-99";
-            ob_end_clean();
-            return false;
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 30);
+        curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+        curl_setopt($ch, CURLOPT_HEADER, 1);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        if( defined('WP_PROXY_HOST')){
+            curl_setopt($ch, CURLOPT_PROXY, WP_PROXY_HOST);
         }
-        
-        $response = "";
-        fwrite($sock, $payload);
-        stream_set_timeout($sock, $this->timeout);
-        $info = stream_get_meta_data($sock);
-        while ((!feof($sock)) && (!$info["timed_out"])) {
-            $response .= fread($sock, $this->chunkSize);
-            $info = stream_get_meta_data($sock);
+        if (defined('WP_PROXY_PORT')){
+            curl_setopt($ch, CURLOPT_PROXYPORT, WP_PROXY_PORT);
         }
-        fclose($sock);
-        ob_end_clean();
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+        $response = curl_exec($ch);
+        $info = curl_getinfo($ch);
+        curl_close ($ch);
+
         if ($info["timed_out"]) {
             $this->errorMessage = "Could not read response (timed out)";
             $this->errorCode = -98;
@@ -355,14 +349,14 @@ class mailchimpSF_MCAPI {
                 break;
             }
         }
-        
+
         if(ini_get("magic_quotes_runtime")) $response = stripslashes($response);
-        
+
         $serial = unserialize($response);
         if($response && $serial === false) {
-        	$response = array("error" => "Bad Response.  Got This: " . $response, "code" => "-99");
+            $response = array("error" => "Bad Response.  Got This: " . $response, "code" => "-99");
         } else {
-        	$response = $serial;
+            $response = $serial;
         }
         if($errored && is_array($response) && isset($response["error"])) {
             $this->errorMessage = $response["error"];
@@ -373,10 +367,10 @@ class mailchimpSF_MCAPI {
             $this->errorCode = $error_code;
             return false;
         }
-        
+
         return $response;
     }
-    
+
     /**
      * Re-implement http_build_query for systems that do not already have it
      */
