@@ -827,11 +827,11 @@ if (get_option('mc_apikey') == '') return;
 
 if (get_option('mc_apikey')!=''){
 	?>
-	<h3><?php esc_html_e('Your Lists', 'mailchimp_i18n'); ?></h3>
+	<h3 class="mc-h2"><?php esc_html_e('Your Lists', 'mailchimp_i18n'); ?></h3>
 
 <div>
 
-	<p><?php esc_html_e('Please select the List you wish to create a Signup Form for.', 'mailchimp_i18n'); ?></p>
+	<p class="mc-p"><?php esc_html_e('Please select the List you wish to create a Signup Form for.', 'mailchimp_i18n'); ?></p>
 
 	<form method="post" action="options-general.php?page=mailchimpSF_options">
 		<?php

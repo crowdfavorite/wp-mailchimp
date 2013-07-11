@@ -13,7 +13,7 @@
 	line-height: 16px;
 	margin: 12px 0;
 	padding: 9px;
-	width: 983px;
+	width: 900px;
 }
 .success_msg { 
 	background: #fff3d4;
@@ -27,14 +27,14 @@
 	line-height: 16px;
 	margin: 12px 0;
 	padding: 9px;
-	width: 983px;
+	width: 900px;
 }
 
 /* 	User
 	---------------------------------------------------------------  */
 
 table.mc-user {
-	width: 983px;
+	width: 900px;
 	margin-top: 19px;
 }
 table.mc-user tr {
@@ -51,6 +51,7 @@ table.mc-user tr {
 	border-top-left-radius: 6px;
 	border-bottom-left-radius: 6px;
 	min-width: 200px;
+	font-weight: normal !important;
 }
 .mc-user td:last-of-type {
 	border-top: 1px solid #6dc5dc;
@@ -68,19 +69,33 @@ table.mc-user tr {
 .mc-user h3 {
 	font-weight: normal;
 	text-indent: 9px;
+	font-family: "HelveticaNeue-Regular", "Helvetica Neue Regular", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 }
 
 /* 	Headings
 	---------------------------------------------------------------  */
+
+.mc-h2 {
+	color: #373737;	
+	font-size: 26px;
+	margin-bottom: 0;
+}
+
+.mc-p {
+	color: #373737;	
+	font-size: 16px;
+	font-family: "HelveticaNeue-Regular", "Helvetica Neue Regular", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: normal;
+}
 
 /* 	Header
 	---------------------------------------------------------------  */
 
 .mailchimp-header {
 	background: url(images/mailchimp-header.png) no-repeat;
-	background-size: 983px 96px;
+	background-size: 900px 96px;
 	height: 96px;
-	width: 983px;
+	width: 900px;
 	margin-top: 19px;
 }
 
