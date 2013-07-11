@@ -941,6 +941,8 @@ if (get_option('mc_list_id') == '') return;
 	</tr>
 </table>
 
+<input type="submit" value="<?php esc_attr_e('Update Subscribe Form Settings', 'mailchimp_i18n'); ?>" class="button mc-submit" /><br/>
+
 <table class="widefat mc-widefat mc-custom-styling">
 	<tr><th colspan="2">Custom Styling</th></tr>
 	<tr class="mc-turned-on"><th><label for="mc_custom_style"><?php esc_html_e('Enabled?', 'mailchimp_i18n'); ?></label></th><td><span class="mc-pre-input"></span><input type="checkbox" name="mc_custom_style" id="mc_custom_style"<?php checked(get_option('mc_custom_style'), 'on'); ?> /></td></tr>
@@ -973,6 +975,8 @@ if (get_option('mc_list_id') == '') return;
 	</td></tr>
 </table>
 
+<input type="submit" value="<?php esc_attr_e('Update Subscribe Form Settings', 'mailchimp_i18n'); ?>" class="button mc-submit" /><br/>
+
 <table class="widefat mc-widefat">
 	<tr><th colspan="2">List Options</th></tr>
     <tr valign="top">
@@ -1002,20 +1006,21 @@ if (get_option('mc_list_id') == '') return;
 	    </td>
     </tr>
 
-</table>
 
+</table>
 
 </div>
 
-<!--<input type="submit" value="<?php esc_attr_e('Update Subscribe Form Settings', 'mailchimp_i18n'); ?>" class="button" />-->
+
 
 <?php
 // Merge Variables Table
 ?>
 <div style="width:900px;">
 
+	<input type="submit" value="<?php esc_attr_e('Update Subscribe Form Settings', 'mailchimp_i18n'); ?>" class="button mc-submit" /><br/>
 
-	<table class='widefat mc-widefat mc-blue'>
+	<table class='widefat mc-widefat'>
 		<tr>
 			<th colspan="4">
 				<?php esc_html_e('Merge Variables Included', 'mailchimp_i18n'); ?>
@@ -1068,7 +1073,9 @@ if (get_option('mc_list_id') == '') return;
 
 ?>
 
-<h4><?php esc_html_e('Interest Groups', 'mailchimp_i18n'); ?></h4>
+<input type="submit" value="<?php esc_attr_e('Update Subscribe Form Settings', 'mailchimp_i18n'); ?>" class="button mc-submit" /><br/>
+
+<h3 class="mc-h3"><?php esc_html_e('Group Settings', 'mailchimp_i18n'); ?></h3>
 
 <?php
 // Interest Groups Table
@@ -1088,7 +1095,10 @@ if (is_array($igs) && !isset($igs['id'])) {
 			?>
 		<table class='mc-widefat mc-blue' width="450px" cellspacing="0">
 			<tr valign="top">
-				<th width="75px">
+				<th colspan="2"><?php echo esc_html($ig['name']); ?></th>
+			</tr>
+			<tr valign="top">
+				<th>
 					<label for="<?php echo esc_attr('mc_show_interest_groups_'.$ig['id']); ?>"><?php esc_html_e('Show?', 'mailchimp_i18n'); ?></label>
 				</th>
 				<th>
@@ -1096,15 +1106,11 @@ if (is_array($igs) && !isset($igs['id'])) {
 				</th>
 			</tr>
 			<tr valign="top">
-				<th><?php esc_html_e('Name', 'mailchimp_i18n'); ?>:</th>
-				<th><?php echo esc_html($ig['name']); ?></th>
-			</tr>
-			<tr valign="top">
-				<th><?php esc_html_e('Input Type', 'mailchimp_i18n'); ?>:</th>
+				<th><?php esc_html_e('Input Type', 'mailchimp_i18n'); ?></th>
 				<td><?php echo esc_html($ig['form_field']); ?></td>
 			</tr>
-			<tr valign="top">
-				<th><?php esc_html_e('Options', 'mailchimp_i18n'); ?>:</th>
+			<tr valign="top" class="last-row">
+				<th><?php esc_html_e('Options', 'mailchimp_i18n'); ?></th>
 				<td>
 					<ul>
 					<?php
