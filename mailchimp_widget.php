@@ -47,15 +47,15 @@ function mailchimpSF_signup_form($args = array()) {
 
 <style>
 	.widget_mailchimpsf_widget .widget-title {
-		line-height: 1.5em;
-		margin-bottom: 9px !important;
+		line-height: 1.4em;
+		margin-bottom: 0.75em;
 	}
 	#mc_subheader {
-		margin-bottom: 18px;
 		line-height: 1.25em;
+		margin-bottom: 18px;
 	}
-	#mc_signup {
-		background: transparent;
+	.mc_merge_var {
+		margin-bottom: 1.0em;
 	}
 	.mc_var_label,
 	.mc_interest_label {
@@ -68,23 +68,36 @@ function mailchimpSF_signup_form($args = array()) {
 	.mc_input.mc_phone {
 		width: auto;
 	}
-	.mc_merge_var {
-		margin-bottom: 1.0em;
+	select.mc_select {
+		margin-top: 0.5em;
+		width: 100%;
 	}
 	.mc_address_label {
 		margin-top: 1.0em;
 		margin-bottom: 0.5em;
 		display: block;
 	}
-	select.mc_select {
-		margin-top: 0.5em;
-		width: 100%;
+	.mc_address_label ~ select {
+		width: 100%;		
 	}
 	.mc_list {
 		margin-top: 1.0;
 	}
 	.mc_list li {
 		list-style: none;
+		background: none !important;
+	}
+	.mc_interests_header {
+		margin-top: 1.0em;
+		margin-bottom: 0.5em;
+	}
+	.mc_interest label,
+	.mc_interest input {
+		margin-bottom: 0.4em;
+	}
+	#mc_signup_submit {
+		margin-top: 1.5em;
+		width: 80%;
 	}
 </style>
 
