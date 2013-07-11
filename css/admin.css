@@ -1,4 +1,8 @@
-/* 	Headings
+/* 	Logged Out
+	---------------------------------------------------------------  */
+
+
+/* 	Errors
 	---------------------------------------------------------------  */
 
 .error_msg { 
@@ -15,7 +19,8 @@
 	padding: 9px;
 	width: 900px;
 }
-.success_msg { 
+.success_msg,
+.notes_msg { 
 	background: #fff3d4;
 	border: 1px solid #febe12;
 	-webkit-border-radius: 6px;

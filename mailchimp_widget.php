@@ -99,6 +99,12 @@ function mailchimpSF_signup_form($args = array()) {
 		margin-top: 1.5em;
 		width: 80%;
 	}
+	#mc_unsub_link a {
+		font-size: 0.75em;
+	}
+	#mc_unsub_link {
+		margin-top: 1.0em;
+	}
 </style>
 
 <div id="mc_signup">

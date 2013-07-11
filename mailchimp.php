@@ -213,7 +213,7 @@ if (get_option('mc_custom_style')=='on'){
 		border-color: #<?php echo get_option('mc_header_border_color'); ?>;
 		color: #<?php echo get_option('mc_header_text_color'); ?>;
 		background-color: #<?php echo get_option('mc_header_background'); ?>;
-		font-size: 1.2em;
+		<!--	font-size: 1.2em;-->
 		padding:5px 10px;
 		width: 100%;
 	}
@@ -755,11 +755,9 @@ if (get_option('mc_apikey') == '') {
 	?>
 	<div>
 		<form method="post" action="options-general.php?page=mailchimpSF_options">
-			<h3><?php esc_html_e('Login Info', 'mailchimp_i18n');?></h3>
-			<?php esc_html_e('To start using the MailChimp plugin, we first need to login and get your API Key. Please enter your MailChimp API Key below.', 'mailchimp_i18n'); ?>
-
-			<br/>
-
+			<h3 class="mc-h2"><?php esc_html_e('Login Info', 'mailchimp_i18n');?></h3>
+			<p class="mc-p"><?php esc_html_e('To start using the MailChimp plugin, we first need to login and get your API Key. Please enter your MailChimp API Key below.', 'mailchimp_i18n'); ?></p>
+			<p class="mc-p">
 			<?php
 			echo sprintf(
 				'%1$s <a href="http://www.mailchimp.com/signup/" target="_blank">%2$s</a>',
@@ -767,7 +765,7 @@ if (get_option('mc_apikey') == '') {
 				esc_html(__('Try one for Free!', 'mailchimp_i18n'))
 			);
 			?>
-
+			</p>
 			<br/>
 
 			<table class="form-table">
@@ -786,17 +784,17 @@ if (get_option('mc_apikey') == '') {
 			<?php wp_nonce_field('update_mc_api_key', '_mcsf_nonce_action'); ?>
 		</form>
 	</div>
-
+<div class="notes_msg">
 	<?php
     if (get_option('mc_username')!=''){
 		?>
 		<strong><?php esc_html_e('Notes', 'mailchimp_i18n'); ?>:</strong>
 		<ul>
-		    <li><em><?php esc_html_e('Changing your settings at MailChimp.com may cause this to stop working.', 'mailchimp_i18n'); ?></em></li>
-		    <li><em><?php esc_html_e('If you change your login to a different account, the info you have setup below will be erased.', 'mailchimp_i18n'); ?></em></li>
-		    <li><em><?php esc_html_e('If any of that happens, no biggie - just reconfigure your login and the items below...', 'mailchimp_i18n'); ?></em></li>
+		    <li><?php esc_html_e('Changing your settings at MailChimp.com may cause this to stop working.', 'mailchimp_i18n'); ?></li>
+		    <li><?php esc_html_e('If you change your login to a different account, the info you have setup below will be erased.', 'mailchimp_i18n'); ?></li>
+		    <li><?php esc_html_e('If any of that happens, no biggie - just reconfigure your login and the items below...', 'mailchimp_i18n'); ?></li>
 		</ul>
-	    <br/>
+</div>
 		<?php
     }
 } // End of login form
