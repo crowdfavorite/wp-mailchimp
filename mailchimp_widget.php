@@ -396,8 +396,16 @@ class mailchimpSF_Widget extends WP_Widget {
 			$instance = array();
 		}
 		mailchimpSF_signup_form(array_merge($args, $instance));
+
 	}
+	function form( $instance ) {
+?>
+		<p>Great work! Your widget is ready to go — just head <a href="/wp-admin/options-general.php?page=mailchimpSF_options">over here</a> if you’d like to adjust your settings.</p>
+<?php
+	}
+
 }
+
 
 function mailchimp_country_list() {
 	return array(
