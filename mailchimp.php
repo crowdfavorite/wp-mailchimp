@@ -832,6 +832,7 @@ if (get_option('mc_apikey')!=''){
 <div>
 
 	<p class="mc-p"><?php esc_html_e('Please select the List you wish to create a Signup Form for.', 'mailchimp_i18n'); ?></p>
+	<p class="mc-list-note"><strong><?php esc_html_e('Note:', 'mailchimp_i18n'); ?></strong> <?php esc_html_e('Updating your list will not cause settings below to be lost. Changing to a new list will.', 'mailchimp_i18n'); ?></p>
 
 	<form method="post" action="options-general.php?page=mailchimpSF_options">
 		<?php
@@ -872,11 +873,6 @@ if (get_option('mc_apikey')!=''){
 				<td>
 					<input type="hidden" name="mcsf_action" value="update_mc_list_id" />
 					<input type="submit" name="Submit" value="<?php esc_attr_e('Update List', 'mailchimp_i18n'); ?>" class="button" />
-				</td>
-			</tr>
-			<tr>
-				<td colspan="2" class="mc-list-note">
-					<strong><?php esc_html_e('Note:', 'mailchimp_i18n'); ?></strong> <?php esc_html_e('Updating your list will not cause settings below to be lost. Changing to a new list will.', 'mailchimp_i18n'); ?>
 				</td>
 			</tr>
 		</table>
@@ -1011,14 +1007,14 @@ if (get_option('mc_list_id') == '') return;
 
 </div>
 
-<input type="submit" value="<?php esc_attr_e('Update Subscribe Form Settings', 'mailchimp_i18n'); ?>" class="button" />
+<!--<input type="submit" value="<?php esc_attr_e('Update Subscribe Form Settings', 'mailchimp_i18n'); ?>" class="button" />-->
 
 <?php
 // Merge Variables Table
 ?>
-<div style="width:400px;">
+<div style="width:900px;">
 
-<h4><?php esc_html_e('Merge Variables Included', 'mailchimp_i18n'); ?></h4>
+	<h3 class="mc-h3"><?php esc_html_e('Merge Variables Included', 'mailchimp_i18n'); ?></h3>
 
 <?php
 $mv = get_option('mc_merge_vars');
@@ -1030,7 +1026,7 @@ if (count($mv) == 0 || !is_array($mv)){
 } else {
 	?>
 
-	<table class='widefat'>
+	<table class='widefat mc-widefat mc-blue'>
 		<tr valign="top">
 			<th><?php esc_html_e('Name', 'mailchimp_i18n');?></th>
 			<th><?php esc_html_e('Tag', 'mailchimp_i18n');?></th>
@@ -1086,7 +1082,7 @@ if (is_array($igs) && !isset($igs['id'])) {
 			}
 			else {
 			?>
-		<table class='widefat'>
+		<table class='mc-widefat mc-blue' width="450px" cellspacing="0">
 			<tr valign="top">
 				<th width="75px">
 					<label for="<?php echo esc_attr('mc_show_interest_groups_'.$ig['id']); ?>"><?php esc_html_e('Show?', 'mailchimp_i18n'); ?></label>
