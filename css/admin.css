@@ -72,6 +72,53 @@ table.mc-user tr {
 	font-family: "HelveticaNeue-Regular", "Helvetica Neue Regular", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 }
 
+
+
+/* 	List Selection
+	---------------------------------------------------------------  */
+
+.mc-list-row {
+	width: 900px;
+	margin-bottom: 12px;
+}
+
+.mc-list-row td:first-of-type {
+	border-top: 2px solid #95D1C4;
+	border-bottom: 2px solid #95D1C4;
+	border-left: 2px solid #95D1C4;
+	-webkit-border-top-left-radius: 6px;
+	-webkit-border-bottom-left-radius: 6px;
+	-moz-border-radius-topleft: 6px;
+	-moz-border-radius-bottomleft: 6px;
+	border-top-left-radius: 6px;
+	border-bottom-left-radius: 6px;
+	min-width: 200px;
+	padding: 12px;
+}
+.mc-list-row td:last-of-type {
+	border-top: 2px solid #95D1C4;
+	border-right: 2px solid #95D1C4;
+	border-bottom: 2px solid #95D1C4;
+	-webkit-border-top-right-radius: 6px;
+	-webkit-border-bottom-right-radius: 6px;
+	-moz-border-radius-topright: 6px;
+	-moz-border-radius-bottomright: 6px;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+	width: 80px;
+	padding: 12px;
+}
+
+.mc-list-note {
+	color: #5D5C5D;	
+	font-size: 14px;
+	font-family: "HelveticaNeue-Regular", "Helvetica Neue Regular", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: normal;
+	padding: 12px;
+	
+	
+}
+
 /* 	Headings
 	---------------------------------------------------------------  */
 
