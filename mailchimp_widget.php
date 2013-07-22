@@ -462,7 +462,7 @@ class mailchimpSF_Widget extends WP_Widget {
 	}
 	function form( $instance ) {
 ?>
-		<p>Great work! Your widget is ready to go — just head <a href="/wp-admin/options-general.php?page=mailchimpSF_options">over here</a> if you’d like to adjust your settings.</p>
+	<p>Great work! Your widget is ready to go — just head <a href="<?php echo admin_url('options-general.php?page=mailchimpSF_options') ?>">over here</a> if you’d like to adjust your settings.</p>
 <?php
 	}
 
