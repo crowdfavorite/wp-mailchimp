@@ -1074,12 +1074,11 @@ if (get_option('mc_list_id') == '') return;
 
 <input type="submit" value="<?php esc_attr_e('Update Subscribe Form Settings', 'mailchimp_i18n'); ?>" class="button mc-submit" /><br/>
 
-<h3 class="mc-h3"><?php esc_html_e('Group Settings', 'mailchimp_i18n'); ?></h3>
-
 <?php
 // Interest Groups Table
 $igs = get_option('mc_interest_groups');
-if (is_array($igs) && !isset($igs['id'])) {
+if (is_array($igs) && !isset($igs['id'])) { ?>
+	<h3 class="mc-h3"><?php esc_html_e('Group Settings', 'mailchimp_i18n'); ?></h3> <?php
 	// Determines whether or not to continue processing. Only false if there was an error.
 	$continue = true;
 	foreach ($igs as $ig) {
@@ -1128,16 +1127,7 @@ if (is_array($igs) && !isset($igs['id'])) {
 		}
 	}
 }
-else {
-	?>
-	<em><?php esc_html_e('Error retrieving interest groups. Please re-import the list.', 'mailchimp_i18n'); ?></em>
-	<?php
-}
-
 ?>
-<p class="submit">
-<input type="submit" value="<?php esc_attr_e('Update Subscribe Form Settings', 'mailchimp_i18n'); ?>" class="button" />
-</p>
 </div>
 </form>
 </div>
