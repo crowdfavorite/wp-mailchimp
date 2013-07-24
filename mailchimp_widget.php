@@ -105,6 +105,12 @@ function mailchimpSF_signup_form($args = array()) {
 	#mc_unsub_link {
 		margin-top: 1.0em;
 	}
+	.mc_header_address {
+		font-weight: bold;
+		margin-top: 1.0em;
+		margin-bottom: 0.5em;
+
+	}
 </style>
 
 <div id="mc_signup">
@@ -390,7 +396,7 @@ function mailchimp_form_field($var, $num_fields) {
 			case 'address':
 			$countries = mailchimp_country_list();
 			$html .= '
-	<br />
+
 	<label for="'.esc_attr($opt.'-addr1').'" class="mc_address_label">'.__('Street Address', 'mailchimp_i18n').'</label> 
 	<input type="text" size="18" value="" name="'.esc_attr($opt.'[addr1]').'" id="'.esc_attr($opt.'-addr1').'" class="mc_input" />
 	<label for="'.esc_attr($opt.'-addr2').'" class="mc_address_label">'.__('Address Line 2', 'mailchimp_i18n').'</label>
