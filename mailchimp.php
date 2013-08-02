@@ -100,9 +100,9 @@ function mailchimpSF_load_resources() {
 
 	if (get_option('mc_use_datepicker') == 'on' && !is_admin()) {
 		// Datepicker theme
-		wp_enqueue_style('flick', MCSF_URL.'/css/flick/flick.css');
+		wp_enqueue_style('flick', MCSF_URL.'css/flick/flick.css');
 		// Datepicker JS
-		wp_enqueue_script('datepicker', MCSF_URL.'/js/datepicker.js', array('jquery','jquery-ui-core'));
+		wp_enqueue_script('datepicker', MCSF_URL.'js/datepicker.js', array('jquery','jquery-ui-core'));
 	}
 
 	wp_enqueue_style('mailchimpSF_main_css', home_url('?mcsf_action=main_css&ver='.MCSF_VER));
