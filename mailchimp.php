@@ -1115,7 +1115,61 @@ if (is_array($igs) && !isset($igs['id'])) { ?>
 	}
 }
 ?>
+
+<table class="widefat mc-widefat mc-yellow">
+	<tr><th colspan="2">CSS Cheat Sheet</th></tr>
+    <tr valign="top">
+    	<th scope="row">.widget_mailchimpsf_widget </th>
+	    <td>This targets the entire widget container.</td>
+    </tr>
+    <tr valign="top">
+    	<th scope="row">.widget-title</th>
+	    <td>This styles the title of your MailChimp widget. <i>Modifying this class will affect your other widget titles.</i></td>
+    </tr>
+    <tr valign="top">
+    	<th scope="row">#mc_signup</th>
+	    <td>This targets the entirity of the widget beneath the widget title.</td>
+    </tr>
+    <tr valign="top">
+    	<th scope="row">#mc_subheader</th>
+	    <td>This styles the subheader text.</td>
+    </tr>
+    <tr valign="top">
+    	<th scope="row">.mc_form_inside</th>
+	    <td>The guts and main container for the all of the form elements (the entirety of the widget minus the header and the sub header).</td>
+    </tr>
+    <tr valign="top">
+    	<th scope="row">.mc_header</th>
+	    <td>This targets the label above the input fields.</td>
+    </tr>
+    <tr valign="top">
+    	<th scope="row">.mc_input</th>
+	    <td>This attaches to the input fields.</td>
+    </tr>
+    <tr valign="top">
+    	<th scope="row">.mc_header_address</th>
+	    <td>This is the label above an address group.</td>
+    </tr>
+    <tr valign="top">
+    	<th scope="row">.mc_radio_label</th>
+	    <td>These are the labels associated with radio buttons.</td>
+    </tr>
+    <tr valign="top">
+    	<th scope="row">#mc-indicates-required</th>
+	    <td>This targets the “Indicates Required Field” text.</td>
+    </tr>
+    <tr valign="top">
+    	<th scope="row">#mc_signup_submit</th>
+	    <td>Use this to style the submit button.</td>
+    </tr>
+    
+
+</table>
+
 </div>
+
+
+
 </form>
 </div>
 </div><!--wrap-->

@@ -276,6 +276,21 @@ table.mc-widefat.mc-blue tr:first-child {
 	background: #6DC5DC !important;
 }
 
+.mc-widefat.mc-yellow {
+	background: #fff !important;
+	border: 2px solid #FEDE88 !important;	
+}
+
+table.mc-widefat.mc-yellow td,
+table.mc-widefat.mc-yellow th {
+	border-bottom: 1px solid #FFE8AA !important;
+}
+table.mc-widefat.mc-yellow tr:first-child {
+	background: #FEDE88 !important;
+}
+
+
+
 .mc-widefat.mc-api {
 	border: 2px solid #95D1C4 !important;	
 }
