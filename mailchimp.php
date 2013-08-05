@@ -945,19 +945,6 @@ if (get_option('mc_list_id') == '') return;
 <table class="widefat mc-widefat mc-custom-styling">
 	<tr><th colspan="2">Custom Styling</th></tr>
 	<tr class="mc-turned-on"><th><label for="mc_custom_style"><?php esc_html_e('Enabled?', 'mailchimp_i18n'); ?></label></th><td><span class="mc-pre-input"></span><input type="checkbox" name="mc_custom_style" id="mc_custom_style"<?php checked(get_option('mc_custom_style'), 'on'); ?> /></td></tr>
-    <tr class="mc-internal-heading"><th colspan="2"><?php esc_html_e('Header Settings (only applies if there are no HTML tags in the Header Content area above)', 'mailchimp_i18n'); ?></th></tr>
-	<tr><th><?php esc_html_e('Border Width', 'mailchimp_i18n'); ?></th><td><span class="mc-pre-input"></span><input type="text" name="mc_header_border_width" size="3" maxlength="3" value="<?php echo esc_attr(get_option('mc_header_border_width')); ?>"/>
-		<em>px • <?php esc_html_e('Set to 0 for no border, do not enter', 'mailchimp_i18n'); ?> <strong>px</strong>!</em>
-	</td></tr>
-	<tr><th><?php esc_html_e('Border Color', 'mailchimp_i18n'); ?></th><td><span class="mc-pre-input">#</span><input type="text" name="mc_header_border_color" size="7" maxlength="6" value="<?php echo esc_attr(get_option('mc_header_border_color')); ?>"/>
-		<em><?php esc_html_e('Do not enter initial', 'mailchimp_i18n'); ?><strong>#</strong></em>
-	</td></tr>
-	<tr><th><?php esc_html_e('Text Color', 'mailchimp_i18n'); ?></th><td><span class="mc-pre-input">#</span><input type="text" name="mc_header_text_color" size="7" maxlength="6" value="<?php echo esc_attr(get_option('mc_header_text_color')); ?>"/>
-		<em><?php esc_html_e('Do not enter initial', 'mailchimp_i18n'); ?> <strong>#</strong></em>
-	</td></tr>
-	<tr><th><?php esc_html_e('Background Color', 'mailchimp_i18n'); ?></th><td><span class="mc-pre-input">#</span><input type="text" name="mc_header_background" size="7" maxlength="6" value="<?php echo esc_attr(get_option('mc_header_background')); ?>"/>
-		<em><?php esc_html_e('Do not enter initial', 'mailchimp_i18n'); ?> <strong>#</strong></em>
-	</td></tr>
 
     <tr class="mc-internal-heading"><th colspan="2"><?php esc_html_e('Form Settings', 'mailchimp_i18n'); ?></th></tr>
 	<tr><th><?php esc_html_e('Border Width', 'mailchimp_i18n'); ?></th><td><span class="mc-pre-input"></span><input type="text" name="mc_form_border_width" size="3" maxlength="3" value="<?php echo esc_attr(get_option('mc_form_border_width')); ?>"/>
