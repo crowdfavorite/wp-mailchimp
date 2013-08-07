@@ -63,6 +63,7 @@ function mailchimpSF_signup_form($args = array()) {
 		margin-bottom: 0.5em;
 	}
 	.mc_input {
+		box-sizing: border-box;
 		width: 100%;
 	}
 	.mc_input.mc_phone {
