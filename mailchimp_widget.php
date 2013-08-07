@@ -80,9 +80,6 @@ function mailchimpSF_signup_form($args = array()) {
 	.mc_address_label ~ select {
 		width: 100%;		
 	}
-	.mc_list {
-		margin-top: 1.0;
-	}
 	.mc_list li {
 		list-style: none;
 		background: none !important;
@@ -105,11 +102,18 @@ function mailchimpSF_signup_form($args = array()) {
 	#mc_unsub_link {
 		margin-top: 1.0em;
 	}
-	.mc_header_address {
+	.mc_header_address,
+	.mc_email_format {
+		display: block;
 		font-weight: bold;
 		margin-top: 1.0em;
 		margin-bottom: 0.5em;
-
+	}
+	.mc_email_options {
+		margin-top: 0.5em;
+	}
+	.mc_email_type {
+		padding-left: 4px;
 	}
 </style>
 
@@ -205,12 +209,11 @@ function mailchimpSF_signup_form($args = array()) {
 		if (get_option('mc_email_type_option')) {
 		?>
 		<div class="mergeRow">
-			<label><?php _e('Preferred Format', 'mailchimp_i18n'); ?></label>
-		    <div class="field-group groups">
+			<label class="mc_email_format"><?php _e('Preferred Format', 'mailchimp_i18n'); ?></label>
+		    <div class="field-group groups mc_email_options">
 		        <ul class="mc_list">
-			        <li><input type="radio" name="email_type" id="email_type_html" value="html" checked="checked"><label for="email_type_html"><?php _e('HTML', 'mailchimp_i18n'); ?></label></li>
-			        <li><input type="radio" name="email_type" id="email_type_text" value="text"><label for="email_type_text"><?php _e('Text', 'mailchimp_i18n'); ?></label></li>
-			        <li><input type="radio" name="email_type" id="email_type_mobile" value="mobile"><label for="email_type_mobile"><?php _e('Mobile', 'mailchimp_i18n'); ?></label></li>
+			        <li><input type="radio" name="email_type" id="email_type_html" value="html" checked="checked"><label for="email_type_html" class="mc_email_type"><?php _e('HTML', 'mailchimp_i18n'); ?></label></li>
+			        <li><input type="radio" name="email_type" id="email_type_text" value="text"><label for="email_type_text" class="mc_email_type"><?php _e('Text', 'mailchimp_i18n'); ?></label></li>
 		        </ul>
 			</div>
 		</div>	
