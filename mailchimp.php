@@ -1322,11 +1322,13 @@ function mailchimpSF_signup_submit() {
 				if ($merge_key !== 'GROUPINGS') {
 					switch ($mv_tag_keys[$merge_key]['field_type']) {
 						case 'phone':
-							$phone = $merge_value;
-							if (!empty($phone)) {
-								if (!preg_match('/[0-9]{0,3}-[0-9]{0,3}-[0-9]{0,4}/', $phone)) {
-									$errs[] = sprintf(__("%s must consist of only numbers", 'mailchimp_i18n'), esc_html($mv_tag_keys[$merge_key]['name']));
-									$success = false;
+							if ($mv_tag_keys[$merge_key]['phoneformat'] == 'US') {
+								$phone = $merge_value;
+								if (!empty($phone)) {
+									if (!preg_match('/[0-9]{0,3}-[0-9]{0,3}-[0-9]{0,4}/', $phone)) {
+										$errs[] = sprintf(__("%s must consist of only numbers", 'mailchimp_i18n'), esc_html($mv_tag_keys[$merge_key]['name']));
+										$success = false;
+									}
 								}
 							}
 							break;

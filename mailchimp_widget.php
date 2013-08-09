@@ -340,7 +340,6 @@ function mailchimp_form_field($var, $num_fields) {
 		$html .= '
 <div class="mc_merge_var">
 		'.$label;
-	
 		switch ($var['field_type']) {
 			case 'date': 
 				$html .= '
@@ -427,11 +426,18 @@ function mailchimp_form_field($var, $num_fields) {
 	<input type="text" size="18" maxlength="5" value="" name="'.esc_attr($opt).'" id="'.esc_attr($opt).'" class="mc_input" />';
 				break;
 			case 'phone':
-				$html .= '
-		<input type="text" size="2" maxlength="3" value="" name="'.esc_attr($opt.'[area]').'" id="'.esc_attr($opt.'-area').'" class="mc_input mc_phone" /> 
-		<input type="text" size="2" maxlength="3" value="" name="'.esc_attr($opt.'[detail1]').'" id="'.esc_attr($opt.'-detail1').'" class="mc_input mc_phone" /> 
-		<input type="text" size="5" maxlength="4" value="" name="'.esc_attr($opt.'[detail2]').'" id="'.esc_attr($opt.'-detail2').'" class="mc_input mc_phone" />
-			';
+				if ($var['phoneformat'] == 'US') {
+					$html .= '
+			<input type="text" size="2" maxlength="3" value="" name="'.esc_attr($opt.'[area]').'" id="'.esc_attr($opt.'-area').'" class="mc_input mc_phone" /> 
+			<input type="text" size="2" maxlength="3" value="" name="'.esc_attr($opt.'[detail1]').'" id="'.esc_attr($opt.'-detail1').'" class="mc_input mc_phone" /> 
+			<input type="text" size="5" maxlength="4" value="" name="'.esc_attr($opt.'[detail2]').'" id="'.esc_attr($opt.'-detail2').'" class="mc_input mc_phone" />
+				';
+				}
+				else {
+					$html .= '
+						<input type="text" size="18" value="" name="'.esc_attr($opt).'" id="'.esc_attr($opt).'" class="mc_input" />
+					';
+				}
 				break;
 			case 'email':
 			case 'url':
