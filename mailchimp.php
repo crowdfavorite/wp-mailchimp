@@ -119,6 +119,7 @@ function mailchimpSF_load_resources() {
  */
 function mc_admin_page_load_resources() {
 	wp_enqueue_style('mailchimpSF_admin_css', MCSF_URL.'css/admin.css');
+	wp_enqueue_script('mailchimpSF_admin_js', MCSF_URL.'js/admin.js');
 }
 add_action('load-settings_page_mailchimpSF_options', 'mc_admin_page_load_resources');
 
@@ -178,6 +179,12 @@ function mailchimpSF_early_request_handler() {
 				header("Content-type: text/css");
 				mailchimpSF_main_css();
 				exit;
+			case 'authorize':
+				mailchimpSF_authorize();
+				break;
+			case 'authorized':
+				mailchimpSF_authorized();
+				break;
 		}
 	}
 }
@@ -339,6 +346,68 @@ function mailchimpSF_request_handler() {
 	}
 }
 add_action('init', 'mailchimpSF_request_handler');
+
+function mailchimpSF_auth_nonce_key($salt = null) {
+	if (is_null($salt)) {
+		$salt = mailchimpSF_auth_nonce_salt();
+	}
+	return md5('social_authentication'.AUTH_KEY.$salt);
+}
+
+function mailchimpSF_auth_nonce_salt() {
+	return md5(microtime().$_SERVER['SERVER_ADDR']);
+}
+
+function mailchimpSF_authorize() {
+	$proxy = apply_filters('mailchimp_authorize_url', 'http://soprestodev.socialize-this.com/mailchimp/authorize');
+	if (strpos($proxy, 'socialize-this') !== false) {
+		$salt = mailchimpSF_auth_nonce_salt();
+		$id = wp_create_nonce(mailchimpSF_auth_nonce_key($salt));
+		$url = home_url('index.php');
+		$args = array(
+			'mcsf_action' => 'authorized',
+			'salt' => $salt,
+			'user_id' => get_current_user_id(),
+		);
+
+		$proxy = add_query_arg(array(
+			'id' => $id,
+			'response_url' => urlencode(add_query_arg($args, $url))
+		), $proxy);
+
+		$proxy = apply_filters('mailchimp_proxy_url', $proxy);
+	}
+
+	wp_redirect($proxy);
+	exit;
+}
+
+function mailchimpSF_authorized() {
+	// User ID on the request? Must be set before nonce comparison
+	$user_id = stripslashes($_GET['user_id']);
+	if ($user_id !== null) {
+		wp_set_current_user($user_id);
+	}
+
+	$nonce = stripslashes($_POST['id']);
+	$salt = stripslashes($_GET['salt']);
+	if (wp_verify_nonce($nonce, mailchimpSF_auth_nonce_key($salt)) === false) {
+		wp_die('Cheatin&rsquo; huh?');
+	}
+
+	$response = stripslashes_deep($_POST['response']);
+
+	if (!isset($response['keys']) || !isset($response['user'])) {
+		wp_die('Something went wrong, please try again');
+	}
+
+	update_option('mc_sopresto_user', $response['user']);
+	update_option('mc_sopresto_public_key', $response['keys']['public']);
+	update_option('mc_sopresto_secret_key', $response['keys']['secret']);
+
+	mailchimpSF_set_api_key($response['keys']['access_token']);
+	exit;
+}
 
 /**
  * Upgrades data if it needs to. Checks on admin_init
@@ -759,7 +828,10 @@ if (mailchimpSF_global_msg() != ''){
 
 // If we don't have an API Key, do a login form
 if (get_option('mc_apikey') == '') {
-	?>
+?>
+	<div>
+	<a href="<?php echo add_query_arg(array("mcsf_action" => "authorize"), home_url('index.php')) ?>" class="mailchimp-login">Login</a>
+	</div>
 	<div>
 		<form method="post" action="options-general.php?page=mailchimpSF_options">
 			<h3 class="mc-h2"><?php esc_html_e('Log In Information', 'mailchimp_i18n');?></h3>
