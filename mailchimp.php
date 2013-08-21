@@ -529,7 +529,7 @@ function mailchimpSF_set_form_defaults($list_name = '') {
 	update_option('mc_submit_text',__( 'Subscribe', 'mailchimp_i18n' ));
 
 	update_option('mc_use_datepicker', 'on');
-	update_option('mc_custom_style','on');
+	update_option('mc_custom_style','off');
 	update_option('mc_use_javascript','on');
 	update_option('mc_use_unsub_link','off');
 	update_option('mc_header_border_width','1');
@@ -538,9 +538,9 @@ function mailchimpSF_set_form_defaults($list_name = '') {
 	update_option('mc_header_text_color','CC6600');
 
 	update_option('mc_form_border_width','1');
-	update_option('mc_form_border_color','C4D3EA');
-	update_option('mc_form_background','EEF3F8');
-	update_option('mc_form_text_color','555555');
+	update_option('mc_form_border_color','E0E0E0');
+	update_option('mc_form_background','FFFFFF');
+	update_option('mc_form_text_color','3F3F3f');
 }
 
 /**
