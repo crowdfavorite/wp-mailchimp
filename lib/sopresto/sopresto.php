@@ -121,7 +121,7 @@ class Sopresto_MailChimp {
         	throw new Exception("No error message was found", $error_code);
         }
         
-        return $response;
+        return $response['response'];
     }
     
     protected $function_map = array(

@@ -467,6 +467,9 @@ function mailchimpSF_do_upgrade() {
  **/
 function mailchimpSF_delete_setup() {
 	delete_option('mc_user_id');
+	delete_option('mc_sopresto_user');
+	delete_option('mc_sopresto_public_key');
+	delete_option('mc_sopresto_secret_key');
 	delete_option('mc_rewards');
 	delete_option('mc_use_javascript');
 	delete_option('mc_use_datepicker');
@@ -807,7 +810,7 @@ if (!$user) {
 	<br/>
 <div class="notes_msg">
 	<?php
-    if ($user && $user->username != ''){
+    if ($user && $user['username'] != ''){
 		?>
 		<strong><?php esc_html_e('Notes', 'mailchimp_i18n'); ?>:</strong>
 		<ul>
@@ -825,7 +828,7 @@ else {
 ?>
 <table style="min-width:400px;" class="mc-user" cellspacing="0">
 	<tr>
-		<td><h3><?php esc_html_e('Logged in as', 'mailchimp_i18n');?>: <?php echo esc_html($user->username); ?></h3>
+		<td><h3><?php esc_html_e('Logged in as', 'mailchimp_i18n');?>: <?php echo esc_html($user['username']); ?></h3>
 		</td>
 		<td>
 			<form method="post" action="options-general.php?page=mailchimpSF_options">
@@ -842,9 +845,10 @@ else {
 
 
 //Just get out if nothing else matters...
-if (get_option('mc_apikey') == '') return;
+$api = mailchimpSF_get_api();
+if (!$api) { return; }
 
-if (get_option('mc_apikey')!=''){
+if ($api){
 	?>
 	<h3 class="mc-h2"><?php esc_html_e('Your Lists', 'mailchimp_i18n'); ?></h3>
 
@@ -855,7 +859,6 @@ if (get_option('mc_apikey')!=''){
 
 	<form method="post" action="options-general.php?page=mailchimpSF_options">
 		<?php
-		$api = mailchimpSF_get_api();
 	    //we *could* support paging, but few users have that many lists (and shouldn't)
 		$lists = $api->lists(array(),0,100);
 		$lists = $lists['data'];
@@ -920,6 +923,7 @@ else {
 <h4><?php esc_html_e('Selected MailChimp List', 'mailchimp_i18n'); ?>: <?php echo esc_html(get_option('mc_list_name')); ?></h4>
 <?php
 }
+
 //Just get out if nothing else matters...
 if (get_option('mc_list_id') == '') return;
 
@@ -1361,6 +1365,8 @@ function mailchimpSF_signup_submit() {
 		}
 		if ($success) {
 			$api = mailchimpSF_get_api();
+			if (!$api) { return; }
+
 			$retval = $api->listSubscribe( $listId, $email, $merge, $email_type);
 			if (!$retval) {
 				switch($api->errorCode) {
