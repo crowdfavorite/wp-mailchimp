@@ -343,7 +343,7 @@ function mailchimp_form_field($var, $num_fields) {
 		switch ($var['field_type']) {
 			case 'date': 
 				$html .= '
-	<input type="text" size="18" value="'.esc_attr($var['default']).'" name="'.esc_attr($opt).'" id="'.esc_attr($opt).'" class="date-pick mc_input"/>';
+	<input type="text" size="18" placeholder="'.esc_attr($var['default']).'" name="'.esc_attr($opt).'" id="'.esc_attr($opt).'" class="date-pick mc_input"/>';
 				break;
 			case 'radio':
 				if (is_array($var['choices'])) {
@@ -374,7 +374,7 @@ function mailchimp_form_field($var, $num_fields) {
 				break;
 			case 'birthday':
 				$html .= '
-	<input type="text" size="18" value="'.esc_attr($var['default']).'" name="'.esc_attr($opt).'" id="'.esc_attr($opt).'" class="birthdate-pick mc_input"/>';
+	<input type="text" size="18" placeholder="'.esc_attr($var['default']).'" name="'.esc_attr($opt).'" id="'.esc_attr($opt).'" class="birthdate-pick mc_input"/>';
 				break;
 			case 'birthday-old':
 				$days = range(1, 31);
@@ -446,7 +446,7 @@ function mailchimp_form_field($var, $num_fields) {
 			case 'number':
 			default:
 				$html .= '
-	<input type="text" size="18" value="'.esc_html($var['default']).'" name="'.esc_attr($opt).'" id="'.esc_attr($opt).'" class="mc_input"/>';
+	<input type="text" size="18" placeholder="'.esc_html($var['default']).'" name="'.esc_attr($opt).'" id="'.esc_attr($opt).'" class="mc_input"/>';
 				break;
 		}
 		if (!empty($var['helptext'])) {
