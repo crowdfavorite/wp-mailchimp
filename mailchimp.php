@@ -34,8 +34,8 @@ define('MCSF_CAP_THRESHOLD', 'manage_options');
 mailchimpSF_where_am_i();
 
 // Get our MailChimp API class in scope
-if (!class_exists('mailchimpSF_MCAPI')) {
-	require_once('miniMCAPI.class.php');
+if (!class_exists('Sopresto_MailChimp')) {
+	require_once(MCSF_DIR.'lib/sopresto/sopresto.php');
 }
 
 // includes the widget code so it can be easily called either normally or via ajax
@@ -293,16 +293,10 @@ function mailchimpSF_request_handler() {
 					wp_die('Cheatin&rsquo; huh?');
 				}
 
-				// erase API Key
-			    update_option('mc_apikey', '');
-				break;
-			case 'update_mc_apikey':
-				// Check capability & Verify nonce
-				if (!current_user_can(MCSF_CAP_THRESHOLD) || !wp_verify_nonce($_POST['_mcsf_nonce_action'], 'update_mc_api_key')) {
-					wp_die('Cheatin&rsquo; huh?');
-				}
-
-				mailchimpSF_set_api_key(strip_tags(stripslashes($_POST['mc_apikey'])));
+				// erase auth information
+			    update_option('mc_sopresto_user', '');
+			    update_option('mc_sopresto_public_key', '');
+			    update_option('mc_sopresto_secret_key', '');
 				break;
 			case 'reset_list':
 				// Check capability & Verify nonce
@@ -404,8 +398,6 @@ function mailchimpSF_authorized() {
 	update_option('mc_sopresto_user', $response['user']);
 	update_option('mc_sopresto_public_key', $response['keys']['public']);
 	update_option('mc_sopresto_secret_key', $response['keys']['secret']);
-
-	mailchimpSF_set_api_key($response['keys']['access_token']);
 	exit;
 }
 
@@ -423,6 +415,22 @@ function mailchimpSF_upgrade() {
 	}
 }
 add_action('admin_init', 'mailchimpSF_upgrade');
+
+/**
+ * Creates new Sopresto API object
+ *
+ * @return Sopresto_MailChimp|false
+ */
+function mailchimpSF_get_api() {
+	$public_key = get_option('mc_sopresto_public_key', false);
+	$secret_key = get_option('mc_sopresto_secret_key', false);
+
+	if ($public_key && $secret_key) {
+		return new Sopresto_MailChimp($public_key, $secret_key, '1.3');
+	}
+
+	return false;
+}
 
 /**
  * Checks to see if we're storing a password, if so, we need
@@ -451,62 +459,7 @@ function mailchimpSF_needs_upgrade() {
  * 2011-02-09 - old password upgrade code deleted as 0.5 is way old
  */
 function mailchimpSF_do_upgrade() {
-    //left in just for good measure
-    delete_option('mc_password');
-    $api = new mailchimpSF_MCAPI(get_option('mc_apikey'));
-    $igs = $api->listInterestGroupings(get_option('mc_list_id'));
-
-	// If we don't have any interest groups store an empty array, not (bool) false
-	$igs = !$igs ? array() : $igs;
-
-    update_option('mc_interest_groups', $igs);
-}
-
-/**
- * Sets the API Key to whatever value was passed to this func
- *
- * @return array of vars
- **/
-function mailchimpSF_set_api_key($api_key = '') {
-	$delete_setup = false;
-	$api = new mailchimpSF_MCAPI($api_key);
-	$api->ping();
-	if (empty($api->errorCode)) {
-		$msg = "<p class='success_msg'>".esc_html(__("Success! We were able to verify your API Key! Let's continue, shall we?", 'mailchimp_i18n'))."</p>";
-		update_option('mc_apikey', $api_key);
-		$req = $api->getAccountDetails();
-		update_option('mc_username', $req['username']);
-		update_option('mc_user_id', $req['user_id']);
-		$cur_list_id = get_option('mc_list_id');
-		if (!empty($cur_list_id)) {
-		    //we *could* support paging, but few users have that many lists (and shouldn't)
-			$lists = $api->lists(array(),0,100);
-			$lists = $lists['data'];
-			//but don't delete if the list still exists...
-            $delete_setup = true;
-			foreach($lists as $list) {
-				if ($list['id'] == $cur_list_id) {
-					$list_id = isset($_POST['mc_list_id']) ? $_POST['mc_list_id'] : '';
-					$delete_setup = false;
-				}
-			}
-		}
-	} else {
-		$msg = "<p class='error_msg'>".esc_html(__('Uh-oh, we were unable to verify your API Key. Please check them and try again!', 'mailchimp_i18n'))."<br/>";
-		$msg .= __('The server said:', 'mailchimp_i18n')."<em>".esc_html($api->errorMessage)."</em></p>";
-		$username = get_option('mc_username');
-		if (empty($username)) {
-			$delete_setup = true;
-		}
-	}
-
-	// Set a global message
-	mailchimpSF_global_msg($msg);
-
-	// If we need to delete our setup, do it
-	if ($delete_setup){
-		mailchimpSF_delete_setup();
-	}
+	# TODO: reload this
 }
 
 /**
@@ -721,11 +674,13 @@ function mailchimpSF_save_general_form_settings() {
 /**
  * Sees if the user changed the list, and updates options accordingly
  **/
-function mailchimpSF_change_list_if_necessary($api_key) {
+function mailchimpSF_change_list_if_necessary() {
 	// Simple permission check before going through all this
 	if (!current_user_can(MCSF_CAP_THRESHOLD)) { return; }
 
-	$api = new mailchimpSF_MCAPI($api_key);
+	$api = mailchimpSF_get_api();
+	if (!$api) { return; }
+
     //we *could* support paging, but few users have that many lists (and shouldn't)
 	$lists = $api->lists(array(),0,100);
 	$lists = $lists['data'];
@@ -795,6 +750,7 @@ function mailchimpSF_change_list_if_necessary($api_key) {
 	}
 }
 
+
 /**
  * Outputs the Settings/Options page
  */
@@ -806,16 +762,10 @@ function mailchimpSF_setup_page() {
 		<h2><?php esc_html_e('MailChimp List Setup', 'mailchimp_i18n');?> </h2>
 	</div>
 <?php
-
-$user = get_option('mc_username');
-$api_key = get_option('mc_apikey');
+$user = get_option('mc_sopresto_user');
 
 // If we have an API Key, see if we need to change the lists and its options
-if (!empty($api_key)){
-	mailchimpSF_change_list_if_necessary($api_key);
-}
-
-
+mailchimpSF_change_list_if_necessary();
 
 // Display our success/error message(s) if have them
 if (mailchimpSF_global_msg() != ''){
@@ -827,16 +777,14 @@ if (mailchimpSF_global_msg() != ''){
 
 
 // If we don't have an API Key, do a login form
-if (get_option('mc_apikey') == '') {
+if (!$user) {
 ?>
 	<div>
-	<a href="<?php echo add_query_arg(array("mcsf_action" => "authorize"), home_url('index.php')) ?>" class="mailchimp-login">Login</a>
 	</div>
 	<div>
-		<form method="post" action="options-general.php?page=mailchimpSF_options">
-			<h3 class="mc-h2"><?php esc_html_e('Log In Information', 'mailchimp_i18n');?></h3>
-			<p class="mc-p"><?php esc_html_e('To start using the MailChimp plugin, we first need to login and get your API Key. Please enter your MailChimp API Key below.', 'mailchimp_i18n'); ?></p>
-			<p class="mc-a">
+		<h3 class="mc-h2"><?php esc_html_e('Log In', 'mailchimp_i18n');?></h3>
+		<p class="mc-p"><?php esc_html_e('To start using the MailChimp plugin, we first need to connect your MailChimp account.  Click login below to connect.', 'mailchimp_i18n'); ?></p>
+		<p class="mc-a">
 			<?php
 			echo sprintf(
 				'%1$s <a href="http://www.mailchimp.com/signup/" target="_blank">%2$s</a>',
@@ -844,29 +792,22 @@ if (get_option('mc_apikey') == '') {
 				esc_html(__('Try one for Free!', 'mailchimp_i18n'))
 			);
 			?>
-			</p>
+		</p>
 		<div style="width: 900px;">
 			<table class="widefat mc-widefat mc-api">
 				<tr valign="top">
-				<th scope="row"><?php esc_html_e('API Key', 'mailchimp_i18n'); ?></th>
+				<th scope="row"><?php esc_html_e('Connect to MailChimp', 'mailchimp_i18n'); ?></th>
 				<td>
-					<input name="mc_apikey" type="text" id="mc_apikey" class="code" value="<?php echo esc_attr($api_key); ?>" size="52" />
-				    <a href="http://admin.mailchimp.com/account/api-key-popup" target="_blank" class="mc-api-key">Get your API Key here.</a>
+					<a href="<?php echo add_query_arg(array("mcsf_action" => "authorize"), home_url('index.php')) ?>" class="mailchimp-login">Connect</a>
 				</td>
 				</tr>
 			</table>
-
-			<input type="hidden" name="mcsf_action" value="update_mc_apikey"/>
-			<input type="submit" name="Submit" value="<?php esc_attr_e('Save & Check', 'mailchimp_i18n');?>" class="button mc-api-submit" />
-			<?php wp_nonce_field('update_mc_api_key', '_mcsf_nonce_action'); ?>
-		</form>
-
 		</div>
 	</div>
 	<br/>
 <div class="notes_msg">
 	<?php
-    if (get_option('mc_username')!=''){
+    if ($user && $user->username != ''){
 		?>
 		<strong><?php esc_html_e('Notes', 'mailchimp_i18n'); ?>:</strong>
 		<ul>
@@ -884,7 +825,7 @@ else {
 ?>
 <table style="min-width:400px;" class="mc-user" cellspacing="0">
 	<tr>
-		<td><h3><?php esc_html_e('Logged in as', 'mailchimp_i18n');?>: <?php echo esc_html(get_option('mc_username')); ?></h3>
+		<td><h3><?php esc_html_e('Logged in as', 'mailchimp_i18n');?>: <?php echo esc_html($user->username); ?></h3>
 		</td>
 		<td>
 			<form method="post" action="options-general.php?page=mailchimpSF_options">
@@ -914,7 +855,7 @@ if (get_option('mc_apikey')!=''){
 
 	<form method="post" action="options-general.php?page=mailchimpSF_options">
 		<?php
-		$api = new mailchimpSF_MCAPI(get_option('mc_apikey'));
+		$api = mailchimpSF_get_api();
 	    //we *could* support paging, but few users have that many lists (and shouldn't)
 		$lists = $api->lists(array(),0,100);
 		$lists = $lists['data'];
@@ -1419,7 +1360,7 @@ function mailchimpSF_signup_submit() {
 			}
 		}
 		if ($success) {
-			$api = new mailchimpSF_MCAPI(get_option('mc_apikey'));
+			$api = mailchimpSF_get_api();
 			$retval = $api->listSubscribe( $listId, $email, $merge, $email_type);
 			if (!$retval) {
 				switch($api->errorCode) {
