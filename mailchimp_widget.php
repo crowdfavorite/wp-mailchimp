@@ -343,7 +343,7 @@ function mailchimp_form_field($var, $num_fields) {
 		switch ($var['field_type']) {
 			case 'date': 
 				$html .= '
-	<input type="text" size="18" placeholder="'.esc_attr($var['default']).'" name="'.esc_attr($opt).'" id="'.esc_attr($opt).'" class="date-pick mc_input"/>';
+	<input type="text" size="18" placeholder="'.esc_attr($var['default']).'" data-format="'.esc_attr($var['dateformat']).'" name="'.esc_attr($opt).'" id="'.esc_attr($opt).'" class="date-pick mc_input"/>';
 				break;
 			case 'radio':
 				if (is_array($var['choices'])) {
@@ -374,7 +374,7 @@ function mailchimp_form_field($var, $num_fields) {
 				break;
 			case 'birthday':
 				$html .= '
-	<input type="text" size="18" placeholder="'.esc_attr($var['default']).'" name="'.esc_attr($opt).'" id="'.esc_attr($opt).'" class="birthdate-pick mc_input"/>';
+	<input type="text" size="18" placeholder="'.esc_attr($var['default']).'" data-format="'.esc_attr($var['dateformat']).'" name="'.esc_attr($opt).'" id="'.esc_attr($opt).'" class="birthdate-pick mc_input"/>';
 				break;
 			case 'birthday-old':
 				$days = range(1, 31);
@@ -470,13 +470,11 @@ class mailchimpSF_Widget extends WP_Widget {
 		);
 		$this->WP_Widget('mailchimpSF_widget', __('MailChimp Widget', 'mailchimp_i18n'), $widget_ops);
 	}
-
 	function widget( $args, $instance ) {
 		if (!is_array($instance)) {
 			$instance = array();
 		}
 		mailchimpSF_signup_form(array_merge($args, $instance));
-
 	}
 	function form( $instance ) {
 ?>

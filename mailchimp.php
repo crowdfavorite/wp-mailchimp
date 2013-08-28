@@ -130,27 +130,34 @@ function mc_datepicker_load() {
 ?>
 	<script type="text/javascript">
 		jQuery(function($) {
-			$('.date-pick').datepicker({
-				autoFocusNextInput: true,
-				constrainInput: false,
-				changeMonth: true,
-				changeYear: true,
-				beforeShow: function(input, inst) { $('#ui-datepicker-div').addClass('show'); },
-				dateFormat: 'yy/mm/dd',
+			$('.date-pick').each(function() {
+				var format = $(this).data('format') || 'mm/dd/yyyy';
+				format = format.replace(/yyyy/i, 'yy');
+				$(this).datepicker({
+					autoFocusNextInput: true,
+					constrainInput: false,
+					changeMonth: true,
+					changeYear: true,
+					beforeShow: function(input, inst) { $('#ui-datepicker-div').addClass('show'); },
+					dateFormat: format.toLowerCase(),
+				});
 			});
-
 			d = new Date();
-			$('.birthdate-pick').datepicker({
-				autoFocusNextInput: true,
-				constrainInput: false,
-				changeMonth: true,
-				changeYear: false,
-				minDate: new Date(d.getFullYear(), 1-1, 1),
-				maxDate: new Date(d.getFullYear(), 12-1, 31),
-				beforeShow: function(input, inst) { $('#ui-datepicker-div').removeClass('show'); },
-				dateFormat: 'mm/dd',
-			});
+			$('.birthdate-pick').each(function() {
+				var format = $(this).data('format') || 'mm/dd';
+				format = format.replace(/yyyy/i, 'yy');
+				$(this).datepicker({
+					autoFocusNextInput: true,
+					constrainInput: false,
+					changeMonth: true,
+					changeYear: false,
+					minDate: new Date(d.getFullYear(), 1-1, 1),
+					maxDate: new Date(d.getFullYear(), 12-1, 31),
+					beforeShow: function(input, inst) { $('#ui-datepicker-div').removeClass('show'); },
+					dateFormat: format.toLowerCase(),
+				});
 
+			});
 
 		});
 	</script>
@@ -1178,7 +1185,9 @@ if (is_array($igs) && !isset($igs['id'])) { ?>
 
 
 function mailchimpSF_register_widgets() {
-	register_widget('mailchimpSF_Widget');
+	if (mailchimpSF_get_api()) {
+		register_widget('mailchimpSF_Widget');
+	}
 }
 add_action('widgets_init', 'mailchimpSF_register_widgets');
 
