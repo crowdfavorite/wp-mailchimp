@@ -294,9 +294,9 @@ function mailchimpSF_request_handler() {
 				}
 
 				// erase auth information
-			    update_option('mc_sopresto_user', '');
-			    update_option('mc_sopresto_public_key', '');
-			    update_option('mc_sopresto_secret_key', '');
+			    delete_option('mc_sopresto_user');
+			    delete_option('mc_sopresto_public_key');
+			    delete_option('mc_sopresto_secret_key');
 				break;
 			case 'reset_list':
 				// Check capability & Verify nonce
@@ -422,8 +422,8 @@ add_action('admin_init', 'mailchimpSF_upgrade');
  * @return Sopresto_MailChimp|false
  */
 function mailchimpSF_get_api() {
-	$public_key = get_option('mc_sopresto_public_key', false);
-	$secret_key = get_option('mc_sopresto_secret_key', false);
+	$public_key = get_option('mc_sopresto_public_key');
+	$secret_key = get_option('mc_sopresto_secret_key');
 
 	if ($public_key && $secret_key) {
 		return new Sopresto_MailChimp($public_key, $secret_key, '1.3');

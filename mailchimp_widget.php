@@ -462,8 +462,8 @@ function mailchimp_form_field($var, $num_fields) {
 /**
  * MailChimp Subscribe Box widget class
  */
-class mailchimpSF_Widget extends WP_Widget {
 
+<<<<<<< HEAD
 	function mailchimpSF_Widget() {
 		$widget_ops = array( 
 			'description' => __('Displays a MailChimp Subscribe box', 'mailchimp_i18n')
@@ -473,7 +473,30 @@ class mailchimpSF_Widget extends WP_Widget {
 	function widget( $args, $instance ) {
 		if (!is_array($instance)) {
 			$instance = array();
+||||||| merged common ancestors
+	function mailchimpSF_Widget() {
+		$widget_ops = array( 
+			'description' => __('Displays a MailChimp Subscribe box', 'mailchimp_i18n')
+		);
+		$this->WP_Widget('mailchimpSF_widget', __('MailChimp Widget', 'mailchimp_i18n'), $widget_ops);
+	}
+
+	function widget( $args, $instance ) {
+		if (!is_array($instance)) {
+			$instance = array();
+=======
+if(mailchimpSF_get_api()) {
+
+	class mailchimpSF_Widget extends WP_Widget {
+
+		function mailchimpSF_Widget() {
+			$widget_ops = array( 
+				'description' => __('Displays a MailChimp Subscribe box', 'mailchimp_i18n')
+			);
+			$this->WP_Widget('mailchimpSF_widget', __('MailChimp Widget', 'mailchimp_i18n'), $widget_ops);
+>>>>>>> only load mailchimp widget if we have a user
 		}
+<<<<<<< HEAD
 		mailchimpSF_signup_form(array_merge($args, $instance));
 	}
 	function form( $instance ) {
@@ -481,9 +504,32 @@ class mailchimpSF_Widget extends WP_Widget {
 	<p>Great work! Your widget is ready to go — just head <a href="<?php echo admin_url('options-general.php?page=mailchimpSF_options') ?>">over here</a> if you’d like to adjust your settings.</p>
 <?php
 	}
+||||||| merged common ancestors
+		mailchimpSF_signup_form(array_merge($args, $instance));
 
+	}
+	function form( $instance ) {
+?>
+	<p>Great work! Your widget is ready to go — just head <a href="<?php echo admin_url('options-general.php?page=mailchimpSF_options') ?>">over here</a> if you’d like to adjust your settings.</p>
+<?php
+	}
+=======
+
+		function widget( $args, $instance ) {
+			if (!is_array($instance)) {
+				$instance = array();
+			}
+			mailchimpSF_signup_form(array_merge($args, $instance));
+>>>>>>> only load mailchimp widget if we have a user
+
+		}
+		function form( $instance ) {
+	?>
+		<p>Great work! Your widget is ready to go — just head <a href="<?php echo admin_url('options-general.php?page=mailchimpSF_options') ?>">over here</a> if you’d like to adjust your settings.</p>
+	<?php
+		}
+	}
 }
-
 
 function mailchimp_country_list() {
 	return array(
