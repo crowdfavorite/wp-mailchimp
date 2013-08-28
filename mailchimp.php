@@ -1361,7 +1361,7 @@ function mailchimpSF_signup_submit() {
 						if (!$api->errorCode) {
 							list($dummy, $dc) = explode('-',get_option('mc_apikey'));
 							$uid = $account['user_id'];
-							$username = $account['username'];
+							$username = preg_replace('/\s+/', '-', $account['username']);
 							$eid = base64_encode($email);
 							$msg .= ' ' . sprintf(__('<a href="%s">Click here to update your profile.</a>', 'mailchimp_i18n'), "http://$username.$dc.list-manage.com/subscribe/send-email?u=$uid&id=$listId&e=$eid");
 						}
