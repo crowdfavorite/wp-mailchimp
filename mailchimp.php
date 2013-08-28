@@ -1202,7 +1202,9 @@ if (is_array($igs) && !isset($igs['id'])) { ?>
 
 
 function mailchimpSF_register_widgets() {
-	register_widget('mailchimpSF_Widget');
+	if (mailchimpSF_get_api()) {
+		register_widget('mailchimpSF_Widget');
+	}
 }
 add_action('widgets_init', 'mailchimpSF_register_widgets');
 
