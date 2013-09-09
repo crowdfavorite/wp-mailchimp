@@ -232,8 +232,7 @@ function mailchimpSF_signup_form($args = array()) {
 	
 		<?php
 		if ( get_option('mc_use_unsub_link') == 'on') {
-        	list($key, $dc) = explode("-",get_option('mc_apikey'),2);
-        	if (!$dc) $dc = "us1";
+			$dc = get_option('mc_sopresto_dc', 'us1');
         	$host = 'http://'.$dc.'.list-manage.com';
 			?>
 			<div id="mc_unsub_link" align="center">
