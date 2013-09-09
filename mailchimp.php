@@ -396,6 +396,7 @@ function mailchimpSF_authorized() {
 	}
 
 	update_option('mc_sopresto_user', $response['user']);
+	update_option('mc_sopresto_dc', $response['dc']);
 	update_option('mc_sopresto_public_key', $response['keys']['public']);
 	update_option('mc_sopresto_secret_key', $response['keys']['secret']);
 	exit;
@@ -1380,7 +1381,7 @@ function mailchimpSF_signup_submit() {
 
 						$account = $api->getAccountDetails(array("modules", "orders", "rewards-credits", "rewards-inspections", "rewards-referrals", "rewards-applied"));
 						if (!$api->errorCode) {
-							list($dummy, $dc) = explode('-',get_option('mc_apikey'));
+							$dc = get_option('mc_sopresto_dc');
 							$uid = $account['user_id'];
 							$username = preg_replace('/\s+/', '-', $account['username']);
 							$eid = base64_encode($email);
