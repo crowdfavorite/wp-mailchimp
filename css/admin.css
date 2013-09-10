@@ -326,3 +326,30 @@ a.mc-api-key:hover {
 	float: right;
 	clear: both;
 }
+
+
+.mailchimp-login {
+	background: #449A88;
+	color: #fff;
+	text-transform: capitalize;
+	padding: 8px 72px;
+	border-radius: 4px;
+	font-weight: 600;
+	font-size: 14px;
+	border-bottom: 2px solid #72C1B0;
+	margin-top: 2px;
+	position: relative;
+	box-sizing: border-box;
+}
+.mailchimp-login:hover {
+	background: #72C1B0;
+	border-color: #449A88;
+	color: #fff;
+}
+th.mailchimp-connect {
+	width: 100% !important;
+}
+
+#wpfooter {
+	margin-left: 0 !important;
+}

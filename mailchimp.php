@@ -787,7 +787,7 @@ if (!$user) {
 	</div>
 	<div>
 		<h3 class="mc-h2"><?php esc_html_e('Log In', 'mailchimp_i18n');?></h3>
-		<p class="mc-p"><?php esc_html_e('To start using the MailChimp plugin, we first need to connect your MailChimp account.  Click login below to connect.', 'mailchimp_i18n'); ?></p>
+		<p class="mc-p" style="width: 40%;line-height: 21px;"><?php esc_html_e('To start using the MailChimp plugin, we first need to connect your MailChimp account.  Click login below to connect.', 'mailchimp_i18n'); ?></p>
 		<p class="mc-a">
 			<?php
 			echo sprintf(
@@ -797,19 +797,20 @@ if (!$user) {
 			);
 			?>
 		</p>
+		
 		<div style="width: 900px;">
 			<table class="widefat mc-widefat mc-api">
 				<tr valign="top">
-				<th scope="row"><?php esc_html_e('Connect to MailChimp', 'mailchimp_i18n'); ?></th>
-				<td>
-					<a href="<?php echo add_query_arg(array("mcsf_action" => "authorize"), home_url('index.php')) ?>" class="mailchimp-login">Connect</a>
-				</td>
+					<th scope="row" class="mailchimp-connect"><?php esc_html_e('Connect to MailChimp', 'mailchimp_i18n'); ?></th>
+					<td>
+						<a href="<?php echo add_query_arg(array("mcsf_action" => "authorize"), home_url('index.php')) ?>" class="mailchimp-login">Connect</a>
+					</td>
 				</tr>
 			</table>
 		</div>
 	</div>
 	<br/>
-<div class="notes_msg">
+<!--<div class="notes_msg">
 	<?php
     if ($user && $user['username'] != ''){
 		?>
@@ -819,7 +820,7 @@ if (!$user) {
 		    <li><?php esc_html_e('If you change your login to a different account, the info you have setup below will be erased.', 'mailchimp_i18n'); ?></li>
 		    <li><?php esc_html_e('If any of that happens, no biggie - just reconfigure your login and the items below...', 'mailchimp_i18n'); ?></li>
 		</ul>
-</div>
+</div>-->
 		<?php
     }
 } // End of login form
