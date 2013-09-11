@@ -10,17 +10,11 @@ class Sopresto_MailChimp {
 	var $timeout = 300;
 	var $chunkSize = 8192;
 	var $secure = false;
-	var $debug = false;
 
 	function __construct($public, $secret, $version = self::DEFAULT_VERSION) {
 		$this->public = $public;
 		$this->secret = $secret;
-
-		if ( $this->debug )
-			$this->apiUrl = parse_url('http://soprestodev.socialize-this.com/mailchimp/');
-		else
-			$this->apiUrl = parse_url('http://sopresto.socialize-this.com/mailchimp/');
-
+		$this->apiUrl = parse_url('https://sopresto.socialize-this.com/mailchimp/');
 		$this->setVersion($version);
 	}
 
