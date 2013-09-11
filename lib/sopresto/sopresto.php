@@ -10,7 +10,7 @@ class Sopresto_MailChimp {
 	var $timeout = 300;
 	var $chunkSize = 8192;
 	var $secure = false;
-	var $debug = true;
+	var $debug = false;
 
 	function __construct($public, $secret, $version = self::DEFAULT_VERSION) {
 		$this->public = $public;
