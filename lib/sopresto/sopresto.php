@@ -19,7 +19,7 @@ class Sopresto_MailChimp {
 	}
 
 	function getApiUrl($uri = '') {
-		return http_build_url($this->apiUrl) . $uri;
+		return $this->apiUrl['scheme'].'://'.$this->apiUrl['host'].$this->apiUrl['path'] . '/' . $uri;
 	}
 
 	function setVersion($version = self::DEFAULT_VERSION) {
