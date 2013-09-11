@@ -353,7 +353,7 @@ function mailchimpSF_auth_nonce_salt() {
 }
 
 function mailchimpSF_authorize() {
-	$api = mailchimpSF_get_api();
+	$api = mailchimpSF_get_api(true);
 	$proxy = apply_filters('mailchimp_authorize_url', $api->getApiUrl('authorize'));
 	if (strpos($proxy, 'socialize-this') !== false) {
 		$salt = mailchimpSF_auth_nonce_salt();
@@ -423,11 +423,11 @@ add_action('admin_init', 'mailchimpSF_upgrade');
  *
  * @return Sopresto_MailChimp|false
  */
-function mailchimpSF_get_api() {
+function mailchimpSF_get_api($force = false) {
 	$public_key = get_option('mc_sopresto_public_key');
 	$secret_key = get_option('mc_sopresto_secret_key');
 
-	if ($public_key && $secret_key) {
+	if ($public_key && $secret_key || $force) {
 		return new Sopresto_MailChimp($public_key, $secret_key, '1.3');
 	}
 
