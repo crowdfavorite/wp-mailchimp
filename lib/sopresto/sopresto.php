@@ -18,6 +18,10 @@ class Sopresto_MailChimp {
 		$this->setVersion($version);
 	}
 
+	function getApiUrl($uri = '') {
+		return http_build_url($this->apiUrl) . $uri;
+	}
+
 	function setVersion($version = self::DEFAULT_VERSION) {
 		if ( !in_array($version, array('1.3', '2.0') ) ) $version = self::DEFAULT_VERSION;
 		$this->version 	= $version;

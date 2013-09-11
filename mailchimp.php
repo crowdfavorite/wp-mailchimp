@@ -353,7 +353,8 @@ function mailchimpSF_auth_nonce_salt() {
 }
 
 function mailchimpSF_authorize() {
-	$proxy = apply_filters('mailchimp_authorize_url', 'http://soprestodev.socialize-this.com/mailchimp/authorize');
+	$api = mailchimpSF_get_api();
+	$proxy = apply_filters('mailchimp_authorize_url', $api->getApiUrl('authorize'));
 	if (strpos($proxy, 'socialize-this') !== false) {
 		$salt = mailchimpSF_auth_nonce_salt();
 		$id = wp_create_nonce(mailchimpSF_auth_nonce_key($salt));
