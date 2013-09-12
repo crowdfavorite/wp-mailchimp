@@ -199,9 +199,11 @@ function mailchimpSF_main_css() {
 	?>
 	.mc_error_msg {
 		color: red;
+		margin-bottom: 1.0em;
 	}
 	.mc_success_msg {
 		color: green;
+		margin-bottom: 1.0em;
 	}
 	.mc_merge_var{
 		padding:0;
