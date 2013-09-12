@@ -20,10 +20,6 @@ function mailchimpSF_signup_form($args = array()) {
 		return;
 	}
 	
-	// Get some options
-	$uid = get_option('mc_user_id');
-	$list_name = get_option('mc_list_name');
-	
 	if (!empty($before_widget)) {
 		echo $before_widget;
 	}
@@ -231,20 +227,21 @@ function mailchimpSF_signup_form($args = array()) {
 	
 	
 		<?php
-		if ( get_option('mc_use_unsub_link') == 'on') {
+		$user = get_option('mc_sopresto_user');
+		if ($user && get_option('mc_use_unsub_link') == 'on') {
 			$dc = get_option('mc_sopresto_dc', 'us1');
         	$host = 'http://'.$dc.'.list-manage.com';
 			?>
 			<div id="mc_unsub_link" align="center">
-				<a href="<?php echo esc_url($host.'/unsubscribe/?u='.get_option('mc_user_id').'&amp;id='.get_option('mc_list_id')); ?>" target="_blank"><?php esc_html_e('unsubscribe from list', 'mailchimp_i18n'); ?></a>
+				<a href="<?php echo esc_url($host.'/unsubscribe/?u='.$user['user_id'].'&amp;id='.get_option('mc_list_id')); ?>" target="_blank"><?php esc_html_e('unsubscribe from list', 'mailchimp_i18n'); ?></a>
 			</div><!-- /mc_unsub_link -->
 			<?php
 		}
-		if ( get_option('mc_rewards') == 'on') {
+		if ($user &&  get_option('mc_rewards') == 'on') {
 			?>
 			<br/>
 			<div id="mc_display_rewards" align="center">
-				<?php esc_html_e('powered by', 'mailchimp_i18n'); ?> <a href="<?php echo esc_url('http://www.mailchimp.com/affiliates/?aid='.get_option('mc_user_id').'&amp;afl=1'); ?>">MailChimp</a>!
+				<?php esc_html_e('powered by', 'mailchimp_i18n'); ?> <a href="<?php echo esc_url('http://www.mailchimp.com/affiliates/?aid='.$user['user_id'].'&amp;afl=1'); ?>">MailChimp</a>!
 			</div><!-- /mc_display_rewards -->
 			<?php
 		}
