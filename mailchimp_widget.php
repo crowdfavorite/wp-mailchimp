@@ -82,8 +82,15 @@ function mailchimpSF_signup_form($args = array()) {
 			reset($mv);
 		}
 		
+
 		// Loop over our vars, and output the ones that are set to display
 		foreach($mv as $var) {
+
+			//if $_GET["mc_override_defaults"] then replace defaults - Ludwig Wendzich 09/2013 ludwig@wendzich.com
+			if($_GET["mc_override_defaults"][$var["tag"]]){
+				$var["default"] = $_GET["mc_override_defaults"][$var["tag"]];
+			}
+
 			if (!$var['public']) {
 				echo '<div style="display:none;">'.mailchimp_form_field($var, $num_fields).'</div>';
 			}
