@@ -2,6 +2,8 @@
 
 class Sopresto_MailChimp {
 	const DEFAULT_VERSION = '2.0';
+	var $errorMessage = '';
+	var $errorCode = 0;
 
 	var $apiUrl;
 	var $version;
@@ -31,14 +33,15 @@ class Sopresto_MailChimp {
 		if ( $this->version == '2.0' ) {
 			list($module, $method) = explode('_', $method, 2);
 			$method = str_replace('_','-',$method);
+
 			$method = "$module/$method";
 		}
 
+		$this->errorMessage = '';
+		$this->errorCode = 0;
+
 		$public = $this->public;
 		$secret = $this->secret;
-
-		$this->errorMessage = "";
-		$this->errorCode = "";
 
 		//some distribs change this to &amp; by default
 		$sep_changed = false;
@@ -65,6 +68,7 @@ class Sopresto_MailChimp {
 
 		if ($sep_changed) ini_set("arg_separator.output", $orig_sep);
 
+
 		$payload = "POST " . $this->apiUrl["path"] . " HTTP/1.0\r\n";
 		$payload .= "Host: " . $this->apiUrl["host"] . "\r\n";
 		$payload .= "User-Agent: Sopresto_MailChimp/1.0\r\n";
@@ -80,9 +84,9 @@ class Sopresto_MailChimp {
 			$sock = fsockopen($this->apiUrl["host"], 80, $errno, $errstr, 30);
 		}
 		if(!$sock) {
+			$this->errorMessage = "Could not connect (ERR $errno: $errstr)";
+			$this->errorCode = "-99";
 			ob_end_clean();
-
-			throw new Exception($errstr, $errno);
 			return false;
 		}
 
@@ -98,10 +102,14 @@ class Sopresto_MailChimp {
 		ob_end_clean();
 
 		if ($info["timed_out"]) {
-			throw new Exception("Could not read response (timed out)", -98);
+			$this->errorMessage = "Could not read response (timed out)";
+			$this->errorCode = -98;
+			return false;
 		}
 
 		list($headers, $response) = explode("\r\n\r\n", $response, 2);
+		$headers = explode("\r\n", $headers);
+
 		if(ini_get("magic_quotes_runtime")) $response = stripslashes($response);
 
 		$serial = json_decode($response,true);
@@ -111,12 +119,20 @@ class Sopresto_MailChimp {
 			$response = $serial;
 		}
 
-		if($errored && is_array($response) && isset($response["error"])) {
-			throw new Exception($response["error"], $response["code"]);
-		} elseif($errored){
-			throw new Exception("No error message was found", $error_code);
+		if ( $this->version == '2.0' ) {
+			if ( is_array($response) && isset($response['response']['errors'][0]['code']) && $response['response']['errors'][0]['code'] ) {
+				$this->errorMessage = $response['response']['errors'][0]['error'];
+				$this->errorCode = $response['response']['errors'][0]['code'];
+				return false;
+			}
+		} else {
+			if (is_array($response) && isset($response["result"]) && $response["result"] == 'error') {
+				list($code, $message) = explode('||',$response['response'],2);
+				$this->errorMessage = $message;
+				$this->errorCode = $code;
+				return false;
+			}
 		}
-
 		return $response['response'];
 	}
 
