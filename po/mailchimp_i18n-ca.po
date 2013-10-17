@@ -1,0 +1,414 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR MailChimp API Support Team
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: MailChimp 1.1.5\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/mailchimp\n"
+"POT-Creation-Date: 2009-07-15 14:23-0400\n"
+"PO-Revision-Date: 2013-10-17 12:31+0100\n"
+"Last-Translator: Marc Queralt <marc@demomentsomtres.com>\n"
+"Language-Team: DeMomentSomTres <dms3@demomentsomtres.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: Català\n"
+
+#: mailchimp_includes.php:27 mailchimp_includes.php:62
+msgid "You must fill in %s."
+msgstr "Has de completar %s."
+
+#: mailchimp_includes.php:59
+msgid "That email address is already subscribed to the list"
+msgstr "Aquest email ja es troba a la llista"
+
+#: mailchimp_includes.php:66
+#, php-format
+msgid "%s has invalid content"
+msgstr "%s té contingut no vàlid"
+
+#: mailchimp_includes.php:68
+msgid "An invalid Interest Group was selected"
+msgstr "S'ha escollit un grup d'interès no vàlid"
+
+#: mailchimp_includes.php:69
+msgid "That email address is invalid"
+msgstr "L'email no està ben format"
+
+#: mailchimp_includes.php:75
+msgid "Success, you've been signed up! Please look for our confirmation email!"
+msgstr ""
+"Enhorabona, ja estàs subscrit! Comprova que hagis rebut el nostre email de "
+"confirmació."
+
+#: mailchimp_includes.php:131
+msgid "required field"
+msgstr "camp obligatori"
+
+#: mailchimp_includes.php:168
+msgid "unsubscribe from list"
+msgstr "esborra'm de la llista"
+
+#: mailchimp_includes.php:171
+msgid "powered by"
+msgstr "funciona mitjançant"
+
+#: mailchimp.php:135
+msgid "MailChimp Setup"
+msgstr "Configuració de MailChimp"
+
+#: mailchimp.php:150
+msgid ""
+"While upgrading the plugin setup, we were unable to login to your account. "
+"You will need to login again and setup your list."
+msgstr ""
+"Ha estat impossible connectar amb el teu compte. T'hauràs de tornar a "
+"connectar i configurar la teva llista."
+
+#: mailchimp.php:156
+msgid "MailChimp List Setup"
+msgstr "Configuració de la llista de MailChimp"
+
+#: mailchimp.php:166
+msgid ""
+"Success! We were able to verify your username & password! Let's continue, "
+"shall we?"
+msgstr "Enhorabona! Hem pogut verificar el teu usuari i contrasenya! Seguim?"
+
+#: mailchimp.php:178
+msgid ""
+"Uh-oh, we were unable to login and verify your username & password. Please "
+"check them and try again!"
+msgstr ""
+"Llàstima, no hem pogut connectar-nos i verificar el teu usuari i "
+"contrasenya. Comprova'ls i torna a intentar-ho!"
+
+#: mailchimp.php:179
+msgid "The server said:"
+msgstr "El servidor diu:"
+
+#: mailchimp.php:222
+msgid "Sign up for"
+msgstr "Subscripció per"
+
+#: mailchimp.php:223
+msgid "Subscribe"
+msgstr "Subscriu-me"
+
+#: mailchimp.php:253
+#, php-format
+msgid ""
+"Success! Loaded and saved the info for %d Merge Variables and %d Interest "
+"Groups from your list"
+msgstr ""
+"Enhorabona! S'ha carregat i desat la informació de %d variables de fusió i "
+"%d grups d'interès de la teva llista"
+
+#: mailchimp.php:256
+msgid ""
+"Now you should either Turn On the MailChimp Widget or change your options "
+"below, then turn it on."
+msgstr ""
+"Ara tens dues opcions Activar el Widget de MailChimp o canviar les opcions i "
+"activar-lo."
+
+#: mailchimp.php:284
+msgid "Successfully Reset your List selection... Now you get to pick again!"
+msgstr "S'ha eliminat la selecció de llista… Ja pots seleccionar de nou!"
+
+#: mailchimp.php:290
+msgid "Monkey Rewards turned On!"
+msgstr "Monkey Rewards activats!"
+
+#: mailchimp.php:294
+msgid "Monkey Rewards turned Off!"
+msgstr "Monkey Rewards desactivats!"
+
+#: mailchimp.php:299
+msgid "Fancy Javascript submission turned On!"
+msgstr "Enviament usant Javascript activat!"
+
+#: mailchimp.php:303
+msgid "Fancy Javascript submission turned Off!"
+msgstr "Enviament usant Javascript desactivat!"
+
+#: mailchimp.php:309
+msgid "Unsubscribe link turned On!"
+msgstr "Enllaços de baixa activats!"
+
+#: mailchimp.php:313
+msgid "Unsubscribe link turned Off!"
+msgstr "Enllaços de baixa desactivats!"
+
+#: mailchimp.php:359
+msgid "Successfully Updated your List Subscribe Form Settings!"
+msgstr "S'ha actualitzat la configuració de formularis de subscripció!"
+
+#: mailchimp.php:372
+msgid "Login Info"
+msgstr "Informació de connexió"
+
+#: mailchimp.php:373
+msgid ""
+"To start using the MailChimp plugin, we first need to login and get your API "
+"Key. Please enter your MailChimp username and password below."
+msgstr ""
+"Per començar a usar l'extensió de MailChimp, cal que obtinguis una API Key "
+"des de la pàgina de MailChimp. Introdueix els teus paràmetres d'accés."
+
+#: mailchimp.php:375
+msgid ""
+"Don't have a MailChimp account? <a href='http://www.mailchimp.com/tryit."
+"phtml' target='_blank'>Try one for Free</a>!"
+msgstr ""
+"No tens un compte a MailChimp? <a href='http://www.mailchimp.com/tryit."
+"phtml' target='_blank'>Prova gratuïtament</a>!"
+
+#: mailchimp.php:379
+msgid "Username"
+msgstr "Usuari"
+
+#: mailchimp.php:383
+msgid "Password"
+msgstr "Contrasenya"
+
+#: mailchimp.php:389
+msgid "Save & Check"
+msgstr "Desa i comprova"
+
+#: mailchimp.php:394
+msgid "Notes"
+msgstr "Notes"
+
+#: mailchimp.php:395
+msgid "Changing your settings at MailChimp.com may cause this to stop working."
+msgstr "Canviar els paràmetres a MailChimp.com pot fer que deixi de funcionar."
+
+#: mailchimp.php:396
+msgid ""
+"If you change your login to a different account, the info you have setup "
+"below will be erased."
+msgstr ""
+"Si canvies la configuració d'accés cap a un altre compte, s'esborrarà "
+"automàticament la informació que segueix."
+
+#: mailchimp.php:397
+msgid ""
+"If any of that happens, no biggie - just reconfigure your login and the "
+"items below..."
+msgstr ""
+"Si passa alguna d'aquestes coses, no pateixis - n'hi ha prou amb que "
+"reconfiguris la connexió i els paràmetres d'aquesta pàgina..."
+
+#: mailchimp.php:403
+msgid "Logged in as"
+msgstr "Connectat com a"
+
+#: mailchimp.php:407
+msgid "Logout"
+msgstr "Desconnectar"
+
+#: mailchimp.php:421
+msgid "Your Lists"
+msgstr "Les teves llistes"
+
+#: mailchimp.php:423
+msgid "Please select the List you wish to create a Signup Form for."
+msgstr "Escull la llista que vols gestionar amb l'extensió"
+
+#: mailchimp.php:432
+#, php-format
+msgid ""
+"Uh-oh, you don't have any lists defined! Please visit %s, login, and setup a "
+"list before using this tool!"
+msgstr ""
+"No tens cap llista definida! Visita %s, connecta't i configura una llista "
+"abans d'usar aquesta eina!"
+
+#: mailchimp.php:437
+msgid "Select A List"
+msgstr "Escull una llista"
+
+#: mailchimp.php:450
+msgid "Update List"
+msgstr "Actualitza llista"
+
+#: mailchimp.php:453
+msgid "Note:"
+msgstr "Nota:"
+
+#: mailchimp.php:453
+msgid ""
+"Updating your list will not cause settings below to be lost. Changing to a "
+"new list will."
+msgstr ""
+"Actualitzar la llista no fa perdre aquesta configuració. Canviar a una nova "
+"llista sí que provoca la pèrdua d'aquesta configuració."
+
+#: mailchimp.php:471
+msgid "Reset List Options and Select again"
+msgstr "Reiniciar les opcions de llista i tria de nou"
+
+#: mailchimp.php:474
+msgid "Subscribe Form Widget Settings for this List"
+msgstr "Configuració del giny de subscripció per aquesta llista"
+
+#: mailchimp.php:475
+msgid "Selected MailChimp List"
+msgstr "Llista de MailChimp escollida"
+
+#: mailchimp.php:496 mailchimp.php:569 mailchimp.php:630
+msgid "Update Subscribe Form Settings"
+msgstr "Actualitza la configuració"
+
+#: mailchimp.php:499
+msgid "Monkey Rewards"
+msgstr "Monkey Rewards"
+
+#: mailchimp.php:501
+msgid ""
+"turning this on will place a \"powered by MailChimp\" link in your form that "
+"will earn you credits with us. It is optional and can be turned on or off at "
+"any time."
+msgstr ""
+"activant-ho posarà un missatge al giny indicant que funciona amb MailChimp "
+"amb un enllaç que et donarà crèdits amb nosaltres. És opcional i es pot "
+"activar o desactivar en qualsevol moment."
+
+#: mailchimp.php:505
+msgid "Use Javascript Support?"
+msgstr "Usar Javascript?"
+
+#: mailchimp.php:507
+msgid ""
+"turning this on will use fancy javascript submission and should degrade "
+"gracefully for users not using javascript. It is optional and can be turned "
+"on or off at any time."
+msgstr ""
+"si s'activa el giny farà ús de javascript si és possible. És opcional i es "
+"pot activar o desactivar en qualsevol moment."
+
+#: mailchimp.php:511
+msgid "Include Unsubscribe link?"
+msgstr "Enllaç de baixa?"
+
+#: mailchimp.php:513
+msgid "turning this on will add a link to your host unsubscribe form"
+msgstr ""
+"si ho actives s'afegeix un enllaç al giny per sol·licitar la baixa de la "
+"llista"
+
+#: mailchimp.php:517
+msgid "Header content"
+msgstr "Contingut de capçalera"
+
+#: mailchimp.php:520
+msgid ""
+"You can fill this with your own Text, HTML markup (including image links), "
+"or Nothing!"
+msgstr "Pots posar-hi text o HTML (incloent enllaços a imatges) o no res!"
+
+#: mailchimp.php:525
+msgid "Submit Button text"
+msgstr "Text del botó de subscripció"
+
+#: mailchimp.php:532
+msgid "Custom Styling"
+msgstr "Estils personalitzats"
+
+#: mailchimp.php:536
+msgid "Turned On?"
+msgstr "Activat?"
+
+#: mailchimp.php:537
+msgid ""
+"Header Settings (only applies if there are no HTML tags in the Header "
+"Content area above)"
+msgstr ""
+"Configuració de capçalera (sols aplica si no hi ha etiquetes HTML en el camp "
+"de Contingut de capçalera de més amunt)"
+
+#: mailchimp.php:538 mailchimp.php:552
+msgid "Border Width"
+msgstr "Ample de les vores"
+
+#: mailchimp.php:539 mailchimp.php:553
+msgid "Set to 0 for no border, do not enter <strong>px</strong>!"
+msgstr "Posa 0 si no vols vores, no hi posis <strong>px</strong>!"
+
+#: mailchimp.php:541 mailchimp.php:555
+msgid "Border Color"
+msgstr "Color de les vores"
+
+#: mailchimp.php:542 mailchimp.php:545 mailchimp.php:548 mailchimp.php:556
+#: mailchimp.php:559 mailchimp.php:562
+msgid "do not enter initial <strong>#</strong>"
+msgstr "no hi posis <strong>#</strong> al principi"
+
+#: mailchimp.php:551
+msgid "Form Settings"
+msgstr "Configuració del formulari"
+
+#: mailchimp.php:571
+msgid "Merge Variables Included"
+msgstr "Variables de fusió incloses"
+
+#: mailchimp.php:574
+msgid "No Merge Variables found."
+msgstr "No s'han trobat variables de fusió."
+
+#: mailchimp.php:580 mailchimp.php:614
+msgid "Name"
+msgstr "Nom"
+
+#: mailchimp.php:581
+msgid "Tag"
+msgstr "Etiqueta"
+
+#: mailchimp.php:582
+msgid "Required?"
+msgstr "Obligatori?"
+
+#: mailchimp.php:583
+msgid "Include?"
+msgstr "Inclou?"
+
+#: mailchimp.php:603
+msgid "Interest Groups"
+msgstr "Grups d'interès"
+
+#: mailchimp.php:605
+msgid "No Interest Groups Setup for this List"
+msgstr "No hi ha cap grup d'interès per aquesta llista"
+
+#: mailchimp.php:610
+msgid "Show?"
+msgstr "Mostra?"
+
+#: mailchimp.php:617
+msgid "Input Type"
+msgstr "Tipus d'entrada"
+
+#: mailchimp.php:620
+msgid "Options"
+msgstr "Opcions"
+
+#: wp-content/plugins/mailchimp/mailchimp_widget.php:140
+msgid "Preferred Format"
+msgstr "Format per defecte"
+
+#: wp-content/plugins/mailchimp/mailchimp_widget.php:143
+msgid "HTML"
+msgstr "HTML"
+
+#: wp-content/plugins/mailchimp/mailchimp_widget.php:144
+msgid "Text"
+msgstr "Text"
+
+#: wp-content/plugins/mailchimp/mailchimp_widget.php:145
+msgid "Mobile"
+msgstr "Mòbil"
