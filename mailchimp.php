@@ -804,8 +804,6 @@ if (mailchimpSF_global_msg() != ''){
 if (!$user && MAILCHIMP_DEV_MODE == false) {
 ?>
 	<div>
-	</div>
-	<div>
 		<h3 class="mc-h2"><?php esc_html_e('Log In', 'mailchimp_i18n');?></h3>
 		<p class="mc-p" style="width: 40%;line-height: 21px;"><?php esc_html_e('To start using the MailChimp plugin, we first need to connect your MailChimp account.  Click login below to connect.', 'mailchimp_i18n'); ?></p>
 		<p class="mc-a">
@@ -1214,14 +1212,14 @@ if (MAILCHIMP_DEV_MODE == false) { ?>
 	</div>
 
 </form>
-
+</div>
 </div><!--wrap-->
 <?php
 }//mailchimpSF_setup_page()
 
 
 function mailchimpSF_register_widgets() {
-	if (mailchimpSF_get_api()) {
+	if (mailchimpSF_get_api() || MAILCHIMP_DEV_MODE == true) {
 		register_widget('mailchimpSF_Widget');
 	}
 }
