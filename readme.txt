@@ -124,6 +124,9 @@ Maybe! Look in the /po/ directory in our plugin package and see if your language
 
 == Upgrade Notice ==
 
+= 1.4 =
+Added Developer Mode "Kitchen Sink" to aid in styling without having to authenticate a MailChimp account.
+
 = 1.3 =
 Now using OAuth flow within plugin for user authentication
 
@@ -145,6 +148,10 @@ Fixes major bug with "Settings" link on Plugins screen.
 Added support for multiple interest groups, field formatting based on type and date picker.
 
 == Changelog ==
+
+= 1.4 = 
+* Developer Mode "Kitchen Sink" takes over plugin for local development
+* Developer Mode has filters of changable content
 
 = 1.3 =
 * Now using OAuth flow for user authentication

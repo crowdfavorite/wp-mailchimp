@@ -31,7 +31,7 @@ function mailchimpSF_signup_form($args = array()) {
 
 	$header =  get_option('mc_header_content');
 	if (!$header && MAILCHIMP_DEV_MODE == true) {
-		$header = apply_filters( 'mailchimp_dev_mode_header_text', "MailChimp Developer" );
+		$header = apply_filters( 'mailchimp_dev_mode_header_text', 'MailChimp Developer' );
 	}
 
 	// See if we have custom header content
@@ -49,7 +49,7 @@ function mailchimpSF_signup_form($args = array()) {
 	
 	$sub_heading = trim(get_option('mc_subheader_content'));
 	if (!$sub_heading && MAILCHIMP_DEV_MODE == true) {
-		$sub_heading = apply_filters( 'mailchimp_dev_mode_sub_heading_text', "This is the subheading text." );
+		$sub_heading = apply_filters( 'mailchimp_dev_mode_subheading_text', 'This is the subheading text.' );
 	}
 
 	?>
@@ -235,7 +235,7 @@ function mailchimpSF_signup_form($args = array()) {
 
 		$submit_text = get_option('mc_submit_text');
 		if (!$submit_text && MAILCHIMP_DEV_MODE == true) {
-			$submit_text = apply_filters( 'mailchimp_dev_mode_submit_text', "Subscribe" );
+			$submit_text = apply_filters( 'mailchimp_dev_mode_submit_text', 'Subscribe' );
 		}
 
 		?>
@@ -722,7 +722,7 @@ function mailchimp_get_kitchen_sink_fields() {
 function mailchimp_get_kitchen_sink_groups() {
 	$groups = array ( 
 		0 => array (
-			'id' => 11877,
+			'id' => 123,
 			'name' => 'Checkboxes',
 			'form_field' => 'checkboxes',
 			'display_order' => '0',
