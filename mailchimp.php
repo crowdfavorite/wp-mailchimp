@@ -1099,12 +1099,13 @@ if (MAILCHIMP_DEV_MODE == false) { ?>
 	}
 	?>
 	</table>
+	<input type="submit" value="<?php esc_attr_e('Update Subscribe Form Settings', 'mailchimp_i18n'); ?>" class="button mc-submit" /><br/>
 </div>
 	<?php
 }
 ?>
 
-<input type="submit" value="<?php esc_attr_e('Update Subscribe Form Settings', 'mailchimp_i18n'); ?>" class="button mc-submit" /><br/>
+
 
 <?php
 	// Interest Groups Table
@@ -1161,7 +1162,7 @@ if (MAILCHIMP_DEV_MODE == false) { ?>
 	}
 } // end dev mode check
 ?>
-	<div>
+	<div style="width: 900px; margin-top: 35px;">
 		<table class="widefat mc-widefat mc-yellow">
 			<tr><th colspan="2">CSS Cheat Sheet</th></tr>
 			<tr valign="top">
@@ -1212,8 +1213,6 @@ if (MAILCHIMP_DEV_MODE == false) { ?>
 	</div>
 
 </form>
-</div>
-</div><!--wrap-->
 <?php
 }//mailchimpSF_setup_page()
 
