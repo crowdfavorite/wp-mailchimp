@@ -1257,7 +1257,16 @@ function mailchimpSF_signup_submit() {
 		$opt_val = isset($_POST[$opt]) ? $_POST[$opt] : '';
 
 		if (is_array($opt_val) && isset($opt_val['area'])) {
-			$opt_val = implode('-', $opt_val);
+			// This filters out all 'falsey' elements
+			$opt_val = array_filter($opt_val);
+
+			// If they weren't all empty
+			if ($opt_val) {
+				$opt_val = implode('-', $opt_val);
+			}
+			else {
+				$opt_val = '';
+			}
 		}
 		else if (is_array($opt_val) && $var['field_type'] == 'address') {
 			if ($var['req'] == 'Y') {
