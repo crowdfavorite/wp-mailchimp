@@ -259,6 +259,10 @@ tr.mc-turned-on th {
 	width: 70px;
 	margin-right: 7px;
 }
+.mc-custom-styling td input[type="checkbox"] {
+	width: auto;
+	margin-right: 7px;
+}
 
 
 
