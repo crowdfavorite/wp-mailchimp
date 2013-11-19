@@ -2,8 +2,8 @@
 Contributors: mc_jesse, crowdfavorite
 Tags: mailchimp, email, newsletter, signup, marketing, plugin, widget
 Requires at least: 2.8
-Tested up to: 3.6.1
-Stable tag: 1.3
+Tested up to: 3.7.1
+Stable tag: 1.4
 
 == Description ==
 
@@ -47,6 +47,20 @@ Where ever you want it to show up.
 Note: in some environments you will need to install the Exec_PHP plugin to use that method of display. It can be found here:
 http://wordpress.org/extend/plugins/exec-php/
 
+== Developer Mode ==
+
+You can enable "Devleoper Mode" by adding the following line to your `wp-config.php` file just above the "That's all, stope editing!" line.
+
+    define('MAILCHIMP_DEV_MODE', true);
+
+This will enable the MailChimp List Subscribe plugin to operate without the need to connect an external MailChimp Account, and will provide a
+subscription form widget that will not actually submit anywhere.
+
+This will allow you to style and configure the widget in non-production environments that are not publicly accessible.
+
+For more Developer Mode customization options see the following article:
+
+http://connect.mailchimp.com/how-to/how-to-article-configuring-developer-mode-for-the-list-subscribe-wordpress-plugin
 
 == Upgrading ==
 
@@ -149,9 +163,10 @@ Added support for multiple interest groups, field formatting based on type and d
 
 == Changelog ==
 
-= 1.4 = 
+= 1.4 =
 * Developer Mode "Kitchen Sink" takes over plugin for local development
 * Developer Mode has filters of changable content
+* Fix bug related to required US phone validation
 
 = 1.3 =
 * Now using OAuth flow for user authentication
