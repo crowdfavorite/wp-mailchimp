@@ -1263,6 +1263,9 @@ function mailchimpSF_signup_submit() {
 			// If they weren't all empty
 			if ($opt_val) {
 				$opt_val = implode('-', $opt_val);
+				if (strlen($opt_val) < 12) {
+					$opt_val = '';
+				}
 			}
 			else {
 				$opt_val = '';
