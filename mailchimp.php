@@ -3,32 +3,37 @@
 Plugin Name: MailChimp
 Plugin URI: http://www.mailchimp.com/plugins/mailchimp-wordpress-plugin/
 Description: The MailChimp plugin allows you to quickly and easily add a signup form for your MailChimp list.
-Version: 1.3
+Version: 1.4
 Author: MailChimp and Crowd Favorite
 Author URI: http://mailchimp.com/api/
 */
 /*  Copyright 2008-2012  MailChimp.com  (email : api@mailchimp.com)
 
-    This program is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation; either version 2 of the License, or
-    (at your option) any later version.
+	This program is free software; you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation; either version 2 of the License, or
+	(at your option) any later version.
 
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+	You should have received a copy of the GNU General Public License
+	along with this program; if not, write to the Free Software
+	Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
 // Version constant for easy CSS refreshes
-define('MCSF_VER', '1.3');
+define('MCSF_VER', '1.4');
 
 // What's our permission (capability) threshold
 define('MCSF_CAP_THRESHOLD', 'manage_options');
+
+// If Developer mode not defined, make it false
+if (! defined('MAILCHIMP_DEV_MODE') ) {
+	define('MAILCHIMP_DEV_MODE', false);
+}
 
 // Define our location constants, both MCSF_DIR and MCSF_URL
 mailchimpSF_where_am_i();
@@ -296,9 +301,9 @@ function mailchimpSF_request_handler() {
 				}
 
 				// erase auth information
-			    delete_option('mc_sopresto_user');
-			    delete_option('mc_sopresto_public_key');
-			    delete_option('mc_sopresto_secret_key');
+				delete_option('mc_sopresto_user');
+				delete_option('mc_sopresto_public_key');
+				delete_option('mc_sopresto_secret_key');
 				break;
 			case 'reset_list':
 				// Check capability & Verify nonce
@@ -332,10 +337,10 @@ function mailchimpSF_request_handler() {
 						* global message left over from the signup_submit function */
 						break;
 					case 'js':
-					    if (!headers_sent()){ //just in case...
-				            header('Last-Modified: '.gmdate('D, d M Y H:i:s').' GMT', true, 200);
-				        }
-					    echo mailchimpSF_global_msg(); // Don't esc_html this, b/c we've already escaped it
+						if (!headers_sent()){ //just in case...
+							header('Last-Modified: '.gmdate('D, d M Y H:i:s').' GMT', true, 200);
+						}
+						echo mailchimpSF_global_msg(); // Don't esc_html this, b/c we've already escaped it
 						exit;
 				}
 		}
@@ -490,11 +495,11 @@ function mailchimpSF_delete_setup() {
 	delete_option('mc_interest_groups');
 	$mv = get_option('mc_merge_vars');
 	if (is_array($mv)){
-        foreach($mv as $var){
-	        $opt = 'mc_mv_'.$var['tag'];
-	        delete_option($opt);
-        }
-    }
+		foreach($mv as $var){
+			$opt = 'mc_mv_'.$var['tag'];
+			delete_option($opt);
+		}
+	}
 	delete_option('mc_merge_vars');
 }
 
@@ -585,92 +590,99 @@ function mailchimpSF_set_form_defaults($list_name = '') {
  * @return void
  **/
 function mailchimpSF_save_general_form_settings() {
-	if (isset($_POST['mc_rewards'])){
-		update_option('mc_rewards', 'on');
-		$msg = '<p class="success_msg">'.__('Monkey Rewards turned On!', 'mailchimp_i18n').'</p>';
-		mailchimpSF_global_msg($msg);
-	} else if (get_option('mc_rewards')!='off') {
-		update_option('mc_rewards', 'off');
-		$msg = '<p class="success_msg">'.__('Monkey Rewards turned Off!', 'mailchimp_i18n').'</p>';
-		mailchimpSF_global_msg($msg);
+
+	if (MAILCHIMP_DEV_MODE == false) {
+		if (isset($_POST['mc_rewards'])){
+			update_option('mc_rewards', 'on');
+			$msg = '<p class="success_msg">'.__('Monkey Rewards turned On!', 'mailchimp_i18n').'</p>';
+			mailchimpSF_global_msg($msg);
+		} else if (get_option('mc_rewards')!='off') {
+			update_option('mc_rewards', 'off');
+			$msg = '<p class="success_msg">'.__('Monkey Rewards turned Off!', 'mailchimp_i18n').'</p>';
+			mailchimpSF_global_msg($msg);
+		}
+		if (isset($_POST['mc_use_javascript'])){
+			update_option('mc_use_javascript', 'on');
+			$msg = '<p class="success_msg">'.__('Fancy Javascript submission turned On!', 'mailchimp_i18n').'</p>';
+			mailchimpSF_global_msg($msg);
+		} else if (get_option('mc_use_javascript')!='off') {
+			update_option('mc_use_javascript', 'off');
+			$msg = '<p class="success_msg">'.__('Fancy Javascript submission turned Off!', 'mailchimp_i18n').'</p>';
+			mailchimpSF_global_msg($msg);
+		}
+
+		if (isset($_POST['mc_use_datepicker'])){
+			update_option('mc_use_datepicker', 'on');
+			$msg = '<p class="success_msg">'.__('Datepicker turned On!', 'mailchimp_i18n').'</p>';
+			mailchimpSF_global_msg($msg);
+		} else if (get_option('mc_use_datepicker')!='off') {
+			update_option('mc_use_datepicker', 'off');
+			$msg = '<p class="success_msg">'.__('Datepicker turned Off!', 'mailchimp_i18n').'</p>';
+			mailchimpSF_global_msg($msg);
+		}
+
+		if (isset($_POST['mc_use_unsub_link'])){
+			update_option('mc_use_unsub_link', 'on');
+			$msg = '<p class="success_msg">'.__('Unsubscribe link turned On!', 'mailchimp_i18n').'</p>';
+			mailchimpSF_global_msg($msg);
+		} else if (get_option('mc_use_unsub_link')!='off') {
+			update_option('mc_use_unsub_link', 'off');
+			$msg = '<p class="success_msg">'.__('Unsubscribe link turned Off!', 'mailchimp_i18n').'</p>';
+			mailchimpSF_global_msg($msg);
+		}
+
+		$content = stripslashes($_POST['mc_header_content']);
+		$content = str_replace("\r\n","<br/>", $content);
+		update_option('mc_header_content', $content );
+
+		$content = stripslashes($_POST['mc_subheader_content']);
+		$content = str_replace("\r\n","<br/>", $content);
+		update_option('mc_subheader_content', $content );
+
+
+		$submit_text = stripslashes($_POST['mc_submit_text']);
+		$submit_text = str_replace("\r\n","", $submit_text);
+		update_option('mc_submit_text', $submit_text);
 	}
-	if (isset($_POST['mc_use_javascript'])){
-		update_option('mc_use_javascript', 'on');
-		$msg = '<p class="success_msg">'.__('Fancy Javascript submission turned On!', 'mailchimp_i18n').'</p>';
-		mailchimpSF_global_msg($msg);
-	} else if (get_option('mc_use_javascript')!='off') {
-		update_option('mc_use_javascript', 'off');
-		$msg = '<p class="success_msg">'.__('Fancy Javascript submission turned Off!', 'mailchimp_i18n').'</p>';
-		mailchimpSF_global_msg($msg);
-	}
-
-	if (isset($_POST['mc_use_datepicker'])){
-		update_option('mc_use_datepicker', 'on');
-		$msg = '<p class="success_msg">'.__('Datepicker turned On!', 'mailchimp_i18n').'</p>';
-		mailchimpSF_global_msg($msg);
-	} else if (get_option('mc_use_datepicker')!='off') {
-		update_option('mc_use_datepicker', 'off');
-		$msg = '<p class="success_msg">'.__('Datepicker turned Off!', 'mailchimp_i18n').'</p>';
-		mailchimpSF_global_msg($msg);
-	}
-
-	if (isset($_POST['mc_use_unsub_link'])){
-		update_option('mc_use_unsub_link', 'on');
-		$msg = '<p class="success_msg">'.__('Unsubscribe link turned On!', 'mailchimp_i18n').'</p>';
-		mailchimpSF_global_msg($msg);
-	} else if (get_option('mc_use_unsub_link')!='off') {
-		update_option('mc_use_unsub_link', 'off');
-		$msg = '<p class="success_msg">'.__('Unsubscribe link turned Off!', 'mailchimp_i18n').'</p>';
-		mailchimpSF_global_msg($msg);
-	}
-
-	$content = stripslashes($_POST['mc_header_content']);
-	$content = str_replace("\r\n","<br/>", $content);
-	update_option('mc_header_content', $content );
-
-	$content = stripslashes($_POST['mc_subheader_content']);
-	$content = str_replace("\r\n","<br/>", $content);
-	update_option('mc_subheader_content', $content );
-
-
-	$submit_text = stripslashes($_POST['mc_submit_text']);
-	$submit_text = str_replace("\r\n","", $submit_text);
-	update_option('mc_submit_text', $submit_text);
 
 	// Set Custom Style option
 	update_option('mc_custom_style', isset($_POST['mc_custom_style']) ? 'on' : 'off');
 
-	//we told them not to put these things we are replacing in, but let's just make sure they are listening...
-	update_option('mc_header_border_width',str_replace('px','',$_POST['mc_header_border_width']) );
-	update_option('mc_header_border_color', str_replace('#','',$_POST['mc_header_border_color']));
-	update_option('mc_header_background',str_replace('#','',$_POST['mc_header_background']));
-	update_option('mc_header_text_color', str_replace('#','',$_POST['mc_header_text_color']));
+	if (MAILCHIMP_DEV_MODE == false) {
+		//we told them not to put these things we are replacing in, but let's just make sure they are listening...
+		update_option('mc_header_border_width',str_replace('px','',$_POST['mc_header_border_width']) );
+		update_option('mc_header_border_color', str_replace('#','',$_POST['mc_header_border_color']));
+		update_option('mc_header_background',str_replace('#','',$_POST['mc_header_background']));
+		update_option('mc_header_text_color', str_replace('#','',$_POST['mc_header_text_color']));
+	}
 
 	update_option('mc_form_border_width',str_replace('px','',$_POST['mc_form_border_width']) );
 	update_option('mc_form_border_color', str_replace('#','',$_POST['mc_form_border_color']));
 	update_option('mc_form_background',str_replace('#','',$_POST['mc_form_background']));
 	update_option('mc_form_text_color', str_replace('#','',$_POST['mc_form_text_color']));
 
-	$igs = get_option('mc_interest_groups');
-	if (is_array($igs)) {
-		foreach($igs as $var){
-			$opt = 'mc_show_interest_groups_'.$var['id'];
-			if (isset($_POST[$opt])){
-				update_option($opt,'on');
-			} else {
-				update_option($opt,'off');
+	if (MAILCHIMP_DEV_MODE == false) {
+		$igs = get_option('mc_interest_groups');
+		if (is_array($igs)) {
+			foreach($igs as $var){
+				$opt = 'mc_show_interest_groups_'.$var['id'];
+				if (isset($_POST[$opt])){
+					update_option($opt,'on');
+				} else {
+					update_option($opt,'off');
+				}
 			}
 		}
-	}
 
-	$mv = get_option('mc_merge_vars');
-	if (is_array($mv)) {
-		foreach($mv as $var){
-			$opt = 'mc_mv_'.$var['tag'];
-			if (isset($_POST[$opt]) || $var['req']=='Y'){
-				update_option($opt,'on');
-			} else {
-				update_option($opt,'off');
+		$mv = get_option('mc_merge_vars');
+		if (is_array($mv)) {
+			foreach($mv as $var){
+				$opt = 'mc_mv_'.$var['tag'];
+				if (isset($_POST[$opt]) || $var['req']=='Y'){
+					update_option($opt,'on');
+				} else {
+					update_option($opt,'off');
+				}
 			}
 		}
 	}
@@ -688,7 +700,7 @@ function mailchimpSF_change_list_if_necessary() {
 	$api = mailchimpSF_get_api();
 	if (!$api) { return; }
 
-    //we *could* support paging, but few users have that many lists (and shouldn't)
+	//we *could* support paging, but few users have that many lists (and shouldn't)
 	$lists = $api->lists(array(),0,100);
 	$lists = $lists['data'];
 
@@ -706,52 +718,52 @@ function mailchimpSF_change_list_if_necessary() {
 
 		$orig_list = get_option('mc_list_id');
 		if ($list_id != '') {
-	        update_option('mc_list_id', $list_id);
-		    update_option('mc_list_name', $list_name);
+			update_option('mc_list_id', $list_id);
+			update_option('mc_list_name', $list_name);
 			update_option('mc_email_type_option', $lists[$list_key]['email_type_option']);
 
 
 			// See if the user changed the list
-	        if ($orig_list != $list_id){
+			if ($orig_list != $list_id){
 				// The user changed the list, Reset the Form Defaults
 				mailchimpSF_set_form_defaults($list_name);
-	        }
+			}
 	//		email_type_option
 
 			// Grab the merge vars and interest groups
-		    $mv = $api->listMergeVars($list_id);
-		    $igs = $api->listInterestGroupings($list_id);
+			$mv = $api->listMergeVars($list_id);
+			$igs = $api->listInterestGroupings($list_id);
 
-		    update_option('mc_merge_vars', $mv);
-		    foreach($mv as $var){
-			    $opt = 'mc_mv_'.$var['tag'];
-			    //turn them all on by default
-			    if ($orig_list != $list_id) {
-	    		    update_option($opt, 'on' );
-	    		}
-		    }
-		    update_option('mc_interest_groups', $igs);
+			update_option('mc_merge_vars', $mv);
+			foreach($mv as $var){
+				$opt = 'mc_mv_'.$var['tag'];
+				//turn them all on by default
+				if ($orig_list != $list_id) {
+					update_option($opt, 'on' );
+				}
+			}
+			update_option('mc_interest_groups', $igs);
 			if (is_array($igs)) {
 				foreach ($igs as $var){
-				    $opt = 'mc_show_interest_groups_'.$var['id'];
-				    //turn them all on by default
-				    if ($orig_list != $list_id) {
-		    		    update_option($opt, 'on' );
-		    		}
-			    }
+					$opt = 'mc_show_interest_groups_'.$var['id'];
+					//turn them all on by default
+					if ($orig_list != $list_id) {
+						update_option($opt, 'on' );
+					}
+				}
 			}
 			$igs_text = ' ';
 			if (is_array($igs)) {
 				$igs_text .= sprintf(__('and %s Sets of Interest Groups', 'mailchimp_i18n'), count($igs));
 			}
 
-		    $msg = '<p class="success_msg">'.
-		        sprintf(
+			$msg = '<p class="success_msg">'.
+				sprintf(
 					__('<b>Success!</b> Loaded and saved the info for %d Merge Variables', 'mailchimp_i18n').$igs_text,
 					count($mv)
 				).' '.
 				__('from your list').' "'.$list_name.'"<br/><br/>'.
-			    __('Now you should either Turn On the MailChimp Widget or change your options below, then turn it on.', 'mailchimp_i18n').'</p>';
+				__('Now you should either Turn On the MailChimp Widget or change your options below, then turn it on.', 'mailchimp_i18n').'</p>';
 			mailchimpSF_global_msg($msg);
 		}
 	}
@@ -769,6 +781,12 @@ function mailchimpSF_setup_page() {
 		<h2><?php esc_html_e('MailChimp List Setup', 'mailchimp_i18n');?> </h2>
 	</div>
 <?php
+
+// Display Developer mode active.
+if (MAILCHIMP_DEV_MODE == true) { ?>
+		<p class="error_msg">Developer mode active.</p>
+<?php }
+
 $user = get_option('mc_sopresto_user');
 
 // If we have an API Key, see if we need to change the lists and its options
@@ -778,16 +796,13 @@ mailchimpSF_change_list_if_necessary();
 if (mailchimpSF_global_msg() != ''){
 	// Message has already been html escaped, so we don't want to 2x escape it here
 	?>
-    <div id="mc_message" class=""><?php echo mailchimpSF_global_msg(); ?></div>
+	<div id="mc_message" class=""><?php echo mailchimpSF_global_msg(); ?></div>
 	<?php
 }
 
-
 // If we don't have an API Key, do a login form
-if (!$user) {
+if (!$user && MAILCHIMP_DEV_MODE == false) {
 ?>
-	<div>
-	</div>
 	<div>
 		<h3 class="mc-h2"><?php esc_html_e('Log In', 'mailchimp_i18n');?></h3>
 		<p class="mc-p" style="width: 40%;line-height: 21px;"><?php esc_html_e('To start using the MailChimp plugin, we first need to connect your MailChimp account.  Click login below to connect.', 'mailchimp_i18n'); ?></p>
@@ -812,24 +827,25 @@ if (!$user) {
 			</table>
 		</div>
 	</div>
+
 	<br/>
-<!--<div class="notes_msg">
 	<?php
-    if ($user && $user['username'] != ''){
+	if ($user && $user['username'] != '') {
 		?>
+<!--<div class="notes_msg">
 		<strong><?php esc_html_e('Notes', 'mailchimp_i18n'); ?>:</strong>
 		<ul>
-		    <li><?php esc_html_e('Changing your settings at MailChimp.com may cause this to stop working.', 'mailchimp_i18n'); ?></li>
-		    <li><?php esc_html_e('If you change your login to a different account, the info you have setup below will be erased.', 'mailchimp_i18n'); ?></li>
-		    <li><?php esc_html_e('If any of that happens, no biggie - just reconfigure your login and the items below...', 'mailchimp_i18n'); ?></li>
+			<li><?php esc_html_e('Changing your settings at MailChimp.com may cause this to stop working.', 'mailchimp_i18n'); ?></li>
+			<li><?php esc_html_e('If you change your login to a different account, the info you have setup below will be erased.', 'mailchimp_i18n'); ?></li>
+			<li><?php esc_html_e('If any of that happens, no biggie - just reconfigure your login and the items below...', 'mailchimp_i18n'); ?></li>
 		</ul>
 </div>-->
 		<?php
-    }
+	}
 } // End of login form
 
 // Start logout form
-else {
+elseif (MAILCHIMP_DEV_MODE == false) {
 ?>
 <table style="min-width:400px;" class="mc-user" cellspacing="0">
 	<tr>
@@ -847,11 +863,9 @@ else {
 <?php
 } // End Logout form
 
-
-
 //Just get out if nothing else matters...
 $api = mailchimpSF_get_api();
-if (!$api) { return; }
+if (!$api && MAILCHIMP_DEV_MODE == false) { return; }
 
 if ($api){
 	?>
@@ -864,7 +878,7 @@ if ($api){
 
 	<form method="post" action="options-general.php?page=mailchimpSF_options">
 		<?php
-	    //we *could* support paging, but few users have that many lists (and shouldn't)
+		//we *could* support paging, but few users have that many lists (and shouldn't)
 		$lists = $api->lists(array(),0,100);
 		$lists = $lists['data'];
 
@@ -882,18 +896,18 @@ if ($api){
 		}
 		else {
 			?>
-	    <table style="min-width:400px" class="mc-list-select" cellspacing="0">
+		<table style="min-width:400px" class="mc-list-select" cellspacing="0">
 			<tr class="mc-list-row">
 				<td>
-		    	    <select name="mc_list_id" style="min-width:200px;">
-			            <option value=""> &mdash; <?php esc_html_e('Select A List','mailchimp_i18n'); ?> &mdash; </option>
+					<select name="mc_list_id" style="min-width:200px;">
+						<option value=""> &mdash; <?php esc_html_e('Select A List','mailchimp_i18n'); ?> &mdash; </option>
 						<?php
-					    foreach ($lists as $list) {
+						foreach ($lists as $list) {
 							$option = get_option('mc_list_id');
 							?>
-						    <option value="<?php echo esc_attr($list['id']); ?>"<?php selected($list['id'], $option); ?>><?php echo esc_html($list['name']); ?></option>
+							<option value="<?php echo esc_attr($list['id']); ?>"<?php selected($list['id'], $option); ?>><?php echo esc_html($list['name']); ?></option>
 							<?php
-					    }
+						}
 						?>
 					</select>
 				</td>
@@ -913,7 +927,7 @@ if ($api){
 
 <?php
 }
-else {
+elseif (MAILCHIMP_DEV_MODE == false) {
 //display the selected list...
 ?>
 
@@ -930,7 +944,7 @@ else {
 }
 
 //Just get out if nothing else matters...
-if (get_option('mc_list_id') == '') return;
+if (get_option('mc_list_id') == '' && MAILCHIMP_DEV_MODE == false) return;
 
 
 // The main Settings form
@@ -941,10 +955,12 @@ if (get_option('mc_list_id') == '') return;
 <div style="width:900px;">
 <input type="hidden" name="mcsf_action" value="change_form_settings">
 <?php wp_nonce_field('update_general_form_settings', '_mcsf_nonce_action'); ?>
+
+<?php if (MAILCHIMP_DEV_MODE == false) { ?>
 <!--<input type="submit" value="<?php esc_attr_e('Update Subscribe Form Settings', 'mailchimp_i18n'); ?>" class="button" />-->
 <table class="widefat mc-widefat mc-label-options">
 	<tr><th colspan="2">Content Options</th></tr>
-    <tr valign="top">
+	<tr valign="top">
 		<th scope="row"><?php esc_html_e('Header', 'mailchimp_i18n'); ?></th>
 		<td>
 			<textarea name="mc_header_content" rows="2" cols="70"><?php echo esc_html(get_option('mc_header_content')); ?></textarea><br/>
@@ -952,12 +968,12 @@ if (get_option('mc_list_id') == '') return;
 		</td>
 	</tr>
 
-    <tr valign="top">
+	<tr valign="top">
 		<th scope="row"><?php esc_html_e('Sub-header', 'mailchimp_i18n'); ?></th>
 		<td>
 			<textarea name="mc_subheader_content" rows="2" cols="70"><?php echo esc_html(get_option('mc_subheader_content')); ?></textarea><br/>
 			<?php esc_html_e('You can fill this with your own Text, HTML markup (including image links), or Nothing!', 'mailchimp_i18n'); ?>.<br/>
-		    <?php esc_html_e('This will be displayed under the heading and above the form.', 'mailchimp_i18n'); ?>
+			<?php esc_html_e('This will be displayed under the heading and above the form.', 'mailchimp_i18n'); ?>
 		</td>
 	</tr>
 
@@ -970,12 +986,13 @@ if (get_option('mc_list_id') == '') return;
 </table>
 
 <input type="submit" value="<?php esc_attr_e('Update Subscribe Form Settings', 'mailchimp_i18n'); ?>" class="button mc-submit" /><br/>
+<?php } ?>
 
 <table class="widefat mc-widefat mc-custom-styling">
 	<tr><th colspan="2">Custom Styling</th></tr>
 	<tr class="mc-turned-on"><th><label for="mc_custom_style"><?php esc_html_e('Enabled?', 'mailchimp_i18n'); ?></label></th><td><span class="mc-pre-input"></span><input type="checkbox" name="mc_custom_style" id="mc_custom_style"<?php checked(get_option('mc_custom_style'), 'on'); ?> /></td></tr>
 
-    <tr class="mc-internal-heading"><th colspan="2"><?php esc_html_e('Form Settings', 'mailchimp_i18n'); ?></th></tr>
+	<tr class="mc-internal-heading"><th colspan="2"><?php esc_html_e('Form Settings', 'mailchimp_i18n'); ?></th></tr>
 	<tr><th><?php esc_html_e('Border Width', 'mailchimp_i18n'); ?></th><td><span class="mc-pre-input"></span><input type="text" name="mc_form_border_width" size="3" maxlength="3" value="<?php echo esc_attr(get_option('mc_form_border_width')); ?>"/>
 		<em>px •<?php esc_html_e('Set to 0 for no border, do not enter', 'mailchimp_i18n'); ?> <strong>px</strong>!</em>
 	</td></tr>
@@ -992,45 +1009,44 @@ if (get_option('mc_list_id') == '') return;
 
 <input type="submit" value="<?php esc_attr_e('Update Subscribe Form Settings', 'mailchimp_i18n'); ?>" class="button mc-submit" /><br/>
 
+<?php if (MAILCHIMP_DEV_MODE == false) { ?>
 <table class="widefat mc-widefat">
 	<tr><th colspan="2">List Options</th></tr>
-    <tr valign="top">
-    	<th scope="row"><?php esc_html_e('Monkey Rewards', 'mailchimp_i18n'); ?>?</th>
-	    <td><input name="mc_rewards" type="checkbox"<?php if (get_option('mc_rewards')=='on' || get_option('mc_rewards')=='' ) { echo ' checked="checked"'; } ?> id="mc_rewards" class="code" />
-		    <em><label for="mc_rewards"><?php esc_html_e('Turning this on will place a "powered by MailChimp" link in your form that will earn you credits with us. It is optional and can be turned on or off at any time.', 'mailchimp_i18n'); ?></label></em>
-	    </td>
-    </tr>
-    
-    <tr valign="top">
-	    <th scope="row"><?php esc_html_e('Use Javascript Support?', 'mailchimp_i18n'); ?></th>
-	    <td><input name="mc_use_javascript" type="checkbox" <?php checked(get_option('mc_use_javascript'), 'on'); ?> id="mc_use_javascript" class="code" />
-		    <em><label for="mc_use_javascript"><?php esc_html_e('Turning this on will use fancy javascript submission and should degrade gracefully for users not using javascript. It is optional and can be turned on or off at any time.', 'mailchimp_i18n'); ?></label></em>
-	    </td>
-    </tr>
+	<tr valign="top">
+		<th scope="row"><?php esc_html_e('Monkey Rewards', 'mailchimp_i18n'); ?>?</th>
+		<td><input name="mc_rewards" type="checkbox"<?php if (get_option('mc_rewards')=='on' || get_option('mc_rewards')=='' ) { echo ' checked="checked"'; } ?> id="mc_rewards" class="code" />
+			<em><label for="mc_rewards"><?php esc_html_e('Turning this on will place a "powered by MailChimp" link in your form that will earn you credits with us. It is optional and can be turned on or off at any time.', 'mailchimp_i18n'); ?></label></em>
+		</td>
+	</tr>
 	
 	<tr valign="top">
-    	<th scope="row"><?php esc_html_e('Use Javascript Datepicker?', 'mailchimp_i18n'); ?></th>
-	    <td><input name="mc_use_datepicker" type="checkbox" <?php checked(get_option('mc_use_datepicker'), 'on'); ?> id="mc_use_datepicker" class="code" />
-		    <em><label for="mc_use_datepicker"><?php esc_html_e('Turning this on will use the jQuery UI Datepicker for dates.', 'mailchimp_i18n'); ?></label></em>
-	    </td>
-    </tr>
-    <tr valign="top" class="last-row">
-	    <th scope="row"><?php esc_html_e('Include Unsubscribe link?', 'mailchimp_i18n'); ?></th>
-	    <td><input name="mc_use_unsub_link" type="checkbox"<?php checked(get_option('mc_use_unsub_link'), 'on'); ?> id="mc_use_unsub_link" class="code" />
-		    <em><label for="mc_use_unsub_link"><?php esc_html_e('Turning this on will add a link to your host unsubscribe form', 'mailchimp_i18n'); ?></label></em>
-	    </td>
-    </tr>
-
-
+		<th scope="row"><?php esc_html_e('Use Javascript Support?', 'mailchimp_i18n'); ?></th>
+		<td><input name="mc_use_javascript" type="checkbox" <?php checked(get_option('mc_use_javascript'), 'on'); ?> id="mc_use_javascript" class="code" />
+			<em><label for="mc_use_javascript"><?php esc_html_e('Turning this on will use fancy javascript submission and should degrade gracefully for users not using javascript. It is optional and can be turned on or off at any time.', 'mailchimp_i18n'); ?></label></em>
+		</td>
+	</tr>
+	
+	<tr valign="top">
+		<th scope="row"><?php esc_html_e('Use Javascript Datepicker?', 'mailchimp_i18n'); ?></th>
+		<td><input name="mc_use_datepicker" type="checkbox" <?php checked(get_option('mc_use_datepicker'), 'on'); ?> id="mc_use_datepicker" class="code" />
+			<em><label for="mc_use_datepicker"><?php esc_html_e('Turning this on will use the jQuery UI Datepicker for dates.', 'mailchimp_i18n'); ?></label></em>
+		</td>
+	</tr>
+	<tr valign="top" class="last-row">
+		<th scope="row"><?php esc_html_e('Include Unsubscribe link?', 'mailchimp_i18n'); ?></th>
+		<td><input name="mc_use_unsub_link" type="checkbox"<?php checked(get_option('mc_use_unsub_link'), 'on'); ?> id="mc_use_unsub_link" class="code" />
+			<em><label for="mc_use_unsub_link"><?php esc_html_e('Turning this on will add a link to your host unsubscribe form', 'mailchimp_i18n'); ?></label></em>
+		</td>
+	</tr>
 </table>
+
+<?php } ?>
 
 </div>
 
-
-
 <?php
 // Merge Variables Table
-?>
+if (MAILCHIMP_DEV_MODE == false) { ?>
 <div style="width:900px;">
 
 	<input type="submit" value="<?php esc_attr_e('Update Subscribe Form Settings', 'mailchimp_i18n'); ?>" class="button mc-submit" /><br/>
@@ -1083,131 +1099,126 @@ if (get_option('mc_list_id') == '') return;
 	}
 	?>
 	</table>
+	<input type="submit" value="<?php esc_attr_e('Update Subscribe Form Settings', 'mailchimp_i18n'); ?>" class="button mc-submit" /><br/>
+</div>
 	<?php
 }
-
 ?>
 
-<input type="submit" value="<?php esc_attr_e('Update Subscribe Form Settings', 'mailchimp_i18n'); ?>" class="button mc-submit" /><br/>
+
 
 <?php
-// Interest Groups Table
-$igs = get_option('mc_interest_groups');
-if (is_array($igs) && !isset($igs['id'])) { ?>
-	<h3 class="mc-h3"><?php esc_html_e('Group Settings', 'mailchimp_i18n'); ?></h3> <?php
-	// Determines whether or not to continue processing. Only false if there was an error.
-	$continue = true;
-	foreach ($igs as $ig) {
-		if ($continue) {
-			if (!is_array($ig) || empty($ig) || $ig == 'N' ) {
-			?>
-		<em><?php esc_html_e('No Interest Groups Setup for this List', 'mailchimp_i18n'); ?></em>
-			<?php
-				$continue = false;
-			}
-			else {
-			?>
-		<table class='mc-widefat mc-blue' width="450px" cellspacing="0">
-			<tr valign="top">
-				<th colspan="2"><?php echo esc_html($ig['name']); ?></th>
-			</tr>
-			<tr valign="top">
-				<th>
-					<label for="<?php echo esc_attr('mc_show_interest_groups_'.$ig['id']); ?>"><?php esc_html_e('Show?', 'mailchimp_i18n'); ?></label>
-				</th>
-				<th>
-					<input name="<?php echo esc_attr('mc_show_interest_groups_'.$ig['id']); ?>" id="<?php echo esc_attr('mc_show_interest_groups_'.$ig['id']); ?>" type="checkbox" class="code"<?php checked('on', get_option('mc_show_interest_groups_'.$ig['id'])); ?> />
-				</th>
-			</tr>
-			<tr valign="top">
-				<th><?php esc_html_e('Input Type', 'mailchimp_i18n'); ?></th>
-				<td><?php echo esc_html($ig['form_field']); ?></td>
-			</tr>
-			<tr valign="top" class="last-row">
-				<th><?php esc_html_e('Options', 'mailchimp_i18n'); ?></th>
-				<td>
-					<ul>
-					<?php
-					foreach($ig['groups'] as $interest){
-						?>
-						<li><?php echo esc_html($interest['name']); ?></li>
+	// Interest Groups Table
+	$igs = get_option('mc_interest_groups');
+	if (is_array($igs) && !isset($igs['id'])) { ?>
+		<h3 class="mc-h3"><?php esc_html_e('Group Settings', 'mailchimp_i18n'); ?></h3> <?php
+		// Determines whether or not to continue processing. Only false if there was an error.
+		$continue = true;
+		foreach ($igs as $ig) {
+			if ($continue) {
+				if (!is_array($ig) || empty($ig) || $ig == 'N' ) {
+				?>
+			<em><?php esc_html_e('No Interest Groups Setup for this List', 'mailchimp_i18n'); ?></em>
+				<?php
+					$continue = false;
+				}
+				else {
+				?>
+			<table class='mc-widefat mc-blue' width="450px" cellspacing="0">
+				<tr valign="top">
+					<th colspan="2"><?php echo esc_html($ig['name']); ?></th>
+				</tr>
+				<tr valign="top">
+					<th>
+						<label for="<?php echo esc_attr('mc_show_interest_groups_'.$ig['id']); ?>"><?php esc_html_e('Show?', 'mailchimp_i18n'); ?></label>
+					</th>
+					<th>
+						<input name="<?php echo esc_attr('mc_show_interest_groups_'.$ig['id']); ?>" id="<?php echo esc_attr('mc_show_interest_groups_'.$ig['id']); ?>" type="checkbox" class="code"<?php checked('on', get_option('mc_show_interest_groups_'.$ig['id'])); ?> />
+					</th>
+				</tr>
+				<tr valign="top">
+					<th><?php esc_html_e('Input Type', 'mailchimp_i18n'); ?></th>
+					<td><?php echo esc_html($ig['form_field']); ?></td>
+				</tr>
+				<tr valign="top" class="last-row">
+					<th><?php esc_html_e('Options', 'mailchimp_i18n'); ?></th>
+					<td>
+						<ul>
 						<?php
-					}
-					?>
-					</ul>
-				</td>
-			</tr>
-		</table>
-		<?php
+						foreach($ig['groups'] as $interest){
+							?>
+							<li><?php echo esc_html($interest['name']); ?></li>
+							<?php
+						}
+						?>
+						</ul>
+					</td>
+				</tr>
+			</table>
+			<?php
+				}
 			}
 		}
 	}
-}
+} // end dev mode check
 ?>
-
-<table class="widefat mc-widefat mc-yellow">
-	<tr><th colspan="2">CSS Cheat Sheet</th></tr>
-    <tr valign="top">
-    	<th scope="row">.widget_mailchimpsf_widget </th>
-	    <td>This targets the entire widget container.</td>
-    </tr>
-    <tr valign="top">
-    	<th scope="row">.widget-title</th>
-	    <td>This styles the title of your MailChimp widget. <i>Modifying this class will affect your other widget titles.</i></td>
-    </tr>
-    <tr valign="top">
-    	<th scope="row">#mc_signup</th>
-	    <td>This targets the entirity of the widget beneath the widget title.</td>
-    </tr>
-    <tr valign="top">
-    	<th scope="row">#mc_subheader</th>
-	    <td>This styles the subheader text.</td>
-    </tr>
-    <tr valign="top">
-    	<th scope="row">.mc_form_inside</th>
-	    <td>The guts and main container for the all of the form elements (the entirety of the widget minus the header and the sub header).</td>
-    </tr>
-    <tr valign="top">
-    	<th scope="row">.mc_header</th>
-	    <td>This targets the label above the input fields.</td>
-    </tr>
-    <tr valign="top">
-    	<th scope="row">.mc_input</th>
-	    <td>This attaches to the input fields.</td>
-    </tr>
-    <tr valign="top">
-    	<th scope="row">.mc_header_address</th>
-	    <td>This is the label above an address group.</td>
-    </tr>
-    <tr valign="top">
-    	<th scope="row">.mc_radio_label</th>
-	    <td>These are the labels associated with radio buttons.</td>
-    </tr>
-    <tr valign="top">
-    	<th scope="row">#mc-indicates-required</th>
-	    <td>This targets the “Indicates Required Field” text.</td>
-    </tr>
-    <tr valign="top">
-    	<th scope="row">#mc_signup_submit</th>
-	    <td>Use this to style the submit button.</td>
-    </tr>
-    
-
-</table>
-
-</div>
-
-
+	<div style="width: 900px; margin-top: 35px;">
+		<table class="widefat mc-widefat mc-yellow">
+			<tr><th colspan="2">CSS Cheat Sheet</th></tr>
+			<tr valign="top">
+				<th scope="row">.widget_mailchimpsf_widget </th>
+				<td>This targets the entire widget container.</td>
+			</tr>
+			<tr valign="top">
+				<th scope="row">.widget-title</th>
+				<td>This styles the title of your MailChimp widget. <i>Modifying this class will affect your other widget titles.</i></td>
+			</tr>
+			<tr valign="top">
+				<th scope="row">#mc_signup</th>
+				<td>This targets the entirity of the widget beneath the widget title.</td>
+			</tr>
+			<tr valign="top">
+				<th scope="row">#mc_subheader</th>
+				<td>This styles the subheader text.</td>
+			</tr>
+			<tr valign="top">
+				<th scope="row">.mc_form_inside</th>
+				<td>The guts and main container for the all of the form elements (the entirety of the widget minus the header and the sub header).</td>
+			</tr>
+			<tr valign="top">
+				<th scope="row">.mc_header</th>
+				<td>This targets the label above the input fields.</td>
+			</tr>
+			<tr valign="top">
+				<th scope="row">.mc_input</th>
+				<td>This attaches to the input fields.</td>
+			</tr>
+			<tr valign="top">
+				<th scope="row">.mc_header_address</th>
+				<td>This is the label above an address group.</td>
+			</tr>
+			<tr valign="top">
+				<th scope="row">.mc_radio_label</th>
+				<td>These are the labels associated with radio buttons.</td>
+			</tr>
+			<tr valign="top">
+				<th scope="row">#mc-indicates-required</th>
+				<td>This targets the “Indicates Required Field” text.</td>
+			</tr>
+			<tr valign="top">
+				<th scope="row">#mc_signup_submit</th>
+				<td>Use this to style the submit button.</td>
+			</tr>
+		</table>
+	</div>
 
 </form>
-</div>
-</div><!--wrap-->
 <?php
 }//mailchimpSF_setup_page()
 
 
 function mailchimpSF_register_widgets() {
-	if (mailchimpSF_get_api()) {
+	if (mailchimpSF_get_api() || MAILCHIMP_DEV_MODE == true) {
 		register_widget('mailchimpSF_Widget');
 	}
 }
@@ -1246,7 +1257,19 @@ function mailchimpSF_signup_submit() {
 		$opt_val = isset($_POST[$opt]) ? $_POST[$opt] : '';
 
 		if (is_array($opt_val) && isset($opt_val['area'])) {
-			$opt_val = implode('-', $opt_val);
+			// This filters out all 'falsey' elements
+			$opt_val = array_filter($opt_val);
+
+			// If they weren't all empty
+			if ($opt_val) {
+				$opt_val = implode('-', $opt_val);
+				if (strlen($opt_val) < 12) {
+					$opt_val = '';
+				}
+			}
+			else {
+				$opt_val = '';
+			}
 		}
 		else if (is_array($opt_val) && $var['field_type'] == 'address') {
 			if ($var['req'] == 'Y') {

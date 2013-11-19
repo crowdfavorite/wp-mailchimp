@@ -9,7 +9,7 @@ function mailchimpSF_signup_form($args = array()) {
 	$igs = get_option('mc_interest_groups');
 	
 	// See if we have valid Merge Vars
-	if (!is_array($mv)){
+	if (!is_array($mv) && MAILCHIMP_DEV_MODE == false) {
 		echo $before_widget;
 		?>
 		<div class="mc_error_msg">
@@ -19,12 +19,21 @@ function mailchimpSF_signup_form($args = array()) {
 		echo $after_widget;
 		return;
 	}
+
+	if (!is_array($mv) && MAILCHIMP_DEV_MODE == true) {
+		$mv = mailchimp_get_kitchen_sink_fields();
+		$igs = mailchimp_get_kitchen_sink_groups();
+	}
 	
 	if (!empty($before_widget)) {
 		echo $before_widget;
 	}
 
 	$header =  get_option('mc_header_content');
+	if (!$header && MAILCHIMP_DEV_MODE == true) {
+		$header = apply_filters( 'mailchimp_dev_mode_header_text', 'MailChimp Developer' );
+	}
+
 	// See if we have custom header content
 	if (!empty($header)) {
 		// See if we need to wrap the header content in our own div
@@ -39,6 +48,10 @@ function mailchimpSF_signup_form($args = array()) {
 	}
 	
 	$sub_heading = trim(get_option('mc_subheader_content'));
+	if (!$sub_heading && MAILCHIMP_DEV_MODE == true) {
+		$sub_heading = apply_filters( 'mailchimp_dev_mode_subheading_text', 'This is the subheading text.' );
+	}
+
 	?>
 
 <style>
@@ -178,7 +191,7 @@ function mailchimpSF_signup_form($args = array()) {
 		if (is_array($igs) && !empty($igs)) {
 			foreach ($igs as $ig) {
 				if (is_array($ig) && isset($ig['id'])) {
-					if ($igs && get_option('mc_show_interest_groups_'.$ig['id']) == 'on') {
+					if (($igs && get_option('mc_show_interest_groups_'.$ig['id']) == 'on') || MAILCHIMP_DEV_MODE == true) {
 						if ($ig['form_field'] != 'hidden') {
 						?>				
 							<div class="mc_interests_header">
@@ -205,7 +218,7 @@ function mailchimpSF_signup_form($args = array()) {
 			}
 		}
 
-		if (get_option('mc_email_type_option')) {
+		if (get_option('mc_email_type_option') || MAILCHIMP_DEV_MODE == true) {
 		?>
 		<div class="mergeRow">
 			<label class="mc_email_format"><?php _e('Preferred Format', 'mailchimp_i18n'); ?></label>
@@ -219,10 +232,16 @@ function mailchimpSF_signup_form($args = array()) {
 
 		<?php
 		}
+
+		$submit_text = get_option('mc_submit_text');
+		if (!$submit_text && MAILCHIMP_DEV_MODE == true) {
+			$submit_text = apply_filters( 'mailchimp_dev_mode_submit_text', 'Subscribe' );
+		}
+
 		?>
 
 		<div class="mc_signup_submit">
-			<input type="submit" name="mc_signup_submit" id="mc_signup_submit" value="<?php echo esc_attr(get_option('mc_submit_text')); ?>" class="button" />
+			<input type="submit" name="mc_signup_submit" id="mc_signup_submit" value="<?php echo esc_attr($submit_text); ?>" class="button" />
 		</div><!-- /mc_signup_submit -->
 	
 	
@@ -675,4 +694,51 @@ function mailchimp_country_list() {
 		'174' => __('Zimbabwe', 'mailchimp_i18n'),
 	);
 }
-?>
+
+function mailchimp_get_kitchen_sink_fields() {
+	$fields = array(
+		0 => array (
+			'name' => 'Email Address', 'req' => true, 'field_type' => 'email', 'public' => true, 'show' => true, 'order' => '1', 'default' => NULL, 'helptext' => NULL, 'size' => '25', 'tag' => 'EMAIL', 'id' => 0,
+		),
+		1 => array (
+			'name' => 'First Name', 'req' => true, 'field_type' => 'text', 'public' => true, 'show' => true, 'order' => '2', 'default' => '', 'helptext' => '', 'size' => '25', 'tag' => 'FNAME', 'id' => 1,
+		),
+		2 => array (
+			'name' => 'Last Name', 'req' => true, 'field_type' => 'text', 'public' => true, 'show' => true, 'order' => '3', 'default' => '', 'helptext' => '', 'size' => '25', 'tag' => 'LNAME', 'id' => 2,
+		),
+		3 => array (
+			'name' => 'Radio Buttons', 'req' => true, 'field_type' => 'radio', 'public' => true, 'show' => true, 'order' => '5', 'default' => '', 'helptext' => '', 'size' => '25', 'choices' => array ( 0 => 'First Choice', 1 => 'Second Choice', 2 => 'Third Choice' ), 'tag' => 'MMERGE3', 'id' => 3,
+		),
+		4 => array (
+			'name' => 'Drop Down','req' => true,'field_type' => 'dropdown','public' => true,'show' => true,'order' => '7','default' => '','helptext' => 'Help text','size' => '25','choices' => array (0 => 'First Choice', 1 => 'Second Choice', 2 => 'Third Choice', ),'tag' => 'MMERGE4','id' => 4,
+		),
+		5 => array (
+			'name' => 'Date','req' => true,'field_type' => 'date','public' => true,'show' => true,'order' => '8','default' => '','helptext' => '','size' => '25','dateformat' => 'MM/DD/YYYY','tag' => 'MMERGE5','id' => 5,
+		),
+	);
+	return apply_filters( 'mailchimp_dev_mode_fields', $fields );
+}
+
+function mailchimp_get_kitchen_sink_groups() {
+	$groups = array ( 
+		0 => array (
+			'id' => 123,
+			'name' => 'Checkboxes',
+			'form_field' => 'checkboxes',
+			'display_order' => '0',
+			'groups' => 
+			array (
+				0 => array ( 
+					'bit' => '1', 'name' => 'Checkbox Option 1', 'display_order' => '1', 'subscribers' => 0,
+				),
+				1 => array (
+					'bit' => '2', 'name' => 'Another Checkbox Option', 'display_order' => '2', 'subscribers' => 0,
+				),
+				2 => array (
+					'bit' => '4', 'name' => 'Third Option', 'display_order' => '3', 'subscribers' => 0,
+				),
+			),
+		),
+	);
+	return apply_filters( 'mailchimp_dev_mode_groups', $groups );
+}
