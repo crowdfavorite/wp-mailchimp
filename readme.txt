@@ -1,9 +1,9 @@
 === MailChimp List Subscribe Form ===
-Contributors: mc_jesse, crowdfavorite
+Contributors: crowdfavorite
 Tags: mailchimp, email, newsletter, signup, marketing, plugin, widget
 Requires at least: 2.8
 Tested up to: 3.7.1
-Stable tag: 1.4
+Stable tag: 1.4.1
 
 == Description ==
 
@@ -138,6 +138,8 @@ Maybe! Look in the /po/ directory in our plugin package and see if your language
 
 == Upgrade Notice ==
 
+
+
 = 1.4 =
 Added Developer Mode "Kitchen Sink" to aid in styling without having to authenticate a MailChimp account.
 
@@ -162,6 +164,9 @@ Fixes major bug with "Settings" link on Plugins screen.
 Added support for multiple interest groups, field formatting based on type and date picker.
 
 == Changelog ==
+
+= 1.4.1 =
+* Update styles to be compatible with upcoming 3.8 wp-admin changes
 
 = 1.4 =
 * Developer Mode "Kitchen Sink" takes over plugin for local development
