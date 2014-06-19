@@ -269,7 +269,7 @@ if (get_option('mc_custom_style')=='on'){
 	ul.mc_list li {
 		font-size: 12px;
 	}
-	.ui-datepicker-year {
+	#ui-datepicker-div .ui-datepicker-year {
 		display: none;
 	}
 	#ui-datepicker-div.show .ui-datepicker-year {
