@@ -197,7 +197,7 @@ add_action('init', 'mailchimpSF_early_request_handler', 0);
  * a static file.
  */
 function mailchimpSF_main_css() {
-	?><style>
+	?><style type="text/css">
 	.mc_error_msg {
 		color: red;
 		margin-bottom: 1.0em;
