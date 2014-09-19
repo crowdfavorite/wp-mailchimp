@@ -270,7 +270,7 @@ function mailchimpSF_signup_form($args = array()) {
 	</form><!-- /mc_signup_form -->
 </div><!-- /mc_signup_container -->
 	<?php
-	if (!empty($before_widget)) {
+	if (!empty($after_widget)) {
 		echo $after_widget;
 	}
 }

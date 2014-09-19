@@ -3,7 +3,7 @@
 Plugin Name: MailChimp
 Plugin URI: http://www.mailchimp.com/plugins/mailchimp-wordpress-plugin/
 Description: The MailChimp plugin allows you to quickly and easily add a signup form for your MailChimp list.
-Version: 1.4.1
+Version: 1.4.2
 Author: MailChimp and Crowd Favorite
 Author URI: http://mailchimp.com/api/
 */
@@ -25,7 +25,7 @@ Author URI: http://mailchimp.com/api/
 */
 
 // Version constant for easy CSS refreshes
-define('MCSF_VER', '1.4.1');
+define('MCSF_VER', '1.4.2');
 
 // What's our permission (capability) threshold
 define('MCSF_CAP_THRESHOLD', 'manage_options');
@@ -269,7 +269,7 @@ if (get_option('mc_custom_style')=='on'){
 	ul.mc_list li {
 		font-size: 12px;
 	}
-	.ui-datepicker-year {
+	#ui-datepicker-div .ui-datepicker-year {
 		display: none;
 	}
 	#ui-datepicker-div.show .ui-datepicker-year {
@@ -352,7 +352,7 @@ function mailchimpSF_auth_nonce_key($salt = null) {
 	if (is_null($salt)) {
 		$salt = mailchimpSF_auth_nonce_salt();
 	}
-	return md5('social_authentication'.AUTH_KEY.$salt);
+	return 'social_authentication' . md5( AUTH_KEY . $salt );
 }
 
 function mailchimpSF_auth_nonce_salt() {
@@ -364,7 +364,8 @@ function mailchimpSF_authorize() {
 	$proxy = apply_filters('mailchimp_authorize_url', $api->getApiUrl('authorize'));
 	if (strpos($proxy, 'socialize-this') !== false) {
 		$salt = mailchimpSF_auth_nonce_salt();
-		$id = wp_create_nonce(mailchimpSF_auth_nonce_key($salt));
+		$id = mailchimpSF_create_nonce( mailchimpSF_auth_nonce_key( $salt ) );
+
 		$url = home_url('index.php');
 		$args = array(
 			'mcsf_action' => 'authorized',
@@ -393,7 +394,8 @@ function mailchimpSF_authorized() {
 
 	$nonce = stripslashes($_POST['id']);
 	$salt = stripslashes($_GET['salt']);
-	if (wp_verify_nonce($nonce, mailchimpSF_auth_nonce_key($salt)) === false) {
+
+	if (mailchimpSF_verify_nonce( $nonce, mailchimpSF_auth_nonce_key( $salt ) ) === false) {
 		wp_die('Cheatin&rsquo; huh?');
 	}
 
@@ -1520,4 +1522,70 @@ function mailchimpSF_where_am_i() {
 }
 
 
-?>
+/**
+ * MODIFIED VERSION of wp_verify_nonce from WP Core. Core was not overridden to prevent problems when replacing 
+ * something universally.
+ *
+ * Verify that correct nonce was used with time limit.
+ *
+ * The user is given an amount of time to use the token, so therefore, since the
+ * UID and $action remain the same, the independent variable is the time.
+ *
+ * @param string $nonce Nonce that was used in the form to verify
+ * @param string|int $action Should give context to what is taking place and be the same when nonce was created.
+ * @return bool Whether the nonce check passed or failed.
+ */
+function mailchimpSF_verify_nonce($nonce, $action = -1) {
+	$user = wp_get_current_user();
+	$uid = (int) $user->ID;
+	if ( ! $uid ) {
+		$uid = apply_filters( 'nonce_user_logged_out', $uid, $action );
+	}
+
+	if ( empty( $nonce ) ) {
+		return false;
+	}
+
+	$token = 'MAILCHIMP';
+	$i = wp_nonce_tick();
+
+	// Nonce generated 0-12 hours ago
+	$expected = substr( wp_hash( $i . '|' . $action . '|' . $uid . '|' . $token, 'nonce'), -12, 10 );
+	if ( hash_equals( $expected, $nonce ) ) {
+		return 1;
+	}
+
+	// Nonce generated 12-24 hours ago
+	$expected = substr( wp_hash( ( $i - 1 ) . '|' . $action . '|' . $uid . '|' . $token, 'nonce' ), -12, 10 );
+	if ( hash_equals( $expected, $nonce ) ) {
+		return 2;
+	}
+
+	// Invalid nonce
+	return false;
+}
+
+
+/**
+ * MODIFIED VERSION of wp_create_nonce from WP Core. Core was not overridden to prevent problems when replacing 
+ * something universally.
+ *
+ * Creates a cryptographic token tied to a specific action, user, and window of time.
+ *
+ * @param string $action Scalar value to add context to the nonce.
+ * @return string The token.
+ */
+function mailchimpSF_create_nonce($action = -1) {
+	$user = wp_get_current_user();
+	$uid = (int) $user->ID;
+	if ( ! $uid ) {
+		/** This filter is documented in wp-includes/pluggable.php */
+		$uid = apply_filters( 'nonce_user_logged_out', $uid, $action );
+	}
+
+	$token = 'MAILCHIMP';
+	$i = wp_nonce_tick();
+
+	return substr( wp_hash( $i . '|' . $action . '|' . $uid . '|' . $token, 'nonce' ), -12, 10 );
+}
+
