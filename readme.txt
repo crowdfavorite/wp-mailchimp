@@ -2,8 +2,8 @@
 Contributors: crowdfavorite
 Tags: mailchimp, email, newsletter, signup, marketing, plugin, widget
 Requires at least: 2.8
-Tested up to: 3.7.1
-Stable tag: 1.4.1
+Tested up to: 4.0
+Stable tag: 1.4.2
 
 == Description ==
 
@@ -138,7 +138,11 @@ Maybe! Look in the /po/ directory in our plugin package and see if your language
 
 == Upgrade Notice ==
 
+= 1.4.2 =
+add customized wp_nonces functions for post-back behavior to fix 4.0 callbacks
 
+= 1.4.1 =
+Fix for checkbox weirdness on 3.8
 
 = 1.4 =
 Added Developer Mode "Kitchen Sink" to aid in styling without having to authenticate a MailChimp account.
