@@ -105,12 +105,12 @@ function mailchimpSF_load_resources() {
 
 	if (get_option('mc_use_datepicker') == 'on' && !is_admin()) {
 		// Datepicker theme
-		wp_enqueue_style('flick', MCSF_URL.'/css/flick/flick.css');
+		wp_enqueue_style('flick', MCSF_URL.'css/flick/flick.css');
 		// Datepicker JS
-		wp_enqueue_script('datepicker', MCSF_URL.'/js/datepicker.js', array('jquery','jquery-ui-core'));
+		wp_enqueue_script('datepicker', MCSF_URL.'js/datepicker.js', array('jquery','jquery-ui-core'));
 	}
 
-	wp_enqueue_style('mailchimpSF_main_css', home_url('?mcsf_action=main_css&ver='.MCSF_VER));
+	add_action('wp_head', 'mailchimpSF_main_css');
 	wp_enqueue_style('mailchimpSF_ie_css', MCSF_URL.'css/ie.css');
 	global $wp_styles;
 	$wp_styles->add_data( 'mailchimpSF_ie_css', 'conditional', 'IE' );
@@ -180,10 +180,6 @@ if (get_option('mc_use_datepicker') == 'on' && !is_admin()) {
 function mailchimpSF_early_request_handler() {
 	if (isset($_GET['mcsf_action'])) {
 		switch ($_GET['mcsf_action']) {
-			case 'main_css':
-				header("Content-type: text/css");
-				mailchimpSF_main_css();
-				exit;
 			case 'authorize':
 				mailchimpSF_authorize();
 				break;
@@ -201,7 +197,7 @@ add_action('init', 'mailchimpSF_early_request_handler', 0);
  * a static file.
  */
 function mailchimpSF_main_css() {
-	?>
+	?><style type="text/css">
 	.mc_error_msg {
 		color: red;
 		margin-bottom: 1.0em;
@@ -227,17 +223,6 @@ if (get_option('mc_custom_style')=='on'){
 		background-color: #<?php echo get_option('mc_form_background'); ?>;
 	}
 
-
-	.mc_custom_border_hdr {
-		border-width: <?php echo get_option('mc_header_border_width'); ?>px;
-		border-style: <?php echo (get_option('mc_header_border_width')==0) ? 'none' : 'solid'; ?>;
-		border-color: #<?php echo get_option('mc_header_border_color'); ?>;
-		color: #<?php echo get_option('mc_header_text_color'); ?>;
-		background-color: #<?php echo get_option('mc_header_background'); ?>;
-		<!--	font-size: 1.2em;-->
-		padding:5px 10px;
-		width: 100%;
-	}
 	<?php
 }
 ?>
@@ -276,7 +261,7 @@ if (get_option('mc_custom_style')=='on'){
 		display: inline;
 		padding-left: 3px
 	}
-	<?php
+	</style><?php
 }
 
 
