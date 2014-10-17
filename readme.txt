@@ -1,4 +1,4 @@
-=== MailChimp List Subscribe Form ===
+﻿=== MailChimp List Subscribe Form ===
 Contributors: crowdfavorite
 Tags: mailchimp, email, newsletter, signup, marketing, plugin, widget
 Requires at least: 2.8
@@ -85,6 +85,7 @@ Currently we have the plugin configured so it can be easily translated and the f
 * he_IL - Hebrew in Israel (thanks to [שגיב בית](http://www.sagive.co.il) for contributing)
 * hu_HU - Hungarian in Hungary (thanks to Okostobi for contributing)
 * it_IT - Italian in Italy (thanks to [Stefan Des](http://www.stefandes.com) for contributing)
+* ja_JP - Japanese in Japan (thanks to [Shota Ando](http://twitter.com/shotaando) for contributing)
 * ko_KR - Korean (thanks to 백선기 (SK Baek)  for contributing)
 * nb_NO - Norwegian (thanks to [Alexander Roterud aka Defrag](http://www.tigerpews.com) for contributing)
 * nl_BE - Dutch (thanks to [Filip Stas](http://suddenelfilio.net/) for contributing)
