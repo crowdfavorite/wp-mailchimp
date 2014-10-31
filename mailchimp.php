@@ -93,8 +93,8 @@ function mailchimpSF_load_resources() {
 	// JS
 	if (get_option('mc_use_javascript') == 'on') {
 		if (!is_admin()) {
-			wp_enqueue_script('jquery_scrollto', MCSF_URL.'js/scrollTo.js', array('jquery'), MCSF_VER);
-			wp_enqueue_script('mailchimpSF_main_js', MCSF_URL.'js/mailchimp.js', array('jquery', 'jquery-form'), MCSF_VER);
+			wp_enqueue_script('jquery_scrollto', MCSF_URL.'js/scrollTo.js', array('jquery'), MCSF_VER, true);
+			wp_enqueue_script('mailchimpSF_main_js', MCSF_URL.'js/mailchimp.js', array('jquery', 'jquery-form'), MCSF_VER, true);
 			// some javascript to get ajax version submitting to the proper location
 			global $wp_scripts;
 			$wp_scripts->localize('mailchimpSF_main_js', 'mailchimpSF', array(
@@ -107,7 +107,7 @@ function mailchimpSF_load_resources() {
 		// Datepicker theme
 		wp_enqueue_style('flick', MCSF_URL.'/css/flick/flick.css');
 		// Datepicker JS
-		wp_enqueue_script('datepicker', MCSF_URL.'/js/datepicker.js', array('jquery','jquery-ui-core'));
+		wp_enqueue_script('datepicker', MCSF_URL.'/js/datepicker.js', array('jquery','jquery-ui-core'), false, true );
 	}
 
 	wp_enqueue_style('mailchimpSF_main_css', home_url('?mcsf_action=main_css&ver='.MCSF_VER));
@@ -170,7 +170,7 @@ function mc_datepicker_load() {
 	<?php
 }
 if (get_option('mc_use_datepicker') == 'on' && !is_admin()) {
-	add_action('wp_head', 'mc_datepicker_load');
+	add_action('wp_footer', 'mc_datepicker_load', 1000 );
 }
 
 /**
