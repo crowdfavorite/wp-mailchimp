@@ -170,7 +170,7 @@ function mc_datepicker_load() {
 	<?php
 }
 if (get_option('mc_use_datepicker') == 'on' && !is_admin()) {
-	add_action('wp_head', 'mc_datepicker_load');
+	add_action('wp_footer', 'mc_datepicker_load', 1000 );
 }
 
 /**
