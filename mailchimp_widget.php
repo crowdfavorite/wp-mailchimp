@@ -52,8 +52,7 @@ function mailchimpSF_signup_form($args = array()) {
 		$sub_heading = apply_filters( 'mailchimp_dev_mode_subheading_text', 'This is the subheading text.' );
 	}
 
-	?>
-
+	if ( apply_filters( 'mailchimp_use_inline_styles', true ) ) : ?>
 <style>
 	.widget_mailchimpsf_widget .widget-title {
 		line-height: 1.4em;
@@ -128,6 +127,7 @@ function mailchimpSF_signup_form($args = array()) {
 		padding-left: 4px;
 	}
 </style>
+<?php endif; ?>
 
 <div id="mc_signup">
 	<form method="post" action="#mc_signup" id="mc_signup_form">
