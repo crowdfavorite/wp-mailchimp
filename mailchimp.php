@@ -91,27 +91,27 @@ add_filter('plugin_action_links_'.plugin_basename(__FILE__), 'mailchimpSD_plugin
  */
 function mailchimpSF_load_resources() {
 	// JS
-	if (get_option('mc_use_javascript') == 'on') {
-		if (!is_admin()) {
-			wp_enqueue_script('jquery_scrollto', MCSF_URL.'js/scrollTo.js', array('jquery'), MCSF_VER);
-			wp_enqueue_script('mailchimpSF_main_js', MCSF_URL.'js/mailchimp.js', array('jquery', 'jquery-form'), MCSF_VER);
+	if ( get_option( 'mc_use_javascript' ) == 'on' ) {
+		if ( ! is_admin() ) {
+			wp_enqueue_script( 'jquery_scrollto', MCSF_URL.'js/scrollTo.js', array( 'jquery' ), MCSF_VER );
+			wp_enqueue_script( 'mailchimpSF_main_js', MCSF_URL.'js/mailchimp.js', array( 'jquery' , 'jquery-form' ), MCSF_VER );
 			// some javascript to get ajax version submitting to the proper location
 			global $wp_scripts;
-			$wp_scripts->localize('mailchimpSF_main_js', 'mailchimpSF', array(
-				'ajax_url' => trailingslashit(home_url()),
+			$wp_scripts->localize( 'mailchimpSF_main_js', 'mailchimpSF', array(
+				'ajax_url' => trailingslashit( home_url() ),
 			));
 		}
 	}
 
-	if (get_option('mc_use_datepicker') == 'on' && !is_admin()) {
+	if ( get_option( 'mc_use_datepicker' ) == 'on' && ! is_admin() ) {
 		// Datepicker theme
-		wp_enqueue_style('flick', MCSF_URL.'css/flick/flick.css');
+		wp_enqueue_style( 'flick', MCSF_URL . 'css/flick/flick.css' );
 		// Datepicker JS
-		wp_enqueue_script('datepicker', MCSF_URL.'js/datepicker.js', array('jquery','jquery-ui-core'));
+		wp_enqueue_script( 'datepicker', MCSF_URL . 'js/datepicker.js', array( 'jquery','jquery-ui-core' ) );
 	}
 
-	wp_enqueue_style('mailchimpSF_main_css', home_url('?mcsf_action=main_css&ver='.MCSF_VER));
-	wp_enqueue_style('mailchimpSF_ie_css', MCSF_URL.'css/ie.css');
+	wp_enqueue_style( 'mailchimpSF_main_css', home_url( '?mcsf_action=main_css&ver='.MCSF_VER ) );
+	wp_enqueue_style( 'mailchimpSF_ie_css', MCSF_URL.'css/ie.css');
 	global $wp_styles;
 	$wp_styles->add_data( 'mailchimpSF_ie_css', 'conditional', 'IE' );
 }
@@ -360,28 +360,28 @@ function mailchimpSF_auth_nonce_salt() {
 }
 
 function mailchimpSF_authorize() {
-	$api = mailchimpSF_get_api(true);
-	$proxy = apply_filters('mailchimp_authorize_url', $api->getApiUrl('authorize'));
-	if (strpos($proxy, 'socialize-this') !== false) {
+	$api = mailchimpSF_get_api( true );
+	$proxy = apply_filters( 'mailchimp_authorize_url', $api->getApiUrl( 'authorize' ) );
+	if ( strpos( $proxy, 'socialize-this' ) !== false ) {
 		$salt = mailchimpSF_auth_nonce_salt();
 		$id = mailchimpSF_create_nonce( mailchimpSF_auth_nonce_key( $salt ) );
 
-		$url = home_url('index.php');
+		$url = admin_url( 'index.php' );
 		$args = array(
 			'mcsf_action' => 'authorized',
 			'salt' => $salt,
 			'user_id' => get_current_user_id(),
 		);
 
-		$proxy = add_query_arg(array(
+		$proxy = add_query_arg( array(
 			'id' => $id,
-			'response_url' => urlencode(add_query_arg($args, $url))
-		), $proxy);
+			'response_url' => urlencode( add_query_arg( $args, $url ) )
+		), $proxy );
 
-		$proxy = apply_filters('mailchimp_proxy_url', $proxy);
+		$proxy = apply_filters( 'mailchimp_proxy_url', $proxy );
 	}
 
-	wp_redirect($proxy);
+	wp_redirect( $proxy );
 	exit;
 }
 
@@ -822,7 +822,7 @@ if (!$user && MAILCHIMP_DEV_MODE == false) {
 				<tr valign="top">
 					<th scope="row" class="mailchimp-connect"><?php esc_html_e('Connect to MailChimp', 'mailchimp_i18n'); ?></th>
 					<td>
-						<a href="<?php echo add_query_arg(array("mcsf_action" => "authorize"), home_url('index.php')) ?>" class="mailchimp-login">Connect</a>
+						<a href="<?php echo add_query_arg(array("mcsf_action" => "authorize"), admin_url('index.php')) ?>" class="mailchimp-login">Connect</a>
 					</td>
 				</tr>
 			</table>
