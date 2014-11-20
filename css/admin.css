@@ -5,14 +5,14 @@
 /* 	Errors
 	---------------------------------------------------------------  */
 
-.error_msg { 
+.error_msg {
 	background: #fadbd5;
 	border: 1px solid #db3a1b;
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
 	border-radius: 6px;
 	box-sizing: border-box;
-	color: #373737; 
+	color: #373737;
 	font-size: 12px;
 	line-height: 16px;
 	margin: 12px 0;
@@ -20,14 +20,14 @@
 	width: 900px;
 }
 .success_msg,
-.notes_msg { 
+.notes_msg {
 	background: #fff3d4;
 	border: 1px solid #febe12;
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
 	border-radius: 6px;
 	box-sizing: border-box;
-	color: #373737; 
+	color: #373737;
 	font-size: 12px;
 	line-height: 16px;
 	margin: 12px 0;
@@ -74,7 +74,7 @@ table.mc-user tr {
 .mc-user h3 {
 	font-weight: normal;
 	text-indent: 9px;
-	font-family: "HelveticaNeue-Regular", "Helvetica Neue Regular", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-family: "HelveticaNeue-Regular", "Helvetica Neue Regular", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
 
@@ -97,9 +97,9 @@ table.mc-user tr {
 }
 
 .mc-list-note {
-	color: #5D5C5D;	
+	color: #5D5C5D;
 	font-size: 13px;
-	font-family: "HelveticaNeue-Regular", "Helvetica Neue Regular", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-family: "HelveticaNeue-Regular", "Helvetica Neue Regular", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-weight: normal;
 	padding: 0 0 18px;
 	margin-bottom: 8px;
@@ -115,7 +115,7 @@ table.mc-list-select {
 	---------------------------------------------------------------  */
 
 .mc-h2 {
-	color: #373737;	
+	color: #373737;
 	font-size: 26px;
 	margin-bottom: 0;
 }
@@ -130,45 +130,48 @@ table.mc-list-select {
 }
 
 .mc-p {
-	color: #373737;	
+	color: #373737;
 	font-size: 16px;
-	font-family: "HelveticaNeue-Regular", "Helvetica Neue Regular", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-family: "HelveticaNeue-Regular", "Helvetica Neue Regular", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-weight: normal;
 	margin-bottom: 0;
 }
 
 .mc-a {
-	color: #5D5C5D;	
+	color: #5D5C5D;
 	font-size: 14px;
-	font-family: "HelveticaNeue-Regular", "Helvetica Neue Regular", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-family: "HelveticaNeue-Regular", "Helvetica Neue Regular", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-weight: normal;
-	margin-bottom: 0;	
+	margin-bottom: 0;
 }
 
 /* 	Header
 	---------------------------------------------------------------  */
 
-.mailchimp-header {
+h2.mailchimp-header {
 	background: url(images/mailchimp-header.png) no-repeat;
 	background-size: 900px 96px;
 	height: 96px;
 	width: 900px;
 	margin-top: 19px;
+	display: block;
 }
 
-.mailchimp-header h2 {
+h2.mailchimp-header .header-content{
 	float: right;
 	margin-top: 24px;
 	margin-right: 12px;
-	font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-weight: 700;
 	color: #fff !important;
 	text-shadow: none;
 	font-size: 26px !important;
+	height: 96px;
+	display: block;
 }
 
 
-/* 	Table 
+/* 	Table
 	---------------------------------------------------------------  */
 
 table.mc-widefat {
@@ -195,9 +198,9 @@ table.mc-widefat .last-row th {
 
 table.mc-widefat th {
 	color: #373737 !important;
-	font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-weight: 700;
-	width: 130px;	
+	width: 130px;
 }
 
 table.mc-widefat td label {
@@ -225,16 +228,16 @@ table.mc-widefat tr:first-child {
 }
 table.mc-widefat tr:first-child th {
 	color: #fff !important;
-	font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-size: 16px;
 	margin-left: 9px;
-	text-shadow: none;	
+	text-shadow: none;
 	border-bottom: none !important;
 }
 
 
 .mc-internal-heading {
-	background: rgba(197,229,222,0.25) !important;	
+	background: rgba(197,229,222,0.25) !important;
 }
 table.mc-widefat tr.mc-internal-heading th {
 	text-shadow: none !important;
@@ -242,7 +245,7 @@ table.mc-widefat tr.mc-internal-heading th {
 }
 
 tr.mc-turned-on th {
-	color: #449A88 !important;	
+	color: #449A88 !important;
 }
 .mc-custom-styling em,
 .mc-custom-styling td {
@@ -269,7 +272,7 @@ tr.mc-turned-on th {
 
 .mc-widefat.mc-blue {
 	background: #fff !important;
-	border: 2px solid #6DC5DC !important;	
+	border: 2px solid #6DC5DC !important;
 }
 
 table.mc-widefat.mc-blue td,
@@ -282,7 +285,7 @@ table.mc-widefat.mc-blue tr:first-child {
 
 .mc-widefat.mc-yellow {
 	background: #fff !important;
-	border: 2px solid #FEDE88 !important;	
+	border: 2px solid #FEDE88 !important;
 }
 
 table.mc-widefat.mc-yellow td,
@@ -296,7 +299,7 @@ table.mc-widefat.mc-yellow tr:first-child {
 
 
 .mc-widefat.mc-api {
-	border: 2px solid #95D1C4 !important;	
+	border: 2px solid #95D1C4 !important;
 }
 
 table.mc-widefat.mc-api {

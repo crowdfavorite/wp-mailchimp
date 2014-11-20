@@ -778,10 +778,9 @@ function mailchimpSF_change_list_if_necessary() {
 function mailchimpSF_setup_page() {
 ?>
 <div class="wrap">
-
-	<div class="mailchimp-header">
-		<h2><?php esc_html_e('MailChimp List Setup', 'mailchimp_i18n');?> </h2>
-	</div>
+	<h2 class="mailchimp-header">
+		<span class="header-content"> <?php esc_html_e( 'MailChimp List Setup', 'mailchimp_i18n' );?> </span>
+	</h2>
 <?php
 
 // Display Developer mode active.
