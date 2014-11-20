@@ -719,7 +719,7 @@ function mailchimpSF_change_list_if_necessary() {
 		}
 
 		$orig_list = get_option('mc_list_id');
-		if ($list_id != '') {
+		if ( ! empty( $list_id ) ) {
 			update_option('mc_list_id', $list_id);
 			update_option('mc_list_name', $list_name);
 			update_option('mc_email_type_option', $lists[$list_key]['email_type_option']);
@@ -779,7 +779,7 @@ function mailchimpSF_setup_page() {
 ?>
 <div class="wrap">
 	<h2 class="mailchimp-header">
-		<span class="header-content"> <?php esc_html_e( 'MailChimp List Setup', 'mailchimp_i18n' );?> </span>
+		<span class="header-content"> <?php esc_html_e( 'MailChimp List Setup', 'mailchimp_i18n' ); ?> </span>
 	</h2>
 <?php
 
