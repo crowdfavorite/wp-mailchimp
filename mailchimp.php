@@ -817,7 +817,7 @@ if (!$user && MAILCHIMP_DEV_MODE == false) {
 			);
 			?>
 		</p>
-		
+
 		<div style="width: 900px;">
 			<table class="widefat mc-widefat mc-api">
 				<tr valign="top">
@@ -1020,14 +1020,14 @@ if (get_option('mc_list_id') == '' && MAILCHIMP_DEV_MODE == false) return;
 			<em><label for="mc_rewards"><?php esc_html_e('Turning this on will place a "powered by MailChimp" link in your form that will earn you credits with us. It is optional and can be turned on or off at any time.', 'mailchimp_i18n'); ?></label></em>
 		</td>
 	</tr>
-	
+
 	<tr valign="top">
 		<th scope="row"><?php esc_html_e('Use Javascript Support?', 'mailchimp_i18n'); ?></th>
 		<td><input name="mc_use_javascript" type="checkbox" <?php checked(get_option('mc_use_javascript'), 'on'); ?> id="mc_use_javascript" class="code" />
 			<em><label for="mc_use_javascript"><?php esc_html_e('Turning this on will use fancy javascript submission and should degrade gracefully for users not using javascript. It is optional and can be turned on or off at any time.', 'mailchimp_i18n'); ?></label></em>
 		</td>
 	</tr>
-	
+
 	<tr valign="top">
 		<th scope="row"><?php esc_html_e('Use Javascript Datepicker?', 'mailchimp_i18n'); ?></th>
 		<td><input name="mc_use_datepicker" type="checkbox" <?php checked(get_option('mc_use_datepicker'), 'on'); ?> id="mc_use_datepicker" class="code" />
@@ -1060,7 +1060,7 @@ if (MAILCHIMP_DEV_MODE == false) { ?>
 
 				<?php
 				$mv = get_option('mc_merge_vars');
-				
+
 				if (count($mv) == 0 || !is_array($mv)){
 					?>
 					<em><?php esc_html_e('No Merge Variables found.', 'mailchimp_i18n'); ?></em>
@@ -1485,25 +1485,25 @@ function mailchimpSF_where_am_i() {
 			'url' => plugins_url(),
 		),
 		'template' => array(
-			'dir' => trailingslashit(get_template_directory()).'plugins/',
-			'url' => trailingslashit(get_template_directory_uri()).'plugins/',
+			'dir' => trailingslashit( get_template_directory() ) . 'plugins/',
+			'url' => trailingslashit( get_template_directory_uri() ) . 'plugins/',
 		),
 		'stylesheet' => array(
-			'dir' => trailingslashit(get_stylesheet_directory()).'plugins/',
-			'url' => trailingslashit(get_stylesheet_directory_uri()).'plugins/',
+			'dir' => trailingslashit( get_stylesheet_directory() ) . 'plugins/',
+			'url' => trailingslashit( get_stylesheet_directory_uri() ) . 'plugins/',
 		),
 	);
 
 	// Set defaults
-	$mscf_dirbase = trailingslashit(basename(dirname(__FILE__))); // Typically wp-mailchimp/ or mailchimp/
-	$mscf_dir = trailingslashit(WP_PLUGIN_DIR).$mscf_dirbase;
-	$mscf_url = trailingslashit(WP_PLUGIN_URL).$mscf_dirbase;
+	$mscf_dirbase = ltrim( trailingslashit( basename( dirname( __FILE__ ) ) ), '/' ); // Typically wp-mailchimp/ or mailchimp/
+	$mscf_dir = trailingslashit( WP_PLUGIN_DIR ) . $mscf_dirbase;
+	$mscf_url = trailingslashit( WP_PLUGIN_URL ) . $mscf_dirbase;
 
 	// Try our hands at finding the real location
 	foreach ($locations as $key => $loc) {
-		$dir = trailingslashit($loc['dir']).$mscf_dirbase;
-		$url = trailingslashit($loc['url']).$mscf_dirbase;
-		if (is_file($dir.basename(__FILE__))) {
+		$dir = trailingslashit( $loc['dir']) . $mscf_dirbase;
+		$url = trailingslashit( $loc['url']) . $mscf_dirbase;
+		if (is_file( $dir . basename(__FILE__) ) ) {
 			$mscf_dir = $dir;
 			$mscf_url = $url;
 			break;
@@ -1511,19 +1511,19 @@ function mailchimpSF_where_am_i() {
 	}
 
 	// Define our complete filesystem path
-	define('MCSF_DIR', $mscf_dir);
+	define( 'MCSF_DIR', $mscf_dir );
 
 	/* Lang location needs to be relative *from* ABSPATH,
 	so strip it out of our language dir location */
-	define('MCSF_LANG_DIR', trailingslashit(MCSF_DIR).'po/');
+	define( 'MCSF_LANG_DIR', trailingslashit( MCSF_DIR ) . 'po/' );
 
 	// Define our complete URL to the plugin folder
-	define('MCSF_URL', $mscf_url);
+	define( 'MCSF_URL', $mscf_url );
 }
 
 
 /**
- * MODIFIED VERSION of wp_verify_nonce from WP Core. Core was not overridden to prevent problems when replacing 
+ * MODIFIED VERSION of wp_verify_nonce from WP Core. Core was not overridden to prevent problems when replacing
  * something universally.
  *
  * Verify that correct nonce was used with time limit.
@@ -1567,7 +1567,7 @@ function mailchimpSF_verify_nonce($nonce, $action = -1) {
 
 
 /**
- * MODIFIED VERSION of wp_create_nonce from WP Core. Core was not overridden to prevent problems when replacing 
+ * MODIFIED VERSION of wp_create_nonce from WP Core. Core was not overridden to prevent problems when replacing
  * something universally.
  *
  * Creates a cryptographic token tied to a specific action, user, and window of time.
