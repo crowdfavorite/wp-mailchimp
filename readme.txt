@@ -176,6 +176,7 @@ Added support for multiple interest groups, field formatting based on type and d
 * Prevent assets from having double slashes in the URL which causes issues with caching plugins
 * Prevent WP error bars from overlapping the header image and text
 * Fixed an issue which generated the incorrect URL to update a profile
+* Fixed an issue which would occasionally prevent connection for users with versions of PHP < 5.6.0
 
 = 1.4.2 =
 * Update to address changes in nonces for WP 4.0

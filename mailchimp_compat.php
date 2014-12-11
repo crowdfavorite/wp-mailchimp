@@ -40,7 +40,7 @@ if (!function_exists('home_url')) {
 	function home_url( $path = '', $scheme = null ) {
 		return get_home_url(null, $path, $scheme);
 	}
-	
+
 }
 
 if (!function_exists('get_home_url')) {
@@ -97,4 +97,33 @@ if (!function_exists('is_multisite')) {
 		return false;
 	}
 }
-?>
+
+// Copied from wp core, in case it core isn't loaded when the request comes back
+if ( ! function_exists( 'hash_equals' ) ) :
+/**
+ * Compare two strings in constant time.
+ *
+ * This function was added in PHP 5.6.
+ * It can leak the length of a string.
+ *
+ * @since 3.9.2
+ *
+ * @param string $a Expected string.
+ * @param string $b Actual string.
+ * @return bool Whether strings are equal.
+ */
+function hash_equals( $a, $b ) {
+	$a_length = strlen( $a );
+	if ( $a_length !== strlen( $b ) ) {
+		return false;
+	}
+	$result = 0;
+
+	// Do not attempt to "optimize" this.
+	for ( $i = 0; $i < $a_length; $i++ ) {
+		$result |= ord( $a[ $i ] ) ^ ord( $b[ $i ] );
+	}
+
+	return $result === 0;
+}
+endif;
