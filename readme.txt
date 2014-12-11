@@ -172,6 +172,14 @@ Added support for multiple interest groups, field formatting based on type and d
 
 == Changelog ==
 
+= 1.4.3 =
+* Prevent assets from having double slashes in the URL which causes issues with caching plugins
+* Prevent WP error bars from overlapping the header image and text
+* Fixed an issue which generated the incorrect URL to update a profile
+
+= 1.4.2 =
+* Update to address changes in nonces for WP 4.0
+
 = 1.4.1 =
 * Update styles to be compatible with upcoming 3.8 wp-admin changes
 
