@@ -652,10 +652,18 @@ function mailchimpSF_save_general_form_settings() {
 
 	if (MAILCHIMP_DEV_MODE == false) {
 		//we told them not to put these things we are replacing in, but let's just make sure they are listening...
-		update_option('mc_header_border_width',str_replace('px','',$_POST['mc_header_border_width']) );
-		update_option('mc_header_border_color', str_replace('#','',$_POST['mc_header_border_color']));
-		update_option('mc_header_background',str_replace('#','',$_POST['mc_header_background']));
-		update_option('mc_header_text_color', str_replace('#','',$_POST['mc_header_text_color']));
+		$header_keys = array(
+			'mc_header_border_width' = > 'px',
+			'mc_header_border_color' => '#',
+			'mc_header_background' => '#',
+			'mc_header_text_color' => '#',
+		);
+		// Prevent WP_DEBUG warnings and updating when they are not set
+		foreach ( $header_keys as $header_key => $header_replacement) {
+			if ( isset( $_POST[ $header_key ] ) ) {
+				update_option( $header_key, str_replace( $header_replacement, '', $_POST[ $header_key ] ) );
+			}
+		}
 	}
 
 	update_option('mc_form_border_width',str_replace('px','',$_POST['mc_form_border_width']) );
