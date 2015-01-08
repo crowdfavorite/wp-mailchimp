@@ -1265,6 +1265,9 @@ function mailchimpSF_signup_submit() {
 
 		$opt_val = isset($_POST[$opt]) ? $_POST[$opt] : '';
 
+		// WordPress auto adds slashes to everything (in plugins)
+		$opt_val = stripslashes_deep( $opt_val );
+
 		if (is_array($opt_val) && isset($opt_val['area'])) {
 			// This filters out all 'falsey' elements
 			$opt_val = array_filter($opt_val);
