@@ -141,6 +141,15 @@ Maybe! Look in the /po/ directory in our plugin package and see if your language
 
 == Upgrade Notice ==
 
+= 1.4.3 =
+Fixed an issue with improper URLs to updating profile settings
+Fixed an issue in which backslashes, single and double quotes were having an extra slash attached
+Fixed an issue in which logging out then attempting to reconnect with OAuth prevented actual login
+Updated translation files to support the latest strings
+Adjust how alerts are handled to prevent header from being seen
+Update instances of home_url to properly refernce admin_url
+Update to prevent PHP warnings when WP_DEBUG is enabled
+
 = 1.4.2 =
 add customized wp_nonces functions for post-back behavior to fix 4.0 callbacks
 
