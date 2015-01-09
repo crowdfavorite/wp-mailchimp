@@ -1,3 +1,4 @@
+# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MailChimp API Support Team
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
@@ -7,14 +8,19 @@ msgstr ""
 "Project-Id-Version: MailChimp 1.1.5\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/mailchimp\n"
 "POT-Creation-Date: 2015-01-08 14:23-0400\n"
-"PO-Revision-Date: 2015-01-08 17:29-0700\n"
-"Last-Translator: Will Castillo <will@mailchimp.com>\n"
-"Language-Team: Spain Spanish <LL@li.org>\n"
-"Language: es\n"
+"PO-Revision-Date: 2015-01-08 17:26-0700\n"
+"Last-Translator: Lenin <doctortomorrow@gmail.com>\n"
+"Language-Team: TasawrTeam <lenin@phpxperts.net>\n"
+"Language: ar_SA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural= n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Basepath: ..\n"
 "X-Generator: Poedit 1.7.1\n"
+"X-Poedit-SearchPath-0: ..\n"
 
 #: ../mailchimp.php:80
 msgid "Settings"
@@ -22,37 +28,35 @@ msgstr ""
 
 #: ../mailchimp.php:290
 msgid "MailChimp Setup"
-msgstr "Configuración Mailchimp"
+msgstr "إعداد Mailchimp "
 
 #: ../mailchimp.php:540
 msgid "Successfully Reset your List selection... Now you get to pick again!"
-msgstr ""
-"Inicializada exitosamente su selección de Lista... Ahora puedes elegir "
-"nuevamente!"
+msgstr "تم إعادة تعيين اختيار القائمة بنجاح... عليك الاختيار مرة أخرى!"
 
 #: ../mailchimp.php:571
 msgid "Sign up for"
-msgstr "Registrarse para"
+msgstr "التسجيل في"
 
 #: ../mailchimp.php:572
 msgid "Subscribe"
-msgstr "Subscribirse"
+msgstr "اشتراك"
 
 #: ../mailchimp.php:599
 msgid "Monkey Rewards turned On!"
-msgstr "Monkey Rewards Activado!"
+msgstr "مكافآت القرد مفتوحة!"
 
 #: ../mailchimp.php:603
 msgid "Monkey Rewards turned Off!"
-msgstr "Monkey Rewards Desactivado!"
+msgstr "مكافآت القرد مغلقة!"
 
 #: ../mailchimp.php:608
 msgid "Fancy Javascript submission turned On!"
-msgstr "Uso de Javascript en el formulario Activado"
+msgstr "تحولت الهوى الجافا تقديم وفي!"
 
 #: ../mailchimp.php:612
 msgid "Fancy Javascript submission turned Off!"
-msgstr "Uso de Javascript en el formulario Desactivado"
+msgstr "تحولت الهوى الجافا تقديم معطلة!"
 
 #: ../mailchimp.php:618
 msgid "Datepicker turned On!"
@@ -64,17 +68,15 @@ msgstr ""
 
 #: ../mailchimp.php:628
 msgid "Unsubscribe link turned On!"
-msgstr "Enlace de Darse de baja Activado!"
+msgstr "رابط إلغاء الاشتراك مفتوح!"
 
 #: ../mailchimp.php:632
 msgid "Unsubscribe link turned Off!"
-msgstr "Enlace de Darse de baja Desactivado!"
+msgstr "رابط إلغاء الاشتراك مغلق!"
 
 #: ../mailchimp.php:699
 msgid "Successfully Updated your List Subscribe Form Settings!"
-msgstr ""
-"Se ha actualizado correctamente la configuración del Formulario de "
-"Subscripción!"
+msgstr "تم تحديث إعدادات نموذج الاشتراك في قائمتك الخاصة!"
 
 #: ../mailchimp.php:767
 #, php-format
@@ -95,12 +97,12 @@ msgid ""
 "Now you should either Turn On the MailChimp Widget or change your options "
 "below, then turn it on."
 msgstr ""
-"Ahora deberías o bien activar el Widget Mailchimp o bien cambiar tus "
-"opciones abajo y después activarlo."
+"الآن يتعين عليك إما تشغيل ودجت MailChimp أو تغيير الخيارات الخاصة بك أدناه، "
+"وإعادة تشغيلة بعد ذلك."
 
 #: ../mailchimp.php:790
 msgid "MailChimp List Setup"
-msgstr "Configuración de Lista Mailchimp"
+msgstr "إعداد القائمة البريدية على Mailchimp"
 
 #: ../mailchimp.php:816
 msgid "Log In"
@@ -126,59 +128,55 @@ msgstr ""
 
 #: ../mailchimp.php:845
 msgid "Notes"
-msgstr "Notas"
+msgstr "ملاحظات"
 
 #: ../mailchimp.php:847
 msgid "Changing your settings at MailChimp.com may cause this to stop working."
-msgstr ""
-"Cambiar su configuración en Mailchimp.com puede provocar fallos de "
-"funcionamiento."
+msgstr "تغيير إعداداتك على MailChimp.com قد يؤدي إلى توقف العمل."
 
 #: ../mailchimp.php:848
 msgid ""
 "If you change your login to a different account, the info you have setup "
 "below will be erased."
 msgstr ""
-"Si cambias tus datos de inicio de sesión a otra cuenta diferente, la "
-"información que has configurado será eliminada"
+"إذا قمت بتعيير تسجيل الدخول إلى حساب مختلف، فسوف يتم مسح المعلومات التي قمت "
+"بإدخالها أدناه."
 
 #: ../mailchimp.php:849
 msgid ""
 "If any of that happens, no biggie - just reconfigure your login and the "
 "items below..."
 msgstr ""
-"Si eso sucede, no te preocupes - simplemente reconfigura tu acceso y los "
-"puntos que se encuentran abajo..."
+"في حالة حدوث أي من تلك الاحتمالات، ما عليك سوى إعادة تهيئة تسجيل والبنود "
+"أدناه..."
 
 #: ../mailchimp.php:861
 msgid "Logged in as"
-msgstr "Sesión iniciada como"
+msgstr "تسجيل الدخول كـ"
 
 #: ../mailchimp.php:866
 msgid "Logout"
-msgstr "Cerrar Sesión"
+msgstr "خروج"
 
 #: ../mailchimp.php:881
 msgid "Your Lists"
-msgstr "Tus Listas"
+msgstr "القوائم الخاصة بك"
 
 #: ../mailchimp.php:885
 msgid "Please select the List you wish to create a Signup Form for."
-msgstr ""
-"Por favor selecciona la Lista para la que deseas crear un Formulario de "
-"Subscripción"
+msgstr "يرجي تحديد القائمة التي ترغب في إنشاء نموذج اشتراك لها."
 
 #: ../mailchimp.php:886
 msgid "Note:"
-msgstr "Nota:"
+msgstr "ملاحظة:"
 
 #: ../mailchimp.php:886
 msgid ""
 "Updating your list will not cause settings below to be lost. Changing to a "
 "new list will."
 msgstr ""
-"Actualizar tu lista no causará que la configuración actual se pierda. "
-"Cambiar a una lista nueva sí lo hará."
+"تحديث القائمة الخاصة بك لن يؤدي إلى فقد الاعدادات التالية. ولكن الانتقال إلى "
+"قائمة جديدة سيؤدي إلى ذلك."
 
 #: ../mailchimp.php:899
 #, php-format
@@ -186,35 +184,33 @@ msgid ""
 "Uh-oh, you don't have any lists defined! Please visit %s, login, and setup a "
 "list before using this tool!"
 msgstr ""
-"Uy, no tienes listas definidas! Por favor visita %s, accede a su cuenta y "
-"configura una lista antes de utilizar esta herramienta!"
+"عفواً. ليس لديك أية قوائم محددة. يرجى زيارة %s وتسجيل الدخول، وإعداد قائمة "
+"قبل استخدام هذه الأداة!"
 
 #: ../mailchimp.php:912
 msgid "Select A List"
-msgstr "Seleccionar Una Lista"
+msgstr "حدد قائمة"
 
 #: ../mailchimp.php:925
 msgid "Update List"
-msgstr "Actualizar Lista"
+msgstr "تحديث القائمة"
 
 #: ../mailchimp.php:946
 msgid "Reset List Options and Select again"
-msgstr "Inicializar Opciones de Lista y Seleccionar nuevamente"
+msgstr "إعادة تعيين خيارات القائمة وتحديدها مرة أخرى"
 
 #: ../mailchimp.php:950
 msgid "Subscribe Form Widget Settings for this List"
-msgstr ""
-"Configuración de Opciones de Widget de Formulario de Subscripción para esta "
-"Lista"
+msgstr "إعدادات ودجت نموذج الاشتراك لهذه القائمة "
 
 #: ../mailchimp.php:951
 msgid "Selected MailChimp List"
-msgstr "Lista Mailchimp Seleccionada"
+msgstr "قائمة MailChimp المحددة"
 
 #: ../mailchimp.php:969 ../mailchimp.php:997 ../mailchimp.php:1019
 #: ../mailchimp.php:1061 ../mailchimp.php:1111
 msgid "Update Subscribe Form Settings"
-msgstr "Actualizar Opciones de Formulario de Subscripción"
+msgstr "تحديث إعدادات نموذج الاشتراك"
 
 #: ../mailchimp.php:973
 msgid "Header"
@@ -225,8 +221,8 @@ msgid ""
 "You can fill this with your own Text, HTML markup (including image links), "
 "or Nothing!"
 msgstr ""
-"Puedes completar esta área con su propio Texto, código HTML (incluyendo "
-"imágenes), o dejarlo en blanco! "
+"يمكنك ملأ الحقل بالنص الخاص بك، ولغة HTML (بما في ذلك روابط الصورة) أو تركه "
+"فارغاً!"
 
 #: ../mailchimp.php:981
 msgid "Sub-header"
@@ -246,11 +242,11 @@ msgstr ""
 
 #: ../mailchimp.php:1004
 msgid "Form Settings"
-msgstr "Configuración de Formulario"
+msgstr "إعدادات النموذج"
 
 #: ../mailchimp.php:1005
 msgid "Border Width"
-msgstr "Ancho de Borde"
+msgstr "عرض الحدود"
 
 #: ../mailchimp.php:1006
 msgid "Set to 0 for no border, do not enter"
@@ -258,7 +254,7 @@ msgstr ""
 
 #: ../mailchimp.php:1008
 msgid "Border Color"
-msgstr "Color de Borde"
+msgstr "لون الحدود"
 
 #: ../mailchimp.php:1009 ../mailchimp.php:1012 ../mailchimp.php:1015
 msgid "Do not enter initial"
@@ -274,7 +270,7 @@ msgstr ""
 
 #: ../mailchimp.php:1025
 msgid "Monkey Rewards"
-msgstr "Monkey Rewards"
+msgstr "قرد مكافآت"
 
 #: ../mailchimp.php:1027
 msgid ""
@@ -285,7 +281,7 @@ msgstr ""
 
 #: ../mailchimp.php:1032
 msgid "Use Javascript Support?"
-msgstr "¿Usar Soporte Javascript?"
+msgstr "استخدم دعم جافا سكريبت؟"
 
 #: ../mailchimp.php:1034
 msgid ""
@@ -304,7 +300,7 @@ msgstr ""
 
 #: ../mailchimp.php:1045
 msgid "Include Unsubscribe link?"
-msgstr "Incluir enlace de Cancelar Suscripción"
+msgstr "إدراج رابط إلغاء الاشتراك؟"
 
 #: ../mailchimp.php:1047
 msgid "Turning this on will add a link to your host unsubscribe form"
@@ -312,27 +308,27 @@ msgstr ""
 
 #: ../mailchimp.php:1066
 msgid "Merge Variables Included"
-msgstr "Merge Tags incluídas"
+msgstr "تم إدراج متغيرات الدمج"
 
 #: ../mailchimp.php:1073
 msgid "No Merge Variables found."
-msgstr "No se encontraron Merge Tags"
+msgstr "لم يتم العثور على متغيرات الدمج"
 
 #: ../mailchimp.php:1080
 msgid "Name"
-msgstr "Nombre"
+msgstr "الاسم"
 
 #: ../mailchimp.php:1081
 msgid "Tag"
-msgstr "Etiqueta"
+msgstr "كلمة مفتاحية"
 
 #: ../mailchimp.php:1082
 msgid "Required?"
-msgstr "¿Obligatorio?"
+msgstr "مطلوب؟"
 
 #: ../mailchimp.php:1083
 msgid "Include?"
-msgstr "¿Incluir?"
+msgstr "إدراج؟"
 
 #: ../mailchimp.php:1123
 msgid "Group Settings"
@@ -340,24 +336,24 @@ msgstr ""
 
 #: ../mailchimp.php:1130
 msgid "No Interest Groups Setup for this List"
-msgstr "No hay Grupos de Interés creados para esta lista"
+msgstr "لم يتم إعداد مجموعات اهتمام لهذه القائمة"
 
 #: ../mailchimp.php:1142
 msgid "Show?"
-msgstr "¿Mostrar?"
+msgstr "إظهار؟"
 
 #: ../mailchimp.php:1149
 msgid "Input Type"
-msgstr "Tipo de entrada"
+msgstr "نوع المدخلات"
 
 #: ../mailchimp.php:1153
 msgid "Options"
-msgstr "Opciones"
+msgstr "خيارات"
 
 #: ../mailchimp.php:1289 ../mailchimp.php:1302 ../mailchimp.php:1435
 #, php-format
 msgid "You must fill in %s."
-msgstr "Debes rellenar el %s"
+msgstr "يجب أن تملأ %s."
 
 #: ../mailchimp.php:1395
 #, php-format
@@ -370,7 +366,7 @@ msgstr ""
 
 #: ../mailchimp.php:1419
 msgid "That email address is already subscribed to the list"
-msgstr "Esa cuenta de correo ya está subscrita a la lista"
+msgstr "عنوان البريد الإلكتروني الذي قمت بإدخالة مشترك في القائمة بالفعل."
 
 #: ../mailchimp.php:1427
 #, php-format
@@ -384,17 +380,15 @@ msgstr ""
 
 #: ../mailchimp.php:1442
 msgid "An invalid Interest Group was selected"
-msgstr "Fue seleccionado un Grupo de Interés inválido"
+msgstr "تم تحديد مجموعة اهتمام خاطئة"
 
 #: ../mailchimp.php:1445
 msgid "That email address is invalid"
-msgstr "Esa cuenta de correo no es válida"
+msgstr "عنوان البريد الإلكتروني غير صالح"
 
 #: ../mailchimp.php:1468
 msgid "Success, you've been signed up! Please look for our confirmation email!"
-msgstr ""
-"Enhorabuena! Has sido registrado! Ahora verifica que te ha llegado el correo "
-"de confirmación!"
+msgstr "لقد تم اشتراكك بنجاح! يرجى الاطلاع على رسالة التأكيد!"
 
 #: ../mailchimp_widget.php:16
 msgid ""
@@ -404,27 +398,27 @@ msgstr ""
 
 #: ../mailchimp_widget.php:184
 msgid "required field"
-msgstr "campo obligatorio"
+msgstr "حقل مطلوب"
 
 #: ../mailchimp_widget.php:224
 msgid "Preferred Format"
-msgstr ""
+msgstr "الصيغة المفضلة"
 
 #: ../mailchimp_widget.php:227
 msgid "HTML"
-msgstr ""
+msgstr "HTML"
 
 #: ../mailchimp_widget.php:228
 msgid "Text"
-msgstr ""
+msgstr "النص"
 
 #: ../mailchimp_widget.php:255
 msgid "unsubscribe from list"
-msgstr "Darse de baja de la lista"
+msgstr "إلغاء الاشتراك من القائمة"
 
 #: ../mailchimp_widget.php:263
 msgid "powered by"
-msgstr "powered by"
+msgstr "مدعوم من"
 
 #: ../mailchimp_widget.php:396
 msgid "January"
@@ -1279,115 +1273,112 @@ msgid "Zimbabwe"
 msgstr ""
 
 #~ msgid "%s has invalid content"
-#~ msgstr "%s tiene contenido inválido"
+#~ msgstr "%s به محتوى غير صالح"
 
 #~ msgid ""
 #~ "While upgrading the plugin setup, we were unable to login to your "
 #~ "account. You will need to login again and setup your list."
 #~ msgstr ""
-#~ "Mientras se actualizaba la configuración del plugin, no pudimos ingresar "
-#~ "para verificar tu cuenta. Necesitas iniciar sesión nuevamente y "
-#~ "configurar tu lista."
+#~ "أثناء ترقية البرنامج المساعد، لا يمكننا الدخول على حسابك. سوف تكون بحاجة "
+#~ "إلى تسجيل الدخول مرة أخرى وإعداد القائمة الخاصة بك."
 
 #~ msgid ""
 #~ "Success! We were able to verify your username & password! Let's continue, "
 #~ "shall we?"
 #~ msgstr ""
-#~ "Enhorabuena! Pudimos verificar tu nombre de usuario y clave! Continuamos, "
-#~ "vale?"
+#~ "لقد تحققنا من اسم المستخدم وكلمة المرور الخاصة بك بنجاح! هل تريد متابعة "
+#~ "الإجراء؟"
 
 #~ msgid ""
 #~ "Uh-oh, we were unable to login and verify your username & password. "
 #~ "Please check them and try again!"
 #~ msgstr ""
-#~ "Uy, no pudimos ingresar y verificar tu nombre de usuario y clave. Por "
-#~ "favor revisa tus datos de acceso e inténtalo nuevamente!"
+#~ "عفواً، لا يمكننا تسجيل الدخول والتحقق من اسم المستخدم وكلمة المرور الخاصة "
+#~ "بك. يرجى مراجعة اسم المستخدم وكلمة المرور وإعادة المحاولة مرة أخرى!"
 
 #~ msgid "The server said:"
-#~ msgstr "El servidor respondió:"
+#~ msgstr "الخادوم يقول:"
 
 #~ msgid ""
 #~ "Success! Loaded and saved the info for %d Merge Variables and %d Interest "
 #~ "Groups from your list"
 #~ msgstr ""
-#~ "Enhorabuena! Se ha cargado y guardado la información para %d Merge Tags y "
-#~ "%d Grupos de Interés de tu lista"
+#~ "تم تحميل وحفظ المعلومات الخاصة بمتغيرات الدمج %d ومجموعة الاهتمام %d من "
+#~ "قائمتك بنجاح"
 
 #~ msgid "Login Info"
-#~ msgstr "Información de Acceso"
+#~ msgstr "معلومات تسجيل الدخول"
 
 #~ msgid ""
 #~ "To start using the MailChimp plugin, we first need to login and get your "
 #~ "API Key. Please enter your MailChimp username and password below."
 #~ msgstr ""
-#~ "Para comenzar a usar el plugin de Mailchimp, primero necesitas iniciar "
-#~ "sesión y obtener tu clave API. Por favor inserta tu nombre de usuario y "
-#~ "clave."
+#~ "لبدء استخدام مساعد MailChimp ، نحتاج أولاً تسجيل الدخول والخصول على مفتاح "
+#~ "API. يرجى إدخال اسم المستخدم وكلمة المرور الخاصة بـ MailChimp أدناه."
 
 #~ msgid ""
 #~ "Don't have a MailChimp account? <a href='http://www.mailchimp.com/tryit."
 #~ "phtml' target='_blank'>Try one for Free</a>!"
 #~ msgstr ""
-#~ "No tienes una cuenta en Mailchimp? <a href='http://www.mailchimp.com/"
-#~ "tryit.phtml' target='_blank'>Regístrate gratis</a>!"
+#~ "ليس لديك حساب على MailChimp؟ <a href='http://www.mailchimp.com/tryit."
+#~ "phtml' target='_blank'>جرب حساب الآن مجاناً</a>!"
 
 #~ msgid "Username"
-#~ msgstr "Nombre de Usuario"
+#~ msgstr "اسم المستخدم "
 
 #~ msgid "Password"
-#~ msgstr "Clave"
+#~ msgstr "كلمة المرور"
 
 #~ msgid "Save & Check"
-#~ msgstr "Guardar y Revisar"
+#~ msgstr "حفظ وتسجيل"
 
 #~ msgid ""
 #~ "turning this on will place a \"powered by MailChimp\" link in your form "
 #~ "that will earn you credits with us. It is optional and can be turned on "
 #~ "or off at any time."
 #~ msgstr ""
-#~ "activar esta opción incluirá el enlace \"powered by MailChimp\" en tu "
-#~ "formulario lo cual hará que gane créditos con nosotros. Es opcional y "
-#~ "puede ser activado y desactivado en cualquier momento."
+#~ "تشغيل هذه الخاصية سوف يضع رابط \"مدعوم من MailChimp\" في النموذج الخاص بك "
+#~ "والذي سيمنحك رصيد معنا. هذا الأمر اختياري يمكن تشغيله وإغلاقه في أي وقت. "
 
 #~ msgid ""
 #~ "turning this on will use fancy javascript submission and should degrade "
 #~ "gracefully for users not using javascript. It is optional and can be "
 #~ "turned on or off at any time."
 #~ msgstr ""
-#~ "activar esta opción evitará el uso de javascript en el formulario y "
-#~ "debería degradarse adecuadamente para usuarios que no lo utilicen. Es "
-#~ "opcional y puede ser activado y desactivado en cualquier momento."
+#~ "وسوف تحول هذه على استخدام يتوهم تقديم جافا سكريبت وينبغي أن تتحلل برشاقة "
+#~ "لمستخدمي عدم استخدام جافا سكريبت. وهي اختيارية، ويمكن تشغيل أو إيقاف "
+#~ "تشغيله في أي وقت."
 
 #~ msgid "turning this on will add a link to your host unsubscribe form"
-#~ msgstr ""
-#~ "activar esta opción agregará un enlace al formulario de Cancelación de "
-#~ "suscripción"
+#~ msgstr "تشغيل هذه الخاصية سوف تعمل على إضافة رابط إلى نموذج إلغاء الاشتراك"
 
 #~ msgid "Header content"
-#~ msgstr "Contenido de la Cabecera"
+#~ msgstr "عنوان الرأسية"
 
 #~ msgid "Submit Button text"
-#~ msgstr "Texto para botón de aceptar"
+#~ msgstr "النص الخاص بزر الإرسال"
 
 #~ msgid "Custom Styling"
-#~ msgstr "Estilo Personalizado"
+#~ msgstr "نمط التخصيص"
 
 #~ msgid "Turned On?"
-#~ msgstr "¿Activado?"
+#~ msgstr "تشغيل؟"
 
 #~ msgid ""
 #~ "Header Settings (only applies if there are no HTML tags in the Header "
 #~ "Content area above)"
 #~ msgstr ""
-#~ "Configuración de Cabecera (sólo se aplica si no hay etiquetas HMTL en el "
-#~ "área de Cabecera)"
+#~ "إعدادات الرأسية (يطبق فقط في حالة عدم وجود علامات HTML في مساحة محتوى "
+#~ "الرأسية أعلاه)"
 
 #~ msgid "Set to 0 for no border, do not enter <strong>px</strong>!"
-#~ msgstr ""
-#~ "Indique 0 para no utilizar un borde; no ingrese <strong>px</strong>!"
+#~ msgstr "حدد 0 لإلغاء الحدود، لا تدخل <strong>px</strong>!"
 
 #~ msgid "do not enter initial <strong>#</strong>"
-#~ msgstr "No ingreses <strong>#</strong> al principio"
+#~ msgstr "لا تدخل <strong>#</strong> الأولي"
 
 #~ msgid "Interest Groups"
-#~ msgstr "Grupos de Interés"
+#~ msgstr "مجموعات الاهتمام"
+
+#~ msgid "Mobile"
+#~ msgstr "جوال"

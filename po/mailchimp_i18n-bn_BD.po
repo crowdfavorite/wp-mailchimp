@@ -1,3 +1,4 @@
+# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MailChimp API Support Team
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
@@ -7,14 +8,18 @@ msgstr ""
 "Project-Id-Version: MailChimp 1.1.5\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/mailchimp\n"
 "POT-Creation-Date: 2015-01-08 14:23-0400\n"
-"PO-Revision-Date: 2015-01-08 17:29-0700\n"
-"Last-Translator: Will Castillo <will@mailchimp.com>\n"
-"Language-Team: Spain Spanish <LL@li.org>\n"
-"Language: es\n"
+"PO-Revision-Date: 2015-01-08 17:31-0700\n"
+"Last-Translator: Lenin <doctortomorrow@gmail.com>\n"
+"Language-Team: MailChimp API <lenin@phpxperts.net>\n"
+"Language: bn_BD\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.7.1\n"
+"X-Poedit-SearchPath-0: ..\n"
 
 #: ../mailchimp.php:80
 msgid "Settings"
@@ -22,37 +27,35 @@ msgstr ""
 
 #: ../mailchimp.php:290
 msgid "MailChimp Setup"
-msgstr "Configuración Mailchimp"
+msgstr "Mailchimp সেটআপ"
 
 #: ../mailchimp.php:540
 msgid "Successfully Reset your List selection... Now you get to pick again!"
-msgstr ""
-"Inicializada exitosamente su selección de Lista... Ahora puedes elegir "
-"nuevamente!"
+msgstr "সফলভাবে আপনার তালিকা রিসেট হয়েছে... এখন আপনাকে নতুন করে পছন্দ করতে হবে!"
 
 #: ../mailchimp.php:571
 msgid "Sign up for"
-msgstr "Registrarse para"
+msgstr "নিবন্ধন করুন"
 
 #: ../mailchimp.php:572
 msgid "Subscribe"
-msgstr "Subscribirse"
+msgstr "নিবন্ধন করুন"
 
 #: ../mailchimp.php:599
 msgid "Monkey Rewards turned On!"
-msgstr "Monkey Rewards Activado!"
+msgstr "শাখামৃগ পুরস্কার চালু হয়েছে!"
 
 #: ../mailchimp.php:603
 msgid "Monkey Rewards turned Off!"
-msgstr "Monkey Rewards Desactivado!"
+msgstr "শাখামৃগ পুরস্কার বন্ধ আছে!"
 
 #: ../mailchimp.php:608
 msgid "Fancy Javascript submission turned On!"
-msgstr "Uso de Javascript en el formulario Activado"
+msgstr "ফ্যান্সি জাভাস্ক্রিপ্ট সাবমিশন চালু হলো!"
 
 #: ../mailchimp.php:612
 msgid "Fancy Javascript submission turned Off!"
-msgstr "Uso de Javascript en el formulario Desactivado"
+msgstr "ফ্যান্সি জাভাস্ক্রিপ্ট সাবমিশন বন্ধ হলো!"
 
 #: ../mailchimp.php:618
 msgid "Datepicker turned On!"
@@ -64,17 +67,15 @@ msgstr ""
 
 #: ../mailchimp.php:628
 msgid "Unsubscribe link turned On!"
-msgstr "Enlace de Darse de baja Activado!"
+msgstr "অনিবন্ধন সংযোগ সচল আছে!"
 
 #: ../mailchimp.php:632
 msgid "Unsubscribe link turned Off!"
-msgstr "Enlace de Darse de baja Desactivado!"
+msgstr "অনিবন্ধন সংযোগ অচল আছে"
 
 #: ../mailchimp.php:699
 msgid "Successfully Updated your List Subscribe Form Settings!"
-msgstr ""
-"Se ha actualizado correctamente la configuración del Formulario de "
-"Subscripción!"
+msgstr "সফলভাবে আপনার "
 
 #: ../mailchimp.php:767
 #, php-format
@@ -92,15 +93,15 @@ msgstr ""
 
 #: ../mailchimp.php:776
 msgid ""
-"Now you should either Turn On the MailChimp Widget or change your options "
-"below, then turn it on."
+"Now you should either Turn On the MailChimp Widget or change your options below, "
+"then turn it on."
 msgstr ""
-"Ahora deberías o bien activar el Widget Mailchimp o bien cambiar tus "
-"opciones abajo y después activarlo."
+"এখন আপনি MailChimp উইজেট চালু করতে পারেন অথবা নিচে অপশন পরিবর্তন করে, পরে এটি চালু "
+"করতে পারেন।"
 
 #: ../mailchimp.php:790
 msgid "MailChimp List Setup"
-msgstr "Configuración de Lista Mailchimp"
+msgstr "Mailchimp তালিকা সেটআপ"
 
 #: ../mailchimp.php:816
 msgid "Log In"
@@ -126,95 +127,86 @@ msgstr ""
 
 #: ../mailchimp.php:845
 msgid "Notes"
-msgstr "Notas"
+msgstr "দ্রষ্টব্য"
 
 #: ../mailchimp.php:847
 msgid "Changing your settings at MailChimp.com may cause this to stop working."
-msgstr ""
-"Cambiar su configuración en Mailchimp.com puede provocar fallos de "
-"funcionamiento."
+msgstr "MailChimp.com এ সেটিং পরিবর্তন করলে এটি কাজ বন্ধ করে দিতে পারে।"
 
 #: ../mailchimp.php:848
 msgid ""
-"If you change your login to a different account, the info you have setup "
-"below will be erased."
+"If you change your login to a different account, the info you have setup below "
+"will be erased."
 msgstr ""
-"Si cambias tus datos de inicio de sesión a otra cuenta diferente, la "
-"información que has configurado será eliminada"
+"যদি অন্য কোনো অ্যাকাউন্টের লগিন ব্যবহার করেন, তবে নিচের সেটাপ করা তথ্যগুলো মুছে যাবে।"
 
 #: ../mailchimp.php:849
 msgid ""
-"If any of that happens, no biggie - just reconfigure your login and the "
-"items below..."
+"If any of that happens, no biggie - just reconfigure your login and the items "
+"below..."
 msgstr ""
-"Si eso sucede, no te preocupes - simplemente reconfigura tu acceso y los "
-"puntos que se encuentran abajo..."
+"যদি এর কোনো একটি ঘটে, চিন্তার কিছু নেই - কেবল আপনার লগিন এবং নিচের তথ্যগুলো পরিবর্তন "
+"করে নিলেই হবে..."
 
 #: ../mailchimp.php:861
 msgid "Logged in as"
-msgstr "Sesión iniciada como"
+msgstr "লগিন করেছেন"
 
 #: ../mailchimp.php:866
 msgid "Logout"
-msgstr "Cerrar Sesión"
+msgstr "লগআউট"
 
 #: ../mailchimp.php:881
 msgid "Your Lists"
-msgstr "Tus Listas"
+msgstr "আপনার তালিকাসমূহ"
 
 #: ../mailchimp.php:885
 msgid "Please select the List you wish to create a Signup Form for."
-msgstr ""
-"Por favor selecciona la Lista para la que deseas crear un Formulario de "
-"Subscripción"
+msgstr "দয়া করে যে তালিকার জন্য সাইন আপ ফর্ম তৈরি করতে চান তা পছন্দ করুন।"
 
 #: ../mailchimp.php:886
 msgid "Note:"
-msgstr "Nota:"
+msgstr "লক্ষণীয়:"
 
 #: ../mailchimp.php:886
 msgid ""
-"Updating your list will not cause settings below to be lost. Changing to a "
-"new list will."
-msgstr ""
-"Actualizar tu lista no causará que la configuración actual se pierda. "
-"Cambiar a una lista nueva sí lo hará."
+"Updating your list will not cause settings below to be lost. Changing to a new "
+"list will."
+msgstr "তালিকা নবায়ন করলে নিচের সেটিং হারিয়ে যাবে না। তবে নতুন তালিকা পছন্দ করলে যাবে।"
 
 #: ../mailchimp.php:899
 #, php-format
 msgid ""
-"Uh-oh, you don't have any lists defined! Please visit %s, login, and setup a "
-"list before using this tool!"
+"Uh-oh, you don't have any lists defined! Please visit %s, login, and setup a list "
+"before using this tool!"
 msgstr ""
-"Uy, no tienes listas definidas! Por favor visita %s, accede a su cuenta y "
-"configura una lista antes de utilizar esta herramienta!"
+"ওহো, আপনার কোনো তালিকা তৈরি নেই! দয়া করে %s এ যান, লগিন করুন, এবং একটি তালিকা তৈরি "
+"করুন এতে ব্যবহার করার জন্য!"
 
 #: ../mailchimp.php:912
 msgid "Select A List"
-msgstr "Seleccionar Una Lista"
+msgstr "একটি তালিকা পছন্দ করুন"
 
 #: ../mailchimp.php:925
 msgid "Update List"
-msgstr "Actualizar Lista"
+msgstr "তালিকা নবায়ন করুন"
 
 #: ../mailchimp.php:946
 msgid "Reset List Options and Select again"
-msgstr "Inicializar Opciones de Lista y Seleccionar nuevamente"
+msgstr "তালিকার অপশন রিসেট করুন এবং আবার পছন্দ করুন"
 
 #: ../mailchimp.php:950
 msgid "Subscribe Form Widget Settings for this List"
-msgstr ""
-"Configuración de Opciones de Widget de Formulario de Subscripción para esta "
-"Lista"
+msgstr "এই তালিকার জন্য নিবন্ধন ফর্মের উইজেট সেটিং"
 
 #: ../mailchimp.php:951
 msgid "Selected MailChimp List"
-msgstr "Lista Mailchimp Seleccionada"
+msgstr "পছন্দকৃত MailChimp তালিকা"
 
 #: ../mailchimp.php:969 ../mailchimp.php:997 ../mailchimp.php:1019
 #: ../mailchimp.php:1061 ../mailchimp.php:1111
 msgid "Update Subscribe Form Settings"
-msgstr "Actualizar Opciones de Formulario de Subscripción"
+msgstr "নিবন্ধন ফর্মের সেটিং নবায়ন"
 
 #: ../mailchimp.php:973
 msgid "Header"
@@ -222,11 +214,10 @@ msgstr ""
 
 #: ../mailchimp.php:976 ../mailchimp.php:984
 msgid ""
-"You can fill this with your own Text, HTML markup (including image links), "
-"or Nothing!"
+"You can fill this with your own Text, HTML markup (including image links), or "
+"Nothing!"
 msgstr ""
-"Puedes completar esta área con su propio Texto, código HTML (incluyendo "
-"imágenes), o dejarlo en blanco! "
+"এখানে আপনার নিজের টেক্সট দিতে পারেন, HTML মার্কআপ (ইমেজের লিংকসহ), অথবা কিছুই না!"
 
 #: ../mailchimp.php:981
 msgid "Sub-header"
@@ -246,11 +237,11 @@ msgstr ""
 
 #: ../mailchimp.php:1004
 msgid "Form Settings"
-msgstr "Configuración de Formulario"
+msgstr "ফর্মের সেটিং"
 
 #: ../mailchimp.php:1005
 msgid "Border Width"
-msgstr "Ancho de Borde"
+msgstr "বর্ডারের প্রসার"
 
 #: ../mailchimp.php:1006
 msgid "Set to 0 for no border, do not enter"
@@ -258,7 +249,7 @@ msgstr ""
 
 #: ../mailchimp.php:1008
 msgid "Border Color"
-msgstr "Color de Borde"
+msgstr "বর্ডার কালার"
 
 #: ../mailchimp.php:1009 ../mailchimp.php:1012 ../mailchimp.php:1015
 msgid "Do not enter initial"
@@ -274,24 +265,23 @@ msgstr ""
 
 #: ../mailchimp.php:1025
 msgid "Monkey Rewards"
-msgstr "Monkey Rewards"
+msgstr "শাখামৃগ পুরস্কার"
 
 #: ../mailchimp.php:1027
 msgid ""
-"Turning this on will place a \"powered by MailChimp\" link in your form that "
-"will earn you credits with us. It is optional and can be turned on or off at "
-"any time."
+"Turning this on will place a \"powered by MailChimp\" link in your form that will "
+"earn you credits with us. It is optional and can be turned on or off at any time."
 msgstr ""
 
 #: ../mailchimp.php:1032
 msgid "Use Javascript Support?"
-msgstr "¿Usar Soporte Javascript?"
+msgstr "জাভাস্ক্রিপ্ট সাপোর্ট ব্যবহৃত হবে?"
 
 #: ../mailchimp.php:1034
 msgid ""
-"Turning this on will use fancy javascript submission and should degrade "
-"gracefully for users not using javascript. It is optional and can be turned "
-"on or off at any time."
+"Turning this on will use fancy javascript submission and should degrade gracefully "
+"for users not using javascript. It is optional and can be turned on or off at any "
+"time."
 msgstr ""
 
 #: ../mailchimp.php:1039
@@ -304,7 +294,7 @@ msgstr ""
 
 #: ../mailchimp.php:1045
 msgid "Include Unsubscribe link?"
-msgstr "Incluir enlace de Cancelar Suscripción"
+msgstr "অনিবন্ধন সংযোগ থাকবে?"
 
 #: ../mailchimp.php:1047
 msgid "Turning this on will add a link to your host unsubscribe form"
@@ -312,27 +302,27 @@ msgstr ""
 
 #: ../mailchimp.php:1066
 msgid "Merge Variables Included"
-msgstr "Merge Tags incluídas"
+msgstr "মার্জ ভ্যারিয়েবলসমূহ অন্তর্ভূক্ত করা হয়েছে"
 
 #: ../mailchimp.php:1073
 msgid "No Merge Variables found."
-msgstr "No se encontraron Merge Tags"
+msgstr "কোনো মার্জ ভ্যারিয়েবল পাওয়া যায়নি।"
 
 #: ../mailchimp.php:1080
 msgid "Name"
-msgstr "Nombre"
+msgstr "নাম"
 
 #: ../mailchimp.php:1081
 msgid "Tag"
-msgstr "Etiqueta"
+msgstr "ট্যাগ"
 
 #: ../mailchimp.php:1082
 msgid "Required?"
-msgstr "¿Obligatorio?"
+msgstr "আবশ্যকীয়?"
 
 #: ../mailchimp.php:1083
 msgid "Include?"
-msgstr "¿Incluir?"
+msgstr "অন্তর্ভূক্ত করবে?"
 
 #: ../mailchimp.php:1123
 msgid "Group Settings"
@@ -340,24 +330,24 @@ msgstr ""
 
 #: ../mailchimp.php:1130
 msgid "No Interest Groups Setup for this List"
-msgstr "No hay Grupos de Interés creados para esta lista"
+msgstr "এই তালিকার জন্য কোনো আগ্রহ শ্রেণী নেই"
 
 #: ../mailchimp.php:1142
 msgid "Show?"
-msgstr "¿Mostrar?"
+msgstr "দেখাবে?"
 
 #: ../mailchimp.php:1149
 msgid "Input Type"
-msgstr "Tipo de entrada"
+msgstr "ইনপুটের ধরন"
 
 #: ../mailchimp.php:1153
 msgid "Options"
-msgstr "Opciones"
+msgstr "অপশন"
 
 #: ../mailchimp.php:1289 ../mailchimp.php:1302 ../mailchimp.php:1435
 #, php-format
 msgid "You must fill in %s."
-msgstr "Debes rellenar el %s"
+msgstr "আপনাকে অবশ্যই %s পূরণ করতে হবে।"
 
 #: ../mailchimp.php:1395
 #, php-format
@@ -370,7 +360,7 @@ msgstr ""
 
 #: ../mailchimp.php:1419
 msgid "That email address is already subscribed to the list"
-msgstr "Esa cuenta de correo ya está subscrita a la lista"
+msgstr "এই ইমেইলটি ইতোমধ্যেই নিবন্ধন তালিকায় যুক্ত আছে"
 
 #: ../mailchimp.php:1427
 #, php-format
@@ -384,17 +374,15 @@ msgstr ""
 
 #: ../mailchimp.php:1442
 msgid "An invalid Interest Group was selected"
-msgstr "Fue seleccionado un Grupo de Interés inválido"
+msgstr "পছন্দকৃত আগ্রহ শ্রেণীটি বৈধ নয়"
 
 #: ../mailchimp.php:1445
 msgid "That email address is invalid"
-msgstr "Esa cuenta de correo no es válida"
+msgstr "এই ইমেলটি বৈধ নয়"
 
 #: ../mailchimp.php:1468
 msgid "Success, you've been signed up! Please look for our confirmation email!"
-msgstr ""
-"Enhorabuena! Has sido registrado! Ahora verifica que te ha llegado el correo "
-"de confirmación!"
+msgstr "সুন্দর, আপনি নিবন্ধিত! দয়া করে আমাদের নিশ্চিতিকরণ মেইল খুঁজে দেখুন!"
 
 #: ../mailchimp_widget.php:16
 msgid ""
@@ -404,27 +392,27 @@ msgstr ""
 
 #: ../mailchimp_widget.php:184
 msgid "required field"
-msgstr "campo obligatorio"
+msgstr "আবশ্যকীয় ফিল্ড"
 
 #: ../mailchimp_widget.php:224
 msgid "Preferred Format"
-msgstr ""
+msgstr "পছন্দকৃত ফরম্যাট"
 
 #: ../mailchimp_widget.php:227
 msgid "HTML"
-msgstr ""
+msgstr "HTML"
 
 #: ../mailchimp_widget.php:228
 msgid "Text"
-msgstr ""
+msgstr "টেক্সট"
 
 #: ../mailchimp_widget.php:255
 msgid "unsubscribe from list"
-msgstr "Darse de baja de la lista"
+msgstr "তালিকা থেকে অব্যাহতি"
 
 #: ../mailchimp_widget.php:263
 msgid "powered by"
-msgstr "powered by"
+msgstr "তৈরি করেছে"
 
 #: ../mailchimp_widget.php:396
 msgid "January"
@@ -1279,115 +1267,111 @@ msgid "Zimbabwe"
 msgstr ""
 
 #~ msgid "%s has invalid content"
-#~ msgstr "%s tiene contenido inválido"
+#~ msgstr "%s-তে অনুপযুক্ত বিষয় আছে"
 
 #~ msgid ""
-#~ "While upgrading the plugin setup, we were unable to login to your "
-#~ "account. You will need to login again and setup your list."
+#~ "While upgrading the plugin setup, we were unable to login to your account. You "
+#~ "will need to login again and setup your list."
 #~ msgstr ""
-#~ "Mientras se actualizaba la configuración del plugin, no pudimos ingresar "
-#~ "para verificar tu cuenta. Necesitas iniciar sesión nuevamente y "
-#~ "configurar tu lista."
+#~ "প্লাগিন সেটাপ আপগ্রেডের সময় আমরা আপনার অ্যাকাউন্টে লগিন করতে পারিনি। আপনাকে আবারও "
+#~ "লগিন করে তালিকাগুলো সেটআপ করে নিতে হবে।"
 
 #~ msgid ""
-#~ "Success! We were able to verify your username & password! Let's continue, "
-#~ "shall we?"
+#~ "Success! We were able to verify your username & password! Let's continue, shall "
+#~ "we?"
 #~ msgstr ""
-#~ "Enhorabuena! Pudimos verificar tu nombre de usuario y clave! Continuamos, "
-#~ "vale?"
+#~ "দারুণ! আমরা আপনার ইউজারনেম এবং পাসওয়ার্ড নিরীক্ষা করতে পেরেছি! তাহলে এগুনো যাক, "
+#~ "তাইনা?"
 
 #~ msgid ""
-#~ "Uh-oh, we were unable to login and verify your username & password. "
-#~ "Please check them and try again!"
+#~ "Uh-oh, we were unable to login and verify your username & password. Please "
+#~ "check them and try again!"
 #~ msgstr ""
-#~ "Uy, no pudimos ingresar y verificar tu nombre de usuario y clave. Por "
-#~ "favor revisa tus datos de acceso e inténtalo nuevamente!"
+#~ "ওহো, আমরা আপনার ইউজারনেম ও পাসওয়ার্ড নিরীক্ষা করতে পারিনি। দয়া করে আবার চেষ্টা করুন!"
 
 #~ msgid "The server said:"
-#~ msgstr "El servidor respondió:"
+#~ msgstr "সার্ভার বলেছে:"
 
 #~ msgid ""
 #~ "Success! Loaded and saved the info for %d Merge Variables and %d Interest "
 #~ "Groups from your list"
 #~ msgstr ""
-#~ "Enhorabuena! Se ha cargado y guardado la información para %d Merge Tags y "
-#~ "%d Grupos de Interés de tu lista"
+#~ "দারুণ! তথ্য লোড এবং সংরক্ষিত হয়েছে %dটি মার্জ ভ্যারিয়েবলের জন্য এবং আপনার তালিকার "
+#~ "%dটি আগ্রহ শ্রেণীর জন্য"
 
 #~ msgid "Login Info"
-#~ msgstr "Información de Acceso"
+#~ msgstr "লগিন তথ্যাদি"
 
 #~ msgid ""
-#~ "To start using the MailChimp plugin, we first need to login and get your "
-#~ "API Key. Please enter your MailChimp username and password below."
+#~ "To start using the MailChimp plugin, we first need to login and get your API "
+#~ "Key. Please enter your MailChimp username and password below."
 #~ msgstr ""
-#~ "Para comenzar a usar el plugin de Mailchimp, primero necesitas iniciar "
-#~ "sesión y obtener tu clave API. Por favor inserta tu nombre de usuario y "
-#~ "clave."
+#~ "MailChimp প্লাগিন ব্যবহারের শুরুতে, আমাদেরকে প্রথমে লগিন করতে হবে এবং আপনার API কি "
+#~ "নিতে হবে। দয়া করে নিচে আপনার MailChimp ইউজারনেম ও পাসওয়ার্ড প্রবেশ করান।"
 
 #~ msgid ""
-#~ "Don't have a MailChimp account? <a href='http://www.mailchimp.com/tryit."
-#~ "phtml' target='_blank'>Try one for Free</a>!"
+#~ "Don't have a MailChimp account? <a href='http://www.mailchimp.com/tryit.phtml' "
+#~ "target='_blank'>Try one for Free</a>!"
 #~ msgstr ""
-#~ "No tienes una cuenta en Mailchimp? <a href='http://www.mailchimp.com/"
-#~ "tryit.phtml' target='_blank'>Regístrate gratis</a>!"
+#~ "কোনো MailChimp অ্যাকাউন্ট নেই? <a href='http://www.mailchimp.com/tryit.phtml' "
+#~ "target='_blank'>বিনামূল্যে সুযোগ নিন</a>!"
 
 #~ msgid "Username"
-#~ msgstr "Nombre de Usuario"
+#~ msgstr "ইউজারনেম"
 
 #~ msgid "Password"
-#~ msgstr "Clave"
+#~ msgstr "পাসওয়ার্ড"
 
 #~ msgid "Save & Check"
-#~ msgstr "Guardar y Revisar"
+#~ msgstr "সংরক্ষণ ও চেক করুন"
 
 #~ msgid ""
-#~ "turning this on will place a \"powered by MailChimp\" link in your form "
-#~ "that will earn you credits with us. It is optional and can be turned on "
-#~ "or off at any time."
+#~ "turning this on will place a \"powered by MailChimp\" link in your form that "
+#~ "will earn you credits with us. It is optional and can be turned on or off at "
+#~ "any time."
 #~ msgstr ""
-#~ "activar esta opción incluirá el enlace \"powered by MailChimp\" en tu "
-#~ "formulario lo cual hará que gane créditos con nosotros. Es opcional y "
-#~ "puede ser activado y desactivado en cualquier momento."
+#~ "এটি সচল করলে একটি \"MailChimp কর্তৃক\" সংযোগ আপনার ফর্মের সাথে বসবে যা থেকে আপনি "
+#~ "ক্রেডিট অর্জন করতে পারবেন। এটি ঐচ্ছিক এবং যেকোনো সময় বন্ধ রাখা যায়।"
 
 #~ msgid ""
 #~ "turning this on will use fancy javascript submission and should degrade "
-#~ "gracefully for users not using javascript. It is optional and can be "
-#~ "turned on or off at any time."
+#~ "gracefully for users not using javascript. It is optional and can be turned on "
+#~ "or off at any time."
 #~ msgstr ""
-#~ "activar esta opción evitará el uso de javascript en el formulario y "
-#~ "debería degradarse adecuadamente para usuarios que no lo utilicen. Es "
-#~ "opcional y puede ser activado y desactivado en cualquier momento."
+#~ "এটি চালু করলে ফ্যান্সি জাভাস্ক্রিপ্ট সাবমিশন ব্যবহৃত হবে এবং যারা জাভাস্ক্রিপ্ট ব্যবহার "
+#~ "করছে না এমন ব্যবহারকারির জন্য লক্ষণীয়ভাবেই কার্যকর হবেনা। এটি ঐচ্ছিক এবং যেকোনো সময় "
+#~ "বন্ধ করা যাবে।"
 
 #~ msgid "turning this on will add a link to your host unsubscribe form"
-#~ msgstr ""
-#~ "activar esta opción agregará un enlace al formulario de Cancelación de "
-#~ "suscripción"
+#~ msgstr "এটি সচল করলে আপনার ফর্মে একটি অনিবন্ধন সংযোগ যোগ করবে"
 
 #~ msgid "Header content"
-#~ msgstr "Contenido de la Cabecera"
+#~ msgstr "Header content"
 
 #~ msgid "Submit Button text"
-#~ msgstr "Texto para botón de aceptar"
+#~ msgstr "সাবমিট বাটনের টেক্সট"
 
 #~ msgid "Custom Styling"
-#~ msgstr "Estilo Personalizado"
+#~ msgstr "নিজস্ব স্টাইলিং"
 
 #~ msgid "Turned On?"
-#~ msgstr "¿Activado?"
+#~ msgstr "চালু হয়েছে?"
 
 #~ msgid ""
-#~ "Header Settings (only applies if there are no HTML tags in the Header "
-#~ "Content area above)"
+#~ "Header Settings (only applies if there are no HTML tags in the Header Content "
+#~ "area above)"
 #~ msgstr ""
-#~ "Configuración de Cabecera (sólo se aplica si no hay etiquetas HMTL en el "
-#~ "área de Cabecera)"
+#~ "হেডারের সেটিং (প্রযোজ্য হবে যদি উপরের  Header Content areaতে কোনো HTML ট্যাগ না "
+#~ "থাকে)"
 
 #~ msgid "Set to 0 for no border, do not enter <strong>px</strong>!"
-#~ msgstr ""
-#~ "Indique 0 para no utilizar un borde; no ingrese <strong>px</strong>!"
+#~ msgstr "বর্ডারহীন করতে 0 দিন, তবে <strong>px</strong> লিখবেন না!"
 
 #~ msgid "do not enter initial <strong>#</strong>"
-#~ msgstr "No ingreses <strong>#</strong> al principio"
+#~ msgstr "প্রথমে <strong>#</strong> দেবেন না"
 
 #~ msgid "Interest Groups"
-#~ msgstr "Grupos de Interés"
+#~ msgstr "আগ্রহ শ্রেণীসমূহ"
+
+#~ msgid "Mobile"
+#~ msgstr "মোবাইল"
