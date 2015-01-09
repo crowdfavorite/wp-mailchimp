@@ -7,360 +7,1378 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MailChimp 1.1.5\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/mailchimp\n"
-"POT-Creation-Date: 2009-07-15 14:23-0400\n"
-"PO-Revision-Date: 2012-12-13 15:27+0600\n"
+"POT-Creation-Date: 2015-01-08 14:23-0400\n"
+"PO-Revision-Date: 2015-01-08 17:26-0700\n"
 "Last-Translator: Lenin <doctortomorrow@gmail.com>\n"
 "Language-Team: TasawrTeam <lenin@phpxperts.net>\n"
+"Language: ar_SA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural= n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Poedit-Language: Arabic\n"
-"X-Poedit-Country: SAUDI ARABIA\n"
+"Plural-Forms: nplurals=6; plural= n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-Basepath: ..\n"
+"X-Generator: Poedit 1.7.1\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: mailchimp_includes.php:27
-#: mailchimp_includes.php:62
-msgid "You must fill in %s."
-msgstr "يجب أن تملأ %s."
+#: ../mailchimp.php:80
+msgid "Settings"
+msgstr ""
 
-#: mailchimp_includes.php:59
-msgid "That email address is already subscribed to the list"
-msgstr "عنوان البريد الإلكتروني الذي قمت بإدخالة مشترك في القائمة بالفعل."
-
-#: mailchimp_includes.php:66
-#, php-format
-msgid "%s has invalid content"
-msgstr "%s به محتوى غير صالح"
-
-#: mailchimp_includes.php:68
-msgid "An invalid Interest Group was selected"
-msgstr "تم تحديد مجموعة اهتمام خاطئة"
-
-#: mailchimp_includes.php:69
-msgid "That email address is invalid"
-msgstr "عنوان البريد الإلكتروني غير صالح"
-
-#: mailchimp_includes.php:75
-msgid "Success, you've been signed up! Please look for our confirmation email!"
-msgstr "لقد تم اشتراكك بنجاح! يرجى الاطلاع على رسالة التأكيد!"
-
-#: mailchimp_includes.php:131
-msgid "required field"
-msgstr "حقل مطلوب"
-
-#: mailchimp_includes.php:168
-msgid "unsubscribe from list"
-msgstr "إلغاء الاشتراك من القائمة"
-
-#: mailchimp_includes.php:171
-msgid "powered by"
-msgstr "مدعوم من"
-
-#: mailchimp.php:135
+#: ../mailchimp.php:290
 msgid "MailChimp Setup"
 msgstr "إعداد Mailchimp "
 
-#: mailchimp.php:150
-msgid "While upgrading the plugin setup, we were unable to login to your account. You will need to login again and setup your list."
-msgstr "أثناء ترقية البرنامج المساعد، لا يمكننا الدخول على حسابك. سوف تكون بحاجة إلى تسجيل الدخول مرة أخرى وإعداد القائمة الخاصة بك."
-
-#: mailchimp.php:156
-msgid "MailChimp List Setup"
-msgstr "إعداد القائمة البريدية على Mailchimp"
-
-#: mailchimp.php:166
-msgid "Success! We were able to verify your username & password! Let's continue, shall we?"
-msgstr "لقد تحققنا من اسم المستخدم وكلمة المرور الخاصة بك بنجاح! هل تريد متابعة الإجراء؟"
-
-#: mailchimp.php:178
-msgid "Uh-oh, we were unable to login and verify your username & password. Please check them and try again!"
-msgstr "عفواً، لا يمكننا تسجيل الدخول والتحقق من اسم المستخدم وكلمة المرور الخاصة بك. يرجى مراجعة اسم المستخدم وكلمة المرور وإعادة المحاولة مرة أخرى!"
-
-#: mailchimp.php:179
-msgid "The server said:"
-msgstr "الخادوم يقول:"
-
-#: mailchimp.php:222
-msgid "Sign up for"
-msgstr "التسجيل في"
-
-#: mailchimp.php:223
-msgid "Subscribe"
-msgstr "اشتراك"
-
-#: mailchimp.php:253
-#, php-format
-msgid "Success! Loaded and saved the info for %d Merge Variables and %d Interest Groups from your list"
-msgstr "تم تحميل وحفظ المعلومات الخاصة بمتغيرات الدمج %d ومجموعة الاهتمام %d من قائمتك بنجاح"
-
-#: mailchimp.php:256
-msgid "Now you should either Turn On the MailChimp Widget or change your options below, then turn it on."
-msgstr "الآن يتعين عليك إما تشغيل ودجت MailChimp أو تغيير الخيارات الخاصة بك أدناه، وإعادة تشغيلة بعد ذلك."
-
-#: mailchimp.php:284
+#: ../mailchimp.php:540
 msgid "Successfully Reset your List selection... Now you get to pick again!"
 msgstr "تم إعادة تعيين اختيار القائمة بنجاح... عليك الاختيار مرة أخرى!"
 
-#: mailchimp.php:290
+#: ../mailchimp.php:571
+msgid "Sign up for"
+msgstr "التسجيل في"
+
+#: ../mailchimp.php:572
+msgid "Subscribe"
+msgstr "اشتراك"
+
+#: ../mailchimp.php:599
 msgid "Monkey Rewards turned On!"
 msgstr "مكافآت القرد مفتوحة!"
 
-#: mailchimp.php:294
+#: ../mailchimp.php:603
 msgid "Monkey Rewards turned Off!"
 msgstr "مكافآت القرد مغلقة!"
 
-#: mailchimp.php:299
+#: ../mailchimp.php:608
 msgid "Fancy Javascript submission turned On!"
 msgstr "تحولت الهوى الجافا تقديم وفي!"
 
-#: mailchimp.php:303
+#: ../mailchimp.php:612
 msgid "Fancy Javascript submission turned Off!"
 msgstr "تحولت الهوى الجافا تقديم معطلة!"
 
-#: mailchimp.php:309
+#: ../mailchimp.php:618
+msgid "Datepicker turned On!"
+msgstr ""
+
+#: ../mailchimp.php:622
+msgid "Datepicker turned Off!"
+msgstr ""
+
+#: ../mailchimp.php:628
 msgid "Unsubscribe link turned On!"
 msgstr "رابط إلغاء الاشتراك مفتوح!"
 
-#: mailchimp.php:313
+#: ../mailchimp.php:632
 msgid "Unsubscribe link turned Off!"
 msgstr "رابط إلغاء الاشتراك مغلق!"
 
-#: mailchimp.php:359
+#: ../mailchimp.php:699
 msgid "Successfully Updated your List Subscribe Form Settings!"
 msgstr "تم تحديث إعدادات نموذج الاشتراك في قائمتك الخاصة!"
 
-#: mailchimp.php:372
-msgid "Login Info"
-msgstr "معلومات تسجيل الدخول"
+#: ../mailchimp.php:767
+#, php-format
+msgid "and %s Sets of Interest Groups"
+msgstr ""
 
-#: mailchimp.php:373
-msgid "To start using the MailChimp plugin, we first need to login and get your API Key. Please enter your MailChimp username and password below."
-msgstr "لبدء استخدام مساعد MailChimp ، نحتاج أولاً تسجيل الدخول والخصول على مفتاح API. يرجى إدخال اسم المستخدم وكلمة المرور الخاصة بـ MailChimp أدناه."
+#: ../mailchimp.php:772
+#, php-format
+msgid "<b>Success!</b> Loaded and saved the info for %d Merge Variables"
+msgstr ""
 
-#: mailchimp.php:375
-msgid "Don't have a MailChimp account? <a href='http://www.mailchimp.com/tryit.phtml' target='_blank'>Try one for Free</a>!"
-msgstr "ليس لديك حساب على MailChimp؟ <a href='http://www.mailchimp.com/tryit.phtml' target='_blank'>جرب حساب الآن مجاناً</a>!"
+#: ../mailchimp.php:775
+msgid "from your list"
+msgstr ""
 
-#: mailchimp.php:379
-msgid "Username"
-msgstr "اسم المستخدم "
+#: ../mailchimp.php:776
+msgid ""
+"Now you should either Turn On the MailChimp Widget or change your options "
+"below, then turn it on."
+msgstr ""
+"الآن يتعين عليك إما تشغيل ودجت MailChimp أو تغيير الخيارات الخاصة بك أدناه، "
+"وإعادة تشغيلة بعد ذلك."
 
-#: mailchimp.php:383
-msgid "Password"
-msgstr "كلمة المرور"
+#: ../mailchimp.php:790
+msgid "MailChimp List Setup"
+msgstr "إعداد القائمة البريدية على Mailchimp"
 
-#: mailchimp.php:389
-msgid "Save & Check"
-msgstr "حفظ وتسجيل"
+#: ../mailchimp.php:816
+msgid "Log In"
+msgstr ""
 
-#: mailchimp.php:394
+#: ../mailchimp.php:817
+msgid ""
+"To start using the MailChimp plugin, we first need to connect your MailChimp "
+"account.  Click login below to connect."
+msgstr ""
+
+#: ../mailchimp.php:822
+msgid "Don't have a MailChimp account?"
+msgstr ""
+
+#: ../mailchimp.php:823
+msgid "Try one for Free!"
+msgstr ""
+
+#: ../mailchimp.php:831
+msgid "Connect to MailChimp"
+msgstr ""
+
+#: ../mailchimp.php:845
 msgid "Notes"
 msgstr "ملاحظات"
 
-#: mailchimp.php:395
+#: ../mailchimp.php:847
 msgid "Changing your settings at MailChimp.com may cause this to stop working."
 msgstr "تغيير إعداداتك على MailChimp.com قد يؤدي إلى توقف العمل."
 
-#: mailchimp.php:396
-msgid "If you change your login to a different account, the info you have setup below will be erased."
-msgstr "إذا قمت بتعيير تسجيل الدخول إلى حساب مختلف، فسوف يتم مسح المعلومات التي قمت بإدخالها أدناه."
+#: ../mailchimp.php:848
+msgid ""
+"If you change your login to a different account, the info you have setup "
+"below will be erased."
+msgstr ""
+"إذا قمت بتعيير تسجيل الدخول إلى حساب مختلف، فسوف يتم مسح المعلومات التي قمت "
+"بإدخالها أدناه."
 
-#: mailchimp.php:397
-msgid "If any of that happens, no biggie - just reconfigure your login and the items below..."
-msgstr "في حالة حدوث أي من تلك الاحتمالات، ما عليك سوى إعادة تهيئة تسجيل والبنود أدناه..."
+#: ../mailchimp.php:849
+msgid ""
+"If any of that happens, no biggie - just reconfigure your login and the "
+"items below..."
+msgstr ""
+"في حالة حدوث أي من تلك الاحتمالات، ما عليك سوى إعادة تهيئة تسجيل والبنود "
+"أدناه..."
 
-#: mailchimp.php:403
+#: ../mailchimp.php:861
 msgid "Logged in as"
 msgstr "تسجيل الدخول كـ"
 
-#: mailchimp.php:407
+#: ../mailchimp.php:866
 msgid "Logout"
 msgstr "خروج"
 
-#: mailchimp.php:421
+#: ../mailchimp.php:881
 msgid "Your Lists"
 msgstr "القوائم الخاصة بك"
 
-#: mailchimp.php:423
+#: ../mailchimp.php:885
 msgid "Please select the List you wish to create a Signup Form for."
 msgstr "يرجي تحديد القائمة التي ترغب في إنشاء نموذج اشتراك لها."
 
-#: mailchimp.php:432
-#, php-format
-msgid "Uh-oh, you don't have any lists defined! Please visit %s, login, and setup a list before using this tool!"
-msgstr "عفواً. ليس لديك أية قوائم محددة. يرجى زيارة %s وتسجيل الدخول، وإعداد قائمة قبل استخدام هذه الأداة!"
-
-#: mailchimp.php:437
-msgid "Select A List"
-msgstr "حدد قائمة"
-
-#: mailchimp.php:450
-msgid "Update List"
-msgstr "تحديث القائمة"
-
-#: mailchimp.php:453
+#: ../mailchimp.php:886
 msgid "Note:"
 msgstr "ملاحظة:"
 
-#: mailchimp.php:453
-msgid "Updating your list will not cause settings below to be lost. Changing to a new list will."
-msgstr "تحديث القائمة الخاصة بك لن يؤدي إلى فقد الاعدادات التالية. ولكن الانتقال إلى قائمة جديدة سيؤدي إلى ذلك."
+#: ../mailchimp.php:886
+msgid ""
+"Updating your list will not cause settings below to be lost. Changing to a "
+"new list will."
+msgstr ""
+"تحديث القائمة الخاصة بك لن يؤدي إلى فقد الاعدادات التالية. ولكن الانتقال إلى "
+"قائمة جديدة سيؤدي إلى ذلك."
 
-#: mailchimp.php:471
+#: ../mailchimp.php:899
+#, php-format
+msgid ""
+"Uh-oh, you don't have any lists defined! Please visit %s, login, and setup a "
+"list before using this tool!"
+msgstr ""
+"عفواً. ليس لديك أية قوائم محددة. يرجى زيارة %s وتسجيل الدخول، وإعداد قائمة "
+"قبل استخدام هذه الأداة!"
+
+#: ../mailchimp.php:912
+msgid "Select A List"
+msgstr "حدد قائمة"
+
+#: ../mailchimp.php:925
+msgid "Update List"
+msgstr "تحديث القائمة"
+
+#: ../mailchimp.php:946
 msgid "Reset List Options and Select again"
 msgstr "إعادة تعيين خيارات القائمة وتحديدها مرة أخرى"
 
-#: mailchimp.php:474
+#: ../mailchimp.php:950
 msgid "Subscribe Form Widget Settings for this List"
 msgstr "إعدادات ودجت نموذج الاشتراك لهذه القائمة "
 
-#: mailchimp.php:475
+#: ../mailchimp.php:951
 msgid "Selected MailChimp List"
 msgstr "قائمة MailChimp المحددة"
 
-#: mailchimp.php:496
-#: mailchimp.php:569
-#: mailchimp.php:630
+#: ../mailchimp.php:969 ../mailchimp.php:997 ../mailchimp.php:1019
+#: ../mailchimp.php:1061 ../mailchimp.php:1111
 msgid "Update Subscribe Form Settings"
 msgstr "تحديث إعدادات نموذج الاشتراك"
 
-#: mailchimp.php:499
-msgid "Monkey Rewards"
-msgstr "قرد مكافآت"
+#: ../mailchimp.php:973
+msgid "Header"
+msgstr ""
 
-#: mailchimp.php:501
-msgid "turning this on will place a \"powered by MailChimp\" link in your form that will earn you credits with us. It is optional and can be turned on or off at any time."
-msgstr "تشغيل هذه الخاصية سوف يضع رابط \"مدعوم من MailChimp\" في النموذج الخاص بك والذي سيمنحك رصيد معنا. هذا الأمر اختياري يمكن تشغيله وإغلاقه في أي وقت. "
+#: ../mailchimp.php:976 ../mailchimp.php:984
+msgid ""
+"You can fill this with your own Text, HTML markup (including image links), "
+"or Nothing!"
+msgstr ""
+"يمكنك ملأ الحقل بالنص الخاص بك، ولغة HTML (بما في ذلك روابط الصورة) أو تركه "
+"فارغاً!"
 
-#: mailchimp.php:505
-msgid "Use Javascript Support?"
-msgstr "استخدم دعم جافا سكريبت؟"
+#: ../mailchimp.php:981
+msgid "Sub-header"
+msgstr ""
 
-#: mailchimp.php:507
-msgid "turning this on will use fancy javascript submission and should degrade gracefully for users not using javascript. It is optional and can be turned on or off at any time."
-msgstr "وسوف تحول هذه على استخدام يتوهم تقديم جافا سكريبت وينبغي أن تتحلل برشاقة لمستخدمي عدم استخدام جافا سكريبت. وهي اختيارية، ويمكن تشغيل أو إيقاف تشغيله في أي وقت."
+#: ../mailchimp.php:985
+msgid "This will be displayed under the heading and above the form."
+msgstr ""
 
-#: mailchimp.php:511
-msgid "Include Unsubscribe link?"
-msgstr "إدراج رابط إلغاء الاشتراك؟"
+#: ../mailchimp.php:990
+msgid "Submit Button"
+msgstr ""
 
-#: mailchimp.php:513
-msgid "turning this on will add a link to your host unsubscribe form"
-msgstr "تشغيل هذه الخاصية سوف تعمل على إضافة رابط إلى نموذج إلغاء الاشتراك"
+#: ../mailchimp.php:1002
+msgid "Enabled?"
+msgstr ""
 
-#: mailchimp.php:517
-msgid "Header content"
-msgstr "عنوان الرأسية"
-
-#: mailchimp.php:520
-msgid "You can fill this with your own Text, HTML markup (including image links), or Nothing!"
-msgstr "يمكنك ملأ الحقل بالنص الخاص بك، ولغة HTML (بما في ذلك روابط الصورة) أو تركه فارغاً!"
-
-#: mailchimp.php:525
-msgid "Submit Button text"
-msgstr "النص الخاص بزر الإرسال"
-
-#: mailchimp.php:532
-msgid "Custom Styling"
-msgstr "نمط التخصيص"
-
-#: mailchimp.php:536
-msgid "Turned On?"
-msgstr "تشغيل؟"
-
-#: mailchimp.php:537
-msgid "Header Settings (only applies if there are no HTML tags in the Header Content area above)"
-msgstr "إعدادات الرأسية (يطبق فقط في حالة عدم وجود علامات HTML في مساحة محتوى الرأسية أعلاه)"
-
-#: mailchimp.php:538
-#: mailchimp.php:552
-msgid "Border Width"
-msgstr "عرض الحدود"
-
-#: mailchimp.php:539
-#: mailchimp.php:553
-msgid "Set to 0 for no border, do not enter <strong>px</strong>!"
-msgstr "حدد 0 لإلغاء الحدود، لا تدخل <strong>px</strong>!"
-
-#: mailchimp.php:541
-#: mailchimp.php:555
-msgid "Border Color"
-msgstr "لون الحدود"
-
-#: mailchimp.php:542
-#: mailchimp.php:545
-#: mailchimp.php:548
-#: mailchimp.php:556
-#: mailchimp.php:559
-#: mailchimp.php:562
-msgid "do not enter initial <strong>#</strong>"
-msgstr "لا تدخل <strong>#</strong> الأولي"
-
-#: mailchimp.php:551
+#: ../mailchimp.php:1004
 msgid "Form Settings"
 msgstr "إعدادات النموذج"
 
-#: mailchimp.php:571
+#: ../mailchimp.php:1005
+msgid "Border Width"
+msgstr "عرض الحدود"
+
+#: ../mailchimp.php:1006
+msgid "Set to 0 for no border, do not enter"
+msgstr ""
+
+#: ../mailchimp.php:1008
+msgid "Border Color"
+msgstr "لون الحدود"
+
+#: ../mailchimp.php:1009 ../mailchimp.php:1012 ../mailchimp.php:1015
+msgid "Do not enter initial"
+msgstr ""
+
+#: ../mailchimp.php:1011
+msgid "Text Color"
+msgstr ""
+
+#: ../mailchimp.php:1014
+msgid "Background Color"
+msgstr ""
+
+#: ../mailchimp.php:1025
+msgid "Monkey Rewards"
+msgstr "قرد مكافآت"
+
+#: ../mailchimp.php:1027
+msgid ""
+"Turning this on will place a \"powered by MailChimp\" link in your form that "
+"will earn you credits with us. It is optional and can be turned on or off at "
+"any time."
+msgstr ""
+
+#: ../mailchimp.php:1032
+msgid "Use Javascript Support?"
+msgstr "استخدم دعم جافا سكريبت؟"
+
+#: ../mailchimp.php:1034
+msgid ""
+"Turning this on will use fancy javascript submission and should degrade "
+"gracefully for users not using javascript. It is optional and can be turned "
+"on or off at any time."
+msgstr ""
+
+#: ../mailchimp.php:1039
+msgid "Use Javascript Datepicker?"
+msgstr ""
+
+#: ../mailchimp.php:1041
+msgid "Turning this on will use the jQuery UI Datepicker for dates."
+msgstr ""
+
+#: ../mailchimp.php:1045
+msgid "Include Unsubscribe link?"
+msgstr "إدراج رابط إلغاء الاشتراك؟"
+
+#: ../mailchimp.php:1047
+msgid "Turning this on will add a link to your host unsubscribe form"
+msgstr ""
+
+#: ../mailchimp.php:1066
 msgid "Merge Variables Included"
 msgstr "تم إدراج متغيرات الدمج"
 
-#: mailchimp.php:574
+#: ../mailchimp.php:1073
 msgid "No Merge Variables found."
 msgstr "لم يتم العثور على متغيرات الدمج"
 
-#: mailchimp.php:580
-#: mailchimp.php:614
+#: ../mailchimp.php:1080
 msgid "Name"
 msgstr "الاسم"
 
-#: mailchimp.php:581
+#: ../mailchimp.php:1081
 msgid "Tag"
 msgstr "كلمة مفتاحية"
 
-#: mailchimp.php:582
+#: ../mailchimp.php:1082
 msgid "Required?"
 msgstr "مطلوب؟"
 
-#: mailchimp.php:583
+#: ../mailchimp.php:1083
 msgid "Include?"
 msgstr "إدراج؟"
 
-#: mailchimp.php:603
-msgid "Interest Groups"
-msgstr "مجموعات الاهتمام"
+#: ../mailchimp.php:1123
+msgid "Group Settings"
+msgstr ""
 
-#: mailchimp.php:605
+#: ../mailchimp.php:1130
 msgid "No Interest Groups Setup for this List"
 msgstr "لم يتم إعداد مجموعات اهتمام لهذه القائمة"
 
-#: mailchimp.php:610
+#: ../mailchimp.php:1142
 msgid "Show?"
 msgstr "إظهار؟"
 
-#: mailchimp.php:617
+#: ../mailchimp.php:1149
 msgid "Input Type"
 msgstr "نوع المدخلات"
 
-#: mailchimp.php:620
+#: ../mailchimp.php:1153
 msgid "Options"
 msgstr "خيارات"
 
-#: wp-content/plugins/mailchimp/mailchimp_widget.php:140
+#: ../mailchimp.php:1289 ../mailchimp.php:1302 ../mailchimp.php:1435
+#, php-format
+msgid "You must fill in %s."
+msgstr "يجب أن تملأ %s."
+
+#: ../mailchimp.php:1395
+#, php-format
+msgid "%s must consist of only numbers"
+msgstr ""
+
+#: ../mailchimp.php:1416
+msgid "Please try again later"
+msgstr ""
+
+#: ../mailchimp.php:1419
+msgid "That email address is already subscribed to the list"
+msgstr "عنوان البريد الإلكتروني الذي قمت بإدخالة مشترك في القائمة بالفعل."
+
+#: ../mailchimp.php:1427
+#, php-format
+msgid "<a href=\"%s\">Click here to update your profile.</a>"
+msgstr ""
+
+#: ../mailchimp.php:1439
+#, php-format
+msgid "%s has invalid content."
+msgstr ""
+
+#: ../mailchimp.php:1442
+msgid "An invalid Interest Group was selected"
+msgstr "تم تحديد مجموعة اهتمام خاطئة"
+
+#: ../mailchimp.php:1445
+msgid "That email address is invalid"
+msgstr "عنوان البريد الإلكتروني غير صالح"
+
+#: ../mailchimp.php:1468
+msgid "Success, you've been signed up! Please look for our confirmation email!"
+msgstr "لقد تم اشتراكك بنجاح! يرجى الاطلاع على رسالة التأكيد!"
+
+#: ../mailchimp_widget.php:16
+msgid ""
+"There was a problem loading your MailChimp details. Please re-run the setup "
+"process under Settings->MailChimp Setup"
+msgstr ""
+
+#: ../mailchimp_widget.php:184
+msgid "required field"
+msgstr "حقل مطلوب"
+
+#: ../mailchimp_widget.php:224
 msgid "Preferred Format"
 msgstr "الصيغة المفضلة"
 
-#: wp-content/plugins/mailchimp/mailchimp_widget.php:143
+#: ../mailchimp_widget.php:227
 msgid "HTML"
 msgstr "HTML"
 
-#: wp-content/plugins/mailchimp/mailchimp_widget.php:144
+#: ../mailchimp_widget.php:228
 msgid "Text"
 msgstr "النص"
 
-#: wp-content/plugins/mailchimp/mailchimp_widget.php:145
-msgid "Mobile"
-msgstr "جوال"
+#: ../mailchimp_widget.php:255
+msgid "unsubscribe from list"
+msgstr "إلغاء الاشتراك من القائمة"
 
+#: ../mailchimp_widget.php:263
+msgid "powered by"
+msgstr "مدعوم من"
+
+#: ../mailchimp_widget.php:396
+msgid "January"
+msgstr ""
+
+#: ../mailchimp_widget.php:396
+msgid "February"
+msgstr ""
+
+#: ../mailchimp_widget.php:396
+msgid "March"
+msgstr ""
+
+#: ../mailchimp_widget.php:396
+msgid "April"
+msgstr ""
+
+#: ../mailchimp_widget.php:396
+msgid "May"
+msgstr ""
+
+#: ../mailchimp_widget.php:396
+msgid "June"
+msgstr ""
+
+#: ../mailchimp_widget.php:396
+msgid "July"
+msgstr ""
+
+#: ../mailchimp_widget.php:396
+msgid "August"
+msgstr ""
+
+#: ../mailchimp_widget.php:396
+msgid "September"
+msgstr ""
+
+#: ../mailchimp_widget.php:396
+msgid "October"
+msgstr ""
+
+#: ../mailchimp_widget.php:396
+msgid "November"
+msgstr ""
+
+#: ../mailchimp_widget.php:396
+msgid "December"
+msgstr ""
+
+#: ../mailchimp_widget.php:420
+msgid "Street Address"
+msgstr ""
+
+#: ../mailchimp_widget.php:422
+msgid "Address Line 2"
+msgstr ""
+
+#: ../mailchimp_widget.php:424
+msgid "City"
+msgstr ""
+
+#: ../mailchimp_widget.php:426
+msgid "State"
+msgstr ""
+
+#: ../mailchimp_widget.php:428
+msgid "Zip / Postal"
+msgstr ""
+
+#: ../mailchimp_widget.php:430
+msgid "Country"
+msgstr ""
+
+#: ../mailchimp_widget.php:485
+msgid "Displays a MailChimp Subscribe box"
+msgstr ""
+
+#: ../mailchimp_widget.php:487
+msgid "MailChimp Widget"
+msgstr ""
+
+#: ../mailchimp_widget.php:502
+msgid "USA"
+msgstr ""
+
+#: ../mailchimp_widget.php:503
+msgid "Aaland Islands"
+msgstr ""
+
+#: ../mailchimp_widget.php:504
+msgid "Afghanistan"
+msgstr ""
+
+#: ../mailchimp_widget.php:505
+msgid "Albania"
+msgstr ""
+
+#: ../mailchimp_widget.php:506
+msgid "Algeria"
+msgstr ""
+
+#: ../mailchimp_widget.php:507
+msgid "American Samoa"
+msgstr ""
+
+#: ../mailchimp_widget.php:508
+msgid "Andorra"
+msgstr ""
+
+#: ../mailchimp_widget.php:509
+msgid "Angola"
+msgstr ""
+
+#: ../mailchimp_widget.php:510
+msgid "Anguilla"
+msgstr ""
+
+#: ../mailchimp_widget.php:511
+msgid "Antigua And Barbuda"
+msgstr ""
+
+#: ../mailchimp_widget.php:512
+msgid "Argentina"
+msgstr ""
+
+#: ../mailchimp_widget.php:513
+msgid "Armenia"
+msgstr ""
+
+#: ../mailchimp_widget.php:514
+msgid "Aruba"
+msgstr ""
+
+#: ../mailchimp_widget.php:515
+msgid "Australia"
+msgstr ""
+
+#: ../mailchimp_widget.php:516
+msgid "Austria"
+msgstr ""
+
+#: ../mailchimp_widget.php:517
+msgid "Azerbaijan"
+msgstr ""
+
+#: ../mailchimp_widget.php:518
+msgid "Bahamas"
+msgstr ""
+
+#: ../mailchimp_widget.php:519
+msgid "Bahrain"
+msgstr ""
+
+#: ../mailchimp_widget.php:520
+msgid "Bangladesh"
+msgstr ""
+
+#: ../mailchimp_widget.php:521
+msgid "Barbados"
+msgstr ""
+
+#: ../mailchimp_widget.php:522
+msgid "Belarus"
+msgstr ""
+
+#: ../mailchimp_widget.php:523
+msgid "Belgium"
+msgstr ""
+
+#: ../mailchimp_widget.php:524
+msgid "Belize"
+msgstr ""
+
+#: ../mailchimp_widget.php:525
+msgid "Benin"
+msgstr ""
+
+#: ../mailchimp_widget.php:526
+msgid "Bermuda"
+msgstr ""
+
+#: ../mailchimp_widget.php:527
+msgid "Bhutan"
+msgstr ""
+
+#: ../mailchimp_widget.php:528
+msgid "Bolivia"
+msgstr ""
+
+#: ../mailchimp_widget.php:529
+msgid "Bosnia and Herzegovina"
+msgstr ""
+
+#: ../mailchimp_widget.php:530
+msgid "Botswana"
+msgstr ""
+
+#: ../mailchimp_widget.php:531
+msgid "Brazil"
+msgstr ""
+
+#: ../mailchimp_widget.php:532
+msgid "Brunei Darussalam"
+msgstr ""
+
+#: ../mailchimp_widget.php:533
+msgid "Bulgaria"
+msgstr ""
+
+#: ../mailchimp_widget.php:534
+msgid "Burkina Faso"
+msgstr ""
+
+#: ../mailchimp_widget.php:535
+msgid "Burundi"
+msgstr ""
+
+#: ../mailchimp_widget.php:536
+msgid "Cambodia"
+msgstr ""
+
+#: ../mailchimp_widget.php:537
+msgid "Cameroon"
+msgstr ""
+
+#: ../mailchimp_widget.php:538
+msgid "Canada"
+msgstr ""
+
+#: ../mailchimp_widget.php:539
+msgid "Cape Verde"
+msgstr ""
+
+#: ../mailchimp_widget.php:540
+msgid "Cayman Islands"
+msgstr ""
+
+#: ../mailchimp_widget.php:541
+msgid "Central African Republic"
+msgstr ""
+
+#: ../mailchimp_widget.php:542
+msgid "Chad"
+msgstr ""
+
+#: ../mailchimp_widget.php:543
+msgid "Chile"
+msgstr ""
+
+#: ../mailchimp_widget.php:544
+msgid "China"
+msgstr ""
+
+#: ../mailchimp_widget.php:545
+msgid "Colombia"
+msgstr ""
+
+#: ../mailchimp_widget.php:546
+msgid "Congo"
+msgstr ""
+
+#: ../mailchimp_widget.php:547
+msgid "Cook Islands"
+msgstr ""
+
+#: ../mailchimp_widget.php:548
+msgid "Costa Rica"
+msgstr ""
+
+#: ../mailchimp_widget.php:549
+msgid "Cote D'Ivoire"
+msgstr ""
+
+#: ../mailchimp_widget.php:550
+msgid "Croatia"
+msgstr ""
+
+#: ../mailchimp_widget.php:551
+msgid "Cuba"
+msgstr ""
+
+#: ../mailchimp_widget.php:552
+msgid "Cyprus"
+msgstr ""
+
+#: ../mailchimp_widget.php:553
+msgid "Czech Republic"
+msgstr ""
+
+#: ../mailchimp_widget.php:554
+msgid "Denmark"
+msgstr ""
+
+#: ../mailchimp_widget.php:555
+msgid "Djibouti"
+msgstr ""
+
+#: ../mailchimp_widget.php:556
+msgid "Dominica"
+msgstr ""
+
+#: ../mailchimp_widget.php:557
+msgid "Dominican Republic"
+msgstr ""
+
+#: ../mailchimp_widget.php:558
+msgid "East Timor"
+msgstr ""
+
+#: ../mailchimp_widget.php:559
+msgid "Ecuador"
+msgstr ""
+
+#: ../mailchimp_widget.php:560
+msgid "Egypt"
+msgstr ""
+
+#: ../mailchimp_widget.php:561
+msgid "El Salvador"
+msgstr ""
+
+#: ../mailchimp_widget.php:562
+msgid "Equatorial Guinea"
+msgstr ""
+
+#: ../mailchimp_widget.php:563
+msgid "Eritrea"
+msgstr ""
+
+#: ../mailchimp_widget.php:564
+msgid "Estonia"
+msgstr ""
+
+#: ../mailchimp_widget.php:565
+msgid "Ethiopia"
+msgstr ""
+
+#: ../mailchimp_widget.php:566
+msgid "Faroe Islands"
+msgstr ""
+
+#: ../mailchimp_widget.php:567
+msgid "Fiji"
+msgstr ""
+
+#: ../mailchimp_widget.php:568
+msgid "Finland"
+msgstr ""
+
+#: ../mailchimp_widget.php:569
+msgid "France"
+msgstr ""
+
+#: ../mailchimp_widget.php:570
+msgid "French Polynesia"
+msgstr ""
+
+#: ../mailchimp_widget.php:571
+msgid "Germany"
+msgstr ""
+
+#: ../mailchimp_widget.php:572
+msgid "Ghana"
+msgstr ""
+
+#: ../mailchimp_widget.php:573
+msgid "Gibraltar"
+msgstr ""
+
+#: ../mailchimp_widget.php:574
+msgid "Greece"
+msgstr ""
+
+#: ../mailchimp_widget.php:575
+msgid "Greenland"
+msgstr ""
+
+#: ../mailchimp_widget.php:576
+msgid "Grenada"
+msgstr ""
+
+#: ../mailchimp_widget.php:577
+msgid "Guam"
+msgstr ""
+
+#: ../mailchimp_widget.php:578
+msgid "Guatemala"
+msgstr ""
+
+#: ../mailchimp_widget.php:579
+msgid "Guernsey"
+msgstr ""
+
+#: ../mailchimp_widget.php:580
+msgid "Guyana"
+msgstr ""
+
+#: ../mailchimp_widget.php:581
+msgid "Haiti"
+msgstr ""
+
+#: ../mailchimp_widget.php:582
+msgid "Honduras"
+msgstr ""
+
+#: ../mailchimp_widget.php:583
+msgid "Hong Kong"
+msgstr ""
+
+#: ../mailchimp_widget.php:584
+msgid "Hungary"
+msgstr ""
+
+#: ../mailchimp_widget.php:585
+msgid "Iceland"
+msgstr ""
+
+#: ../mailchimp_widget.php:586
+msgid "India"
+msgstr ""
+
+#: ../mailchimp_widget.php:587
+msgid "Indonesia"
+msgstr ""
+
+#: ../mailchimp_widget.php:588
+msgid "Iran"
+msgstr ""
+
+#: ../mailchimp_widget.php:589
+msgid "Iraq"
+msgstr ""
+
+#: ../mailchimp_widget.php:590
+msgid "Ireland"
+msgstr ""
+
+#: ../mailchimp_widget.php:591
+msgid "Israel"
+msgstr ""
+
+#: ../mailchimp_widget.php:592
+msgid "Italy"
+msgstr ""
+
+#: ../mailchimp_widget.php:593
+msgid "Jamaica"
+msgstr ""
+
+#: ../mailchimp_widget.php:594
+msgid "Japan"
+msgstr ""
+
+#: ../mailchimp_widget.php:595
+msgid "Jersey  (Channel Islands)"
+msgstr ""
+
+#: ../mailchimp_widget.php:596
+msgid "Jordan"
+msgstr ""
+
+#: ../mailchimp_widget.php:597
+msgid "Kazakhstan"
+msgstr ""
+
+#: ../mailchimp_widget.php:598
+msgid "Kenya"
+msgstr ""
+
+#: ../mailchimp_widget.php:599
+msgid "Kuwait"
+msgstr ""
+
+#: ../mailchimp_widget.php:600
+msgid "Kyrgyzstan"
+msgstr ""
+
+#: ../mailchimp_widget.php:601
+msgid "Lao People's Democratic Republic"
+msgstr ""
+
+#: ../mailchimp_widget.php:602
+msgid "Latvia"
+msgstr ""
+
+#: ../mailchimp_widget.php:603
+msgid "Lebanon"
+msgstr ""
+
+#: ../mailchimp_widget.php:604
+msgid "Libya"
+msgstr ""
+
+#: ../mailchimp_widget.php:605
+msgid "Liechtenstein"
+msgstr ""
+
+#: ../mailchimp_widget.php:606
+msgid "Lithuania"
+msgstr ""
+
+#: ../mailchimp_widget.php:607
+msgid "Luxembourg"
+msgstr ""
+
+#: ../mailchimp_widget.php:608
+msgid "Macau"
+msgstr ""
+
+#: ../mailchimp_widget.php:609
+msgid "Macedonia"
+msgstr ""
+
+#: ../mailchimp_widget.php:610
+msgid "Madagascar"
+msgstr ""
+
+#: ../mailchimp_widget.php:611
+msgid "Malawi"
+msgstr ""
+
+#: ../mailchimp_widget.php:612
+msgid "Malaysia"
+msgstr ""
+
+#: ../mailchimp_widget.php:613
+msgid "Maldives"
+msgstr ""
+
+#: ../mailchimp_widget.php:614
+msgid "Mali"
+msgstr ""
+
+#: ../mailchimp_widget.php:615
+msgid "Malta"
+msgstr ""
+
+#: ../mailchimp_widget.php:616
+msgid "Mauritius"
+msgstr ""
+
+#: ../mailchimp_widget.php:617
+msgid "Mexico"
+msgstr ""
+
+#: ../mailchimp_widget.php:618
+msgid "Moldova, Republic of"
+msgstr ""
+
+#: ../mailchimp_widget.php:619
+msgid "Monaco"
+msgstr ""
+
+#: ../mailchimp_widget.php:620
+msgid "Mongolia"
+msgstr ""
+
+#: ../mailchimp_widget.php:621
+msgid "Montenegro"
+msgstr ""
+
+#: ../mailchimp_widget.php:622
+msgid "Morocco"
+msgstr ""
+
+#: ../mailchimp_widget.php:623
+msgid "Mozambique"
+msgstr ""
+
+#: ../mailchimp_widget.php:624
+msgid "Myanmar"
+msgstr ""
+
+#: ../mailchimp_widget.php:625
+msgid "Namibia"
+msgstr ""
+
+#: ../mailchimp_widget.php:626
+msgid "Nepal"
+msgstr ""
+
+#: ../mailchimp_widget.php:627
+msgid "Netherlands"
+msgstr ""
+
+#: ../mailchimp_widget.php:628
+msgid "Netherlands Antilles"
+msgstr ""
+
+#: ../mailchimp_widget.php:629
+msgid "New Caledonia"
+msgstr ""
+
+#: ../mailchimp_widget.php:630
+msgid "New Zealand"
+msgstr ""
+
+#: ../mailchimp_widget.php:631
+msgid "Nicaragua"
+msgstr ""
+
+#: ../mailchimp_widget.php:632
+msgid "Niger"
+msgstr ""
+
+#: ../mailchimp_widget.php:633
+msgid "Nigeria"
+msgstr ""
+
+#: ../mailchimp_widget.php:634
+msgid "North Korea"
+msgstr ""
+
+#: ../mailchimp_widget.php:635
+msgid "Norway"
+msgstr ""
+
+#: ../mailchimp_widget.php:636
+msgid "Oman"
+msgstr ""
+
+#: ../mailchimp_widget.php:637
+msgid "Pakistan"
+msgstr ""
+
+#: ../mailchimp_widget.php:638
+msgid "Palau"
+msgstr ""
+
+#: ../mailchimp_widget.php:639
+msgid "Palestine"
+msgstr ""
+
+#: ../mailchimp_widget.php:640
+msgid "Panama"
+msgstr ""
+
+#: ../mailchimp_widget.php:641
+msgid "Papua New Guinea"
+msgstr ""
+
+#: ../mailchimp_widget.php:642
+msgid "Paraguay"
+msgstr ""
+
+#: ../mailchimp_widget.php:643
+msgid "Peru"
+msgstr ""
+
+#: ../mailchimp_widget.php:644
+msgid "Philippines"
+msgstr ""
+
+#: ../mailchimp_widget.php:645
+msgid "Poland"
+msgstr ""
+
+#: ../mailchimp_widget.php:646
+msgid "Portugal"
+msgstr ""
+
+#: ../mailchimp_widget.php:647
+msgid "Qatar"
+msgstr ""
+
+#: ../mailchimp_widget.php:648
+msgid "Republic of Georgia"
+msgstr ""
+
+#: ../mailchimp_widget.php:649
+msgid "Romania"
+msgstr ""
+
+#: ../mailchimp_widget.php:650
+msgid "Russia"
+msgstr ""
+
+#: ../mailchimp_widget.php:651
+msgid "Rwanda"
+msgstr ""
+
+#: ../mailchimp_widget.php:652
+msgid "Saint Kitts and Nevis"
+msgstr ""
+
+#: ../mailchimp_widget.php:653
+msgid "Saint Lucia"
+msgstr ""
+
+#: ../mailchimp_widget.php:654
+msgid "Samoa (Independent)"
+msgstr ""
+
+#: ../mailchimp_widget.php:655
+msgid "San Marino"
+msgstr ""
+
+#: ../mailchimp_widget.php:656
+msgid "Saudi Arabia"
+msgstr ""
+
+#: ../mailchimp_widget.php:657
+msgid "Senegal"
+msgstr ""
+
+#: ../mailchimp_widget.php:658
+msgid "Serbia"
+msgstr ""
+
+#: ../mailchimp_widget.php:659
+msgid "Seychelles"
+msgstr ""
+
+#: ../mailchimp_widget.php:660
+msgid "Singapore"
+msgstr ""
+
+#: ../mailchimp_widget.php:661
+msgid "Slovakia"
+msgstr ""
+
+#: ../mailchimp_widget.php:662
+msgid "Slovenia"
+msgstr ""
+
+#: ../mailchimp_widget.php:663
+msgid "Solomon Islands"
+msgstr ""
+
+#: ../mailchimp_widget.php:664
+msgid "South Africa"
+msgstr ""
+
+#: ../mailchimp_widget.php:665
+msgid "South Korea"
+msgstr ""
+
+#: ../mailchimp_widget.php:666
+msgid "Spain"
+msgstr ""
+
+#: ../mailchimp_widget.php:667
+msgid "Sri Lanka"
+msgstr ""
+
+#: ../mailchimp_widget.php:668
+msgid "Sudan"
+msgstr ""
+
+#: ../mailchimp_widget.php:669
+msgid "Suriname"
+msgstr ""
+
+#: ../mailchimp_widget.php:670
+msgid "Swaziland"
+msgstr ""
+
+#: ../mailchimp_widget.php:671
+msgid "Sweden"
+msgstr ""
+
+#: ../mailchimp_widget.php:672
+msgid "Switzerland"
+msgstr ""
+
+#: ../mailchimp_widget.php:673
+msgid "Taiwan"
+msgstr ""
+
+#: ../mailchimp_widget.php:674
+msgid "Tanzania"
+msgstr ""
+
+#: ../mailchimp_widget.php:675
+msgid "Thailand"
+msgstr ""
+
+#: ../mailchimp_widget.php:676
+msgid "Togo"
+msgstr ""
+
+#: ../mailchimp_widget.php:677
+msgid "Tonga"
+msgstr ""
+
+#: ../mailchimp_widget.php:678
+msgid "Trinidad and Tobago"
+msgstr ""
+
+#: ../mailchimp_widget.php:679
+msgid "Tunisia"
+msgstr ""
+
+#: ../mailchimp_widget.php:680
+msgid "Turkey"
+msgstr ""
+
+#: ../mailchimp_widget.php:681
+msgid "Turks &amp; Caicos Islands"
+msgstr ""
+
+#: ../mailchimp_widget.php:682
+msgid "Uganda"
+msgstr ""
+
+#: ../mailchimp_widget.php:683
+msgid "Ukraine"
+msgstr ""
+
+#: ../mailchimp_widget.php:684
+msgid "United Arab Emirates"
+msgstr ""
+
+#: ../mailchimp_widget.php:685
+msgid "United Kingdom"
+msgstr ""
+
+#: ../mailchimp_widget.php:686
+msgid "Uruguay"
+msgstr ""
+
+#: ../mailchimp_widget.php:687
+msgid "Vanuatu"
+msgstr ""
+
+#: ../mailchimp_widget.php:688
+msgid "Vatican City State (Holy See)"
+msgstr ""
+
+#: ../mailchimp_widget.php:689
+msgid "Venezuela"
+msgstr ""
+
+#: ../mailchimp_widget.php:690
+msgid "Vietnam"
+msgstr ""
+
+#: ../mailchimp_widget.php:691
+msgid "Virgin Islands (British)"
+msgstr ""
+
+#: ../mailchimp_widget.php:692
+msgid "Virgin Islands (U.S.)"
+msgstr ""
+
+#: ../mailchimp_widget.php:693
+msgid "Zambia"
+msgstr ""
+
+#: ../mailchimp_widget.php:694
+msgid "Zimbabwe"
+msgstr ""
+
+#~ msgid "%s has invalid content"
+#~ msgstr "%s به محتوى غير صالح"
+
+#~ msgid ""
+#~ "While upgrading the plugin setup, we were unable to login to your "
+#~ "account. You will need to login again and setup your list."
+#~ msgstr ""
+#~ "أثناء ترقية البرنامج المساعد، لا يمكننا الدخول على حسابك. سوف تكون بحاجة "
+#~ "إلى تسجيل الدخول مرة أخرى وإعداد القائمة الخاصة بك."
+
+#~ msgid ""
+#~ "Success! We were able to verify your username & password! Let's continue, "
+#~ "shall we?"
+#~ msgstr ""
+#~ "لقد تحققنا من اسم المستخدم وكلمة المرور الخاصة بك بنجاح! هل تريد متابعة "
+#~ "الإجراء؟"
+
+#~ msgid ""
+#~ "Uh-oh, we were unable to login and verify your username & password. "
+#~ "Please check them and try again!"
+#~ msgstr ""
+#~ "عفواً، لا يمكننا تسجيل الدخول والتحقق من اسم المستخدم وكلمة المرور الخاصة "
+#~ "بك. يرجى مراجعة اسم المستخدم وكلمة المرور وإعادة المحاولة مرة أخرى!"
+
+#~ msgid "The server said:"
+#~ msgstr "الخادوم يقول:"
+
+#~ msgid ""
+#~ "Success! Loaded and saved the info for %d Merge Variables and %d Interest "
+#~ "Groups from your list"
+#~ msgstr ""
+#~ "تم تحميل وحفظ المعلومات الخاصة بمتغيرات الدمج %d ومجموعة الاهتمام %d من "
+#~ "قائمتك بنجاح"
+
+#~ msgid "Login Info"
+#~ msgstr "معلومات تسجيل الدخول"
+
+#~ msgid ""
+#~ "To start using the MailChimp plugin, we first need to login and get your "
+#~ "API Key. Please enter your MailChimp username and password below."
+#~ msgstr ""
+#~ "لبدء استخدام مساعد MailChimp ، نحتاج أولاً تسجيل الدخول والخصول على مفتاح "
+#~ "API. يرجى إدخال اسم المستخدم وكلمة المرور الخاصة بـ MailChimp أدناه."
+
+#~ msgid ""
+#~ "Don't have a MailChimp account? <a href='http://www.mailchimp.com/tryit."
+#~ "phtml' target='_blank'>Try one for Free</a>!"
+#~ msgstr ""
+#~ "ليس لديك حساب على MailChimp؟ <a href='http://www.mailchimp.com/tryit."
+#~ "phtml' target='_blank'>جرب حساب الآن مجاناً</a>!"
+
+#~ msgid "Username"
+#~ msgstr "اسم المستخدم "
+
+#~ msgid "Password"
+#~ msgstr "كلمة المرور"
+
+#~ msgid "Save & Check"
+#~ msgstr "حفظ وتسجيل"
+
+#~ msgid ""
+#~ "turning this on will place a \"powered by MailChimp\" link in your form "
+#~ "that will earn you credits with us. It is optional and can be turned on "
+#~ "or off at any time."
+#~ msgstr ""
+#~ "تشغيل هذه الخاصية سوف يضع رابط \"مدعوم من MailChimp\" في النموذج الخاص بك "
+#~ "والذي سيمنحك رصيد معنا. هذا الأمر اختياري يمكن تشغيله وإغلاقه في أي وقت. "
+
+#~ msgid ""
+#~ "turning this on will use fancy javascript submission and should degrade "
+#~ "gracefully for users not using javascript. It is optional and can be "
+#~ "turned on or off at any time."
+#~ msgstr ""
+#~ "وسوف تحول هذه على استخدام يتوهم تقديم جافا سكريبت وينبغي أن تتحلل برشاقة "
+#~ "لمستخدمي عدم استخدام جافا سكريبت. وهي اختيارية، ويمكن تشغيل أو إيقاف "
+#~ "تشغيله في أي وقت."
+
+#~ msgid "turning this on will add a link to your host unsubscribe form"
+#~ msgstr "تشغيل هذه الخاصية سوف تعمل على إضافة رابط إلى نموذج إلغاء الاشتراك"
+
+#~ msgid "Header content"
+#~ msgstr "عنوان الرأسية"
+
+#~ msgid "Submit Button text"
+#~ msgstr "النص الخاص بزر الإرسال"
+
+#~ msgid "Custom Styling"
+#~ msgstr "نمط التخصيص"
+
+#~ msgid "Turned On?"
+#~ msgstr "تشغيل؟"
+
+#~ msgid ""
+#~ "Header Settings (only applies if there are no HTML tags in the Header "
+#~ "Content area above)"
+#~ msgstr ""
+#~ "إعدادات الرأسية (يطبق فقط في حالة عدم وجود علامات HTML في مساحة محتوى "
+#~ "الرأسية أعلاه)"
+
+#~ msgid "Set to 0 for no border, do not enter <strong>px</strong>!"
+#~ msgstr "حدد 0 لإلغاء الحدود، لا تدخل <strong>px</strong>!"
+
+#~ msgid "do not enter initial <strong>#</strong>"
+#~ msgstr "لا تدخل <strong>#</strong> الأولي"
+
+#~ msgid "Interest Groups"
+#~ msgstr "مجموعات الاهتمام"
+
+#~ msgid "Mobile"
+#~ msgstr "جوال"
