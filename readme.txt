@@ -141,6 +141,15 @@ Maybe! Look in the /po/ directory in our plugin package and see if your language
 
 == Upgrade Notice ==
 
+= 1.4.3 =
+Fixed an issue with improper URLs to updating profile settings
+Fixed an issue in which backslashes, single and double quotes were having an extra slash attached
+Fixed an issue in which logging out then attempting to reconnect with OAuth prevented actual login
+Updated translation files to support the latest strings
+Adjust how alerts are handled to prevent header from being seen
+Update instances of home_url to properly refernce admin_url
+Update to prevent PHP warnings when WP_DEBUG is enabled
+
 = 1.4.2 =
 add customized wp_nonces functions for post-back behavior to fix 4.0 callbacks
 
@@ -171,6 +180,15 @@ Fixes major bug with "Settings" link on Plugins screen.
 Added support for multiple interest groups, field formatting based on type and date picker.
 
 == Changelog ==
+
+= 1.4.3 =
+* Prevent assets from having double slashes in the URL which causes issues with caching plugins
+* Prevent WP error bars from overlapping the header image and text
+* Fixed an issue which generated the incorrect URL to update a profile
+* Fixed an issue which would occasionally prevent connection for users with versions of PHP < 5.6.0
+
+= 1.4.2 =
+* Update to address changes in nonces for WP 4.0
 
 = 1.4.1 =
 * Update styles to be compatible with upcoming 3.8 wp-admin changes
