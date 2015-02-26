@@ -1,0 +1,430 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR MailChimp API Support Team
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: MailChimp 1.1.5\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/mailchimp\n"
+"POT-Creation-Date: 2009-07-15 14:23-0400\n"
+"PO-Revision-Date: 2014-10-17 18:02+0900\n"
+"Last-Translator: shotaando <shotaando@gmail.com>\n"
+"Language-Team: MailChimp API <api@mailchimp.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"X-Generator: Poedit 1.6.10\n"
+
+#: mailchimp_includes.php:27 mailchimp_includes.php:62
+msgid "You must fill in %s."
+msgstr "%sを記入する必要があります。"
+
+#: mailchimp_includes.php:59
+msgid "That email address is already subscribed to the list"
+msgstr "そのメールアドレスは、既に登録されています。"
+
+#: mailchimp_includes.php:66
+#, php-format
+msgid "%s has invalid content"
+msgstr "%sは不正な内容です。"
+
+#: mailchimp_includes.php:68
+msgid "An invalid Interest Group was selected"
+msgstr "不正なInterest Groupが選択されています。"
+
+#: mailchimp_includes.php:69
+msgid "That email address is invalid"
+msgstr "メールアドレスが不正です。"
+
+#: mailchimp_includes.php:75
+msgid "Success, you've been signed up! Please look for our confirmation email!"
+msgstr "登録が完了しました！確認メールをご確認ください。"
+
+#: mailchimp_includes.php:131
+msgid "required field"
+msgstr "入力必須項目"
+
+#: mailchimp_includes.php:168
+msgid "unsubscribe from list"
+msgstr "登録解除"
+
+#: mailchimp_includes.php:171
+msgid "powered by"
+msgstr "powered by"
+
+#: mailchimp.php:135
+msgid "MailChimp Setup"
+msgstr "MailChimp設定"
+
+#: mailchimp.php:150
+msgid ""
+"While upgrading the plugin setup, we were unable to login to your account. "
+"You will need to login again and setup your list."
+msgstr ""
+"プラグインを更新している間、あなたのアカウントにはログインできません。再度ロ"
+"グインを行い、リストをセットアップしてください。"
+
+#: mailchimp.php:156
+msgid "MailChimp List Setup"
+msgstr "MailChimpリスト設定"
+
+#: mailchimp.php:166
+msgid ""
+"Success! We were able to verify your username & password! Let's continue, "
+"shall we?"
+msgstr "ユーザ名とパスワードが認証されました。処理を継続しますか？"
+
+#: mailchimp.php:178
+msgid ""
+"Uh-oh, we were unable to login and verify your username & password. Please "
+"check them and try again!"
+msgstr ""
+"ユーザ名かパスワードが間違っています。再確認し、再度ログインしてください。"
+
+#: mailchimp.php:179
+msgid "The server said:"
+msgstr "サーバからのメッセージ："
+
+#: mailchimp.php:222
+msgid "Sign up for"
+msgstr "登録リスト"
+
+#: mailchimp.php:223
+msgid "Subscribe"
+msgstr "購読"
+
+#: mailchimp.php:253
+#, php-format
+msgid ""
+"Success! Loaded and saved the info for %d Merge Variables and %d Interest "
+"Groups from your list"
+msgstr ""
+"リストから、%d つのMerge Variablesと%d つのInterest Groupsが保存され、更新さ"
+"れました。"
+
+#: mailchimp.php:256
+msgid ""
+"Now you should either Turn On the MailChimp Widget or change your options "
+"below, then turn it on."
+msgstr ""
+"MailChimpウィジェットを有効化するか、下のオプションを変更してから有効化してく"
+"ださい。"
+
+#: mailchimp.php:284
+msgid "Successfully Reset your List selection... Now you get to pick again!"
+msgstr "選択されたリストはリセットされました。再度選択しなおしてください。"
+
+#: mailchimp.php:290
+msgid "Monkey Rewards turned On!"
+msgstr "Monkey Rewardsを有効化しました！"
+
+#: mailchimp.php:294
+msgid "Monkey Rewards turned Off!"
+msgstr "Monkey Rewardsを無効化しました！"
+
+#: mailchimp.php:299
+msgid "Fancy Javascript submission turned On!"
+msgstr "Fancy Javascriptを有効化しました！"
+
+#: mailchimp.php:303
+msgid "Fancy Javascript submission turned Off!"
+msgstr "Fancy Javascriptを無効化しました！"
+
+#: mailchimp.php:309
+msgid "Unsubscribe link turned On!"
+msgstr "Unsubscribe linkが有効化されました！"
+
+#: mailchimp.php:313
+msgid "Unsubscribe link turned Off!"
+msgstr "Unsubscribe linkが無効化されました！"
+
+#: mailchimp.php:359
+msgid "Successfully Updated your List Subscribe Form Settings!"
+msgstr "Subscribe Formのリスト設定が正しく更新されました！"
+
+#: mailchimp.php:372
+msgid "Login Info"
+msgstr "ログイン情報"
+
+#: mailchimp.php:373
+msgid ""
+"To start using the MailChimp plugin, we first need to login and get your API "
+"Key. Please enter your MailChimp username and password below."
+msgstr ""
+"MailChimpプラグインを使用するにあたり、まずログインしてAPI Keyを取得する必要"
+"があります。以下にMailChimpのユーザー名とパスワードを入力してください。"
+
+#: mailchimp.php:375
+msgid ""
+"Don't have a MailChimp account? <a href='http://www.mailchimp.com/tryit."
+"phtml' target='_blank'>Try one for Free</a>!"
+msgstr ""
+"MailChimpアカウントを持っていないですか？ <a href='http://www.mailchimp.com/"
+"tryit.phtml' target='_blank'>無料で試すことができます</a>!"
+
+#: mailchimp.php:379
+msgid "Username"
+msgstr "ユーザー名"
+
+#: mailchimp.php:383
+msgid "Password"
+msgstr "パスワード"
+
+#: mailchimp.php:389
+msgid "Save & Check"
+msgstr "保存と確認"
+
+#: mailchimp.php:394
+msgid "Notes"
+msgstr "備考"
+
+#: mailchimp.php:395
+msgid "Changing your settings at MailChimp.com may cause this to stop working."
+msgstr "MailChimp.comの設定を変更すると、動作が停止する場合があります。"
+
+#: mailchimp.php:396
+msgid ""
+"If you change your login to a different account, the info you have setup "
+"below will be erased."
+msgstr ""
+"ログインユーザを別のものに変更すると、セットアップした内容が削除されてしまい"
+"ます。"
+
+#: mailchimp.php:397
+msgid ""
+"If any of that happens, no biggie - just reconfigure your login and the "
+"items below..."
+msgstr ""
+"何か問題が発生した場合、小さい問題だとしても、以下のログイン情報と項目を再設"
+"定してください。"
+
+#: mailchimp.php:403
+msgid "Logged in as"
+msgstr "右のユーザでログイン中"
+
+#: mailchimp.php:407
+msgid "Logout"
+msgstr "ログアウト"
+
+#: mailchimp.php:421
+msgid "Your Lists"
+msgstr "あなたのリスト"
+
+#: mailchimp.php:423
+msgid "Please select the List you wish to create a Signup Form for."
+msgstr "Signup Formを作成するリストを選択してください。"
+
+#: mailchimp.php:432
+#, php-format
+msgid ""
+"Uh-oh, you don't have any lists defined! Please visit %s, login, and setup a "
+"list before using this tool!"
+msgstr ""
+"定義されたリストがありません。使用前に%sを確認し、ログインし、リストをセット"
+"アップしてください。"
+
+#: mailchimp.php:437
+msgid "Select A List"
+msgstr "リストを選択"
+
+#: mailchimp.php:450
+msgid "Update List"
+msgstr "リストを更新"
+
+#: mailchimp.php:453
+msgid "Note:"
+msgstr "備考："
+
+#: mailchimp.php:453
+msgid ""
+"Updating your list will not cause settings below to be lost. Changing to a "
+"new list will."
+msgstr ""
+"既存のリストを変更しても設定は削除されません。新しいリストに変更した場合、設"
+"定が削除されます。"
+
+#: mailchimp.php:471
+msgid "Reset List Options and Select again"
+msgstr "リストオプションをリセットし、再選択してください。"
+
+#: mailchimp.php:474
+msgid "Subscribe Form Widget Settings for this List"
+msgstr "このリストの購読Formウィジェット設定"
+
+#: mailchimp.php:475
+msgid "Selected MailChimp List"
+msgstr "選択済みのMailChimpリスト"
+
+#: mailchimp.php:496 mailchimp.php:569 mailchimp.php:630
+msgid "Update Subscribe Form Settings"
+msgstr "Subscribe Form 設定の更新"
+
+#: mailchimp.php:499
+msgid "Monkey Rewards"
+msgstr "Monkey Rewardsの使用"
+
+#: mailchimp.php:501
+msgid ""
+"Turning this on will place a \"powered by MailChimp\" link in your form that "
+"will earn you credits with us. It is optional and can be turned on or off at "
+"any time."
+msgstr ""
+"これを有効にすると \"powered by MailChimp\" リンクがフォームに表示されます。"
+"この表示により信用性が高まります。オプションで設定でき、いつでも有効化し、無"
+"効化することができます。"
+
+#: mailchimp.php:505
+msgid "Use Javascript Support?"
+msgstr "Javascript サポートの使用"
+
+#: mailchimp.php:507
+msgid ""
+"Turning this on will use fancy javascript submission and should degrade "
+"gracefully for users not using javascript. It is optional and can be turned "
+"on or off at any time."
+msgstr ""
+"これを有効にするとfancy javascript登録が使用できます。javascriptが使用できな"
+"いユーザでも表示が可能になります。オプションで設定でき、いつでも有効化し、無"
+"効化することができます。"
+
+#: mailchimp.php:511
+msgid "Include Unsubscribe link?"
+msgstr "Unsubscribe linkの表示"
+
+#: mailchimp.php:513
+msgid "Turning this on will add a link to your host unsubscribe form"
+msgstr ""
+"これを有効にすると、保存しているunsubscribe formのリンクが追加されます。"
+
+#: mailchimp.php:517
+msgid "Header content"
+msgstr "ヘッダー内容"
+
+#: mailchimp.php:520
+msgid ""
+"You can fill this with your own Text, HTML markup (including image links), "
+"or Nothing!"
+msgstr ""
+"テキストやHTML（画像リンク含む）などで記述できます。記述は必須ではありませ"
+"ん。"
+
+#: mailchimp.php:525
+msgid "Submit Button text"
+msgstr "登録ボタンテキスト"
+
+#: mailchimp.php:532
+msgid "Custom Styling"
+msgstr "カスタムスタイル"
+
+#: mailchimp.php:536
+msgid "Turned On?"
+msgstr "有効化しますか？"
+
+#: mailchimp.php:537
+msgid ""
+"Header Settings (only applies if there are no HTML tags in the Header "
+"Content area above)"
+msgstr "ヘッダー設定（ヘッダー内容にHTMLタグがない場合のみ適用されます）"
+
+#: mailchimp.php:538 mailchimp.php:552
+msgid "Border Width"
+msgstr "Border Width"
+
+#: mailchimp.php:539 mailchimp.php:553
+msgid "Set to 0 for no border, do not enter"
+msgstr "no borderの場合は、0を設定します。右の文字は入力不要："
+
+#: mailchimp.php:541 mailchimp.php:555
+msgid "Border Color"
+msgstr "Border Color"
+
+#: mailchimp.php:542 mailchimp.php:545 mailchimp.php:548 mailchimp.php:556
+#: mailchimp.php:559 mailchimp.php:562
+msgid "Do not enter initial"
+msgstr "右の文字は入力不要："
+
+#: mailchimp.php:551
+msgid "Form Settings"
+msgstr "Form設定"
+
+#: mailchimp.php:571
+msgid "Merge Variables Included"
+msgstr "Merge Variablesの設定"
+
+#: mailchimp.php:574
+msgid "No Merge Variables found."
+msgstr "Merge Variablesはありません。"
+
+#: mailchimp.php:580 mailchimp.php:614
+msgid "Name"
+msgstr "名前"
+
+#: mailchimp.php:581
+msgid "Tag"
+msgstr "タグ"
+
+#: mailchimp.php:582
+msgid "Required?"
+msgstr "必須項目"
+
+#: mailchimp.php:583
+msgid "Include?"
+msgstr "表示"
+
+#: mailchimp.php:603
+msgid "Interest Groups"
+msgstr "Interest Groups"
+
+#: mailchimp.php:605
+msgid "No Interest Groups Setup for this List"
+msgstr "このリストのInterest Groupsセットアップはありません。"
+
+#: mailchimp.php:610
+msgid "Show?"
+msgstr "表示しますか？"
+
+#: mailchimp.php:617
+msgid "Input Type"
+msgstr "Input Type"
+
+#: mailchimp.php:620
+msgid "Options"
+msgstr "オプション"
+
+#: mailchimp.php:995
+msgid "Enabled?"
+msgstr "有効化"
+
+#: mailchimp.php:978
+msgid "This will be displayed under the heading and above the form."
+msgstr "先頭下部およびフォームの上部に表示されます。"
+
+#: mailchimp.php:966
+msgid "Header"
+msgstr "ヘッダー"
+
+#: mailchimp.php:974
+msgid "Sub-header"
+msgstr "サブヘッダー"
+
+#: mailchimp.php:983
+msgid "Submit Button"
+msgstr "登録ボタン"
+
+#: mailchimp.php:1032
+msgid "Use Javascript Datepicker?"
+msgstr "Javascript Datepickerの使用"
+
+#: mailchimp.php:1034
+msgid "Turning this on will use the jQuery UI Datepicker for dates."
+msgstr "これを有効にすると、日付にjQuery UI Datepickerを使用できます。"
+
+#: mailchimp.php:618
+msgid "Datepicker turned On!"
+msgstr "Datepickerを有効化しました！"
+
+#: mailchimp.php:623
+msgid "Datepicker turned Off!"
+msgstr "Datepickerを無効化しました！"
