@@ -653,7 +653,7 @@ function mailchimpSF_save_general_form_settings() {
 	if (MAILCHIMP_DEV_MODE == false) {
 		//we told them not to put these things we are replacing in, but let's just make sure they are listening...
 		$header_keys = array(
-			'mc_header_border_width' = > 'px',
+			'mc_header_border_width' => 'px',
 			'mc_header_border_color' => '#',
 			'mc_header_background' => '#',
 			'mc_header_text_color' => '#',
