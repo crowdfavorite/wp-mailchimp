@@ -653,7 +653,7 @@ function mailchimpSF_save_general_form_settings() {
 	if (MAILCHIMP_DEV_MODE == false) {
 		//we told them not to put these things we are replacing in, but let's just make sure they are listening...
 		$header_keys = array(
-			'mc_header_border_width' = > 'px',
+			'mc_header_border_width' => 'px',
 			'mc_header_border_color' => '#',
 			'mc_header_background' => '#',
 			'mc_header_text_color' => '#',
@@ -1385,7 +1385,7 @@ function mailchimpSF_signup_submit() {
 		// Custom validation based on type
 		if (is_array($merge) && !empty($merge)) {
 			foreach ($merge as $merge_key => $merge_value) {
-				if ($merge_key !== 'GROUPINGS') {
+				if ($merge_key !== 'GROUPINGS' && isset($mv_tag_keys[$merge_key])) {
 					switch ($mv_tag_keys[$merge_key]['field_type']) {
 						case 'phone':
 							if ($mv_tag_keys[$merge_key]['phoneformat'] == 'US') {

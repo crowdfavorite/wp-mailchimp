@@ -52,8 +52,7 @@ function mailchimpSF_signup_form($args = array()) {
 		$sub_heading = apply_filters( 'mailchimp_dev_mode_subheading_text', 'This is the subheading text.' );
 	}
 
-	?>
-
+	if ( apply_filters( 'mailchimp_use_inline_styles', true ) ) : ?>
 <style>
 	.widget_mailchimpsf_widget .widget-title {
 		line-height: 1.4em;
@@ -128,6 +127,7 @@ function mailchimpSF_signup_form($args = array()) {
 		padding-left: 4px;
 	}
 </style>
+<?php endif; ?>
 
 <div id="mc_signup">
 	<form method="post" action="#mc_signup" id="mc_signup_form">
@@ -189,6 +189,9 @@ function mailchimpSF_signup_form($args = array()) {
 		
 		// Show our Interest groups fields if we have them, and they're set to on
 		if (is_array($igs) && !empty($igs)) {
+			?>
+			<div class="mc_interests">
+			<?php
 			foreach ($igs as $ig) {
 				if (is_array($ig) && isset($ig['id'])) {
 					if (($igs && get_option('mc_show_interest_groups_'.$ig['id']) == 'on') || MAILCHIMP_DEV_MODE == true) {
@@ -215,7 +218,9 @@ function mailchimpSF_signup_form($args = array()) {
 					<?php
 					}
 				}
-			}
+			}?>
+			</div><!-- /mc_interests -->
+			<?php 
 		}
 
 		if (get_option('mc_email_type_option') || MAILCHIMP_DEV_MODE == true) {
