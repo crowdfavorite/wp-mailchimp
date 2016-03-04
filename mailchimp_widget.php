@@ -130,6 +130,7 @@ function mailchimpSF_signup_form($args = array()) {
 <?php endif; ?>
 
 <div id="mc_signup">
+        <?php do_action('mailchimp_widget_before_form'); ?>
 	<form method="post" action="#mc_signup" id="mc_signup_form">
 		<input type="hidden" id="mc_submit_type" name="mc_submit_type" value="html" />
 		<input type="hidden" name="mcsf_action" value="mc_submit_signup_form" />
@@ -273,6 +274,7 @@ function mailchimpSF_signup_form($args = array()) {
 		
 	</div><!-- /mc_form_inside -->
 	</form><!-- /mc_signup_form -->
+        <?php do_action('mailchimp_widget_after_form'); ?>
 </div><!-- /mc_signup_container -->
 	<?php
 	if (!empty($after_widget)) {
