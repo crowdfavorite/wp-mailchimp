@@ -349,6 +349,9 @@ function mailchimp_interest_group_field($ig) {
 function mailchimp_form_field($var, $num_fields) {
 	$opt = 'mc_mv_'.$var['tag'];
 	$html = '';
+	
+	if($var['tag']=='EMAIL') $var['default'] = __('E-mail', 'mailchimp_i18n');
+	
 	// See if that var is set as required, or turned on (for display)
 	if ($var['req'] || get_option($opt) == 'on') {
 		$label = '<label for="'.esc_attr($opt).'" class="mc_var_label mc_header mc_header_'.esc_attr($var['field_type']).'">'.esc_html($var['name']);
