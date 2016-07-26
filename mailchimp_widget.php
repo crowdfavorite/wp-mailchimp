@@ -341,10 +341,11 @@ function mailchimp_interest_group_field($ig) {
 }
 
 /**
- * Generate and display markup for form fields
- * @param array $var Array containing informaoin about the field
- * @param int $num_fields The number of fields total we'll be generating markup for. Used in calculating required text logic
- * @return void
+ * Generate and display markup for form fields.
+ *
+ * @param array $var        Array containing informaoin about the field
+ * @param int   $num_fields The number of fields total we'll be generating markup for. Used in calculating required text logic
+ * @return string
  */
 function mailchimp_form_field($var, $num_fields) {
 	$opt = 'mc_mv_'.$var['tag'];
