@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: MailChimp 1.1.5\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/mailchimp\n"
 "POT-Creation-Date: 2015-01-08 14:23-0400\n"
-"PO-Revision-Date: 2017-01-27 21:17+0100\n"
+"PO-Revision-Date: 2017-01-27 21:23+0100\n"
 "Last-Translator: Alexandre Plennevaux <alexandre@pixeline.be>\n"
 "Language-Team: Contributed <LL@li.org>\n"
 "Language: fr_FR\n"
@@ -49,11 +49,11 @@ msgstr "Récompenses MailChimp désactivées !"
 
 #: ../mailchimp.php:608
 msgid "Fancy Javascript submission turned On!"
-msgstr "Inscription fantaisiste ( En Javascript ) activée !"
+msgstr "Inscription élégante ( En Javascript ) activée !"
 
 #: ../mailchimp.php:612
 msgid "Fancy Javascript submission turned Off!"
-msgstr "Inscription fantaisiste ( En Javascript ) désactivée !"
+msgstr "Inscription élégante ( En Javascript ) désactivée !"
 
 #: ../mailchimp.php:618
 msgid "Datepicker turned On!"
