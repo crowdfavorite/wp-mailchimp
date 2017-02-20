@@ -1358,6 +1358,11 @@ function mailchimpSF_signup_submit() {
 		}
 	}
 
+  if ( defined('QTRANS_INIT') && function_exists('qtrans_getLanguage') ) {
+    $lang = qtrans_getLanguage();
+    $merge['MC_LANGUAGE'] = $lang;
+  }
+    
 	// If we're good
 	if ($success) {
 		// Clear out empty merge vars
