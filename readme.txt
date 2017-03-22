@@ -81,6 +81,7 @@ Currently we have the plugin configured so it can be easily translated and the f
 * es_CL - Spanish in Chile (thanks to Tomás Nader for contributing)
 * es_ES - Spanish in Spain (thanks to [Claudia Mansilla](http://cricava.com/) for contributing)
 * et_ET - Estonian in Estonia (thanks to [Helen Urbanik](http://www.motomaania.ee/) for contributing)
+* fr_CA - French in Canada (thanks to [Dominic Mercier](http://www.dominic-mercier.com/) for contributing. Copied from fr_FR from [Maxime Toulliou](http://www.maximetoulliou.com/))
 * fr_FR - French in France (thanks to [Maxime Toulliou](http://www.maximetoulliou.com/) for contributing)
 * he_IL - Hebrew in Israel (thanks to [שגיב בית](http://www.sagive.co.il) for contributing)
 * hu_HU - Hungarian in Hungary (thanks to Okostobi for contributing)
