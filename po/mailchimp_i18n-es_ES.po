@@ -7,22 +7,22 @@ msgstr ""
 "Project-Id-Version: MailChimp 1.1.5\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/mailchimp\n"
 "POT-Creation-Date: 2015-01-08 14:23-0400\n"
-"PO-Revision-Date: 2015-01-08 17:29-0700\n"
-"Last-Translator: Will Castillo <will@mailchimp.com>\n"
+"PO-Revision-Date: 2017-08-02 09:29+0200\n"
+"Last-Translator: Nilo Velez <nilovelez@gmail.com>\n"
 "Language-Team: Spain Spanish <LL@li.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.7.1\n"
+"X-Generator: Poedit 2.0.3\n"
 
 #: ../mailchimp.php:80
 msgid "Settings"
-msgstr ""
+msgstr "Configuración"
 
 #: ../mailchimp.php:290
 msgid "MailChimp Setup"
-msgstr "Configuración Mailchimp"
+msgstr "Configuración de MailChimp"
 
 #: ../mailchimp.php:540
 msgid "Successfully Reset your List selection... Now you get to pick again!"
@@ -48,19 +48,19 @@ msgstr "Monkey Rewards Desactivado!"
 
 #: ../mailchimp.php:608
 msgid "Fancy Javascript submission turned On!"
-msgstr "Uso de Javascript en el formulario Activado"
+msgstr "¡Uso de Javascript en el formulario Activado!"
 
 #: ../mailchimp.php:612
 msgid "Fancy Javascript submission turned Off!"
-msgstr "Uso de Javascript en el formulario Desactivado"
+msgstr "¡Uso de Javascript en el formulario Desactivado!"
 
 #: ../mailchimp.php:618
 msgid "Datepicker turned On!"
-msgstr ""
+msgstr "¡Selector de fechas activado!"
 
 #: ../mailchimp.php:622
 msgid "Datepicker turned Off!"
-msgstr ""
+msgstr "¡Selector de fechas desactivado!"
 
 #: ../mailchimp.php:628
 msgid "Unsubscribe link turned On!"
@@ -79,16 +79,18 @@ msgstr ""
 #: ../mailchimp.php:767
 #, php-format
 msgid "and %s Sets of Interest Groups"
-msgstr ""
+msgstr "y %s sets de grupos de interés"
 
 #: ../mailchimp.php:772
 #, php-format
 msgid "<b>Success!</b> Loaded and saved the info for %d Merge Variables"
 msgstr ""
+"<b>¡Éxito!</b> Se ha cargado y guardado la información de %d variables de "
+"fusión"
 
 #: ../mailchimp.php:775
 msgid "from your list"
-msgstr ""
+msgstr "de tu lista"
 
 #: ../mailchimp.php:776
 msgid ""
@@ -104,25 +106,27 @@ msgstr "Configuración de Lista Mailchimp"
 
 #: ../mailchimp.php:816
 msgid "Log In"
-msgstr ""
+msgstr "Iniciar sesión"
 
 #: ../mailchimp.php:817
 msgid ""
 "To start using the MailChimp plugin, we first need to connect your MailChimp "
 "account.  Click login below to connect."
 msgstr ""
+"Para empezar a utilizar el plugin de MailChimp, tenemos que conectarnos a tu "
+"cuenta de MailChimp.  Haz clic en Iniciar de sesión para conectar."
 
 #: ../mailchimp.php:822
 msgid "Don't have a MailChimp account?"
-msgstr ""
+msgstr "¿No tienes una cuenta de MailChimp?"
 
 #: ../mailchimp.php:823
 msgid "Try one for Free!"
-msgstr ""
+msgstr "¡Puébalo gratis!"
 
 #: ../mailchimp.php:831
 msgid "Connect to MailChimp"
-msgstr ""
+msgstr "Conectar a MailChimp"
 
 #: ../mailchimp.php:845
 msgid "Notes"
@@ -140,7 +144,7 @@ msgid ""
 "below will be erased."
 msgstr ""
 "Si cambias tus datos de inicio de sesión a otra cuenta diferente, la "
-"información que has configurado será eliminada"
+"información que has configurado será eliminada."
 
 #: ../mailchimp.php:849
 msgid ""
@@ -160,13 +164,13 @@ msgstr "Cerrar Sesión"
 
 #: ../mailchimp.php:881
 msgid "Your Lists"
-msgstr "Tus Listas"
+msgstr "Tus listas"
 
 #: ../mailchimp.php:885
 msgid "Please select the List you wish to create a Signup Form for."
 msgstr ""
-"Por favor selecciona la Lista para la que deseas crear un Formulario de "
-"Subscripción"
+"Por favor selecciona la Lista para la que deseas crear un formulario de "
+"subscripción."
 
 #: ../mailchimp.php:886
 msgid "Note:"
@@ -191,11 +195,11 @@ msgstr ""
 
 #: ../mailchimp.php:912
 msgid "Select A List"
-msgstr "Seleccionar Una Lista"
+msgstr "Seleccionar una lista"
 
 #: ../mailchimp.php:925
 msgid "Update List"
-msgstr "Actualizar Lista"
+msgstr "Actualizar lista"
 
 #: ../mailchimp.php:946
 msgid "Reset List Options and Select again"
@@ -218,59 +222,59 @@ msgstr "Actualizar Opciones de Formulario de Subscripción"
 
 #: ../mailchimp.php:973
 msgid "Header"
-msgstr ""
+msgstr "Cabecera"
 
 #: ../mailchimp.php:976 ../mailchimp.php:984
 msgid ""
 "You can fill this with your own Text, HTML markup (including image links), "
 "or Nothing!"
 msgstr ""
-"Puedes completar esta área con su propio Texto, código HTML (incluyendo "
-"imágenes), o dejarlo en blanco! "
+"Puedes completar esta área con tu propio Texto, código HTML (incluyendo "
+"imágenes) ¡o dejarlo en blanco!"
 
 #: ../mailchimp.php:981
 msgid "Sub-header"
-msgstr ""
+msgstr "Subencabezado"
 
 #: ../mailchimp.php:985
 msgid "This will be displayed under the heading and above the form."
-msgstr ""
+msgstr "Se mostrará entre el encabezado y el formulario."
 
 #: ../mailchimp.php:990
 msgid "Submit Button"
-msgstr ""
+msgstr "Botón enviar"
 
 #: ../mailchimp.php:1002
 msgid "Enabled?"
-msgstr ""
+msgstr "¿Activado?"
 
 #: ../mailchimp.php:1004
 msgid "Form Settings"
-msgstr "Configuración de Formulario"
+msgstr "Configuración de formulario"
 
 #: ../mailchimp.php:1005
 msgid "Border Width"
-msgstr "Ancho de Borde"
+msgstr "Ancho del borde"
 
 #: ../mailchimp.php:1006
 msgid "Set to 0 for no border, do not enter"
-msgstr ""
+msgstr "Escribe 0 para sin borde, no pongas delante"
 
 #: ../mailchimp.php:1008
 msgid "Border Color"
-msgstr "Color de Borde"
+msgstr "Color de borde"
 
 #: ../mailchimp.php:1009 ../mailchimp.php:1012 ../mailchimp.php:1015
 msgid "Do not enter initial"
-msgstr ""
+msgstr "No pongas delante"
 
 #: ../mailchimp.php:1011
 msgid "Text Color"
-msgstr ""
+msgstr "Color de texto"
 
 #: ../mailchimp.php:1014
 msgid "Background Color"
-msgstr ""
+msgstr "Color de fondo"
 
 #: ../mailchimp.php:1025
 msgid "Monkey Rewards"
@@ -282,10 +286,13 @@ msgid ""
 "will earn you credits with us. It is optional and can be turned on or off at "
 "any time."
 msgstr ""
+"Activar esto colocará un enlace de \"powered by MailChimp\" en tu formulario "
+"que hará que ganes créditos con nosotros. Esto es opcional y se puede "
+"desactivar en cualquier momento."
 
 #: ../mailchimp.php:1032
 msgid "Use Javascript Support?"
-msgstr "¿Usar Soporte Javascript?"
+msgstr "¿Usar soporte Javascript?"
 
 #: ../mailchimp.php:1034
 msgid ""
@@ -293,30 +300,35 @@ msgid ""
 "gracefully for users not using javascript. It is optional and can be turned "
 "on or off at any time."
 msgstr ""
+"Activar esto hará que se use un envío por javascript que debería degradarse "
+"elegantemente para los usuarios que no usen javascript. Es opcional y se "
+"puede desactivar en cualquier momento."
 
 #: ../mailchimp.php:1039
 msgid "Use Javascript Datepicker?"
-msgstr ""
+msgstr "¿usar el selector de fechas de javascript?"
 
 #: ../mailchimp.php:1041
 msgid "Turning this on will use the jQuery UI Datepicker for dates."
 msgstr ""
+"Activar esto hará que se use el selector de fechas de jQuery UI para las "
+"fechas."
 
 #: ../mailchimp.php:1045
 msgid "Include Unsubscribe link?"
-msgstr "Incluir enlace de Cancelar Suscripción"
+msgstr "¿Incluir enlace de cancelar suscripción?"
 
 #: ../mailchimp.php:1047
 msgid "Turning this on will add a link to your host unsubscribe form"
-msgstr ""
+msgstr "Activar esto añade un enlace al formulario de baja de tu host"
 
 #: ../mailchimp.php:1066
 msgid "Merge Variables Included"
-msgstr "Merge Tags incluídas"
+msgstr "Variables de fusión incluídas"
 
 #: ../mailchimp.php:1073
 msgid "No Merge Variables found."
-msgstr "No se encontraron Merge Tags"
+msgstr "No se encontraron Variables de fusión."
 
 #: ../mailchimp.php:1080
 msgid "Name"
@@ -336,7 +348,7 @@ msgstr "¿Incluir?"
 
 #: ../mailchimp.php:1123
 msgid "Group Settings"
-msgstr ""
+msgstr "Ajustes del grupo"
 
 #: ../mailchimp.php:1130
 msgid "No Interest Groups Setup for this List"
@@ -357,16 +369,16 @@ msgstr "Opciones"
 #: ../mailchimp.php:1289 ../mailchimp.php:1302 ../mailchimp.php:1435
 #, php-format
 msgid "You must fill in %s."
-msgstr "Debes rellenar el %s"
+msgstr "Debes rellenar el %s."
 
 #: ../mailchimp.php:1395
 #, php-format
 msgid "%s must consist of only numbers"
-msgstr ""
+msgstr "%s sólo puede contener números"
 
 #: ../mailchimp.php:1416
 msgid "Please try again later"
-msgstr ""
+msgstr "Inténtalo más tarde"
 
 #: ../mailchimp.php:1419
 msgid "That email address is already subscribed to the list"
@@ -375,12 +387,12 @@ msgstr "Esa cuenta de correo ya está subscrita a la lista"
 #: ../mailchimp.php:1427
 #, php-format
 msgid "<a href=\"%s\">Click here to update your profile.</a>"
-msgstr ""
+msgstr "<a href=\"%s\">Pulsa aquí para actualizar tu ferfil.</a>"
 
 #: ../mailchimp.php:1439
 #, php-format
 msgid "%s has invalid content."
-msgstr ""
+msgstr "%s tiene contenido no válido."
 
 #: ../mailchimp.php:1442
 msgid "An invalid Interest Group was selected"
@@ -393,7 +405,7 @@ msgstr "Esa cuenta de correo no es válida"
 #: ../mailchimp.php:1468
 msgid "Success, you've been signed up! Please look for our confirmation email!"
 msgstr ""
-"Enhorabuena! Has sido registrado! Ahora verifica que te ha llegado el correo "
+"¡Enhorabuena, te has registrado! ¡Ahora verifica que te ha llegado el correo "
 "de confirmación!"
 
 #: ../mailchimp_widget.php:16
@@ -401,6 +413,9 @@ msgid ""
 "There was a problem loading your MailChimp details. Please re-run the setup "
 "process under Settings->MailChimp Setup"
 msgstr ""
+"Ha habido un problema al cargar tus detalles de MailChimp. Por favor, vuelve "
+"a ejecutar el proceso de configuración en Ajustes -> Configuración de "
+"MailChimp"
 
 #: ../mailchimp_widget.php:184
 msgid "required field"
@@ -408,19 +423,19 @@ msgstr "campo obligatorio"
 
 #: ../mailchimp_widget.php:224
 msgid "Preferred Format"
-msgstr ""
+msgstr "Formato preferido"
 
 #: ../mailchimp_widget.php:227
 msgid "HTML"
-msgstr ""
+msgstr "HTML"
 
 #: ../mailchimp_widget.php:228
 msgid "Text"
-msgstr ""
+msgstr "Texto"
 
 #: ../mailchimp_widget.php:255
 msgid "unsubscribe from list"
-msgstr "Darse de baja de la lista"
+msgstr "darse de baja de la lista"
 
 #: ../mailchimp_widget.php:263
 msgid "powered by"
@@ -428,855 +443,855 @@ msgstr "powered by"
 
 #: ../mailchimp_widget.php:396
 msgid "January"
-msgstr ""
+msgstr "Enero"
 
 #: ../mailchimp_widget.php:396
 msgid "February"
-msgstr ""
+msgstr "Febrero"
 
 #: ../mailchimp_widget.php:396
 msgid "March"
-msgstr ""
+msgstr "Marzo"
 
 #: ../mailchimp_widget.php:396
 msgid "April"
-msgstr ""
+msgstr "Abril"
 
 #: ../mailchimp_widget.php:396
 msgid "May"
-msgstr ""
+msgstr "Mayo"
 
 #: ../mailchimp_widget.php:396
 msgid "June"
-msgstr ""
+msgstr "Junio"
 
 #: ../mailchimp_widget.php:396
 msgid "July"
-msgstr ""
+msgstr "Julio"
 
 #: ../mailchimp_widget.php:396
 msgid "August"
-msgstr ""
+msgstr "Agosto"
 
 #: ../mailchimp_widget.php:396
 msgid "September"
-msgstr ""
+msgstr "Septiembre"
 
 #: ../mailchimp_widget.php:396
 msgid "October"
-msgstr ""
+msgstr "Octubre"
 
 #: ../mailchimp_widget.php:396
 msgid "November"
-msgstr ""
+msgstr "Noviembre"
 
 #: ../mailchimp_widget.php:396
 msgid "December"
-msgstr ""
+msgstr "Diciembre"
 
 #: ../mailchimp_widget.php:420
 msgid "Street Address"
-msgstr ""
+msgstr "Dirección"
 
 #: ../mailchimp_widget.php:422
 msgid "Address Line 2"
-msgstr ""
+msgstr "Dirección línea 2"
 
 #: ../mailchimp_widget.php:424
 msgid "City"
-msgstr ""
+msgstr "Ciudad"
 
 #: ../mailchimp_widget.php:426
 msgid "State"
-msgstr ""
+msgstr "Departamento/ Provincia"
 
 #: ../mailchimp_widget.php:428
 msgid "Zip / Postal"
-msgstr ""
+msgstr "Código Postal / ZIP"
 
 #: ../mailchimp_widget.php:430
 msgid "Country"
-msgstr ""
+msgstr "País"
 
 #: ../mailchimp_widget.php:485
 msgid "Displays a MailChimp Subscribe box"
-msgstr ""
+msgstr "Muestra una caja de suscripción de MailChimp"
 
 #: ../mailchimp_widget.php:487
 msgid "MailChimp Widget"
-msgstr ""
+msgstr "Widget de MailChimp"
 
 #: ../mailchimp_widget.php:502
 msgid "USA"
-msgstr ""
+msgstr "EE. UU."
 
 #: ../mailchimp_widget.php:503
 msgid "Aaland Islands"
-msgstr ""
+msgstr "Islas Åland"
 
 #: ../mailchimp_widget.php:504
 msgid "Afghanistan"
-msgstr ""
+msgstr "Afganistán"
 
 #: ../mailchimp_widget.php:505
 msgid "Albania"
-msgstr ""
+msgstr "Albania"
 
 #: ../mailchimp_widget.php:506
 msgid "Algeria"
-msgstr ""
+msgstr "Argelia"
 
 #: ../mailchimp_widget.php:507
 msgid "American Samoa"
-msgstr ""
+msgstr "Samoa"
 
 #: ../mailchimp_widget.php:508
 msgid "Andorra"
-msgstr ""
+msgstr "Andorra"
 
 #: ../mailchimp_widget.php:509
 msgid "Angola"
-msgstr ""
+msgstr "Angola"
 
 #: ../mailchimp_widget.php:510
 msgid "Anguilla"
-msgstr ""
+msgstr "Anguilla"
 
 #: ../mailchimp_widget.php:511
 msgid "Antigua And Barbuda"
-msgstr ""
+msgstr "Antigua y Barbuda"
 
 #: ../mailchimp_widget.php:512
 msgid "Argentina"
-msgstr ""
+msgstr "Islas Baleares"
 
 #: ../mailchimp_widget.php:513
 msgid "Armenia"
-msgstr ""
+msgstr "Armenia"
 
 #: ../mailchimp_widget.php:514
 msgid "Aruba"
-msgstr ""
+msgstr "Aruba"
 
 #: ../mailchimp_widget.php:515
 msgid "Australia"
-msgstr ""
+msgstr "Australia"
 
 #: ../mailchimp_widget.php:516
 msgid "Austria"
-msgstr ""
+msgstr "Austria"
 
 #: ../mailchimp_widget.php:517
 msgid "Azerbaijan"
-msgstr ""
+msgstr "Azerbaiyán"
 
 #: ../mailchimp_widget.php:518
 msgid "Bahamas"
-msgstr ""
+msgstr "Bahamas"
 
 #: ../mailchimp_widget.php:519
 msgid "Bahrain"
-msgstr ""
+msgstr "Baréin"
 
 #: ../mailchimp_widget.php:520
 msgid "Bangladesh"
-msgstr ""
+msgstr "Bangladés"
 
 #: ../mailchimp_widget.php:521
 msgid "Barbados"
-msgstr ""
+msgstr "Barbados"
 
 #: ../mailchimp_widget.php:522
 msgid "Belarus"
-msgstr ""
+msgstr "Bielorrusia"
 
 #: ../mailchimp_widget.php:523
 msgid "Belgium"
-msgstr ""
+msgstr "Bélgica"
 
 #: ../mailchimp_widget.php:524
 msgid "Belize"
-msgstr ""
+msgstr "Belice"
 
 #: ../mailchimp_widget.php:525
 msgid "Benin"
-msgstr ""
+msgstr "Benín"
 
 #: ../mailchimp_widget.php:526
 msgid "Bermuda"
-msgstr ""
+msgstr "Bermuda"
 
 #: ../mailchimp_widget.php:527
 msgid "Bhutan"
-msgstr ""
+msgstr "Bután"
 
 #: ../mailchimp_widget.php:528
 msgid "Bolivia"
-msgstr ""
+msgstr "Bolivia"
 
 #: ../mailchimp_widget.php:529
 msgid "Bosnia and Herzegovina"
-msgstr ""
+msgstr "Bosnia y Herzegovina"
 
 #: ../mailchimp_widget.php:530
 msgid "Botswana"
-msgstr ""
+msgstr "Botsuana"
 
 #: ../mailchimp_widget.php:531
 msgid "Brazil"
-msgstr ""
+msgstr "Brasil"
 
 #: ../mailchimp_widget.php:532
 msgid "Brunei Darussalam"
-msgstr ""
+msgstr "Brunei Darussalam"
 
 #: ../mailchimp_widget.php:533
 msgid "Bulgaria"
-msgstr ""
+msgstr "Bulgaria"
 
 #: ../mailchimp_widget.php:534
 msgid "Burkina Faso"
-msgstr ""
+msgstr "Burkina Faso"
 
 #: ../mailchimp_widget.php:535
 msgid "Burundi"
-msgstr ""
+msgstr "Burundi"
 
 #: ../mailchimp_widget.php:536
 msgid "Cambodia"
-msgstr ""
+msgstr "Camboya"
 
 #: ../mailchimp_widget.php:537
 msgid "Cameroon"
-msgstr ""
+msgstr "Camerún"
 
 #: ../mailchimp_widget.php:538
 msgid "Canada"
-msgstr ""
+msgstr "Canadá"
 
 #: ../mailchimp_widget.php:539
 msgid "Cape Verde"
-msgstr ""
+msgstr "Cabo Verde"
 
 #: ../mailchimp_widget.php:540
 msgid "Cayman Islands"
-msgstr ""
+msgstr "Islas Caimán"
 
 #: ../mailchimp_widget.php:541
 msgid "Central African Republic"
-msgstr ""
+msgstr "República Centroafricana"
 
 #: ../mailchimp_widget.php:542
 msgid "Chad"
-msgstr ""
+msgstr "Chad"
 
 #: ../mailchimp_widget.php:543
 msgid "Chile"
-msgstr ""
+msgstr "Chile"
 
 #: ../mailchimp_widget.php:544
 msgid "China"
-msgstr ""
+msgstr "China"
 
 #: ../mailchimp_widget.php:545
 msgid "Colombia"
-msgstr ""
+msgstr "Colombia"
 
 #: ../mailchimp_widget.php:546
 msgid "Congo"
-msgstr ""
+msgstr "Congo"
 
 #: ../mailchimp_widget.php:547
 msgid "Cook Islands"
-msgstr ""
+msgstr "Islas Cook"
 
 #: ../mailchimp_widget.php:548
 msgid "Costa Rica"
-msgstr ""
+msgstr "Costa Rica"
 
 #: ../mailchimp_widget.php:549
 msgid "Cote D'Ivoire"
-msgstr ""
+msgstr "Costa de Marfil"
 
 #: ../mailchimp_widget.php:550
 msgid "Croatia"
-msgstr ""
+msgstr "Croctia"
 
 #: ../mailchimp_widget.php:551
 msgid "Cuba"
-msgstr ""
+msgstr "Cuba"
 
 #: ../mailchimp_widget.php:552
 msgid "Cyprus"
-msgstr ""
+msgstr "Chipre"
 
 #: ../mailchimp_widget.php:553
 msgid "Czech Republic"
-msgstr ""
+msgstr "República Checa"
 
 #: ../mailchimp_widget.php:554
 msgid "Denmark"
-msgstr ""
+msgstr "Dinamarca"
 
 #: ../mailchimp_widget.php:555
 msgid "Djibouti"
-msgstr ""
+msgstr "Yibuti"
 
 #: ../mailchimp_widget.php:556
 msgid "Dominica"
-msgstr ""
+msgstr "Dominica"
 
 #: ../mailchimp_widget.php:557
 msgid "Dominican Republic"
-msgstr ""
+msgstr "Republica dominicana"
 
 #: ../mailchimp_widget.php:558
 msgid "East Timor"
-msgstr ""
+msgstr "Timor Oriental"
 
 #: ../mailchimp_widget.php:559
 msgid "Ecuador"
-msgstr ""
+msgstr "Ecuador"
 
 #: ../mailchimp_widget.php:560
 msgid "Egypt"
-msgstr ""
+msgstr "Egipto"
 
 #: ../mailchimp_widget.php:561
 msgid "El Salvador"
-msgstr ""
+msgstr "El Salvador"
 
 #: ../mailchimp_widget.php:562
 msgid "Equatorial Guinea"
-msgstr ""
+msgstr "Guinea Ecuatorial"
 
 #: ../mailchimp_widget.php:563
 msgid "Eritrea"
-msgstr ""
+msgstr "Eritrea"
 
 #: ../mailchimp_widget.php:564
 msgid "Estonia"
-msgstr ""
+msgstr "Estonia"
 
 #: ../mailchimp_widget.php:565
 msgid "Ethiopia"
-msgstr ""
+msgstr "Etiopía"
 
 #: ../mailchimp_widget.php:566
 msgid "Faroe Islands"
-msgstr ""
+msgstr "Islas Feroe"
 
 #: ../mailchimp_widget.php:567
 msgid "Fiji"
-msgstr ""
+msgstr "Fiji"
 
 #: ../mailchimp_widget.php:568
 msgid "Finland"
-msgstr ""
+msgstr "Finlandia"
 
 #: ../mailchimp_widget.php:569
 msgid "France"
-msgstr ""
+msgstr "Francia"
 
 #: ../mailchimp_widget.php:570
 msgid "French Polynesia"
-msgstr ""
+msgstr "Polinesia Francesa"
 
 #: ../mailchimp_widget.php:571
 msgid "Germany"
-msgstr ""
+msgstr "Alemania"
 
 #: ../mailchimp_widget.php:572
 msgid "Ghana"
-msgstr ""
+msgstr "Ghana"
 
 #: ../mailchimp_widget.php:573
 msgid "Gibraltar"
-msgstr ""
+msgstr "Gibraltar"
 
 #: ../mailchimp_widget.php:574
 msgid "Greece"
-msgstr ""
+msgstr "Grecia"
 
 #: ../mailchimp_widget.php:575
 msgid "Greenland"
-msgstr ""
+msgstr "Groenlandia"
 
 #: ../mailchimp_widget.php:576
 msgid "Grenada"
-msgstr ""
+msgstr "Granada"
 
 #: ../mailchimp_widget.php:577
 msgid "Guam"
-msgstr ""
+msgstr "Guam"
 
 #: ../mailchimp_widget.php:578
 msgid "Guatemala"
-msgstr ""
+msgstr "Guatemala"
 
 #: ../mailchimp_widget.php:579
 msgid "Guernsey"
-msgstr ""
+msgstr "Guernsey"
 
 #: ../mailchimp_widget.php:580
 msgid "Guyana"
-msgstr ""
+msgstr "Guyana"
 
 #: ../mailchimp_widget.php:581
 msgid "Haiti"
-msgstr ""
+msgstr "Haití"
 
 #: ../mailchimp_widget.php:582
 msgid "Honduras"
-msgstr ""
+msgstr "Honduras"
 
 #: ../mailchimp_widget.php:583
 msgid "Hong Kong"
-msgstr ""
+msgstr "Hong Kong"
 
 #: ../mailchimp_widget.php:584
 msgid "Hungary"
-msgstr ""
+msgstr "Hungría"
 
 #: ../mailchimp_widget.php:585
 msgid "Iceland"
-msgstr ""
+msgstr "Islandia"
 
 #: ../mailchimp_widget.php:586
 msgid "India"
-msgstr ""
+msgstr "India"
 
 #: ../mailchimp_widget.php:587
 msgid "Indonesia"
-msgstr ""
+msgstr "Indonesia"
 
 #: ../mailchimp_widget.php:588
 msgid "Iran"
-msgstr ""
+msgstr "Irán"
 
 #: ../mailchimp_widget.php:589
 msgid "Iraq"
-msgstr ""
+msgstr "Irak"
 
 #: ../mailchimp_widget.php:590
 msgid "Ireland"
-msgstr ""
+msgstr "Irlanda"
 
 #: ../mailchimp_widget.php:591
 msgid "Israel"
-msgstr ""
+msgstr "Israel"
 
 #: ../mailchimp_widget.php:592
 msgid "Italy"
-msgstr ""
+msgstr "Italia"
 
 #: ../mailchimp_widget.php:593
 msgid "Jamaica"
-msgstr ""
+msgstr "Jamaica"
 
 #: ../mailchimp_widget.php:594
 msgid "Japan"
-msgstr ""
+msgstr "Japón"
 
 #: ../mailchimp_widget.php:595
 msgid "Jersey  (Channel Islands)"
-msgstr ""
+msgstr "Jersey  (Channel Islands)"
 
 #: ../mailchimp_widget.php:596
 msgid "Jordan"
-msgstr ""
+msgstr "Jordán"
 
 #: ../mailchimp_widget.php:597
 msgid "Kazakhstan"
-msgstr ""
+msgstr "Kazajistán"
 
 #: ../mailchimp_widget.php:598
 msgid "Kenya"
-msgstr ""
+msgstr "Kenia"
 
 #: ../mailchimp_widget.php:599
 msgid "Kuwait"
-msgstr ""
+msgstr "Kuwait"
 
 #: ../mailchimp_widget.php:600
 msgid "Kyrgyzstan"
-msgstr ""
+msgstr "Kirguistán"
 
 #: ../mailchimp_widget.php:601
 msgid "Lao People's Democratic Republic"
-msgstr ""
+msgstr "República Popular Democrática de Laos"
 
 #: ../mailchimp_widget.php:602
 msgid "Latvia"
-msgstr ""
+msgstr "Letonia"
 
 #: ../mailchimp_widget.php:603
 msgid "Lebanon"
-msgstr ""
+msgstr "Líbano"
 
 #: ../mailchimp_widget.php:604
 msgid "Libya"
-msgstr ""
+msgstr "Libia"
 
 #: ../mailchimp_widget.php:605
 msgid "Liechtenstein"
-msgstr ""
+msgstr "Liechtenstein"
 
 #: ../mailchimp_widget.php:606
 msgid "Lithuania"
-msgstr ""
+msgstr "Lituania"
 
 #: ../mailchimp_widget.php:607
 msgid "Luxembourg"
-msgstr ""
+msgstr "Luxemburgo"
 
 #: ../mailchimp_widget.php:608
 msgid "Macau"
-msgstr ""
+msgstr "Macao"
 
 #: ../mailchimp_widget.php:609
 msgid "Macedonia"
-msgstr ""
+msgstr "Macedonia"
 
 #: ../mailchimp_widget.php:610
 msgid "Madagascar"
-msgstr ""
+msgstr "Madagascar"
 
 #: ../mailchimp_widget.php:611
 msgid "Malawi"
-msgstr ""
+msgstr "Malaui"
 
 #: ../mailchimp_widget.php:612
 msgid "Malaysia"
-msgstr ""
+msgstr "Malasia"
 
 #: ../mailchimp_widget.php:613
 msgid "Maldives"
-msgstr ""
+msgstr "Maldivas"
 
 #: ../mailchimp_widget.php:614
 msgid "Mali"
-msgstr ""
+msgstr "Malí"
 
 #: ../mailchimp_widget.php:615
 msgid "Malta"
-msgstr ""
+msgstr "Malta"
 
 #: ../mailchimp_widget.php:616
 msgid "Mauritius"
-msgstr ""
+msgstr "Mauricio"
 
 #: ../mailchimp_widget.php:617
 msgid "Mexico"
-msgstr ""
+msgstr "México"
 
 #: ../mailchimp_widget.php:618
 msgid "Moldova, Republic of"
-msgstr ""
+msgstr "Moldavia"
 
 #: ../mailchimp_widget.php:619
 msgid "Monaco"
-msgstr ""
+msgstr "Mónaco"
 
 #: ../mailchimp_widget.php:620
 msgid "Mongolia"
-msgstr ""
+msgstr "Mongolia"
 
 #: ../mailchimp_widget.php:621
 msgid "Montenegro"
-msgstr ""
+msgstr "Montenegro"
 
 #: ../mailchimp_widget.php:622
 msgid "Morocco"
-msgstr ""
+msgstr "Marruecos"
 
 #: ../mailchimp_widget.php:623
 msgid "Mozambique"
-msgstr ""
+msgstr "Mozambique"
 
 #: ../mailchimp_widget.php:624
 msgid "Myanmar"
-msgstr ""
+msgstr "Myanmar"
 
 #: ../mailchimp_widget.php:625
 msgid "Namibia"
-msgstr ""
+msgstr "Namibia"
 
 #: ../mailchimp_widget.php:626
 msgid "Nepal"
-msgstr ""
+msgstr "Nepal"
 
 #: ../mailchimp_widget.php:627
 msgid "Netherlands"
-msgstr ""
+msgstr "Países Bajos"
 
 #: ../mailchimp_widget.php:628
 msgid "Netherlands Antilles"
-msgstr ""
+msgstr "Antillas Holandesas"
 
 #: ../mailchimp_widget.php:629
 msgid "New Caledonia"
-msgstr ""
+msgstr "Nueva Caledonia"
 
 #: ../mailchimp_widget.php:630
 msgid "New Zealand"
-msgstr ""
+msgstr "Nueva Zelanda"
 
 #: ../mailchimp_widget.php:631
 msgid "Nicaragua"
-msgstr ""
+msgstr "Nicaragua"
 
 #: ../mailchimp_widget.php:632
 msgid "Niger"
-msgstr ""
+msgstr "Nigeria"
 
 #: ../mailchimp_widget.php:633
 msgid "Nigeria"
-msgstr ""
+msgstr "Nigeria"
 
 #: ../mailchimp_widget.php:634
 msgid "North Korea"
-msgstr ""
+msgstr "Corea del Norte"
 
 #: ../mailchimp_widget.php:635
 msgid "Norway"
-msgstr ""
+msgstr "Noruega"
 
 #: ../mailchimp_widget.php:636
 msgid "Oman"
-msgstr ""
+msgstr "Omán"
 
 #: ../mailchimp_widget.php:637
 msgid "Pakistan"
-msgstr ""
+msgstr "Pakistán"
 
 #: ../mailchimp_widget.php:638
 msgid "Palau"
-msgstr ""
+msgstr "Palau"
 
 #: ../mailchimp_widget.php:639
 msgid "Palestine"
-msgstr ""
+msgstr "Palestina"
 
 #: ../mailchimp_widget.php:640
 msgid "Panama"
-msgstr ""
+msgstr "Panamá"
 
 #: ../mailchimp_widget.php:641
 msgid "Papua New Guinea"
-msgstr ""
+msgstr "Papua Nueva Guinea"
 
 #: ../mailchimp_widget.php:642
 msgid "Paraguay"
-msgstr ""
+msgstr "Paraguay"
 
 #: ../mailchimp_widget.php:643
 msgid "Peru"
-msgstr ""
+msgstr "Perú"
 
 #: ../mailchimp_widget.php:644
 msgid "Philippines"
-msgstr ""
+msgstr "Filipinas"
 
 #: ../mailchimp_widget.php:645
 msgid "Poland"
-msgstr ""
+msgstr "Polonia"
 
 #: ../mailchimp_widget.php:646
 msgid "Portugal"
-msgstr ""
+msgstr "Portugal"
 
 #: ../mailchimp_widget.php:647
 msgid "Qatar"
-msgstr ""
+msgstr "Qatar"
 
 #: ../mailchimp_widget.php:648
 msgid "Republic of Georgia"
-msgstr ""
+msgstr "República de Georgia"
 
 #: ../mailchimp_widget.php:649
 msgid "Romania"
-msgstr ""
+msgstr "Rumanía"
 
 #: ../mailchimp_widget.php:650
 msgid "Russia"
-msgstr ""
+msgstr "Rusia"
 
 #: ../mailchimp_widget.php:651
 msgid "Rwanda"
-msgstr ""
+msgstr "Ruanda"
 
 #: ../mailchimp_widget.php:652
 msgid "Saint Kitts and Nevis"
-msgstr ""
+msgstr "San Cristóbal y Nieves"
 
 #: ../mailchimp_widget.php:653
 msgid "Saint Lucia"
-msgstr ""
+msgstr "Santa Lucía"
 
 #: ../mailchimp_widget.php:654
 msgid "Samoa (Independent)"
-msgstr ""
+msgstr "Samoa (Independiente)"
 
 #: ../mailchimp_widget.php:655
 msgid "San Marino"
-msgstr ""
+msgstr "San Marino"
 
 #: ../mailchimp_widget.php:656
 msgid "Saudi Arabia"
-msgstr ""
+msgstr "Arabia Saudita"
 
 #: ../mailchimp_widget.php:657
 msgid "Senegal"
-msgstr ""
+msgstr "Senegal"
 
 #: ../mailchimp_widget.php:658
 msgid "Serbia"
-msgstr ""
+msgstr "Serbia"
 
 #: ../mailchimp_widget.php:659
 msgid "Seychelles"
-msgstr ""
+msgstr "Seychelles"
 
 #: ../mailchimp_widget.php:660
 msgid "Singapore"
-msgstr ""
+msgstr "Singapur"
 
 #: ../mailchimp_widget.php:661
 msgid "Slovakia"
-msgstr ""
+msgstr "Eslovaquia"
 
 #: ../mailchimp_widget.php:662
 msgid "Slovenia"
-msgstr ""
+msgstr "Eslovenia"
 
 #: ../mailchimp_widget.php:663
 msgid "Solomon Islands"
-msgstr ""
+msgstr "Islas Salomón"
 
 #: ../mailchimp_widget.php:664
 msgid "South Africa"
-msgstr ""
+msgstr "Sudáfrica"
 
 #: ../mailchimp_widget.php:665
 msgid "South Korea"
-msgstr ""
+msgstr "Corea del Sur"
 
 #: ../mailchimp_widget.php:666
 msgid "Spain"
-msgstr ""
+msgstr "España"
 
 #: ../mailchimp_widget.php:667
 msgid "Sri Lanka"
-msgstr ""
+msgstr "Sri Lanka"
 
 #: ../mailchimp_widget.php:668
 msgid "Sudan"
-msgstr ""
+msgstr "Sudán"
 
 #: ../mailchimp_widget.php:669
 msgid "Suriname"
-msgstr ""
+msgstr "Surinam"
 
 #: ../mailchimp_widget.php:670
 msgid "Swaziland"
-msgstr ""
+msgstr "Suazilandia"
 
 #: ../mailchimp_widget.php:671
 msgid "Sweden"
-msgstr ""
+msgstr "Suecia"
 
 #: ../mailchimp_widget.php:672
 msgid "Switzerland"
-msgstr ""
+msgstr "Suiza"
 
 #: ../mailchimp_widget.php:673
 msgid "Taiwan"
-msgstr ""
+msgstr "Taiwan"
 
 #: ../mailchimp_widget.php:674
 msgid "Tanzania"
-msgstr ""
+msgstr "Tanzania"
 
 #: ../mailchimp_widget.php:675
 msgid "Thailand"
-msgstr ""
+msgstr "Tailandia"
 
 #: ../mailchimp_widget.php:676
 msgid "Togo"
-msgstr ""
+msgstr "Togo"
 
 #: ../mailchimp_widget.php:677
 msgid "Tonga"
-msgstr ""
+msgstr "Tonga"
 
 #: ../mailchimp_widget.php:678
 msgid "Trinidad and Tobago"
-msgstr ""
+msgstr "Trinidad y Tobago"
 
 #: ../mailchimp_widget.php:679
 msgid "Tunisia"
-msgstr ""
+msgstr "Túnez"
 
 #: ../mailchimp_widget.php:680
 msgid "Turkey"
-msgstr ""
+msgstr "Turkía"
 
 #: ../mailchimp_widget.php:681
 msgid "Turks &amp; Caicos Islands"
-msgstr ""
+msgstr "Islas Turcas y Caicos"
 
 #: ../mailchimp_widget.php:682
 msgid "Uganda"
-msgstr ""
+msgstr "Uganda"
 
 #: ../mailchimp_widget.php:683
 msgid "Ukraine"
-msgstr ""
+msgstr "Ucrania"
 
 #: ../mailchimp_widget.php:684
 msgid "United Arab Emirates"
-msgstr ""
+msgstr "Emiratos Árabes Unidos"
 
 #: ../mailchimp_widget.php:685
 msgid "United Kingdom"
-msgstr ""
+msgstr "Reino Unido"
 
 #: ../mailchimp_widget.php:686
 msgid "Uruguay"
-msgstr ""
+msgstr "Uruguay"
 
 #: ../mailchimp_widget.php:687
 msgid "Vanuatu"
-msgstr ""
+msgstr "Vanuatu"
 
 #: ../mailchimp_widget.php:688
 msgid "Vatican City State (Holy See)"
-msgstr ""
+msgstr "Estado de la Ciudad del Vaticano (Santa Sede)"
 
 #: ../mailchimp_widget.php:689
 msgid "Venezuela"
-msgstr ""
+msgstr "Venezuela"
 
 #: ../mailchimp_widget.php:690
 msgid "Vietnam"
-msgstr ""
+msgstr "Vietnam"
 
 #: ../mailchimp_widget.php:691
 msgid "Virgin Islands (British)"
-msgstr ""
+msgstr "Islas Vírgenes (Británicas)"
 
 #: ../mailchimp_widget.php:692
 msgid "Virgin Islands (U.S.)"
-msgstr ""
+msgstr "Islas Vírgenes (U.S.)"
 
 #: ../mailchimp_widget.php:693
 msgid "Zambia"
-msgstr ""
+msgstr "Zambia"
 
 #: ../mailchimp_widget.php:694
 msgid "Zimbabwe"
-msgstr ""
+msgstr "Zimbawe"
 
 #~ msgid "%s has invalid content"
 #~ msgstr "%s tiene contenido inválido"
