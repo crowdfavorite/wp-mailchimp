@@ -703,13 +703,13 @@ function mailchimp_country_list() {
 function mailchimp_get_kitchen_sink_fields() {
 	$fields = array(
 		0 => array (
-			'name' => 'Email Address', 'req' => true, 'field_type' => 'email', 'public' => true, 'show' => true, 'order' => '1', 'default' => NULL, 'helptext' => NULL, 'size' => '25', 'tag' => 'EMAIL', 'id' => 0,
+			'name' => 'Email Address', 'req' => true, 'field_type' => 'email', 'public' => true, 'show' => true, 'order' => '1', 'default' => NULL, 'helptext' => NULL, 'size' => '25', 'tag' => 'EMAIL', 'id' => 0, 'placeholder' => 'john.doe@example.com,'
 		),
 		1 => array (
-			'name' => 'First Name', 'req' => true, 'field_type' => 'text', 'public' => true, 'show' => true, 'order' => '2', 'default' => '', 'helptext' => '', 'size' => '25', 'tag' => 'FNAME', 'id' => 1,
+			'name' => 'First Name', 'req' => true, 'field_type' => 'text', 'public' => true, 'show' => true, 'order' => '2', 'default' => '', 'helptext' => '', 'size' => '25', 'tag' => 'FNAME', 'id' => 1, 'placeholder' => 'John',
 		),
 		2 => array (
-			'name' => 'Last Name', 'req' => true, 'field_type' => 'text', 'public' => true, 'show' => true, 'order' => '3', 'default' => '', 'helptext' => '', 'size' => '25', 'tag' => 'LNAME', 'id' => 2,
+			'name' => 'Last Name', 'req' => true, 'field_type' => 'text', 'public' => true, 'show' => true, 'order' => '3', 'default' => '', 'helptext' => '', 'size' => '25', 'tag' => 'LNAME', 'id' => 2, 'placeholder' => 'Doe',
 		),
 		3 => array (
 			'name' => 'Radio Buttons', 'req' => true, 'field_type' => 'radio', 'public' => true, 'show' => true, 'order' => '5', 'default' => '', 'helptext' => '', 'size' => '25', 'choices' => array ( 0 => 'First Choice', 1 => 'Second Choice', 2 => 'Third Choice' ), 'tag' => 'MMERGE3', 'id' => 3,
